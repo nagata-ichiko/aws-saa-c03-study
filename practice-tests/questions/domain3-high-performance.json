@@ -14,7 +14,13 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 1
+    "domain_seq": 1,
+    "question_ja": "Standard RDS ストレージよりも Provisioned IOPS を選ぶべきなのはどのような場合ですか？",
+    "choices_ja": [
+      "バッチ処理のワークロードがある場合",
+      "本番のオンライン・トランザクション処理（OLTP）ワークロードを使用する場合",
+      "一貫したパフォーマンスに敏感でないワークロードがある場合"
+    ]
   },
   {
     "id": 9,
@@ -32,7 +38,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 2
+    "domain_seq": 2,
+    "question_ja": "あなたの部署では、会社のログファイルから定期的に分析レポートを作成しています。すべてのログデータは Amazon S3 に収集され、毎日実行される Amazon Elastic MapReduce (EMR) ジョブで処理されます。このジョブは、日次のPDFレポートと Amazon Redshift データウェアハウス用の集計済みCSVテーブルを生成します。システムの平均パフォーマンスや生データのデータ整合性を損なうことなく、コストを削減するにはどの選択肢が適切でしょうか？",
+    "choices_ja": [
+      "すべてのデータに対して Amazon S3 の Reduced Redundancy Storage (RRS) を使用する。Amazon EMR ジョブには Spot インスタンスと Reserved インスタンスを組み合わせて使用する。Amazon Redshift には Reserved インスタンスを使用する。",
+      "PDF と CSV データに対して Amazon S3 の Reduced Redundancy Storage (RRS) を使用する。EMR ジョブに Spot インスタンスを追加する。Amazon Redshift には Spot インスタンスを使用する。",
+      "PDF と CSV データに対して Amazon S3 の Reduced Redundancy Storage (RRS) を使用する。Amazon EMR ジョブに Spot インスタンスを追加する。Amazon Redshift には Reserved インスタンスを使用する。",
+      "すべてのデータに対して Amazon S3 の Reduced Redundancy Storage (RRS) を使用する。Amazon EMR ジョブに Spot インスタンスを追加する。Amazon Redshift には Reserved インスタンスを使用する。"
+    ]
   },
   {
     "id": 13,
@@ -50,7 +63,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 3
+    "domain_seq": 3,
+    "question_ja": "クライアントの最新の要件として、コンテンツおよびメディアサーバーが必要です。クライアントは低遅延、高可用性、耐久性、アクセス制御などの要件を非常に具体的に示しています。サーバーには数百万のアクセスが見込まれ、利用パターンが「スパイク的」であるため、運用チームは最大想定需要を支えるために静的なハードウェア、ネットワーク、管理リソースを事前に用意する必要があります。顧客基盤は当初は少ないものの、将来的には増加し、地理的にも広がる見込みです。コンテンツ配信に適したソリューションはどれでしょうか？",
+    "choices_ja": [
+      "Amazon S3 をオリジンサーバー兼キャッシュとして使用する。",
+      "AWS Storage Gateway をオリジンサーバーとして、Amazon EC2 をキャッシュとして使用する。",
+      "AWS CloudFront をオリジンサーバー兼キャッシュとして使用する。",
+      "Amazon S3 をオリジンサーバーとして、Amazon CloudFront をキャッシュとして使用する。"
+    ]
   },
   {
     "id": 18,
@@ -70,7 +90,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 4
+    "domain_seq": 4,
+    "question_ja": "次のうち、AWSリージョン内で保存データをネイティブに暗号化するサービスはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "AWS Storage Gateway",
+      "Amazon DynamoDB",
+      "Amazon CloudFront",
+      "Amazon Glacier",
+      "Amazon Simple Queue Service"
+    ]
   },
   {
     "id": 19,
@@ -88,7 +116,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 5
+    "domain_seq": 5,
+    "question_ja": "次のうち、Amazon CloudFront のオリジンサーバーとして使用できないものはどれですか？",
+    "choices_ja": [
+      "自社インフラで稼働しているウェブサーバー",
+      "Amazon S3",
+      "Amazon Glacier",
+      "Amazon EC2 インスタンスで稼働しているウェブサーバー"
+    ]
   },
   {
     "id": 29,
@@ -106,7 +141,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 6
+    "domain_seq": 6,
+    "question_ja": "Amazon EC2 の c4.8xlarge インスタンスが提供するネットワーク性能はどれですか？",
+    "choices_ja": [
+      "20ギガビット",
+      "10ギガビット",
+      "非常に高いが変動する",
+      "5ギガビット"
+    ]
   },
   {
     "id": 31,
@@ -124,7 +166,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 7
+    "domain_seq": 7,
+    "question_ja": "Amazon DynamoDB は何を提供しますか？",
+    "choices_ja": [
+      "予測可能でスケーラブルな MySQL データベース",
+      "高速で信頼性の高い PL/SQL データベースクラスター",
+      "Amazon Web Services が管理するスタンドアロンの Cassandra データベース",
+      "高速で高いスケーラビリティを持つマネージド NoSQL データベースサービス"
+    ]
   },
   {
     "id": 35,
@@ -142,7 +191,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 8
+    "domain_seq": 8,
+    "question_ja": "Amazon Elastic Beanstalk は何を提供しますか？",
+    "choices_ja": [
+      "Amazon Web Services 上に構築されたスケーラブルなストレージアプライアンス",
+      "Amazon Web Services 上に構築されたアプリケーションコンテナ",
+      "その名前のサービスは存在しない",
+      "スケーラブルな EC2 インスタンスのクラスター"
+    ]
   },
   {
     "id": 40,
@@ -160,7 +216,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 9
+    "domain_seq": 9,
+    "question_ja": "Amazon Redshift を使ってデータウェアハウスを構築するよう依頼されました。Redshift については、SQL ベースのデータウェアハウスソリューションであり、業界標準の ODBC や JDBC 接続、PostgreSQL ドライバーを使用していることは知っています。しかし、データベーステーブルのストレージがどのような形式かはわかりません。Amazon Redshift はデータベーステーブルにどのようなストレージを使用しているでしょうか？",
+    "choices_ja": [
+      "InnoDB テーブル",
+      "NDB データストレージ",
+      "カラムナ型データストレージ",
+      "NDB クラスター ストレージ"
+    ]
   },
   {
     "id": 45,
@@ -178,7 +241,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 10
+    "domain_seq": 10,
+    "question_ja": "ユーザーは EC2 を使った高可用性のアプリケーション展開を計画しています。以下のうち、高可用性の実現に役立たないものはどれですか？",
+    "choices_ja": [
+      "Elastic IP アドレス",
+      "PIOPS（プロビジョンド IOPS）",
+      "AMI（Amazon マシンイメージ）",
+      "アベイラビリティゾーン"
+    ]
   },
   {
     "id": 48,
@@ -196,7 +266,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 11
+    "domain_seq": 11,
+    "question_ja": "非常に人気のあるテレビ番組の投票を集めるアプリケーションを展開しています。何百万人ものユーザーがモバイル端末から投票を送信します。投票はリアルタイムで公開集計できるよう、耐久性が高く、スケーラブルで高可用性のデータストアに収集する必要があります。どのサービスを使用すべきでしょうか？",
+    "choices_ja": [
+      "Amazon DynamoDB",
+      "Amazon Redshift",
+      "Amazon Kinesis",
+      "Amazon Simple Queue Service"
+    ]
   },
   {
     "id": 73,
@@ -214,7 +291,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 12
+    "domain_seq": 12,
+    "question_ja": "以下のうち、AWSのストレージサービスではないものはどれですか？",
+    "choices_ja": [
+      "Amazon S3",
+      "Amazon Glacier",
+      "Amazon CloudFront",
+      "Amazon EBS"
+    ]
   },
   {
     "id": 77,
@@ -232,7 +316,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 13
+    "domain_seq": 13,
+    "question_ja": "EBS ボリュームのパフォーマンスが低下しているように見えるため、パフォーマンスを測定する必要があります。1,024 KB の I/O を測定しましたが、同僚から EBS ボリュームのパフォーマンスは IOPS で測定されると指摘されました。1,024 KB の I/O は何 IOPS に相当しますか？",
+    "choices_ja": [
+      "16",
+      "256",
+      "8",
+      "4"
+    ]
   },
   {
     "id": 78,
@@ -250,7 +341,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 14
+    "domain_seq": 14,
+    "question_ja": "あなたの会社は、高級ファッションとカスタム技術を融合させた、顧客注文による唯一無二のスキー用ヘルメットを製造しています。顧客はスキー場で個性をアピールでき、ヘッドアップディスプレイやGPSリアビューカメラ、その他ヘルメットに組み込みたい技術革新を利用できます。現在の製造プロセスはデータが豊富で複雑であり、カスタム電子部品や材料が最高水準であることを保証するための評価が含まれています。評価は人手と自動の両方で行われています。今回、新たにGPUのCUDAを用いてカスタム電子部品の故障モードをモデル化する評価を、低遅延ネットワークで接続されたサーバークラスター上で実行する必要があります。既存のプロセスをハイブリッド方式で自動化し、かつ将来的なプロセスの進化にも対応できるアーキテクチャとして最適なのはどれでしょうか？",
+    "choices_ja": [
+      "AWS Data Pipelineを使ってデータとメタデータの移動および評価を管理し、プレースメントグループ内のG2インスタンスのオートスケーリンググループを使用する。",
+      "Amazon Simple Workflow (SWF)を使って評価やデータ・メタデータの移動を管理し、プレースメントグループ内のG2インスタンスのオートスケーリンググループを使用する。",
+      "Amazon Simple Workflow (SWF)を使って評価やデータ・メタデータの移動を管理し、SR-IOV（Single Root I/O Virtualization）対応のC3インスタンスのオートスケーリンググループを使用する。",
+      "AWS Data Pipelineを使ってデータとメタデータの移動および評価を管理し、SR-IOV（Single Root I/O Virtualization）対応のC3インスタンスのオートスケーリンググループを使用する。"
+    ]
   },
   {
     "id": 100,
@@ -268,7 +366,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 15
+    "domain_seq": 15,
+    "question_ja": "ネットワークの監視を設定するよう依頼され、CloudWatchが最適なサービスだと判断しました。Amazon CloudWatchは、AWSリソースやAWS上で実行しているアプリケーションをリアルタイムで監視します。CloudWatchを使って、リソースやアプリケーションの測定したい変数であるメトリクスを収集・追跡できます。次のうち、AWS CloudWatchが監視できるものはどれですか？",
+    "choices_ja": [
+      "アプリケーションが生成するログファイル",
+      "このページに記載されているすべての項目",
+      "リソース利用状況、アプリケーションのパフォーマンス、運用状況のシステム全体の可視化",
+      "アプリケーションやサービスが生成するカスタムメトリクス"
+    ]
   },
   {
     "id": 101,
@@ -286,7 +391,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 16
+    "domain_seq": 16,
+    "question_ja": "単一の DynamoDB テーブルでプロビジョニングできる最大の書き込みスループットはどれですか？",
+    "choices_ja": [
+      "1,000 書き込みキャパシティユニット",
+      "100,000 書き込みキャパシティユニット",
+      "DynamoDB は無制限にスケールするよう設計されていますが、10,000 を超える場合は事前に AWS に連絡する必要があります",
+      "10,000 書き込みキャパシティユニット"
+    ]
   },
   {
     "id": 105,
@@ -304,7 +416,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 17
+    "domain_seq": 17,
+    "question_ja": "Amazon EBS ボリュームの「詳細」モニタリングデータでは、Provisioned IOPS ボリュームが自動的に Amazon CloudWatch に送信するメトリクスの間隔は何分ですか？",
+    "choices_ja": [
+      "3分",
+      "1分",
+      "5分",
+      "2分"
+    ]
   },
   {
     "id": 106,
@@ -322,7 +441,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 18
+    "domain_seq": 18,
+    "question_ja": "既存のインフラを改善する方法を検討しています。基本的な管理や監視作業に多くのエンジニアリングリソースが割かれており、コストも過剰に感じられます。これを解決するために Amazon ElasticCache の導入を考えています。ElasticCache に関して正しい記述はどれでしょうか？",
+    "choices_ja": [
+      "ユーザーの操作やクエリに対する負荷と応答時間を改善できますが、ウェブアプリケーションのスケーリングにかかるコストは増加します。",
+      "ユーザーの操作やクエリに対する負荷と応答時間は改善できませんが、ウェブアプリケーションのスケーリングにかかるコストは削減できます。",
+      "ユーザーの操作やクエリに対する負荷と応答時間を改善できますが、ウェブアプリケーションのスケーリングにかかるコストは変わりません。",
+      "ユーザーの操作やクエリに対する負荷と応答時間を改善でき、かつウェブアプリケーションのスケーリングにかかるコストも削減できます。"
+    ]
   },
   {
     "id": 127,
@@ -340,7 +466,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 19
+    "domain_seq": 19,
+    "question_ja": "MySQL および Oracle データベースエンジンで Amazon RDS の Provisioned IOPS ストレージを使用している場合、IOPS レートを指定することでデータベースインスタンスのスループットをどの範囲でスケールできますか？",
+    "choices_ja": [
+      "1,000 から 100,000 まで",
+      "100 から 1,000 まで",
+      "10,000 から 100,000 まで",
+      "1,000 から 10,000 まで"
+    ]
   },
   {
     "id": 132,
@@ -362,7 +495,16 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 20
+    "domain_seq": 20,
+    "question_ja": "ソーシャルメディアサイトを設計しており、分散型サービス拒否（DDoS）攻撃を軽減する方法を検討しています。以下のうち、有効な軽減策はどれですか？（3つ選択してください）",
+    "choices_ja": [
+      "各EC2インスタンスに複数のElastic Network Interface（ENI）を追加してネットワーク帯域幅を増やす。",
+      "専用インスタンスを使用して、各インスタンスが最大のパフォーマンスを発揮できるようにする。",
+      "静的および動的コンテンツの両方にAmazon CloudFrontディストリビューションを使用する。",
+      "ウェブアプリケーション層とAmazon RDS層にElastic Load Balancerとオートスケーリンググループを使用する。",
+      "Amazon CloudWatchのアラートを設定して、高いネットワーク入力とCPU使用率を監視する。",
+      "インスタンスのOSファイアウォールに対してルールを迅速に追加・削除できるプロセスと機能を作成する。"
+    ]
   },
   {
     "id": 133,
@@ -380,7 +522,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 21
+    "domain_seq": 21,
+    "question_ja": "Amazon CloudFront で、Amazon EC2 インスタンスやその他のカスタムオリジンを使用する場合、推奨されることは何ですか？",
+    "choices_ja": [
+      "Elastic Load Balancing を使用しない。",
+      "インターネット通信をプライベートインスタンスに制限しつつ、送信トラフィックを許可する。",
+      "CloudWatch メトリクスのためにアクセスキーのローテーションを有効にする。",
+      "オリジンサーバーのドメイン名に対してロードバランサーの URL を指定する。"
+    ]
   },
   {
     "id": 137,
@@ -398,7 +547,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 22
+    "domain_seq": 22,
+    "question_ja": "Amazon Elastic Compute Cloud インスタンス上で動作するアプリケーションが、5 GB の動画ファイルを Amazon Simple Storage Service (S3) にアップロードしています。動画のアップロードに予想以上に時間がかかっており、アプリケーションのパフォーマンスが低下しています。どの方法がアプリケーションのパフォーマンス改善に役立ちますか？",
+    "choices_ja": [
+      "Enhanced Networking を有効にする。",
+      "Amazon S3 のマルチパートアップロードを使用する。",
+      "Amazon CloudFront を活用し、HTTP POST メソッドを使ってレイテンシを減らす。",
+      "Amazon Elastic Block Store の Provisioned IOPS を使用し、Amazon EBS 最適化インスタンスを利用する。"
+    ]
   },
   {
     "id": 138,
@@ -416,7 +572,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 23
+    "domain_seq": 23,
+    "question_ja": "新しいスタートアップの写真共有会社（flickrに似た）向けにAWSのメディア共有フレームワークを構築することになりました。まず最初に考えられるのは、このフレームワークには大量の永続的なデータストレージが必要になるということです。次のうち、永続的なストレージとして適切なものはどれでしょうか？",
+    "choices_ja": [
+      "Amazon Glacier または Amazon S3",
+      "Amazon Glacier または AWS Import/Export",
+      "AWS Import/Export または Amazon CloudFront",
+      "Amazon EBS ボリューム または Amazon S3"
+    ]
   },
   {
     "id": 167,
@@ -432,7 +595,12 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 24
+    "domain_seq": 24,
+    "question_ja": "正しいか誤りか：Provisioned IOPS の料金は、当月に使用したかどうかに関わらず、IOPS とストレージの両方に対して課金されます。",
+    "choices_ja": [
+      "正しい",
+      "誤り"
+    ]
   },
   {
     "id": 169,
@@ -450,7 +618,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 25
+    "domain_seq": 25,
+    "question_ja": "エッジロケーションとは、どのAmazon Web Serviceを指しますか？",
+    "choices_ja": [
+      "エッジロケーションは、ゾーンまたはリージョン内に構成されたネットワークを指します。",
+      "エッジロケーションはAWSリージョンです。",
+      "エッジロケーションはAmazon CloudFrontで使用されるデータセンターの場所です。",
+      "エッジロケーションはAWSリージョン内のゾーンです。"
+    ]
   },
   {
     "id": 181,
@@ -468,7 +643,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 26
+    "domain_seq": 26,
+    "question_ja": "Amazon S3 に保存された大量のデータを Amazon Elastic MapReduce で分析する必要があります。現在、cc2 8xlarge インスタンスタイプを使用していますが、処理中に CPU の多くがアイドル状態になっています。ジョブの実行時間を短縮し、コスト効率を高めるために最も適切な方法はどれですか？",
+    "choices_ja": [
+      "Amazon S3 上により小さなファイルを多数作成する。",
+      "タスクグループを導入して、cc2 8xlarge インスタンスを追加する。",
+      "より高い総合 I/O パフォーマンスを持つ小型インスタンスを使用する。",
+      "Amazon S3 上により少ない数の大きなファイルを作成する。"
+    ]
   },
   {
     "id": 193,
@@ -486,7 +668,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 27
+    "domain_seq": 27,
+    "question_ja": "In the most recent company meeting, your CEO focused on the fact that everyone in the organization needs to make sure that all of the infrastructure that is built is truly scalable. Which of the following statements is incorrect in reference to scalable architecture?",
+    "choices_ja": [
+      "A scalable service is capable of handling heterogeneity.",
+      "A scalable service is resilient.",
+      "A scalable architecture won't be cost effective as it grows.",
+      "Increasing resources results in a proportional increase in performance."
+    ]
   },
   {
     "id": 204,
@@ -505,7 +694,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 28
+    "domain_seq": 28,
+    "question_ja": "4台の500 GB EBS Provisioned IOPSボリュームをアタッチしたEC2インスタンスを起動しました。このEC2インスタンスはEBS-Optimizedで、EC2とEBS間のスループットは500 Mbpsをサポートしています。4つのEBSボリュームは単一のRAID 0デバイスとして構成されており、それぞれのProvisioned IOPSボリュームは4,000 IOPS（16KBの読み書き）に設定されているため、インスタンス全体で合計16,000のランダムIOPSが得られます。EC2インスタンスは当初、期待通りの16,000 IOPSのランダム読み書き性能を発揮していました。その後、インスタンスの総ランダムI/O性能を向上させるために、さらに2台の500 GB EBS Provisioned IOPSボリュームをRAIDに追加しました。各ボリュームは元の4台と同様に4,000 IOPSに設定されており、EC2インスタンスの合計IOPSは24,000となります。モニタリングでは、EC2インスタンスのCPU使用率が50%から70%に上昇しましたが、インスタンスレベルで測定される総ランダムIOPSは全く増加していません。問題は何であり、有効な解決策は何でしょうか？",
+    "choices_ja": [
+      "より大きなストレージボリュームはより高いProvisioned IOPSをサポートするため、6台のEBSボリュームそれぞれの容量を1TBに増やす。",
+      "EBS-Optimizedのスループットが利用可能な総IOPSを制限しているため、より大きなスループットを提供するEBS-Optimizedインスタンスを使用する。",
+      "小さなブロックサイズが性能低下を引き起こし、I/Oスループットを制限しているため、インスタンスのデバイスドライバーとファイルシステムを64KBブロックに設定してスループットを向上させる。",
+      "標準のEBSインスタンスルートボリュームが総IOPSレートを制限しているため、インスタンスのルートボリュームも500GBで4,000 Provisioned IOPSのボリュームに変更する。",
+      "RAID 0は約4台のデバイスまで線形にスケールするため、4台のEBS Provisioned IOPSボリュームでRAID 0を構成し、各ボリュームのProvisioned IOPSを6,000に増やす。"
+    ]
   },
   {
     "id": 208,
@@ -523,7 +720,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 29
+    "domain_seq": 29,
+    "question_ja": "A web company is looking to implement an intrusion detection and prevention system into their deployed VPC. This platform should have the ability to scale to thousands of instances running inside of the VPC. How should they architect their solution to achieve these goals?",
+    "choices_ja": [
+      "Configure an instance with monitoring software and the elastic network interface (ENI) set to promiscuous mode packet sniffing to see an traffic across the VPC. Configure servers running in the VPC using the host-based 'route' commands to send all traffic through the platform to a scalable virtualized IDS/IP.",
+      "Create a second VPC and route all traffic from the primary application VPC through the second VPC where the scalable virtualized IDS/IPS platform resides.",
+      "Configure servers running in the VPC using the host-based 'route' commands to send all traffic through the platform to a scalable virtualized IDS/IP.",
+      "Configure each host with an agent that collects all network traffic and sends that traffic to the IDS/IPS platform for inspection."
+    ]
   },
   {
     "id": 210,
@@ -541,7 +745,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 30
+    "domain_seq": 30,
+    "question_ja": "Which of the following is not a true statement relating to the performance of your EBS volumes?",
+    "choices_ja": [
+      "Frequent snapshots provide a higher level of data durability and they will not degrade the performance of your application while the snapshot is in progress.",
+      "General Purpose (SSD) and Provisioned IOPS (SSD) volumes have a throughput limit of 128 MB/s per volume.",
+      "There is a relationship between the maximum performance of your EBS volumes, the amount of I/O you are driving to them, and the amount of time it takes for each transaction to complete.",
+      "There is a 5 to 50 percent reduction in IOPS when you first access each block of data on a newly created or restored EBS volume."
+    ]
   },
   {
     "id": 228,
@@ -561,7 +772,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 31
+    "domain_seq": 31,
+    "question_ja": "どのサービスが、基盤となるEC2インスタンスの完全な管理権限を顧客に保持させますか？（2つ選択してください）",
+    "choices_ja": [
+      "Amazon Relational Database Service",
+      "Amazon Elastic MapReduce",
+      "Amazon ElastiCache",
+      "Amazon DynamoDB",
+      "AWS Elastic Beanstalk"
+    ]
   },
   {
     "id": 233,
@@ -579,7 +798,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 32
+    "domain_seq": 32,
+    "question_ja": "VPC で Provisioned IOPS を使用できますか？",
+    "choices_ja": [
+      "Oracle ベースの RDS のみ。",
+      "いいえ。",
+      "MSSQL ベースの RDS のみ。",
+      "すべての RDS インスタンスで使用可能。"
+    ]
   },
   {
     "id": 237,
@@ -597,7 +823,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 33
+    "domain_seq": 33,
+    "question_ja": "Which of the below statements would be an incorrect response to your customers enquiry?",
+    "choices_ja": [
+      "Amazon EMR customers can choose to send data to Amazon S3 using the HTTPS protocol for secure transmission.",
+      "Amazon S3 provides authentication mechanisms to ensure that stored data is secured against unauthorized access.",
+      "Every packet sent in the AWS network uses Internet Protocol Security (IPsec).",
+      "Customers may encrypt the input data before they upload it to Amazon S3."
+    ]
   },
   {
     "id": 241,
@@ -615,7 +848,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 34
+    "domain_seq": 34,
+    "question_ja": "あるAWSの顧客が公開ブログサイトを運営しています。サイトのユーザーは月に200万件のブログ記事をアップロードしており、1記事あたりの平均サイズは200KBです。ブログ記事へのアクセスは公開から6ヶ月後にはほとんどなくなり、1年後にはほとんどアクセスされません。また、ブログ記事は公開後最初の3ヶ月間は更新頻度が高く、その後6ヶ月を過ぎると更新はなくなります。顧客はCloudFrontを使ってユーザーの読み込み時間を改善したいと考えています。どのような提案をしますか？",
+    "choices_ja": [
+      "ブログ記事を2つの異なるバケットに複製し、S3アクセスをCloudFrontのIDに限定した2つのCloudFrontディストリビューションを作成する。",
+      "米国とヨーロッパのユーザー向けに'US'とEuropeの価格クラスを使ったCloudFrontディストリビューションを作成し、その他のユーザー向けに全エッジロケーションを使った別のCloudFrontディストリビューションを作成する。",
+      "S3アクセスをCloudFrontのIDに限定したCloudFrontディストリビューションを作成し、アップロード月ごとにS3内のブログ記事の場所を分割してCloudFrontのビヘイビアで使う。",
+      "CloudFrontディストリビューションを作成し、Restrict Viewer Accessを有効にし、クエリ文字列の転送を有効、最小TTLを0に設定する。"
+    ]
   },
   {
     "id": 245,
@@ -633,7 +873,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 35
+    "domain_seq": 35,
+    "question_ja": "大量のコンテンツを扱う、高いスケーラビリティと信頼性を持つウェブアプリケーションを設計しています。静的および動的なウェブコンテンツの配信を高速化するためにCloudFrontを使用することに決めており、Amazon CloudFrontがAmazon CloudWatchのメトリクスと連携してウェブアプリケーションの監視が可能であることも理解しています。シドニーに住んでいるため、AWSコンソールでアジアパシフィック（シドニー）リージョンを選択しました。しかし設定を行ったにもかかわらず、CloudWatchコンソールにCloudFrontのメトリクスが表示されません。以下の選択肢の中で最も考えられる理由は何でしょうか？",
+    "choices_ja": [
+      "CloudWatchのメトリクスは、監視対象のアプリケーションと同じリージョンを選択した場合にのみ利用可能です。",
+      "CloudWatchを有効にするには料金の支払いが必要です。",
+      "CloudWatchのメトリクスは、米国東部（バージニア）リージョンを選択した場合にのみ利用可能です。",
+      "アジアパシフィックリージョンではまだCloudWatchのメトリクスは利用できません。"
+    ]
   },
   {
     "id": 260,
@@ -651,7 +898,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 36
+    "domain_seq": 36,
+    "question_ja": "あなたの会社は、Amazon Web Services (AWS) 上で大規模な寄付サイトを運営する予定です。大量かつ不確定なトラフィックが予想され、多数のデータベース書き込みが発生します。AWS 上でホストされるデータベースへの書き込みを絶対に失わないようにするには、どのサービスを使うべきでしょうか？",
+    "choices_ja": [
+      "予想されるピーク書き込みスループットに合わせてプロビジョニングされた IOPS を持つ Amazon RDS",
+      "書き込みをキャプチャしてキューを消化しながらデータベースに書き込むための Amazon Simple Queue Service (SQS)",
+      "書き込みがデータベースに確定されるまで書き込みを保持するための Amazon ElastiCache",
+      "予想されるピーク書き込みスループットに合わせてプロビジョニングされた書き込みスループットを持つ Amazon DynamoDB"
+    ]
   },
   {
     "id": 272,
@@ -669,7 +923,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 37
+    "domain_seq": 37,
+    "question_ja": "ユーザーはスケーラブルなウェブアプリケーションを立ち上げる予定です。以下のうち、アプリケーションのレイテンシに影響を与えないものはどれですか？",
+    "choices_ja": [
+      "リージョン",
+      "Provisioned IOPS",
+      "アベイラビリティゾーン",
+      "インスタンスサイズ"
+    ]
   },
   {
     "id": 276,
@@ -688,7 +949,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 38
+    "domain_seq": 38,
+    "question_ja": "アプリケーションのストレージ層の設計を依頼されました。アプリケーションは少なくとも100,000 IOPSのディスク性能を必要としています。さらに、ストレージ層は個別のディスク、EC2インスタンス、またはAvailability Zoneの障害が発生してもデータ損失がないように耐えられなければなりません。提供するボリュームは少なくとも3TBの容量を持つ必要があります。次のうち、これらの要件を満たす設計はどれでしょうか？",
+    "choices_ja": [
+      "us-east-1にc3.8xlargeインスタンスを起動し、4つの1TB EBSボリュームをプロビジョニングしてインスタンスにアタッチし、RAID 5ボリュームとして構成する。15分ごとにEBSスナップショットを取得することを保証する。",
+      "us-east-1にc3.8xlargeインスタンスを起動し、3つの1TB EBSボリュームをプロビジョニングしてインスタンスにアタッチし、RAID 0ボリュームとして構成する。15分ごとにEBSスナップショットを取得することを保証する。",
+      "us-east-1aにi2.8xlargeインスタンスを起動し、インスタンスに付属する4つの800GB SSDエフェメラルディスクでRAID 0ボリュームを作成する。さらに3つの1TB EBSボリュームをプロビジョニングしてインスタンスにアタッチし、別のRAID 0ボリュームとして構成する。エフェメラルディスクのボリュームからEBSボリュームへの同期ブロックレベルレプリケーションを設定する。",
+      "us-east-1にc3.8xlargeインスタンスを起動し、AWS Storage Gatewayをプロビジョニングして3TBのストレージと100,000 IOPSを構成し、インスタンスにボリュームをアタッチする。",
+      "us-east-1aにi2.8xlargeインスタンスを起動し、インスタンスに付属する4つの800GB SSDエフェメラルディスクでRAID 0ボリュームを作成する。us-east-1bに同一構成のインスタンスを用意し、同期ブロックレベルレプリケーションを設定する。"
+    ]
   },
   {
     "id": 289,
@@ -706,7 +975,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 39
+    "domain_seq": 39,
+    "question_ja": "あるゲーム会社がサイトのインフラ構築を依頼してきました。彼らはスタートアップらしく資金は限られていますが、大きなアイデアを持っています。ゲームが成功すれば、過去のゲームのように急速に数百万人のユーザーを獲得し、1秒あたり数万から数十万の読み書きが発生する可能性があります。これらを踏まえ、あなたは高速で予測可能なパフォーマンスを提供し、シームレスにスケールできるフルマネージドのNoSQLデータベースサービスが必要だと判断しました。彼らのニーズに最も適したデータベースはどれでしょうか？",
+    "choices_ja": [
+      "Amazon DynamoDB",
+      "Amazon Redshift",
+      "任意の非リレーショナルデータベース",
+      "Amazon SimpleDB"
+    ]
   },
   {
     "id": 295,
@@ -724,7 +1000,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 40
+    "domain_seq": 40,
+    "question_ja": "EC2 SLA によると、インスタンスが EBS 最適化インスタンスに接続されている場合、ユーザーが年間のほとんどで得られる平均 IOPS はどれくらいですか？",
+    "choices_ja": [
+      "950",
+      "990",
+      "1000",
+      "900"
+    ]
   },
   {
     "id": 303,
@@ -742,7 +1025,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 41
+    "domain_seq": 41,
+    "question_ja": "次のうち、即時にDBインスタンスの再起動が発生するのはどれですか？",
+    "choices_ja": [
+      "ストレージタイプをstandardからPIOPSに変更し、Apply Immediatelyがtrueに設定されている。",
+      "DBインスタンスクラスを変更し、Apply Immediatelyがfalseに設定されている。",
+      "DBパラメータグループの静的パラメータを変更した。",
+      "DBインスタンスのバックアップ保持期間を0から0以外の値に、または0以外の値から0に変更し、Apply Immediatelyがfalseに設定されている。"
+    ]
   },
   {
     "id": 311,
@@ -760,7 +1050,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 42
+    "domain_seq": 42,
+    "question_ja": "A Provisioned IOPS volume must be at least [...] GB in size.",
+    "choices_ja": [
+      "1.",
+      "50.",
+      "20.",
+      "10."
+    ]
   },
   {
     "id": 314,
@@ -778,7 +1075,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 43
+    "domain_seq": 43,
+    "question_ja": "以下のサービスは、Amazon EC2、Amazon SimpleDB、AWS Management Console などの AWS 製品を利用する複数のユーザーやシステムを持つ組織を対象としています。",
+    "choices_ja": [
+      "Amazon RDS",
+      "AWS Integrity Management",
+      "AWS Identity and Access Management",
+      "Amazon EMR"
+    ]
   },
   {
     "id": 315,
@@ -796,7 +1100,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 44
+    "domain_seq": 44,
+    "question_ja": "新しいクライアントから、ペタバイト単位の膨大なデータを常に分析する必要があるという依頼を受けました。現在はデータウェアハウスの会社に多額の費用を支払っていますが、AWSでより安価なソリューションが提供できるか検討しています。AWSにはこのニーズに応えるソリューションはありますか？",
+    "choices_ja": [
+      "はい。Amazon SimpleDBです。",
+      "いいえ。現時点ではありません。",
+      "はい。Amazon Redshiftです。",
+      "はい。Amazon EC2とEBS上のリレーショナルAMIを選択できます。"
+    ]
   },
   {
     "id": 335,
@@ -817,7 +1128,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 45
+    "domain_seq": 45,
+    "question_ja": "ユーザーのページ読み込み時間を改善するにはどうすればよいですか？（3つ選択してください）",
+    "choices_ja": [
+      "Auto Scaling グループのスケールアップトリガーを30%に下げて、より積極的にスケールさせる。",
+      "Amazon ElastiCache のキャッシュレイヤーをアプリケーションに追加し、セッションや頻繁なDBクエリを保存する。",
+      "Amazon CloudFront の動的コンテンツサポートを設定して、再利用可能なサイトのコンテンツをキャッシュできるようにする。",
+      "Amazon RDS のデータベースを高メモリのエクストララージインスタンスタイプに切り替える。",
+      "別のリージョンに2つ目のインストールを設定し、Amazon Route 53 のレイテンシーベースルーティング機能を使って適切なリージョンを選択する。"
+    ]
   },
   {
     "id": 339,
@@ -835,7 +1154,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 46
+    "domain_seq": 46,
+    "question_ja": "広告サーバーのセットアップを終え、Amazon Elastic MapReduce (EMR) をサービスとして選択しましたが、クラスタの状態に関して不審な点がありトラブルシューティングを行っています。以下のうち、Amazon EMR のクラスタ状態として存在しないものはどれですか？",
+    "choices_ja": [
+      "STARTING",
+      "STOPPED",
+      "RUNNING",
+      "WAITING"
+    ]
   },
   {
     "id": 342,
@@ -853,7 +1179,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 47
+    "domain_seq": 47,
+    "question_ja": "新しい導入の条件の一つとして、顧客が AWS Storage Gateway を利用したいと考えています。しかし、gateway-cached ボリュームと gateway-stored ボリュームのどちらを使うべきか、またその違いが何かがわかりません。以下のうち、これらの違いを最もよく説明しているものはどれですか？",
+    "choices_ja": [
+      "Gateway-cached はデータを Amazon Simple Storage Service (Amazon S3) に保存し、頻繁にアクセスされるデータの一部をローカルに保持します。Gateway-stored はオンプレミスのゲートウェイにすべてのデータをローカルに保存し、そのデータのポイントインタイムスナップショットを非同期で Amazon S3 にバックアップします。",
+      "Gateway-cached は無料ですが、gateway-stored は無料ではありません。",
+      "Gateway-cached は gateway-stored より最大10倍高速です。",
+      "Gateway-stored はデータを Amazon Simple Storage Service (Amazon S3) に保存し、頻繁にアクセスされるデータの一部をローカルに保持します。Gateway-cached はオンプレミスのゲートウェイにすべてのデータをローカルに保存し、そのデータのポイントインタイムスナップショットを非同期で Amazon S3 にバックアップします。"
+    ]
   },
   {
     "id": 345,
@@ -871,7 +1204,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 48
+    "domain_seq": 48,
+    "question_ja": "クライアントにデータ分析のための有料データウェアハウスの代替として Amazon Redshift を提案した後、なぜ Redshift を推奨するのか説明してほしいと依頼されました。次のうち、妥当な回答はどれでしょうか？",
+    "choices_ja": [
+      "データ量やクエリの複雑さが増しても高いパフォーマンスを発揮する。",
+      "レポーティングや分析処理が OLTP ワークロードのパフォーマンスに影響を与えないようにする。",
+      "自分でデータウェアハウスを運用し、セットアップ、耐久性、監視、スケーリング、パッチ適用を管理する負担がない。",
+      "上記のすべてが妥当な回答である。"
+    ]
   },
   {
     "id": 348,
@@ -893,7 +1233,16 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 49
+    "domain_seq": 49,
+    "question_ja": "同じリージョン内の複数のアベイラビリティゾーンにまたがってクラスターとして稼働している複数の Amazon EC2 インスタンスがあります。最高のネットワークパフォーマンス（パケット毎秒）、最低のレイテンシ、および最低のジッターを実現するために、次のうちどの組み合わせを使用すべきでしょうか？（3つ選択してください）",
+    "choices_ja": [
+      "Amazon EC2 プレースメントグループ",
+      "強化ネットワーキング",
+      "Amazon PV AMI",
+      "Amazon HVM AMI",
+      "Amazon Linux",
+      "Amazon VPC"
+    ]
   },
   {
     "id": 357,
@@ -911,7 +1260,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 50
+    "domain_seq": 50,
+    "question_ja": "会社のアプリケーションで Auto Scaling を利用するために、ユーザーの状態情報を移動する必要があります。耐久性があり低遅延の共有データストアを提供する AWS サービスはどれですか？",
+    "choices_ja": [
+      "AWS ElastiCache Memcached",
+      "Amazon Simple Storage Service",
+      "Amazon EC2 インスタンスストレージ",
+      "Amazon DynamoDB"
+    ]
   },
   {
     "id": 360,
@@ -930,7 +1286,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 51
+    "domain_seq": 51,
+    "question_ja": "Elastic Beanstalk を使って会社のウェブサイトをデプロイし、ログファイルのローテーションを S3 に設定しました。Elastic MapReduce ジョブが定期的に S3 上のログを解析して、CIO と共有する利用状況ダッシュボードを作成しています。最近、CloudFront を使って動的コンテンツ配信を改善し、ウェブサイトをオリジンに設定して全体のパフォーマンスを向上させました。このアーキテクチャ変更後、利用状況ダッシュボードではウェブサイトのトラフィックが一桁減少していることが示されています。利用状況ダッシュボードを正しく表示するにはどうすればよいでしょうか？",
+    "choices_ja": [
+      "CloudFront のアクセスログ配信を有効にして、それを Elastic MapReduce ジョブの入力として使う。",
+      "CloudTrail を有効にして、S3 上のトレイルログファイルを Elastic MapReduce ジョブの入力として使う。",
+      "ログ収集プロセスを変更し、CloudWatch の ELB メトリクスを Elastic MapReduce ジョブの入力として使う。",
+      "Elastic Beanstalk の「Rebuild Environment」オプションを使って、Elastic MapReduce ジョブへのログ配信を更新する。",
+      "Elastic Beanstalk の「Restart App server(s)」オプションを使って、Elastic MapReduce ジョブへのログ配信を更新する。"
+    ]
   },
   {
     "id": 372,
@@ -948,7 +1312,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 52
+    "domain_seq": 52,
+    "question_ja": "Virtual Private Cloud (VPC) ネットワークを設定した後、経験豊富なクラウドエンジニアから、低いネットワーク遅延と高いネットワークスループットを実現するために placement group の設定を検討すべきだと提案されました。あなたはこのことについて何も知りませんが、調べ始め、特にその制限事項に興味を持ちました。以下のうち、placement group の制限事項の説明として誤っているものはどれですか？",
+    "choices_ja": [
+      "複数のインスタンスタイプを placement group に起動することは可能ですが、必要な容量が確保できる可能性が低くなり、起動が成功しにくくなります。",
+      "placement group は複数の Availability Zone にまたがることができます。",
+      "既存のインスタンスを placement group に移動することはできません。",
+      "placement group はピアリングされた VPC にまたがることができます。"
+    ]
   },
   {
     "id": 380,
@@ -966,7 +1337,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 53
+    "domain_seq": 53,
+    "question_ja": "読み取り専用のニュース報道サイトで、ウェブとアプリケーション層が統合され、データベース層があり、大量かつ予測不可能なトラフィックの変動に自動で対応できる必要があります。これらの要件を満たすために使用すべきAWSサービスはどれですか？",
+    "choices_ja": [
+      "ウェブとアプリケーション層にステートレスインスタンスを使用し、ElastiCache Memcachedで同期、CloudWatchで監視するオートスケーリンググループ。RDSはリードレプリカを使用。",
+      "ウェブとアプリケーション層にステートフルインスタンスを使用し、CloudWatchで監視するオートスケーリンググループ。RDSはリードレプリカを使用。",
+      "ウェブとアプリケーション層にステートフルインスタンスを使用し、CloudWatchで監視するオートスケーリンググループ。RDSはマルチAZ構成。",
+      "ウェブとアプリケーション層にステートレスインスタンスを使用し、ElastiCache Memcachedで同期、CloudWatchで監視するオートスケーリンググループ。RDSはマルチAZ構成。"
+    ]
   },
   {
     "id": 381,
@@ -984,7 +1362,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 54
+    "domain_seq": 54,
+    "question_ja": "Amazon AWS において、次のうちキーペアに関して正しい記述はどれですか？",
+    "choices_ja": [
+      "キーペアは Amazon SDK のみで使用される。",
+      "キーペアは Amazon EC2 と Amazon CloudFront のみで使用される。",
+      "キーペアは Elastic Load Balancing と AWS IA のみで使用される。",
+      "キーペアはすべての Amazon サービスで使用される。"
+    ]
   },
   {
     "id": 382,
@@ -1002,7 +1387,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 55
+    "domain_seq": 55,
+    "question_ja": "Amazon ElastiCache は何を提供しますか？",
+    "choices_ja": [
+      "その名前のサービスは存在しません。おそらく Amazon CloudCache のことを指しているのでは？",
+      "大量のメモリを搭載した仮想サーバー。",
+      "マネージド型のインメモリキャッシュサービス。",
+      "Memcached ソフトウェアがあらかじめインストールされた Amazon EC2 インスタンス。"
+    ]
   },
   {
     "id": 386,
@@ -1020,7 +1412,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 56
+    "domain_seq": 56,
+    "question_ja": "あなたの会社は、ペットの健康的な生活を支援するためにバイオメトリック情報を収集する次世代のペット用首輪を開発中です。各首輪は2秒ごとに30KBのバイオメトリックデータをJSON形式で収集プラットフォームに送信し、そのデータを処理・分析して、健康の傾向情報をウェブポータルを通じてペットの飼い主や獣医師に提供します。経営陣からは、以下の要件を満たす収集プラットフォームの設計を任されています。受信したバイオメトリックデータのリアルタイム分析が可能であること。バイオメトリックデータの処理が高い耐久性、弾力性、並列性を持つこと。分析結果はデータマイニングのために永続化されること。以下のどのアーキテクチャが収集プラットフォームの初期要件を満たしますか？",
+    "choices_ja": [
+      "S3を利用して受信したセンサーデータを収集し、S3から日次スケジュールのData Pipelineでデータを分析し、結果をRedshiftクラスターに保存する。",
+      "Amazon Kinesisを利用して受信したセンサーデータを収集し、Kinesisクライアントでデータを分析し、EMRを使って結果をRedshiftクラスターに保存する。",
+      "SQSを利用して受信したセンサーデータを収集し、Amazon KinesisでSQSからデータを分析し、結果をMicrosoft SQL ServerのRDSインスタンスに保存する。",
+      "EMRを利用して受信したセンサーデータを収集し、Amazon KinesisでEMRからデータを分析し、結果をDynamoDBに保存する。"
+    ]
   },
   {
     "id": 390,
@@ -1038,7 +1437,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 57
+    "domain_seq": 57,
+    "question_ja": "あなたは最近、都市部の騒音と空気質を測定するセンサーを開発するスタートアップに参加しました。現在、約100台のセンサーを使ったパイロット運用を3か月間実施しています。各センサーは毎分1KBのデータをAWS上のバックエンドにアップロードしています。パイロット期間中、データベースのピークIOPSは10で、月平均3GBのセンサーデータをデータベースに保存していました。現在の構成は、EC2インスタンスを使ったロードバランスされたオートスケールのインジェスト層と、500GBの標準ストレージを持つPostgreSQLのRDSデータベースです。パイロットは成功と見なされ、CEOは潜在的な投資家の関心を引くことに成功しました。ビジネスプランでは、少なくとも10万台のセンサーをサポートするバックエンドの展開が必要で、さらにセンサーデータを2年以上保存して年次の改善を比較できるようにする必要があります。資金調達を確実にするために、プラットフォームがこれらの要件を満たし、将来的なスケーリングにも対応できる構成はどれでしょうか？",
+    "choices_ja": [
+      "インジェスト層にSQSキューを追加してRDSへの書き込みをバッファリングする。",
+      "データをDynamoDBテーブルに取り込み、古いデータをRedshiftクラスターに移動する。",
+      "RDSインスタンスを96TBのストレージを持つ6ノードのRedshiftクラスターに置き換える。",
+      "現在のアーキテクチャを維持しつつ、RDSのストレージを3TBに増やし、10,000のプロビジョンドIOPSにアップグレードする。"
+    ]
   },
   {
     "id": 394,
@@ -1056,7 +1462,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 58
+    "domain_seq": 58,
+    "question_ja": "次のうち、Amazon EC2 が提供する機能はどれですか？",
+    "choices_ja": [
+      "Exadata Database Machine、最適化ストレージ管理、フラッシュバック技術、データウェアハウジング。",
+      "インスタンス、Amazon Machine Images (AMIs)、キーペア、Amazon EBS ボリューム、ファイアウォール、Elastic IP アドレス、タグ、Virtual Private Clouds (VPCs)。",
+      "Real Application Clusters (RAC)、Elasticache Machine Images (EMIs)、データウェアハウジング、フラッシュバック技術、動的IPアドレス。",
+      "Exadata Database Machine、Real Application Clusters (RAC)、Data Guard、テーブルおよびインデックスのパーティショニング、Data Pump 圧縮。"
+    ]
   },
   {
     "id": 399,
@@ -1074,7 +1487,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 59
+    "domain_seq": 59,
+    "question_ja": "ゲームサイトのために大量のデータを分析するのにEMRが有効だと判断し、Amazon EMRクラスターをデプロイしました。クラスターのパフォーマンスを監視したい場合、次のうちクラスターのパフォーマンス監視に使用できないツールはどれですか？",
+    "choices_ja": [
+      "Kinesis",
+      "Ganglia",
+      "CloudWatch Metrics",
+      "Hadoop Web Interfaces"
+    ]
   },
   {
     "id": 404,
@@ -1092,7 +1512,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 60
+    "domain_seq": 60,
+    "question_ja": "Amazon EBS ボリュームの詳細なモニタリングデータでは、Provisioned IOPS ボリュームは自動的に何分間隔のメトリクスを Amazon CloudWatch に送信しますか？",
+    "choices_ja": [
+      "5分",
+      "2分",
+      "1分",
+      "3分"
+    ]
   },
   {
     "id": 413,
@@ -1110,7 +1537,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 61
+    "domain_seq": 61,
+    "question_ja": "Amazon EC2 のワーカーインスタンスがアップロードされた音声ファイルを処理し、テキストファイルを生成する自動文字起こしサービスを構築しています。これらのファイルはテキストファイルが取得されるまで同じ耐久性のあるストレージに保存する必要があります。ストレージ容量の要件は不明です。コスト効率が良く、かつスケーラブルなストレージオプションはどれですか？",
+    "choices_ja": [
+      "スナップショット付きの複数の Amazon EBS ボリューム",
+      "単一の Amazon Glacier ボールト",
+      "単一の Amazon S3 バケット",
+      "複数のインスタンスストア"
+    ]
   },
   {
     "id": 447,
@@ -1128,7 +1562,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 62
+    "domain_seq": 62,
+    "question_ja": "これまでCPUの使用率がそれほど高くなかったため、T2インスタンスを使用してきました。しかし、より大きなインスタンスタイプを検討し始め、M1とM3インスタンスを調べています。どちらもCPUとメモリの比率が同じように見えるため、その違いに少し混乱しています。以下のうち、どちらかを選ぶ理由として誤っているものはどれですか？",
+    "choices_ja": [
+      "M3インスタンスはM1インスタンスよりもコストが低い。",
+      "M3インスタンスはM1インスタンスよりも多くのスワップメモリが設定されている。",
+      "M3インスタンスはほとんどのユースケースでM1インスタンスよりも優れた、より安定したパフォーマンスを提供する。",
+      "M3インスタンスはSSDベースのインスタンスストレージを提供し、より高いI/Oパフォーマンスを実現している。"
+    ]
   },
   {
     "id": 451,
@@ -1146,7 +1587,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 63
+    "domain_seq": 63,
+    "question_ja": "大手金融機関が大規模なデータマイニングアプリケーションの構築をあなたの会社に依頼しました。AWS を使うにあたり、最適なサービスとして Amazon Elastic MapReduce (EMR) を選択しました。EMR は Hadoop を使用していることがわかっています。次のうち、Hadoop を最も正確に説明しているものはどれですか？",
+    "choices_ja": [
+      "Hadoop は AMI を使ってインストールできるサードパーティ製ソフトウェアです。",
+      "Hadoop はオープンソースの Python ウェブフレームワークです。",
+      "Hadoop はオープンソースの Java ソフトウェアフレームワークです。",
+      "Hadoop はオープンソースの JavaScript フレームワークです。"
+    ]
   },
   {
     "id": 462,
@@ -1164,7 +1612,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 64
+    "domain_seq": 64,
+    "question_ja": "Placement Groupとは何ですか？",
+    "choices_ja": [
+      "同じリージョン内のAuto Scalingグループの集合体。",
+      "高帯域幅かつ低遅延の接続を通じてEC2インスタンス同士が相互に通信できる機能。",
+      "ディストリビューションのために認可されたCloudFrontエッジロケーションの集合体。",
+      "同じリージョンまたはアベイラビリティゾーン内のElastic Load Balancerの集合体。"
+    ]
   },
   {
     "id": 463,
@@ -1182,7 +1637,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 65
+    "domain_seq": 65,
+    "question_ja": "General Purpose (SSD) と Provisioned IOPS (SSD) ボリュームの負荷を確認したところ、I/O レイテンシが要求より高いようです。アプリケーションがプロビジョニングした IOPS を超えて要求していないか確認するために、[...] をチェックする必要があります。",
+    "choices_ja": [
+      "利用可能な IOPS の量",
+      "ストレージサブシステムからの応答",
+      "平均キュー長",
+      "I/O 操作が完了するまでの時間"
+    ]
   },
   {
     "id": 468,
@@ -1200,7 +1662,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 66
+    "domain_seq": 66,
+    "question_ja": "次のうち、Amazon Elastic Compute Cloud (Amazon EC2) の特徴ではないものはどれですか？",
+    "choices_ja": [
+      "必要に応じて仮想サーバーをいくつでも起動できる。",
+      "静的なクラウドコンピューティングのために動的IPアドレスを提供し、トラフィックの予測の必要性を高める。",
+      "初期のハードウェア投資が不要になり、アプリケーションの開発と展開を迅速化できる。",
+      "Amazon Web Services (AWS) クラウドでスケーラブルなコンピューティング容量を提供する。"
+    ]
   },
   {
     "id": 473,
@@ -1218,7 +1687,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 67
+    "domain_seq": 67,
+    "question_ja": "ある重要なクライアントが、管理にかける時間を最小限に抑えたいと考えているため、ほとんど管理が不要なリレーショナルデータベースサービスを迅速に展開する必要があります。最適なデータベースはどれでしょうか？",
+    "choices_ja": [
+      "Amazon SimpleDB",
+      "Amazon EC2 と Elastic Beanstalk 上のリレーショナル AMI の選択",
+      "Amazon RDS",
+      "Amazon Redshift"
+    ]
   },
   {
     "id": 487,
@@ -1236,7 +1712,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 68
+    "domain_seq": 68,
+    "question_ja": "オンラインゲームサイトの担当者から、新しく構築したいサイト向けに高速で高いスケーラビリティを持つNoSQLデータベースサービスをAWSで展開できるか尋ねられました。どのデータベースを推奨しますか？",
+    "choices_ja": [
+      "Amazon DynamoDB",
+      "Amazon RDS",
+      "Amazon Redshift",
+      "Amazon SimpleDB"
+    ]
   },
   {
     "id": 489,
@@ -1256,7 +1739,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 69
+    "domain_seq": 69,
+    "question_ja": "あなたはモバイル睡眠トラッキングアプリを運営する会社の新しいITアーキテクトです。夜間にアプリが起動すると、5分ごとに1キロバイトのデータポイントをバックエンドに送信します。バックエンドはユーザー認証を行い、データポイントをAmazon DynamoDBテーブルに書き込みます。毎朝、そのテーブルをスキャンして前夜のデータをユーザーごとに集計し、結果をAmazon S3に保存します。ユーザーにはAmazon SNSのモバイルプッシュ通知で新しいデータの利用可能を知らせ、アプリで解析・可視化されます。現在、主に北米に約10万人のユーザーがいます。バックエンドシステムのコスト削減のためにアーキテクチャを最適化するよう求められました。どの対策を推奨しますか？（2つ選択してください）",
+    "choices_ja": [
+      "毎日新しいAmazon DynamoDBテーブルを作成し、前日のデータがAmazon S3に保存された後にそのテーブルを削除する。",
+      "モバイルアプリがAmazon S3に保存されたJSONファイルではなく、直接Amazon DynamoDBにアクセスするようにする。",
+      "Amazon SQSキューを導入してAmazon DynamoDBへの書き込みをバッファリングし、プロビジョニングされた書き込みスループットを削減する。",
+      "Amazon ElastiCacheを導入してAmazon DynamoDBからの読み取りをキャッシュし、プロビジョニングされた読み取りスループットを削減する。",
+      "Amazon DynamoDBとAmazon S3の代わりに、データを直接Amazon Redshiftクラスターに書き込む。"
+    ]
   },
   {
     "id": 490,
@@ -1276,7 +1767,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 70
+    "domain_seq": 70,
+    "question_ja": "EC2上で稼働するアプリケーションから特定のドメインへのアウトバウンドHTTPS接続を制限したい企業のために、URLホワイトリストシステムを実装しています。VPC内のすべてのサブネットおよびEC2インスタンスからのトラフィックを受け入れるように設定したプロキシソフトウェアを単一のEC2インスタンスにデプロイしました。プロキシはホワイトリストに定義されたドメインへのトラフィックのみを通過させるように設定しています。毎晩10分間のメンテナンスウィンドウがあり、その間に全インスタンスが約200MBのソフトウェアアップデートを取得します。VPC内には500台のインスタンスが定期的にアップデートを取得しています。数日後、一部のマシンがメンテナンスウィンドウ内にすべてのアップデートを正常にダウンロードできないことに気づきました。アップデートのダウンロードURLはプロキシのホワイトリストに正しく登録されており、インスタンス上のウェブブラウザから手動でアクセスすることは可能です。何が起きている可能性がありますか？（2つ選択してください）",
+    "choices_ja": [
+      "プロキシを稼働させているEC2インスタンスのタイプが小さすぎて、すべてのインスタンスが時間内にアップデートをダウンロードするのに十分なネットワークスループットが確保できていない。",
+      "十分なサイズのEC2インスタンスでプライベートサブネットにプロキシを配置しているが、NATが小さすぎるEC2インスタンスで動作しており、ネットワークスループットが制限されている。",
+      "影響を受けているEC2インスタンスが存在するサブネットのルートテーブルが、ソフトウェアアップデートの配信先へのネットワークトラフィックをプロキシに向けるように設定されていない。",
+      "プロキシを稼働させているEC2インスタンスに十分なストレージを割り当てておらず、ネットワークバッファが溢れて一部のリクエストが失敗している。",
+      "プロキシをパブリックサブネットで稼働させているが、Internet Gateway（IGW）を通じた必要なネットワークスループットをサポートするためのElastic IPが十分に割り当てられていない。"
+    ]
   },
   {
     "id": 533,
@@ -1296,7 +1795,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 71
+    "domain_seq": 71,
+    "question_ja": "次のうち、Amazon Simple Notification Service がサポートしている通知エンドポイントまたはクライアントはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "メール",
+      "CloudFront ディストリビューション",
+      "ファイル転送プロトコル",
+      "ショートメッセージサービス",
+      "シンプルネットワーク管理プロトコル"
+    ]
   },
   {
     "id": 548,
@@ -1314,7 +1821,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 72
+    "domain_seq": 72,
+    "question_ja": "アメリカ国内の配送トラックのGPS座標を追跡するアプリケーションを展開しています。各配送トラックから3秒ごとに座標が送信されます。複数のコンシューマーからこれらの座標をリアルタイムで処理できるアーキテクチャを設計する必要があります。データの取り込みに使用すべきサービスはどれですか？",
+    "choices_ja": [
+      "Amazon Kinesis",
+      "AWS Data Pipeline",
+      "Amazon AppStream",
+      "Amazon Simple Queue Service"
+    ]
   },
   {
     "id": 566,
@@ -1332,7 +1846,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 73
+    "domain_seq": 73,
+    "question_ja": "ユーザーが写真編集ソフトを作成し、EC2上でホストしています。このソフトはユーザーから写真のフォーマットや解像度に関するリクエストを受け取り、それに応じて写真を加工するためのメッセージをS3に送信します。このシナリオで、AWSのインフラを使ってスケーラブルなソフトウェアを構築するのに役立つAWSサービスはどれですか？",
+    "choices_ja": [
+      "AWS Simple Notification Service",
+      "AWS Simple Queue Service",
+      "AWS Elastic Transcoder",
+      "AWS Glacier"
+    ]
   },
   {
     "id": 570,
@@ -1350,7 +1871,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 74
+    "domain_seq": 74,
+    "question_ja": "非x86ハードウェアに依存しているためオンプレミスでアプリケーションを実行しており、データバックアップにAWSを利用したいと考えています。バックアップアプリケーションはPOSIX互換のブロックベースストレージにのみ書き込み可能です。データは140TBあり、ファイルサーバー上で単一のフォルダとしてマウントしたいです。バックアップ中もユーザーがデータの一部にアクセスできる必要があります。このユースケースに最も適したバックアップソリューションはどれでしょうか？",
+    "choices_ja": [
+      "Storage Gatewayを使用し、Gateway Cachedボリュームとして設定する。",
+      "バックアップソフトウェアを設定して、データバックアップのターゲットにS3を使用する。",
+      "バックアップソフトウェアを設定して、データバックアップのターゲットにGlacierを使用する。",
+      "Storage Gatewayを使用し、Gateway Storedボリュームとして設定する。"
+    ]
   },
   {
     "id": 572,
@@ -1368,7 +1896,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 75
+    "domain_seq": 75,
+    "question_ja": "顧客のウェブサイト上のクリックストリームデータを分析し、行動分析を行う必要があります。顧客は、自分の顧客がどのページや広告をどの順番でクリックしたかを把握したいと考えています。このデータはリアルタイムで使用され、顧客がサイトをクリックして進むにつれてページレイアウトを変更し、滞在時間や広告のクリック率を向上させるために活用されます。どのオプションがこのデータの記録と分析の要件を満たしますか？",
+    "choices_ja": [
+      "URLごとにウェブログにクリックを記録し、Amazon S3に保存してからElastic MapReduceで分析する。",
+      "セッション単位でウェブクリックをAmazon Kinesisに送信し、Kinesisワーカーで行動を分析する。",
+      "クリックイベントを直接Amazon Redshiftに書き込み、SQLで分析する。",
+      "セッション単位でウェブクリックをAmazon SQSキューに公開し、定期的にこれらのイベントをAmazon RDSに取り込み、SQLで分析する。"
+    ]
   },
   {
     "id": 582,
@@ -1386,7 +1921,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 76
+    "domain_seq": 76,
+    "question_ja": "この機能が導入される前は、HA機能は冗長性とパフォーマンスを提供していましたが、故障または失われたグループメンバーを[...]で復旧する必要がありました。",
+    "choices_ja": [
+      "自動的に",
+      "定期的に",
+      "手動で",
+      "継続的に"
+    ]
   },
   {
     "id": 585,
@@ -1404,7 +1946,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 77
+    "domain_seq": 77,
+    "question_ja": "静的アセットを保存するために Amazon Simple Storage Service (S3) バケットを使用するウェブアプリケーションを設計しています。このバケットには1秒あたり150件を超えるPUTリクエストが即座に発生すると予想されます。最適なパフォーマンスを確保するにはどうすればよいですか？",
+    "choices_ja": [
+      "マルチパートアップロードを使用する。",
+      "キー名にランダムなプレフィックスを追加する。",
+      "この規模であれば Amazon S3 が自動的にパフォーマンスを管理する。",
+      "キー名に連番や日時のような予測可能な命名規則を使用する。"
+    ]
   },
   {
     "id": 587,
@@ -1422,7 +1971,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 78
+    "domain_seq": 78,
+    "question_ja": "顧客はオンプレミスに3TBの単一ボリュームを持っており、大量の画像と印刷レイアウトファイルのリポジトリとして使用しています。このリポジトリは年間500GBずつ増加しており、単一の論理ボリュームとして提供する必要があります。顧客はローカルのストレージ容量に制約を感じており、頻繁にアクセスするデータへの低遅延アクセスを維持しつつ、データのオフサイトバックアップを希望しています。どのAWS Storage Gatewayの構成が顧客の要件を満たしますか？",
+    "choices_ja": [
+      "Amazon S3にスナップショットをスケジュールするGateway-Cachedボリューム",
+      "Amazon S3にスナップショットをスケジュールするGateway-Storedボリューム",
+      "Amazon S3にスナップショットを保存するGateway-Virtual Tape Library",
+      "Amazon Glacierにスナップショットを保存するGateway-Virtual Tape Library"
+    ]
   },
   {
     "id": 589,
@@ -1440,7 +1996,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 79
+    "domain_seq": 79,
+    "question_ja": "従来のデータセンターに近い仮想ネットワークを定義するために使用できる Amazon のサービスはどれですか？",
+    "choices_ja": [
+      "Amazon VPC",
+      "Amazon Service Bus",
+      "Amazon EMR",
+      "Amazon RDS"
+    ]
   },
   {
     "id": 605,
@@ -1458,7 +2021,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 80
+    "domain_seq": 80,
+    "question_ja": "ユーザーは US West-1 リージョンでウェブサイトをホスティングしています。このウェブサイトの主要なクライアントはアジアパシフィック（シンガポール／日本）地域にあります。アプリケーションはクライアントにデータを提供する前に S3 からデータを取得しています。以下のうち、S3 オブジェクトのパフォーマンスが最も良いリージョンはどれですか？",
+    "choices_ja": [
+      "日本",
+      "シンガポール",
+      "US East",
+      "US West-1"
+    ]
   },
   {
     "id": 607,
@@ -1476,7 +2046,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 81
+    "domain_seq": 81,
+    "question_ja": "単一の EBS ボリュームを複数の EC2 インスタンスに同時にアタッチできますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。",
+      "高性能な EBS ボリュームの場合のみ。",
+      "インスタンスが米国リージョンにある場合のみ。"
+    ]
   },
   {
     "id": 608,
@@ -1494,7 +2071,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 82
+    "domain_seq": 82,
+    "question_ja": "アプリケーション用にいくつかの EBS ボリュームを計画・設定しています。EBS ボリュームのパフォーマンスを最大限に引き出すためには、ボリュームをサポートできる十分な[...]を持つインスタンスにアタッチする必要があります。",
+    "choices_ja": [
+      "冗長性",
+      "ストレージ",
+      "帯域幅",
+      "メモリ"
+    ]
   },
   {
     "id": 618,
@@ -1512,7 +2096,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 83
+    "domain_seq": 83,
+    "question_ja": "クライアントは、現在のウェブサイトの運用コストを削減するために、専用ホスティングプロバイダーから既存のインフラをAWSに移行したいと考えています。また、バックアップ管理、ソフトウェアのパッチ適用、自動障害検知と復旧を自動化するプロセスも必要としています。現在の環境ではOracleデータベースを使用していることがわかっています。この要件を満たすために最適なAWSのデータベースはどれでしょうか？",
+    "choices_ja": [
+      "Amazon RDS",
+      "Amazon Redshift",
+      "Amazon SimpleDB",
+      "Amazon ElastiCache"
+    ]
   },
   {
     "id": 628,
@@ -1531,7 +2122,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 84
+    "domain_seq": 84,
+    "question_ja": "ノード間のレイテンシーが低いことが求められるコンピュートクラスターのパフォーマンスを最適化するために、どの機能を使用すべきですか？",
+    "choices_ja": [
+      "複数のAvailability Zonesを利用する",
+      "AWS Direct Connectを使用する",
+      "EC2 Dedicated Instancesを利用する",
+      "Placement Groupsを使用する",
+      "VPCのプライベートサブネットを利用する"
+    ]
   },
   {
     "id": 652,
@@ -1549,7 +2148,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 85
+    "domain_seq": 85,
+    "question_ja": "ある企業が Amazon EC2 インスタンスで高性能コンピューティング（HPC）ワークロードを実行する予定です。このワークロードは、低遅延のネットワーク性能と高いネットワークスループット、さらに密接に連携するノード間通信を必要としています。どのソリューションがこれらの要件を満たしますか？",
+    "choices_ja": [
+      "EC2 インスタンスをクラスター配置グループの一部として設定する。",
+      "Dedicated Instance テナンシーで EC2 インスタンスを起動する。",
+      "Spot インスタンスとして EC2 インスタンスを起動する。",
+      "EC2 インスタンス起動時にオンデマンド容量予約を設定する。"
+    ]
   },
   {
     "id": 656,
@@ -1567,7 +2173,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 86
+    "domain_seq": 86,
+    "question_ja": "ある企業がオンプレミスの MySQL データベースを AWS に移行したいと考えています。このデータベースはクライアント向けアプリケーションから定期的にインポートを受け付けており、多数の書き込み操作が発生しています。企業はトラフィックの多さがアプリケーションのパフォーマンス問題を引き起こしているのではないかと懸念しています。ソリューションアーキテクトは AWS 上でどのようにアーキテクチャを設計すべきでしょうか？",
+    "choices_ja": [
+      "Provisioned IOPS SSD ストレージを使用して Amazon RDS for MySQL DB インスタンスをプロビジョニングする。Amazon CloudWatch で書き込み操作のメトリクスを監視し、必要に応じてプロビジョンド IOPS を調整する。",
+      "General Purpose SSD ストレージを使用して Amazon RDS for MySQL DB インスタンスをプロビジョニングする。DB インスタンスの前に Amazon ElastiCache クラスターを配置し、アプリケーションを ElastiCache に問い合わせるように設定する。",
+      "メモリ最適化インスタンスタイプで Amazon DocumentDB（MongoDB 互換）インスタンスをプロビジョニングする。Amazon CloudWatch でパフォーマンス関連の問題を監視し、必要に応じてインスタンスクラスを変更する。",
+      "General Purpose パフォーマンスモードで Amazon Elastic File System (Amazon EFS) ファイルシステムをプロビジョニングする。Amazon CloudWatch で IOPS のボトルネックを監視し、必要に応じて Provisioned Throughput パフォーマンスモードに変更する。"
+    ]
   },
   {
     "id": 660,
@@ -1585,7 +2198,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 87
+    "domain_seq": 87,
+    "question_ja": "AWS 上でアプリケーションを運用している企業が、データベースとして Amazon Aurora DB クラスターを使用しています。複数のユーザーがデータにアクセスして読み取るピーク時間帯に、監視システムで書き込みクエリのデータベース性能が低下していることが確認されました。企業はピーク時の需要に対応できるよう、アプリケーションのスケーラビリティを向上させたいと考えています。最もコスト効果の高い解決策はどれでしょうか？",
+    "choices_ja": [
+      "2つ目の Aurora DB クラスターを作成し、ユーザーデータを新しいデータベースに複製するコピー処理を設定します。アプリケーションを更新して、読み取りには2つ目のデータベースを使用するようにします。",
+      "既存の Aurora DB クラスターの前に Amazon DynamoDB Accelerator (DAX) クラスターを作成します。アプリケーションを更新して読み取り専用クエリに DAX クラスターを使用し、書き込みは直接 Aurora DB クラスターに行います。",
+      "既存の Aurora DB クラスターに Aurora のリードレプリカを作成します。アプリケーションを更新して、読み取り専用クエリにはリードレプリカのエンドポイントを使用し、書き込みクエリにはクラスターのエンドポイントを使用します。",
+      "Amazon Redshift クラスターを作成し、ユーザーデータを Redshift クラスターにコピーします。アプリケーションを更新して Redshift クラスターに接続し、読み取り専用クエリを Redshift クラスターで実行します。"
+    ]
   },
   {
     "id": 667,
@@ -1603,7 +2223,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 88
+    "domain_seq": 88,
+    "question_ja": "ある企業が自社のウェブアプリケーションのコンテンツへのアクセスを制限したいと考えています。企業はAWSで利用可能な認可技術を使ってコンテンツを保護する必要があります。また、認証と認可にサーバーレスアーキテクチャを採用し、ログインの遅延を低く抑えたいと考えています。ソリューションはウェブアプリケーションと統合し、グローバルにウェブコンテンツを配信できる必要があります。現在アプリケーションのユーザー数は少ないですが、将来的に増加する見込みです。これらの要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "認証にAmazon Cognitoを設定し、認可にLambda@Edgeを実装する。Amazon CloudFrontを設定してウェブアプリケーションをグローバルに配信する。",
+      "認証にAWS Directory Service for Microsoft Active Directoryを設定し、認可にAWS Lambdaを実装する。Application Load Balancerを使用してウェブアプリケーションをグローバルに配信する。",
+      "認証にAmazon Cognitoを設定し、認可にAWS Lambdaを実装する。Amazon S3 Transfer Accelerationを使用してウェブアプリケーションをグローバルに配信する。",
+      "認証にAWS Directory Service for Microsoft Active Directoryを設定し、認可にLambda@Edgeを実装する。AWS Elastic Beanstalkを使用してウェブアプリケーションをグローバルに配信する。"
+    ]
   },
   {
     "id": 676,
@@ -1621,7 +2248,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 89
+    "domain_seq": 89,
+    "question_ja": "AWS Organizations を利用している企業が、30 の異なる AWS アカウントで 150 のアプリケーションを運用しています。同社は管理アカウントで AWS Cost and Usage Report を使って新しいレポートを作成しました。このレポートは Amazon S3 バケットに配信され、そのバケットはデータ収集アカウントのバケットにレプリケートされています。同社の上級経営陣は、当月初めから毎日の NAT ゲートウェイのコストを表示するカスタムダッシュボードを見たいと考えています。この要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "要求されたテーブルビジュアルを含む Amazon QuickSight ダッシュボードを共有する。QuickSight を設定して AWS DataSync を使い、新しいレポートをクエリする。",
+      "要求されたテーブルビジュアルを含む Amazon QuickSight ダッシュボードを共有する。QuickSight を設定して Amazon Athena を使い、新しいレポートをクエリする。",
+      "要求されたテーブルビジュアルを含む Amazon CloudWatch ダッシュボードを共有する。CloudWatch を設定して AWS DataSync を使い、新しいレポートをクエリする。",
+      "要求されたテーブルビジュアルを含む Amazon CloudWatch ダッシュボードを共有する。CloudWatch を設定して Amazon Athena を使い、新しいレポートをクエリする。"
+    ]
   },
   {
     "id": 677,
@@ -1641,7 +2275,15 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 90
+    "domain_seq": 90,
+    "question_ja": "ある企業が、Amazon S3 上で高トラフィックの静的ウェブサイトをホスティングしており、Amazon CloudFront のディストリビューションのデフォルトTTLが0秒に設定されています。企業はウェブサイトのパフォーマンス向上のためにキャッシュを導入したいと考えています。ただし、デプロイ後に古いコンテンツが数分以上配信されないようにもしたいと考えています。これらの要件を満たすために、ソリューションアーキテクトはどのキャッシュ方法の組み合わせを実装すべきでしょうか？（2つ選択してください）",
+    "choices_ja": [
+      "CloudFront のデフォルトTTLを2分に設定する。",
+      "S3バケットにデフォルトTTLを2分に設定する。",
+      "Amazon S3 のオブジェクトに Cache-Control の private ディレクティブを追加する。",
+      "AWS Lambda@Edge 関数を作成し、HTTPレスポンスに Expires ヘッダーを追加する。関数はビューワーレスポンス時に実行するよう設定する。",
+      "Amazon S3 のオブジェクトに Cache-Control の max-age を24時間に設定する。デプロイ時に CloudFront の無効化を作成して、エッジキャッシュから変更されたファイルをクリアする。"
+    ]
   },
   {
     "id": 680,
@@ -1659,7 +2301,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 91
+    "domain_seq": 91,
+    "question_ja": "ある企業は、Application Load Balancer の背後にある Amazon EC2 インスタンスで ecommerce アプリケーションを運用しています。これらのインスタンスは複数の Availability Zone にまたがる Amazon EC2 Auto Scaling グループで稼働しており、Auto Scaling グループは CPU 使用率のメトリクスに基づいてスケールします。ecommerce アプリケーションはトランザクションデータを大規模な EC2 インスタンス上でホストされている MySQL 8.0 データベースに保存していますが、アプリケーションの負荷が増加するとデータベースのパフォーマンスが急速に低下します。アプリケーションは書き込みトランザクションよりも読み取りリクエストの方が多く、企業は予測できない読み取り負荷に対応しつつ高可用性を維持できる、自動的にスケールするデータベースソリューションを求めています。どのソリューションがこれらの要件を満たしますか？",
+    "choices_ja": [
+      "リーダーとコンピュート機能を単一ノードで提供する Amazon Redshift を使用する。",
+      "Amazon RDS の Single-AZ 配置を使用し、異なる Availability Zone にリーダーインスタンスを追加するように設定する。",
+      "Amazon Aurora の Multi-AZ 配置を使用し、Aurora レプリカで Aurora Auto Scaling を設定する。",
+      "EC2 Spot インスタンスと共に Amazon ElastiCache for Memcached を使用する。"
+    ]
   },
   {
     "id": 684,
@@ -1677,7 +2326,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 92
+    "domain_seq": 92,
+    "question_ja": "ある企業が、同じAWSリージョン内のテスト環境に大量の本番データをクローンする能力を向上させたいと考えています。データはAmazon Elastic Block Store（Amazon EBS）ボリューム上のAmazon EC2インスタンスに保存されています。クローンしたデータへの変更が本番環境に影響を与えてはなりません。このデータにアクセスするソフトウェアは、一貫して高いI/Oパフォーマンスを必要とします。ソリューションアーキテクトは、本番データをテスト環境にクローンするための時間を最小限に抑える必要があります。どのソリューションがこれらの要件を満たしますか？",
+    "choices_ja": [
+      "本番のEBSボリュームのスナップショットを取得し、テスト環境のEC2インスタンスストアボリュームにスナップショットを復元する。",
+      "本番のEBSボリュームにEBS Multi-Attach機能を設定し、本番EBSボリュームのスナップショットを取得する。本番EBSボリュームをテスト環境のEC2インスタンスにアタッチする。",
+      "本番のEBSボリュームのスナップショットを取得し、新しいEBSボリュームを作成・初期化する。新しいEBSボリュームをテスト環境のEC2インスタンスにアタッチしてから、本番EBSスナップショットから復元する。",
+      "本番のEBSボリュームのスナップショットを取得し、EBS Fast Snapshot Restore機能をスナップショットに対して有効化する。スナップショットを新しいEBSボリュームに復元し、新しいEBSボリュームをテスト環境のEC2インスタンスにアタッチする。"
+    ]
   },
   {
     "id": 696,
@@ -1695,7 +2351,14 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 93
+    "domain_seq": 93,
+    "question_ja": "ある企業がAWS上でオンラインマーケットプレイスのウェブアプリケーションを運用しています。このアプリケーションはピーク時に数十万人のユーザーにサービスを提供しています。企業は数百万件の金融取引の詳細を複数の社内アプリケーションとスケーラブルかつほぼリアルタイムで共有するソリューションを必要としています。取引データは保存前に機密情報を除去して処理し、低レイテンシで取得可能なドキュメントデータベースに格納する必要があります。これらの要件を満たすためにソリューションアーキテクトは何を推奨すべきでしょうか？",
+    "choices_ja": [
+      "取引データをAmazon DynamoDBに保存する。DynamoDBのルールを設定して、書き込み時にすべての取引から機密情報を除去する。DynamoDB Streamsを使って取引データを他のアプリケーションと共有する。",
+      "取引データをAmazon Kinesis Data Firehoseにストリーミングし、Amazon DynamoDBとAmazon S3にデータを保存する。Kinesis Data Firehoseと連携したAWS Lambdaを使って機密情報を除去する。他のアプリケーションはAmazon S3に保存されたデータを利用できる。",
+      "取引データをAmazon Kinesis Data Streamsにストリーミングする。AWS Lambdaを連携させてすべての取引から機密情報を除去し、その後Amazon DynamoDBに取引データを保存する。他のアプリケーションはKinesisデータストリームから取引データを取得できる。",
+      "バッチ処理された取引データをファイルとしてAmazon S3に保存する。AWS Lambdaを使って各ファイルを処理し、機密情報を除去してからAmazon S3のファイルを更新する。Lambda関数はその後データをAmazon DynamoDBに保存する。他のアプリケーションはAmazon S3に保存された取引ファイルを利用できる。"
+    ]
   },
   {
     "id": 710,
@@ -1713,6 +2376,13 @@
     "domain": 3,
     "tags": [],
     "explanation": "",
-    "domain_seq": 94
+    "domain_seq": 94,
+    "question_ja": "あるEC企業が、自社ウェブサイトからユーザーのクリックストリームデータをリアルタイム分析のために収集したいと考えています。ウェブサイトのトラフィックは一日の中で変動があります。同社は変動するトラフィック量に対応できるスケーラブルなソリューションを必要としています。どのソリューションがこれらの要件を満たしますか？",
+    "choices_ja": [
+      "オンデマンドモードのAmazon Kinesis Data Streamsのデータストリームを使ってクリックストリームデータを収集し、AWS Lambdaでリアルタイム処理する。",
+      "Amazon Kinesis Data Firehoseを使ってクリックストリームデータを収集し、AWS Glueでリアルタイム処理する。",
+      "Amazon Kinesis Video Streamsを使ってクリックストリームデータを収集し、AWS Glueでリアルタイム処理する。",
+      "Amazon Managed Service for Apache Flink（旧称Amazon Kinesis Data Analytics）を使ってクリックストリームデータを収集し、AWS Lambdaでリアルタイム処理する。"
+    ]
   }
 ]

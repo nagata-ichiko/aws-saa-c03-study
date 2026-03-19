@@ -15,7 +15,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 1
+    "domain_seq": 1,
+    "question_ja": "どの Amazon S3 の機能セットが、誤ってデータを失うことを防止し、復旧するのに役立ちますか？",
+    "choices_ja": [
+      "オブジェクトのライフサイクル管理とサービスアクセスログ",
+      "オブジェクトのバージョニングと多要素認証",
+      "アクセス制御とサーバー側暗号化",
+      "ウェブサイトホスティングと Amazon S3 ポリシー"
+    ]
   },
   {
     "id": 5,
@@ -34,7 +41,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 2
+    "domain_seq": 2,
+    "question_ja": "単一の VPC 内にある顧客のウェブアプリケーション向けに侵入検知・防止（IDS/IPS）ソリューションを設計しています。インターネットからのトラフィックに対して IDS/IPS 保護を実装する方法として、どの選択肢を検討しますか？（2つ選んでください）",
+    "choices_ja": [
+      "VPC 内の各インスタンスに IDS/IPS エージェントを導入する。",
+      "各サブネットのインスタンスでネットワークインターフェースカードをプロミスキャスモードに切り替え、ネットワークトラフィックを解析する。",
+      "ウェブアプリケーションの前に SSL リスナーを持つ Elastic Load Balancing を導入する。",
+      "ウェブサーバーの前にリバースプロキシ層を設け、各リバースプロキシサーバーに IDS/IPS エージェントを設定する。"
+    ]
   },
   {
     "id": 11,
@@ -51,7 +65,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 3
+    "domain_seq": 3,
+    "question_ja": "IAM に関して、ユーザーのプロパティは後から編集できますが、コンソールを使って変更できないものはどれですか。",
+    "choices_ja": [
+      "ユーザー名",
+      "パスワード",
+      "デフォルトグループ"
+    ]
   },
   {
     "id": 15,
@@ -69,7 +89,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 4
+    "domain_seq": 4,
+    "question_ja": "Amazon VPC のインスタンスを起動した後、そのインスタンスが所属する VPC のセキュリティグループを変更できますか？",
+    "choices_ja": [
+      "タグ 'VPC_Change_Group' が true の場合のみ可能です。",
+      "はい、変更できます。",
+      "いいえ、変更できません。",
+      "タグ 'VPC Change Group' が true の場合のみ可能です。"
+    ]
   },
   {
     "id": 21,
@@ -87,7 +114,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 5
+    "domain_seq": 5,
+    "question_ja": "Elastic Load Balancing など、他の AWS が所有するインターフェースのセキュリティグループのメンバーシップを変更するにはどうすればよいですか？",
+    "choices_ja": [
+      "サービス固有のコンソールまたは API/CLI コマンドを使用する。",
+      "これらのいずれでもない。",
+      "Amazon EC2 の API/CLI を使用する。",
+      "これらすべての方法を使用する。"
+    ]
   },
   {
     "id": 24,
@@ -105,7 +139,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 6
+    "domain_seq": 6,
+    "question_ja": "以下のうち、Amazon CloudFront の料金に影響しないものはどれですか？",
+    "choices_ja": [
+      "ディストリビューションタイプ",
+      "データ転送量（アウト）",
+      "専用IP SSL証明書",
+      "リクエスト数"
+    ]
   },
   {
     "id": 32,
@@ -122,7 +163,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 7
+    "domain_seq": 7,
+    "question_ja": "セキュリティグループはインスタンスレベルでファイアウォールの役割を果たしますが、[...] はサブネットレベルで機能する追加のセキュリティ層です。",
+    "choices_ja": [
+      "DBセキュリティグループ",
+      "VPCセキュリティグループ",
+      "ネットワークACL"
+    ]
   },
   {
     "id": 33,
@@ -140,7 +187,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 8
+    "domain_seq": 8,
+    "question_ja": "重大なセキュリティ侵害を受けた後、組織のパスワードポリシーを強化するよう求められました。あらゆる可能なセキュリティ対策を検討する必要があります。次のうち、IAMユーザーのアカウントパスワードポリシーとして設定できないものはどれですか？",
+    "choices_ja": [
+      "パスワードが期限切れになった場合に、IAMユーザーにアカウント管理者へ連絡させることを強制する。",
+      "パスワードの最小文字数を設定する。",
+      "パスワードを誤って入力した場合に、IAMユーザーにアカウント管理者へ連絡させることを強制する。",
+      "以前に使用したパスワードの再利用を禁止する。"
+    ]
   },
   {
     "id": 39,
@@ -158,7 +212,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 9
+    "domain_seq": 9,
+    "question_ja": "クラウド移行プロジェクトのためにクライアント向けに新しいVPCを設定しています。パブリックVPNのみが利用される予定です。VPCを作成した後、新しいサブネットとインターネットゲートウェイを作成し、インターネットゲートウェイをVPCにアタッチしました。最初のインスタンスをVPCに起動したところ、Elastic IPを設定していてもインスタンスに接続できないことに気づきました。インスタンスにアクセスするためにはどうすればよいでしょうか？",
+    "choices_ja": [
+      "0.0.0.0/0のルートを作成し、ターゲットにインターネットゲートウェイを指定する",
+      "インスタンスに別のENIをアタッチし、新しいENI経由で接続する",
+      "NATインスタンスを作成し、すべてのトラフィックをNATインスタンスに転送する",
+      "すべてのアウトバウンドトラフィックを許可するNACLを作成する"
+    ]
   },
   {
     "id": 42,
@@ -178,7 +239,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 10
+    "domain_seq": 10,
+    "question_ja": "S3 のデータへのアクセスを制限するために使用できる機能はどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "バケットまたはオブジェクトに S3 ACL を設定する",
+      "バケット用に CloudFront ディストリビューションを作成する",
+      "S3 バケットポリシーを設定する",
+      "IAM アイデンティティフェデレーションを有効にする",
+      "S3 バーチャルホスティングを使用する"
+    ]
   },
   {
     "id": 51,
@@ -196,7 +265,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 11
+    "domain_seq": 11,
+    "question_ja": "インスタンスが、すべてのインバウンドトラフィックを許可し、すべてのアウトバウンドトラフィックを拒否するように設定されたネットワークACLのVPCサブネットに起動されました。インスタンスのセキュリティグループは、任意のIPアドレスからのSSHを許可し、すべてのアウトバウンドトラフィックを拒否するように設定されています。インスタンスへのSSHアクセスを可能にするためには、どのような変更が必要ですか？",
+    "choices_ja": [
+      "アウトバウンドのセキュリティグループを変更してアウトバウンドトラフィックを許可する必要がある。",
+      "アウトバウンドのネットワークACLを変更してアウトバウンドトラフィックを許可する必要がある。",
+      "変更は不要で、任意のIPアドレスからS3を使ってアクセスできる。",
+      "アウトバウンドのセキュリティグループとネットワークACLの両方を変更してアウトバウンドトラフィックを許可する必要がある。"
+    ]
   },
   {
     "id": 54,
@@ -216,7 +292,16 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 12
+    "domain_seq": 12,
+    "question_ja": "既存のアプリケーションが、Amazon Elastic Compute Cloud インスタンスにアタッチされたブートボリュームではない Amazon EBS データボリュームに機密情報を保存しています。Amazon EBS ボリューム上の機密データを保護するために適切な方法はどれですか？",
+    "choices_ja": [
+      "カスタマーキーを AWS CloudHSM にアップロードする。",
+      "Amazon EBS ボリュームを AWS CloudHSM に関連付ける。",
+      "Amazon EBS ボリュームを再マウントする。",
+      "新しい暗号化された Amazon EBS ボリュームを作成してマウントし、データを新しいボリュームに移動する。古い Amazon EBS ボリュームを削除する。",
+      "EBS ボリュームのマウントを解除し、暗号化属性を True に切り替えてから再マウントする。",
+      "現在の Amazon EBS ボリュームのスナップショットを作成し、そのスナップショットを新しい暗号化された Amazon EBS ボリュームに復元してマウントする。"
+    ]
   },
   {
     "id": 55,
@@ -234,7 +319,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 13
+    "domain_seq": 13,
+    "question_ja": "ユーザーがUS WestリージョンにEC2インスタンスを1台起動しました。ユーザーはそのEC2インスタンスからUS Eastリージョンに起動したRDSインスタンスにアクセスしたいと考えています。どのようにしてそのEC2インスタンスのアクセスを設定すればよいでしょうか？",
+    "choices_ja": [
+      "RDSのインバウンドセキュリティルールにUS WestリージョンのインスタンスのIPレンジを設定する。",
+      "US WestリージョンからUS EastリージョンのRDSにアクセスすることはできない。",
+      "RDSのセキュリティグループのインバウンドルールにUS Westリージョンのセキュリティグループを追加する。",
+      "RDSにアクセスできるIAMロールを作成し、それを使ってUS Westリージョンにインスタンスを起動する。"
+    ]
   },
   {
     "id": 57,
@@ -252,7 +344,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 14
+    "domain_seq": 14,
+    "question_ja": "Amazon RDS の DB を作成する際、最初に設定するのは、どの IP アドレスや EC2 インスタンスが DB インスタンスにアクセスできるかを制御する DB の何ですか？",
+    "choices_ja": [
+      "セキュリティトークンプール",
+      "セキュリティトークン",
+      "セキュリティプール",
+      "セキュリティグループ"
+    ]
   },
   {
     "id": 61,
@@ -270,7 +369,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 15
+    "domain_seq": 15,
+    "question_ja": "友人がWordPressのウェブサイトをホスティングするのに毎月100ドル請求されていると言い、あなたはAWSに移行すればその一部の料金で済むと伝え、とても喜ばれました。すると、同じ業者で登録しているドメインに毎月50ドルかかっているとも言い、それもAWSに移せるか尋ねられました。あなたは確信が持てないが調べてみると答えました。ドメイン名をAWSに移管することについて正しいのは次のうちどれですか？",
+    "choices_ja": [
+      "既存のドメインをAWSに移管することはできません。",
+      "既存のドメインをAmazon Route 53の管理下に移管できます。",
+      "既存のドメインをAWS Direct Connect経由で移管できます。",
+      "既存のドメインをAWS Import/Export経由で移管できます。"
+    ]
   },
   {
     "id": 66,
@@ -288,7 +394,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 16
+    "domain_seq": 16,
+    "question_ja": "Amazon Elastic Load Balancing は、Amazon EC2 インスタンスのグループに対するトラフィックを管理し、リージョン内のすべてのアベイラビリティゾーンにまたがってトラフィックを分散します。Elastic Load Balancing はオンプレミスのロードバランサーの利点をすべて備えているだけでなく、いくつかのセキュリティ上のメリットもあります。次のうち、ELB がオンプレミスのロードバランサーに対して持たない利点はどれですか？",
+    "choices_ja": [
+      "ELB は暗号化に4層のキー方式アーキテクチャを使用している。",
+      "ELB はクライアントに対して単一の接点を提供し、ネットワークへの攻撃に対する最初の防御線としても機能できる。",
+      "ELB は暗号化と復号化の処理を Amazon EC2 インスタンスから引き継ぎ、ロードバランサー上で集中管理する。",
+      "ELB は HTTPS 接続を使用するネットワークにおいて、TLS（旧 SSL）によるエンドツーエンドのトラフィック暗号化をサポートする。"
+    ]
   },
   {
     "id": 70,
@@ -306,7 +419,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 17
+    "domain_seq": 17,
+    "question_ja": "Amazon SWF における「Domain」とは何を指しますか？",
+    "choices_ja": [
+      "タスク同士だけが通信できるセキュリティグループ",
+      "特別な種類のワーカー",
+      "関連するワークフローの集合",
+      "Amazon SWF サービスの DNS レコード"
+    ]
   },
   {
     "id": 72,
@@ -324,7 +444,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 18
+    "domain_seq": 18,
+    "question_ja": "AWS とやり取りするすべての人やアプリケーションはセキュリティ認証情報が必要です。AWS はこれらの認証情報を使って、誰が呼び出しを行っているかを識別し、要求されたアクセスを許可するかどうかを判断します。クライアントのために VPC ネットワークを設定したばかりで、このネットワークを最も安全に保つ方法を検討しています。vpcsecuritygroup というセキュリティグループを設定しました。このグループに対してデフォルト設定を使用した場合、初期設定として正しいものはどれですか？",
+    "choices_ja": [
+      "すべてのインバウンドトラフィックを許可し、アウトバウンドトラフィックは許可しない",
+      "インバウンドトラフィックを許可せず、すべてのアウトバウンドトラフィックを許可する",
+      "ポート80のインバウンドトラフィックのみ許可し、すべてのアウトバウンドトラフィックを許可する",
+      "すべてのインバウンドトラフィックとすべてのアウトバウンドトラフィックを許可する"
+    ]
   },
   {
     "id": 75,
@@ -342,7 +469,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 19
+    "domain_seq": 19,
+    "question_ja": "ある企業が AWS 上で複数の AWS サービスにアクセスするソフトウェアを構築しています。AWS の認証情報（Access Key ID と Secret Access Key の組み合わせ）が漏洩しないようにするには、どの設定を使用すべきでしょうか？",
+    "choices_ja": [
+      "AWS ルートアカウントに多要素認証を有効化する。",
+      "Amazon EC2 インスタンスに IAM ロールを割り当てる。",
+      "AWS Access Key ID と Secret Access Key の組み合わせをソフトウェアのコメントに保存する。",
+      "Amazon EC2 インスタンスに IAM ユーザーを割り当てる。"
+    ]
   },
   {
     "id": 80,
@@ -362,7 +496,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 20
+    "domain_seq": 20,
+    "question_ja": "パブリック向けのウェブアプリケーションで静的アセットを配信するために、Amazon S3バケットを設定する必要があります。バケットにアップロードされるすべてのオブジェクトをパブリック読み取りに設定する方法として適切なものはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "アップロード時にオブジェクトの権限をパブリック読み取りに設定する。",
+      "バケットのACLを設定してすべてのオブジェクトをパブリック読み取りにする。",
+      "バケットポリシーを設定してすべてのオブジェクトをパブリック読み取りにする。",
+      "AWS Identity and Access Managementのロールを使ってバケットをパブリック読み取りに設定する。",
+      "Amazon S3のオブジェクトはデフォルトでパブリック読み取りなので、特に設定は不要である。"
+    ]
   },
   {
     "id": 86,
@@ -380,7 +522,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 21
+    "domain_seq": 21,
+    "question_ja": "非常に大規模なECサイトの全体的なセキュリティ体制を強化するために採用されました。彼らはVPC内でよく設計されたマルチティアアプリケーションを運用しており、Web層とアプリ層の前にELBを配置し、静的資産は直接S3から配信しています。動的データにはRDSとDynamoDBを組み合わせて使用し、夜間にS3へアーカイブしてEMRでのさらなる処理を行っています。不審なログエントリを発見し、誰かが不正アクセスを試みていると疑っているため、どの方法がこの種の攻撃に対してコスト効果が高くスケーラブルな対策となるでしょうか？",
+    "choices_ja": [
+      "DirectConnectパートナーの施設でスペースを借り、1GのDirectConnect接続をVPCに確立することを推奨します。その後、インターネット接続をそのスペースに設け、ハードウェアのWebアプリケーションファイアウォール（WAF）でトラフィックをフィルタリングし、DirectConnect経由でVPC内のアプリケーションにトラフィックを通します。",
+      "以前に特定された悪意のある送信元IPをWeb層のサブネットに対する明示的なINBOUND DENYのNACLとして追加する。",
+      "新たにELBとホストベースのWAFを実行するEC2インスタンスのAutoScalingグループを作成してWAF層を追加します。Route 53の解決先を新しいWAF層のELBに向け直し、WAF層がトラフィックを現在のWeb層に渡します。Web層のセキュリティグループはWAF層のセキュリティグループからのトラフィックのみ許可するよう更新します。",
+      "Web層のELBからTLS 1.2以外をすべて削除し、高度なプロトコルフィルタリングを有効にします。これによりELB自体がWAF機能を実行できるようになります。"
+    ]
   },
   {
     "id": 87,
@@ -398,7 +547,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 22
+    "domain_seq": 22,
+    "question_ja": "Amazon VPC 内のアプリケーションサーバーのネットワークインフラを設計しています。ユーザーはインターネットおよびオンプレミスネットワークの両方からすべてのアプリケーションインスタンスにアクセスします。オンプレミスネットワークは AWS Direct Connect 接続を介して VPC に接続されています。上記の要件を満たすために、どのようにルーティングを設計しますか？",
+    "choices_ja": [
+      "インターネットゲートウェイ経由のデフォルトルートを持つ単一のルーティングテーブルを設定します。AWS Direct Connect のカスタマールーターで BGP を使ってデフォルトルートを伝播させます。すべての VPC サブネットにこのルーティングテーブルを関連付けます。",
+      "インターネットゲートウェイ経由のデフォルトルートを持つ単一のルーティングテーブルを設定します。AWS Direct Connect のカスタマールーターで BGP を使ってオンプレミスネットワークの特定ルートを伝播させます。すべての VPC サブネットにこのルーティングテーブルを関連付けます。",
+      "インターネットゲートウェイ経由のデフォルトルートと、VPN ゲートウェイ経由のオンプレミスネットワークへのデフォルトルートの2つを持つ単一のルーティングテーブルを設定します。このルーティングテーブルを VPC 内のすべてのサブネットで使用します。",
+      "2つのルーティングテーブルを設定します。1つはインターネットゲートウェイ経由のデフォルトルートを持ち、もう1つはVPNゲートウェイ経由のデフォルトルートを持ちます。両方のルーティングテーブルを各 VPC サブネットに関連付けます。"
+    ]
   },
   {
     "id": 88,
@@ -416,7 +572,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 23
+    "domain_seq": 23,
+    "question_ja": "複数の VPN 接続があり、AWS VPN CloudHub を使ってサイト間の安全な通信を実現したいです。この設定を正しく行うために最も正確な説明はどれですか？",
+    "choices_ja": [
+      "複数のカスタマーゲートウェイを持つ仮想プライベートゲートウェイを作成し、それぞれにユニークな Border Gateway Protocol (BGP) 自律システム番号 (ASN) を割り当てる。",
+      "複数のカスタマーゲートウェイを持つ仮想プライベートゲートウェイを作成し、それぞれにユニークなキーセットを割り当てる。",
+      "複数のカスタマーゲートウェイを持つ仮想パブリックゲートウェイを作成し、それぞれにユニークなプライベートサブネットを割り当てる。",
+      "複数のカスタマーゲートウェイを持つ仮想プライベートゲートウェイを作成し、それぞれにユニークなサブネットIDを割り当てる。"
+    ]
   },
   {
     "id": 89,
@@ -434,7 +597,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 24
+    "domain_seq": 24,
+    "question_ja": "ユーザーは自身のインスタンスで大容量のダウンロードが行われていることを認識しています。すでにネットワークI/Oが一定の閾値を超えた場合にインスタンス数を増やすAuto Scalingポリシーを設定しています。この一時的なイベントがスケーリングを引き起こさないようにするにはどうすればよいでしょうか？",
+    "choices_ja": [
+      "データダウンロード中はネットワークI/Oに影響がない。",
+      "ネットワークI/Oに対してポリシーを設定できない。",
+      "スケーリングはすでに設定されているため、停止する方法はない。",
+      "スケーリングを一時停止する。"
+    ]
   },
   {
     "id": 94,
@@ -452,7 +622,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 25
+    "domain_seq": 25,
+    "question_ja": "A customer needs to capture all client connection information from their load balancer every five minutes. The company wants to use this data for analyzing traffic patterns and troubleshooting their applications. Which of the following options meets the customer requirements?",
+    "choices_ja": [
+      "Enable AWS CloudTrail for the load balancer.",
+      "Enable access logs on the load balancer.",
+      "Install the Amazon CloudWatch Logs agent on the load balancer.",
+      "Enable Amazon CloudWatch metrics on the load balancer."
+    ]
   },
   {
     "id": 103,
@@ -470,7 +647,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 26
+    "domain_seq": 26,
+    "question_ja": "Security Groupとは何ですか？",
+    "choices_ja": [
+      "どれでもない。",
+      "Amazon EC2インスタンスにアクセスできるユーザーのリスト。",
+      "AWSリソースのアクセスコントロールリスト（ACL）。",
+      "すべてのAmazon EC2インスタンスに標準で設定されている、インバウンドトラフィック用のファイアウォール。"
+    ]
   },
   {
     "id": 104,
@@ -488,7 +672,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 27
+    "domain_seq": 27,
+    "question_ja": "機密情報を保護するために、新たに構築した Amazon Relational Database Service (RDS) に対して高いレベルのセキュリティを設定する必要があります。RDS が使用する可能性のあるセキュリティグループはどれですか？",
+    "choices_ja": [
+      "DB セキュリティグループ、VPC セキュリティグループ、および EC2 セキュリティグループ",
+      "DB セキュリティグループのみ",
+      "EC2 セキュリティグループのみ",
+      "VPC セキュリティグループと EC2 セキュリティグループ"
+    ]
   },
   {
     "id": 107,
@@ -508,7 +699,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 28
+    "domain_seq": 28,
+    "question_ja": "顧客は、各部門が消費するすべてのAWSリソースに対して、企業のITガバナンスとコスト管理を必要としています。各部門は、自分たちが利用するAWSリソースの管理権限を維持し、他の部門のリソースと分離したままにしたいと考えています。部門の自律性と管理権限を保ちつつ、企業のITがガバナンスとコスト管理を行うために、次のうちどの組み合わせが適切でしょうか？（2つ選択してください）",
+    "choices_ja": [
+      "AWS Consolidated Billingを使用し、子アカウントのAWSルートアカウントアクセスを無効にする。",
+      "各子アカウントのすべての企業IT管理者に対してIAMのクロスアカウントアクセスを有効にする。",
+      "企業ITのAWSアカウント内に各部門用の個別VPCを作成する。",
+      "AWS Consolidated Billingを使って、部門のアカウントを親の企業アカウントにリンクする。",
+      "すべての子アカウントのAWS CloudTrailおよびAmazon CloudWatchログを、それぞれの子アカウントのAmazon S3の「Log」バケットに書き込む。"
+    ]
   },
   {
     "id": 108,
@@ -526,7 +725,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 29
+    "domain_seq": 29,
+    "question_ja": "新しい IAM ユーザーを作成した後、そのユーザーが正常に API コールを行うために事前に行う必要があるのはどれですか？",
+    "choices_ja": [
+      "ユーザーにパスワードを設定する",
+      "ユーザーに多要素認証を有効にする",
+      "ユーザーにパスワードポリシーを割り当てる",
+      "ユーザーのためにアクセスキーを作成する"
+    ]
   },
   {
     "id": 109,
@@ -544,7 +750,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 30
+    "domain_seq": 30,
+    "question_ja": "友人がAmazon S3上に小さなBitTorrentストレージエリアを作ってほしいと言っています。あなたは、AWSのインフラでそのようなことが許可される可能性は非常に低いと伝えました。しかし調査することにしました。次のうち、Amazon S3でBitTorrentを使用することについて最も適切に説明しているものはどれですか？",
+    "choices_ja": [
+      "Amazon S3はBitTorrentプロトコルをサポートしていません。なぜならそれは海賊版ソフトウェアに使われるためです。",
+      "BitTorrentプロトコルは使用できますが、オブジェクトのサイズが100GB未満の場合に限ります。",
+      "BitTorrentプロトコルは使用できますが、事前にAWSに特別な許可を求める必要があります。",
+      "BitTorrentプロトコルは使用できますが、オブジェクトのサイズが5GB未満の場合に限ります。"
+    ]
   },
   {
     "id": 110,
@@ -561,7 +774,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 31
+    "domain_seq": 31,
+    "question_ja": "IAM のポリシー評価ロジックは、AWS アカウントのルートセキュリティ認証情報を使用するリクエストを除き、すべてのリクエストに対してデフォルトでどのような状態から開始しますか？",
+    "choices_ja": [
+      "許可",
+      "拒否",
+      "キャンセル"
+    ]
   },
   {
     "id": 114,
@@ -581,7 +800,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 32
+    "domain_seq": 32,
+    "question_ja": "企業のウェブアプリケーションが Amazon Virtual Private Cloud (VPC) 内に展開されており、IPsec VPN を介して企業のデータセンターに接続されています。このアプリケーションはオンプレミスの LDAP サーバーで認証を行う必要があります。認証後、ログインした各ユーザーはそのユーザー固有の Amazon Simple Storage Service (S3) のキー空間にのみアクセスできます。これらの要件を満たすために適切な方法はどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "IAM Security Token Service に対して認証を行い、IAM ロールを引き受けて一時的な AWS セキュリティ認証情報を取得するアイデンティティブローカーを開発する。アプリケーションはアイデンティティブローカーを呼び出して、適切な S3 バケットにアクセスできる一時的な AWS セキュリティ認証情報を取得する。",
+      "アプリケーションが LDAP で認証し、ユーザーに関連付けられた IAM ロール名を取得する。アプリケーションは IAM Security Token Service を呼び出してその IAM ロールを引き受ける。一時的な認証情報を使って適切な S3 バケットにアクセスできる。",
+      "LDAP で認証を行い、その後 IAM Security Token Service を呼び出して IAM フェデレーテッドユーザーの認証情報を取得するアイデンティティブローカーを開発する。アプリケーションはアイデンティティブローカーを呼び出して、適切な S3 バケットにアクセスできる IAM フェデレーテッドユーザーの認証情報を取得する。",
+      "アプリケーションが LDAP で認証を行う。その後、AWS Identity and Access Management (IAM) Security Token Service を呼び出して LDAP 認証情報を使って IAM にログインする。一時的な IAM 認証情報を使って適切な S3 バケットにアクセスできる。",
+      "アプリケーションが LDAP 認証情報を使って IAM Security Token Service に認証を行う。その一時的な AWS セキュリティ認証情報を使って適切な S3 バケットにアクセスする。"
+    ]
   },
   {
     "id": 118,
@@ -599,7 +826,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 33
+    "domain_seq": 33,
+    "question_ja": "インターネットサービスプロバイダーを経由せずに直接AWSへデータを転送することでコストを節約するために、オンプレミスからAWSへの専用ネットワーク接続を確立したいと考えています。コスト削減以外にも何かメリットがあるはずです。クライアントの不安を解消するために最も適切な説明はどれでしょうか？",
+    "choices_ja": [
+      "同じ物理マシン上で動作する異なるインスタンスは、256ビットのAdvanced Encryption Standard（AES-256）によって相互に隔離されています。",
+      "同じ物理マシン上で動作する異なるインスタンスは、Xenハイパーバイザーと256ビットのAdvanced Encryption Standard（AES-256）によって相互に隔離されています。",
+      "同じ物理マシン上で動作する異なるインスタンスは、Xenハイパーバイザーによって相互に隔離されています。",
+      "同じ物理マシン上で動作する異なるインスタンスは、IAMの権限によって相互に隔離されています。"
+    ]
   },
   {
     "id": 120,
@@ -617,7 +851,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 34
+    "domain_seq": 34,
+    "question_ja": "プライマリのプライベートIPアドレスが割り当てられたAmazon Elastic Compute Cloud（EC2）インスタンスをパブリックサブネットに起動しました。VPCにはインターネットゲートウェイがアタッチされており、パブリックルートテーブルはすべてのインターネット向けトラフィックをインターネットゲートウェイに送るように設定されています。インスタンスのセキュリティグループはすべてのアウトバウンドトラフィックを許可していますが、インターネットにアクセスできません。このインスタンスからインターネットに接続できない理由は何ですか？",
+    "choices_ja": [
+      "インスタンスにパブリックIPアドレスが割り当てられていない。",
+      "インターネットゲートウェイのセキュリティグループで全てのアウトバウンドトラフィックを許可する必要がある。",
+      "インスタンスのセキュリティグループで全てのインバウンドトラフィックを許可する必要がある。",
+      "インスタンスの「ソース/宛先チェック」プロパティを有効にする必要がある。"
+    ]
   },
   {
     "id": 128,
@@ -635,7 +876,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 35
+    "domain_seq": 35,
+    "question_ja": "Amazon EC2 のポリシーステートメントでリソースを指定する際、そのリソースの Amazon Resource Name (ARN) を使うことはできますか？",
+    "choices_ja": [
+      "はい、可能です。",
+      "いいえ、できません。EC2 は ARN に関連していないためです。",
+      "いいえ、できません。IAM ポリシーで特定の Amazon EC2 リソースを指定できないためです。",
+      "はい、可能ですが、アクションに影響を受けないリソースに限られます。"
+    ]
   },
   {
     "id": 129,
@@ -653,7 +901,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 36
+    "domain_seq": 36,
+    "question_ja": "ある企業がサードパーティのSaaSアプリケーションを利用したいと考えています。このSaaSアプリケーションは、企業のアカウント内で稼働しているAmazon EC2リソースを検出するために、いくつかのAPIコマンドを発行する必要があります。企業の内部セキュリティポリシーでは、外部からのアクセスは最小権限の原則に従うこと、またSaaSベンダーが使用する認証情報が他の第三者に利用されないように管理が必要とされています。これらの条件をすべて満たす方法として適切なのはどれでしょうか？",
+    "choices_ja": [
+      "AWS Management Consoleからセキュリティ認証情報ページに移動し、自分のアカウントのアクセスキーとシークレットキーを取得する。",
+      "企業アカウント内にIAMユーザーを作成し、SaaSアプリケーションに必要な操作のみを許可するユーザーポリシーを割り当て、そのユーザー用の新しいアクセスキーとシークレットキーを作成してSaaSプロバイダーに提供する。",
+      "クロスアカウントアクセス用のIAMロールを作成し、SaaSプロバイダーのアカウントがそのロールを引き受けられるようにし、SaaSアプリケーションに必要な操作のみを許可するポリシーを割り当てる。",
+      "EC2インスタンス用のIAMロールを作成し、SaaSアプリケーションが動作するために必要な操作のみを許可するポリシーを割り当てる。ロールのARNをSaaSプロバイダーに提供し、アプリケーションインスタンス起動時に使用してもらう。"
+    ]
   },
   {
     "id": 142,
@@ -671,7 +926,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 37
+    "domain_seq": 37,
+    "question_ja": "Auto Scaling グループで作成される新しい Amazon Linux インスタンスにカスタムスクリプトを渡す必要があります。どの機能を使えばこれを実現できますか？",
+    "choices_ja": [
+      "ユーザーデータ",
+      "EC2Config サービス",
+      "IAM ロール",
+      "AWS Config"
+    ]
   },
   {
     "id": 143,
@@ -689,7 +951,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 38
+    "domain_seq": 38,
+    "question_ja": "顧客は自分の Amazon Simple Storage Service (S3) バケットへのアクセスを追跡し、この情報を社内のセキュリティおよびアクセス監査にも利用したいと考えています。どの方法が顧客の要件を満たしますか？",
+    "choices_ja": [
+      "すべての Amazon S3 バケットアクセスを監査するために AWS CloudTrail を有効化する。",
+      "必要なすべての Amazon S3 バケットでサーバーアクセスログを有効化する。",
+      "AWS 請求を通じてアクセスを追跡するために Requester Pays オプションを有効化する。",
+      "Put および Post のために Amazon S3 イベント通知を有効化する。"
+    ]
   },
   {
     "id": 145,
@@ -707,7 +976,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 39
+    "domain_seq": 39,
+    "question_ja": "ある AWS 顧客が、Auto Scaling グループで構成された EC2 インスタンスのアプリケーションを展開しています。顧客のセキュリティポリシーでは、これらのインスタンスから顧客の Virtual Private Cloud 内の他のサービスへのすべてのアウトバウンド接続に対して、特定の instance-id を含むユニークな x.509 証明書を使った認証が必要です。さらに、x.509 証明書は認証に信頼されるために顧客の Key Management Service によって発行されなければなりません。これらの要件を満たすために適切な構成はどれでしょうか？",
+    "choices_ja": [
+      "Amazon S3 に署名済み証明書を含むオブジェクトへのアクセスを許可する IAM ロールを設定し、Auto Scaling グループがこのロールでインスタンスを起動するように設定する。インスタンスは初回起動時に Amazon S3 から証明書を取得するようにする。",
+      "Auto Scaling グループで使用する Amazon Machine Image に証明書を埋め込む。起動したインスタンスは、割り当てられた instance-id を使って Key Management Service に証明書署名要求を生成する。",
+      "Auto Scaling グループが新しいインスタンスの起動時に SNS 通知を信頼された Key Management Service に送信するよう設定する。Key Management Service は署名済み証明書を生成し、新しく起動したインスタンスに直接送信する。",
+      "起動したインスタンスが初回起動時に新しい証明書を生成するよう設定する。Key Management Service は Auto Scaling グループの関連インスタンスをポーリングし、新しいインスタンスに特定の instance-id を含む証明書署名を送信する。"
+    ]
   },
   {
     "id": 146,
@@ -729,7 +1005,16 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 40
+    "domain_seq": 40,
+    "question_ja": "ある企業が Amazon Simple Storage Service (S3) にデータを保存しています。同社のセキュリティポリシーでは、保存データの暗号化が義務付けられています。これを実現する方法として適切なものはどれでしょうか？（3つ選択してください）",
+    "choices_ja": [
+      "AWS Key Management Service 管理キーを使用した Amazon S3 のサーバーサイド暗号化を利用する。",
+      "顧客提供のキーを使用した Amazon S3 のサーバーサイド暗号化を利用する。",
+      "EC2 キーペアを使用した Amazon S3 のサーバーサイド暗号化を利用する。",
+      "Amazon S3 バケットポリシーで保存データへのアクセスを制限する。",
+      "独自のマスターキーを使ってクライアント側でデータを暗号化してから Amazon S3 に取り込む。",
+      "Amazon S3 への転送中のデータを SSL で暗号化する。"
+    ]
   },
   {
     "id": 148,
@@ -747,7 +1032,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 41
+    "domain_seq": 41,
+    "question_ja": "以下の選択肢のうち、セキュリティ上の脅威を回避するための可能な解決策はどれですか？",
+    "choices_ja": [
+      "AWSリソースと組織のアプリケーション間でIAMベースのシングルサインオンを使用する。",
+      "IAMロールを使用し、それをインスタンスに割り当てる。",
+      "アプリケーションがEC2上でホストされているため、S3にアクセスするための認証情報は不要である。",
+      "アクセスキーとシークレットアクセスキーの代わりに509証明書を使用する。"
+    ]
   },
   {
     "id": 150,
@@ -765,7 +1057,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 42
+    "domain_seq": 42,
+    "question_ja": "開発（Dev）環境とテスト環境をAWSに移行しようとしています。各環境をホストするために別々のAWSアカウントを使用することにしました。各アカウントの請求をマスターAWSアカウントに統合請求（Consolidated Billing）でリンクする予定です。予算内に収めるために、マスターアカウントの管理者がDevおよびTestアカウントのリソースを停止、削除、または終了できるようにしたいと考えています。この目的を達成するために適切な方法はどれですか？",
+    "choices_ja": [
+      "マスターアカウントにフル管理者権限を持つIAMユーザーを作成し、DevおよびTestアカウントにクロスアカウントロールを作成して、マスターアカウントからの権限を継承してリソースへのアクセスを許可する。",
+      "マスターアカウントにIAMユーザーとクロスアカウントロールを作成し、DevおよびTestアカウントにフル管理者権限を付与する。",
+      "マスターアカウントにIAMユーザーを作成し、DevおよびTestアカウントにフル管理者権限を持つクロスアカウントロールを作成してマスターアカウントに権限を付与する。",
+      "アカウントを統合請求でリンクする。これによりマスターアカウントのIAMユーザーがDevおよびTestアカウントのリソースにアクセスできるようになる。"
+    ]
   },
   {
     "id": 152,
@@ -783,7 +1082,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 43
+    "domain_seq": 43,
+    "question_ja": "顧客は、企業ネットワークに接続されていない仮想プライベートクラウド（VPC）内でマルチティアのウェブアプリケーションファームを運用しています。彼らはインターネット経由でVPCに接続し、パブリックおよびプライベートサブネットで稼働するすべてのAmazon EC2インスタンスを管理しています。アプリケーションインスタンスのセキュリティグループには、Microsoft Remote Desktop Protocol（RDP）アクセスを許可したbastion-security-groupのみが認可されていますが、会社はVPC内のすべてのインスタンスへの管理アクセスをさらに制限したいと考えています。この要件を満たすBastionの展開シナリオはどれでしょうか？",
+    "choices_ja": [
+      "企業ネットワーク上にWindows Bastionホストを展開し、VPC内のすべてのインスタンスへのRDPアクセスを許可する。",
+      "パブリックサブネットにElastic IPアドレスを持つWindows Bastionホストを展開し、どこからでもBastionへのSSHアクセスを許可する。",
+      "プライベートサブネットにElastic IPアドレスを持つWindows Bastionホストを展開し、BastionへのRDPアクセスを企業のパブリックIPアドレスのみに制限する。",
+      "パブリックサブネットに自動割り当てのパブリックIPアドレスを持つWindows Bastionホストを展開し、BastionへのRDPアクセスを企業のパブリックIPアドレスのみに許可する。"
+    ]
   },
   {
     "id": 154,
@@ -801,7 +1107,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 44
+    "domain_seq": 44,
+    "question_ja": "ある企業が人気テレビ番組の投票システムを構築しています。視聴者はパフォーマンスを見た後、番組のウェブサイトにアクセスしてお気に入りの出演者に投票します。番組終了後の短時間で数百万の訪問者がサイトにアクセスすると予想されています。訪問者はまずAmazon.comの認証情報でログインし、その後投票を行います。投票終了後、ページには投票結果の合計が表示されます。企業は急激なアクセス増加に対応しつつ高いパフォーマンスを維持し、かつコストを最小限に抑えたいと考えています。どの設計パターンを採用すべきでしょうか？",
+    "choices_ja": [
+      "CloudFrontとElastic Load Balancerを、オートスケールするウェブサーバー群の前に配置します。ウェブサーバーはまずLogin With Amazonサービスを呼び出してユーザー認証を行い、その後ユーザーの投票を処理し、結果をマルチAZ構成のRelational Database Serviceインスタンスに保存します。",
+      "CloudFrontとS3の静的ウェブサイトホスティング機能を使用し、Javascript SDKでLogin With Amazonサービスを呼び出してユーザー認証を行います。IAMロールを使ってDynamoDBテーブルへのアクセス権限を取得し、ユーザーの投票を保存します。",
+      "CloudFrontとElastic Load Balancerを、オートスケールするウェブサーバー群の前に配置します。ウェブサーバーはまずLogin With Amazonサービスを呼び出してユーザー認証を行い、その後ユーザーの投票を処理し、IAMロールを使ってDynamoDBテーブルへのアクセス権限を取得し、結果をDynamoDBテーブルに保存します。",
+      "CloudFrontとElastic Load Balancerを、オートスケールするウェブサーバー群の前に配置します。ウェブサーバーはまずLogin With Amazonサービスを呼び出してユーザー認証を行い、その後ユーザーの投票を処理し、IAMロールを使ってSQSキューへのアクセス権限を取得し、結果をSQSキューに保存します。アプリケーションサーバー群がキューから項目を取得し、結果をDynamoDBテーブルに保存します。"
+    ]
   },
   {
     "id": 155,
@@ -820,7 +1133,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 45
+    "domain_seq": 45,
+    "question_ja": "写真共有のモバイルアプリを設計しています。アプリケーションはすべての写真を単一のAmazon S3バケットに保存します。ユーザーはモバイル端末から直接Amazon S3に写真をアップロードし、自分の写真を直接Amazon S3から閲覧およびダウンロードできます。数百万のユーザーを最も安全な方法で扱うためにセキュリティを設定したいと考えています。写真共有モバイルアプリに新しいユーザーが登録したとき、サーバー側のアプリケーションは何をすべきでしょうか？",
+    "choices_ja": [
+      "IAMユーザーを作成し、バケットポリシーにそのIAMユーザー用の適切な権限を追加します。IAMユーザーのアクセスキーとシークレットキーを生成し、モバイルアプリに保存してこれらの認証情報を使ってAmazon S3にアクセスします。",
+      "IAMユーザーを作成し、適切な権限を割り当てます。IAMユーザーのアクセスキーとシークレットキーを生成し、モバイルアプリに保存してこれらの認証情報を使ってAmazon S3にアクセスします。",
+      "AWS Security Token Serviceを使って適切な権限を持つ長期認証情報を作成します。これらの認証情報をモバイルアプリに保存し、Amazon S3へのアクセスに使用します。",
+      "ユーザー情報をAmazon RDSに記録し、IAMで適切な権限を持つロールを作成します。ユーザーがモバイルアプリを使用するときに、AWS Security Token ServiceのAssumeRole機能を使って一時的な認証情報を作成します。これらの認証情報をモバイルアプリのメモリに保存し、Amazon S3へのアクセスに使用します。次回ユーザーがアプリを起動した際に新しい認証情報を生成します。",
+      "ユーザー情報をAmazon DynamoDBに記録します。ユーザーがモバイルアプリを使用するときに、AWS Security Token Serviceを使って適切な権限を持つ一時的な認証情報を作成します。これらの認証情報をモバイルアプリのメモリに保存し、Amazon S3へのアクセスに使用します。次回ユーザーがアプリを起動した際に新しい認証情報を生成します。"
+    ]
   },
   {
     "id": 156,
@@ -838,7 +1159,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 46
+    "domain_seq": 46,
+    "question_ja": "ユーザーが所属できるグループの数に制限はありますか？",
+    "choices_ja": [
+      "0. すべてのユーザーに制限がある。",
+      "1. rootユーザーを除くすべてのユーザーに制限がある。",
+      "2. いいえ、制限はない。",
+      "3. 特別な権限が付与されていない限り制限がある。"
+    ]
   },
   {
     "id": 159,
@@ -856,7 +1184,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 47
+    "domain_seq": 47,
+    "question_ja": "・・・は、1つ以上の権限を正式に記述したドキュメントです。",
+    "choices_ja": [
+      "ポリシー",
+      "権限",
+      "ロール",
+      "リソース"
+    ]
   },
   {
     "id": 161,
@@ -874,7 +1209,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 48
+    "domain_seq": 48,
+    "question_ja": "グループの数に制限はありますか？",
+    "choices_ja": [
+      "ルートユーザー以外のすべてのユーザーに制限があります。",
+      "いいえ、制限はありません。",
+      "特別な許可がない限り制限があります。",
+      "すべてのユーザーに制限があります。"
+    ]
   },
   {
     "id": 164,
@@ -892,7 +1234,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 49
+    "domain_seq": 49,
+    "question_ja": "主要な顧客から、災害発生時に迅速に復旧できるようにAWSインフラを構築してほしいと依頼されました。Amazon EC2のセキュリティグループに関して正しい記述はどれですか？",
+    "choices_ja": [
+      "迅速な復旧が必要な重要なサーバーのAMIを作成・管理する。",
+      "サーバーを定期的に稼働させ、テストし、ソフトウェアの更新や設定変更を適用する。",
+      "AWS内で利用するすべてのカスタムソフトウェアパッケージを用意しておく。",
+      "災害復旧を考える際には、ここに挙げたすべての項目が重要である。"
+    ]
   },
   {
     "id": 165,
@@ -910,7 +1259,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 50
+    "domain_seq": 50,
+    "question_ja": "Amazon EC2 Security Groups（EC2-Classic）について正しい記述を選んでください。",
+    "choices_ja": [
+      "EC2-Classicでインスタンスを起動した後は、そのセキュリティグループを変更できない。",
+      "EC2-Classicでインスタンスを起動した後は、そのセキュリティグループを一度だけ変更できる。",
+      "EC2-Classicでインスタンスを起動した後は、セキュリティグループにルールを追加することだけが可能である。",
+      "EC2-Classicでインスタンスを起動した後は、セキュリティグループのルールを追加も削除もできない。"
+    ]
   },
   {
     "id": 168,
@@ -928,7 +1284,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 51
+    "domain_seq": 51,
+    "question_ja": "複数の稼働中の EC2 インスタンスが属する EC2 セキュリティグループがあります。セキュリティグループのルールを変更して、新しいポートとプロトコルでのインバウンドトラフィックを許可し、同じセキュリティグループ内に新しいインスタンスをいくつか起動しました。新しいルールはいつ適用されますか？",
+    "choices_ja": [
+      "セキュリティグループ内のすべてのインスタンスに即時適用される。",
+      "新しいインスタンスにのみ即時適用される。",
+      "新しいインスタンスには即時適用されるが、既存のインスタンスは停止して再起動しないと新しいルールが適用されない。",
+      "すべてのインスタンスに適用されるが、既存のインスタンスが変更を反映するまで数分かかる場合がある。"
+    ]
   },
   {
     "id": 172,
@@ -946,7 +1309,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 52
+    "domain_seq": 52,
+    "question_ja": "You have set up an S3 bucket with a number of images in it and you have decided that you want anybody to be able to access these images, even anonymous users. To accomplish this you create a bucket policy. You will need to use an Amazon S3 bucket policy that specifies a [...] in the principal element, which means anyone can access the bucket.",
+    "choices_ja": [
+      "hash tag (#).",
+      "anonymous user.",
+      "wildcard (*).",
+      "S3 user."
+    ]
   },
   {
     "id": 173,
@@ -966,7 +1336,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 53
+    "domain_seq": 53,
+    "question_ja": "You try to connect via SSH to a newly created Amazon EC2 instance and get one of the following error messages: 'Network error: Connection timed out' or 'Error connecting to [instance], reason: -> Connection timed out: connect,' You have confirmed that the network and security group rules are configured correctly and the instance is passing status checks. What steps should you take to identify the source of the behavior? (Choose 2 answers)",
+    "choices_ja": [
+      "Verify that the private key file corresponds to the Amazon EC2 key pair assigned at launch.",
+      "Verify that your IAM user policy has permission to launch Amazon EC2 instances.",
+      "Verify that you are connecting with the appropriate user name for your AMI.",
+      "Verify that the Amazon EC2 Instance was launched with the proper IAM role.",
+      "Verify that your federation trust to AWS has been established."
+    ]
   },
   {
     "id": 175,
@@ -984,7 +1362,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 54
+    "domain_seq": 54,
+    "question_ja": "写真共有サービスは、Amazon Simple Storage Service (S3) に写真を保存し、OpenID Connect 対応のアイデンティティプロバイダーを使ってアプリケーションへのサインインを許可しています。Amazon S3 の操作に対して、一時的なアクセスを提供するためにどの AWS Security Token Service の方法を使うべきでしょうか？",
+    "choices_ja": [
+      "SAML ベースのアイデンティティフェデレーション",
+      "クロスアカウントアクセス",
+      "AWS Identity and Access Management ロール",
+      "Web アイデンティティフェデレーション"
+    ]
   },
   {
     "id": 179,
@@ -1002,7 +1387,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 55
+    "domain_seq": 55,
+    "question_ja": "ペネトレーションテストは、顧客のインスタンスに限定されている場合に許可されますか？",
+    "choices_ja": [
+      "はい、許可されていますが、選択されたリージョンのみです。",
+      "いいえ、許可されていません。",
+      "はい、許可されていますが、事前の許可は不要です。",
+      "はい、許可されていますが、承認が必要です。"
+    ]
   },
   {
     "id": 180,
@@ -1020,7 +1412,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 56
+    "domain_seq": 56,
+    "question_ja": "従業員に機密文書を配布するシステムを構築しています。CloudFront を使用して、S3 に保存されているが直接 S3 からは公開されていないコンテンツを配信するには、どの方法が適切ですか？",
+    "choices_ja": [
+      "CloudFront のアカウントセキュリティグループ 'amazon-cf/amazon-cf-sg' を該当する S3 バケットポリシーに追加する。",
+      "CloudFront のディストリビューション ID を Principal とし、対象バケットを Amazon リソースネーム (ARN) として指定する S3 バケットポリシーを作成する。",
+      "CloudFront 用の IAM ユーザーを作成し、その IAM ユーザーに S3 バケット内のオブジェクトへのアクセス権を付与する。",
+      "CloudFront のオリジンアクセスアイデンティティ (OAI) を作成し、その OAI に S3 バケット内のオブジェクトへのアクセス権を付与する。"
+    ]
   },
   {
     "id": 182,
@@ -1038,7 +1437,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 57
+    "domain_seq": 57,
+    "question_ja": "既存の Oracle Database ライセンスを使用して Amazon RDS 上で Oracle を運用できるライセンスモデルの名称は何ですか？",
+    "choices_ja": [
+      "Bring Your Own License（BYOL）",
+      "Role Based License",
+      "Enterprise License",
+      "License Included"
+    ]
   },
   {
     "id": 187,
@@ -1054,7 +1460,12 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 58
+    "domain_seq": 58,
+    "question_ja": "正しいか誤りか：Amazon EC2 には Amazon Resource Names (ARN) が存在しません。なぜなら、IAM ポリシーで特定の Amazon EC2 リソースを指定できないからです。",
+    "choices_ja": [
+      "正しい",
+      "誤り"
+    ]
   },
   {
     "id": 188,
@@ -1072,7 +1483,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 59
+    "domain_seq": 59,
+    "question_ja": "インターネットサービスプロバイダーに多額の費用を支払っている大口顧客から、コスト削減のためにAWS Direct Connectの設定を依頼されました。彼は高速な接続が必要です。AWS Direct Connectで利用可能な接続ポートの速度はどれですか？",
+    "choices_ja": [
+      "500Mbpsと1Gbps",
+      "1Gbpsと10Gbps",
+      "100Mbpsと1Gbps",
+      "1Gbps"
+    ]
   },
   {
     "id": 198,
@@ -1090,7 +1508,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 60
+    "domain_seq": 60,
+    "question_ja": "VPC 内のインスタンスを保護するために利用できるものはどれですか。",
+    "choices_ja": [
+      "セキュリティグループと多要素認証",
+      "セキュリティグループと2要素認証",
+      "セキュリティグループと生体認証",
+      "セキュリティグループとネットワークACL"
+    ]
   },
   {
     "id": 200,
@@ -1108,7 +1533,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 61
+    "domain_seq": 61,
+    "question_ja": "ユーザーがAmazon CloudWatchへのアクセスを希望していますが、特定のLoadBalancerのみを監視したいと言っています。特定のインスタンスや特定のLoadBalancerに対してアクセス権を付与することは可能ですか？",
+    "choices_ja": [
+      "いいえ。IAMを使って特定のリソースに対するCloudWatchデータのアクセスを制御することはできません。",
+      "はい。IAMを使って特定のリソースに対するCloudWatchデータのアクセスを制御できます。",
+      "いいえ。CloudWatchデータにアクセスするにはSysadminである必要があります。",
+      "はい。どのユーザーでもすべてのCloudWatchデータを閲覧でき、アクセス権は不要です。"
+    ]
   },
   {
     "id": 203,
@@ -1124,7 +1556,12 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 62
+    "domain_seq": 62,
+    "question_ja": "どのサービスが AWS のユーザーと権限の管理を可能にしますか？",
+    "choices_ja": [
+      "AWS Access Control Service (ACS)",
+      "AWS Identity and Access Management (IAM)"
+    ]
   },
   {
     "id": 205,
@@ -1142,7 +1579,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 63
+    "domain_seq": 63,
+    "question_ja": "A user has configured a website and launched it using the Apache web server on port 80. The user is using ELB with the EC2 instances for Load Balancing. What should the user do to ensure that the EC2 instances accept requests only from ELB?",
+    "choices_ja": [
+      "Configure the security group of EC2, which allows access to the ELB source security group.",
+      "Configure the EC2 instance so that it only listens on the ELB port.",
+      "Open the port for an ELB static IP in the EC2 security group.",
+      "Configure the security group of EC2, which allows access only to the ELB listener."
+    ]
   },
   {
     "id": 206,
@@ -1160,7 +1604,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 64
+    "domain_seq": 64,
+    "question_ja": "You're trying to delete an SSL certificate from the IAM certificate store, and you're getting the message 'Certificate: <certificate< span=''>-id> is being used by CloudFront.' Which of the following statements is probably the reason why you are getting this error?",
+    "choices_ja": [
+      "Before you can delete an SSL certificate, you need to either rotate SSL certificates or revert from using a custom SSL certificate to using the default CloudFront certificate.",
+      "You can't delete SSL certificates. You need to request it from AWS.",
+      "Before you can delete an SSL certificate, you need to set up the appropriate access level in IAM. Before you can delete an SSL certificate you need to set up https on your server.",
+      "Before you can delete an SSL certificate you need to set up https on your server."
+    ]
   },
   {
     "id": 207,
@@ -1178,7 +1629,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 65
+    "domain_seq": 65,
+    "question_ja": "A government client needs you to set up secure cryptographic key storage for some of their extremely confidential data. You decide that the AWS CloudHSM is the best service for this. However, there seem to be a few pre-requisites before this can happen, one of those being a security group that has certain ports open. Which of the following is correct in regards to those security groups?",
+    "choices_ja": [
+      "A security group that has port 22 (for SSH) or port 3389 (for RDP) open to your network.",
+      "A security group that has no ports open to your network.",
+      "A security group that has only port 3389 (for RDP) open to your network.",
+      "A security group that has only port 22 (for SSH) open to your network."
+    ]
   },
   {
     "id": 209,
@@ -1196,7 +1654,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 66
+    "domain_seq": 66,
+    "question_ja": "You run an ad-supported photo sharing website using Amazon S3 to serve photos to visitors of your site. At some point you find out that other sites have been linking to the photos on your site, causing loss to your business. What is an effective method to mitigate this?",
+    "choices_ja": [
+      "Remove public read access and use signed URLs with expiry dates.",
+      "Use CloudFront distributions for static content.",
+      "Block the IPs of the offending websites in Security Groups.",
+      "Store photos on an EBS volume of the web server."
+    ]
   },
   {
     "id": 213,
@@ -1214,7 +1679,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 67
+    "domain_seq": 67,
+    "question_ja": "You log in to IAM on your AWS console and notice the following message. 'Delete your root access keys.' Why do you think IAM is requesting this?",
+    "choices_ja": [
+      "Because the root access keys will expire as soon as you log out.",
+      "Because the root access keys expire after 1 week.",
+      "Because the root access keys are the same for all users.",
+      "Because they provide unrestricted access to your AWS resources."
+    ]
   },
   {
     "id": 215,
@@ -1232,7 +1704,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 68
+    "domain_seq": 68,
+    "question_ja": "In DynamoDB, could you use IAM to grant access to Amazon DynamoDB resources and API actions?",
+    "choices_ja": [
+      "In DynamoDB there is no need to grant access.",
+      "Depended to the type of access.",
+      "Yes.",
+      "No."
+    ]
   },
   {
     "id": 216,
@@ -1250,7 +1729,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 69
+    "domain_seq": 69,
+    "question_ja": "The common use cases for DynamoDB Fine-Grained Access Control (FGAC) are cases in which the end user wants [...].",
+    "choices_ja": [
+      "to change the hash keys of the table directly.",
+      "to check if an IAM policy requires the hash keys of the tables directly.",
+      "to read or modify any code commit key of the table directly, without a middle-tier service.",
+      "to read or modify the table directly, without a middle-tier service."
+    ]
   },
   {
     "id": 217,
@@ -1268,7 +1754,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 70
+    "domain_seq": 70,
+    "question_ja": "What are the initial settings of an user created security group?",
+    "choices_ja": [
+      "Allow all inbound traffic and Allow no outbound traffic.",
+      "Al low no inbound traffic and Al low no outbound traffic.",
+      "Al low no inbound traffic and Al low all outbound traffic.",
+      "Allow all inbound traffic and Allow all outbound traffic."
+    ]
   },
   {
     "id": 224,
@@ -1287,7 +1780,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 71
+    "domain_seq": 71,
+    "question_ja": "VPC 内で稼働する Amazon EC2 インスタンスにアクセスするための Linux バスチオンホストを設定する任務があります。SSH アクセスは、企業の外部パブリック IP アドレス 72.34.51.100 から接続するクライアントのみに許可する必要があります。どのオプションがこの要件を満たしますか？",
+    "choices_ja": [
+      "セキュリティグループのインバウンドルール：プロトコル – TCP、ポート範囲 – 22、送信元 72.34.51.100/32",
+      "ポート範囲 – 22、送信元 72.34.51.100/32",
+      "セキュリティグループのインバウンドルール：プロトコル – UDP、ポート範囲 – 22、送信元 72.34.51.100/32",
+      "ネットワーク ACL のインバウンドルール：プロトコル – UDP、ポート範囲 – 22、送信元 72.34.51.100/32",
+      "ネットワーク ACL のインバウンドルール：プロトコル – TCP、ポート範囲 – 22、送信元 72.34.51.100/0"
+    ]
   },
   {
     "id": 225,
@@ -1306,7 +1807,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 72
+    "domain_seq": 72,
+    "question_ja": "EBS ボリューム上の保存データをどのように保護できますか？",
+    "choices_ja": [
+      "EC2 の SSL インターフェースを使ってボリュームをインスタンスにアタッチする。",
+      "データを順次ではなくランダムに書き込む。",
+      "S3 のサーバーサイド暗号化サービスを使ってボリュームを暗号化する。",
+      "ボリュームへの読み書きを制限する IAM ポリシーを作成する。",
+      "EBS ボリュームの上に暗号化されたファイルシステムを使用する。"
+    ]
   },
   {
     "id": 226,
@@ -1323,7 +1832,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 73
+    "domain_seq": 73,
+    "question_ja": "IAM システムで特定のインスタンスへのアクセスを許可または拒否する方法はありますか？",
+    "choices_ja": [
+      "VPC ベースのインスタンスにのみ可能です。",
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 227,
@@ -1340,7 +1855,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 74
+    "domain_seq": 74,
+    "question_ja": "Amazon IAM を使って、組織のグループに基づいて権限を付与できますか？",
+    "choices_ja": [
+      "はい、ただし特定の場合のみです。",
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 232,
@@ -1358,7 +1879,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 75
+    "domain_seq": 75,
+    "question_ja": "御社のデータの多くは頻繁にアクセスする必要がなく、取得に数時間かかっても問題ないため、Amazon Glacierに保存されています。しかし、社内のある人物が、自分のデータは他のデータよりも機密性が高いと考えており、S3で使われている高レベルの暗号化が、より安価なGlacierサービスでも同様に適用されているかどうかを気にしています。この懸念に関して最も適切な説明はどれでしょうか？",
+    "choices_ja": [
+      "Amazon Glacierには暗号化がないため、価格が安いのです。",
+      "Amazon Glacierは自動的にAES-128でデータを暗号化します。これはAmazon S3よりも暗号化レベルが低いですが、追加料金を支払えばAES-256に変更可能です。",
+      "Amazon GlacierはAmazon S3と同じく自動的にAES-256でデータを暗号化します。",
+      "Amazon Glacierは自動的にAES-128でデータを暗号化します。これはAmazon S3よりも暗号化レベルが低いです。"
+    ]
   },
   {
     "id": 239,
@@ -1376,7 +1904,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 76
+    "domain_seq": 76,
+    "question_ja": "Is it possible to get a history of all EC2 API calls made on your account for security analysis and operational troubleshooting purposes?",
+    "choices_ja": [
+      "Yes, by default, the history of your API calls is logged.",
+      "Yes, you should turn on the CloudTrail in the AWS console.",
+      "No, you can only get a history of VPC API calls.",
+      "No, you cannot store history of EC2 API calls on Amazon."
+    ]
   },
   {
     "id": 243,
@@ -1394,7 +1929,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 77
+    "domain_seq": 77,
+    "question_ja": "Amazon EC2 API ツールとは何ですか？",
+    "choices_ja": [
+      "存在しません。代わりに Amazon EC2 AMI ツールが権限管理に使われます。",
+      "Amazon EC2 ウェブサービス用のコマンドラインツールです。",
+      "EC2 インスタンスを管理するためのグラフィカルツールのセットです。",
+      "存在しません。Amazon API ツールは Amazon Web Services へのクライアントインターフェースです。"
+    ]
   },
   {
     "id": 248,
@@ -1412,7 +1954,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 78
+    "domain_seq": 78,
+    "question_ja": "次のうち、特定の Amazon EC2 インスタンスへのアクセス権を制御するために Amazon EC2 で使用できないものはどれですか？",
+    "choices_ja": [
+      "セキュリティグループ",
+      "IAM システム",
+      "SSH キー",
+      "Windows パスワード"
+    ]
   },
   {
     "id": 250,
@@ -1432,7 +1981,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 79
+    "domain_seq": 79,
+    "question_ja": "VPC に設定されたロードバランサーがあり、すべてのバックエンドの Amazon EC2 インスタンスはサービス中です。しかし、ロードバランサーの DNS 名にブラウザで接続するとタイムアウトします。この現象の考えられる原因はどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "ロードバランサーがインターネットゲートウェイが設定されたパブリックサブネットで構成されていない。",
+      "Amazon EC2 インスタンスに動的に割り当てられたプライベート IP アドレスがない。",
+      "セキュリティグループまたはネットワーク ACL がウェブトラフィックに対して適切に設定されていない。",
+      "ロードバランサーが NAT インスタンスを持つプライベートサブネットで構成されていない。",
+      "VPC に VGW（仮想プライベートゲートウェイ）が設定されていない。"
+    ]
   },
   {
     "id": 252,
@@ -1450,7 +2007,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 80
+    "domain_seq": 80,
+    "question_ja": "Amazon RDS for Oracle を利用する際に選べるライセンスオプションの種類は何ですか？",
+    "choices_ja": [
+      "BYOL と Enterprise License",
+      "BYOL と License Included",
+      "Enterprise License と License Included",
+      "Role based License と License Included"
+    ]
   },
   {
     "id": 253,
@@ -1473,7 +2037,16 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 81
+    "domain_seq": 81,
+    "question_ja": "AWS において、セキュリティのどの側面が顧客の責任ですか？（4つ選択してください）",
+    "choices_ja": [
+      "Security Group と ACL（アクセスコントロールリスト）の設定",
+      "ストレージデバイスの廃棄処理",
+      "EC2 インスタンスの OS に対するパッチ管理",
+      "IAM 資格情報のライフサイクル管理",
+      "コンピュートリソースへの物理的アクセスの管理",
+      "EBS（Elastic Block Storage）ボリュームの暗号化"
+    ]
   },
   {
     "id": 256,
@@ -1491,7 +2064,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 82
+    "domain_seq": 82,
+    "question_ja": "会社のために Amazon Virtual Private Cloud (Amazon VPC) を設定しており、サブネットの設定も行っています。セキュリティが懸念されており、VPC 内のサブネットを保護するための最適なセキュリティ対策がどれか確信が持てません。以下のうち、各サブネット内の AWS リソースの保護について正しく説明しているものはどれですか？",
+    "choices_ja": [
+      "セキュリティグループやネットワークアクセスコントロールリスト（ACL）など、複数のセキュリティ層を利用できます。",
+      "アクセスコントロールリスト（ACL）のみを使用できます。",
+      "サブネット内にセキュリティは不要です。",
+      "セキュリティグループ、ネットワークアクセスコントロールリスト（ACL）、および CloudHS を含む複数のセキュリティ層を利用できます。"
+    ]
   },
   {
     "id": 257,
@@ -1509,7 +2089,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 83
+    "domain_seq": 83,
+    "question_ja": "Amazon EC2 は、AWS クラウドベースのアプリケーションにシームレスに統合できるパブリックデータセットのリポジトリを提供しています。パブリックデータセットの利用にかかる月額料金はいくらですか？",
+    "choices_ja": [
+      "すべてのデータセットに対して一度限りの10ドルの料金がかかる。",
+      "データセットごとに月額1ドル。",
+      "すべてのデータセットで月額10ドル。",
+      "パブリックデータセットの利用には料金がかからない。"
+    ]
   },
   {
     "id": 264,
@@ -1527,7 +2114,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 84
+    "domain_seq": 84,
+    "question_ja": "システムがトラブルシューティング中にダウンタイムを経験しました。調査の結果、新しい管理者が誤って複数の本番環境のEC2インスタンスを終了させてしまったことが判明しました。今後同様の事態を防ぐために有効な対策はどれでしょうか？ただし、管理者は引き続き以下の操作が可能でなければなりません：開発環境のリソースを起動、停止、終了すること。本番環境のインスタンスを起動および開始すること。",
+    "choices_ja": [
+      "本番環境のEC2終了保護を活用し、インスタンスの終了を許可しないIAMユーザーを作成する。",
+      "リソースベースのタグ付けとIAMユーザーを組み合わせて、特定のユーザーが本番環境のEC2リソースを終了するのを防ぐ。",
+      "EC2終了保護と多要素認証を組み合わせて、ユーザーがEC2インスタンスを終了する前に認証を必須にする。",
+      "IAMユーザーを作成し、本番環境のEC2インスタンスの終了を禁止するIAMロールを適用する。"
+    ]
   },
   {
     "id": 269,
@@ -1545,7 +2139,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 85
+    "domain_seq": 85,
+    "question_ja": "Amazon EC2 リソースへのアクセスを制御する際、1つ以上のインスタンスに到達するトラフィックを制御するファイアウォールの役割を果たすものはどれですか？",
+    "choices_ja": [
+      "セキュリティグループ",
+      "インスタンスタイプ",
+      "ストレージクラスター",
+      "オブジェクト"
+    ]
   },
   {
     "id": 277,
@@ -1565,7 +2166,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 86
+    "domain_seq": 86,
+    "question_ja": "ある企業が開発者にAWS Management Consoleへのアクセスを提供しようとしています。企業のポリシーでは、IDフェデレーションとロールベースのアクセス制御が義務付けられています。現在、ロールは社内のActive Directoryのグループを使って割り当てられています。開発者にAWSコンソールへのアクセスを与えるために、次のうちどの組み合わせが適切でしょうか？（2つ選択してください）",
+    "choices_ja": [
+      "AWS Directory ServiceのAD Connector",
+      "AWS Directory ServiceのSimple AD",
+      "AWS Identity and Access Managementのグループ",
+      "AWS Identity and Access Managementのロール",
+      "AWS Identity and Access Managementのユーザー"
+    ]
   },
   {
     "id": 279,
@@ -1583,7 +2192,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 87
+    "domain_seq": 87,
+    "question_ja": "A、[...] は AWS とプログラムでやり取りを行う個人、システム、またはアプリケーションです。",
+    "choices_ja": [
+      "ユーザー",
+      "AWS アカウント",
+      "グループ",
+      "ロール"
+    ]
   },
   {
     "id": 280,
@@ -1601,7 +2217,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 88
+    "domain_seq": 88,
+    "question_ja": "ユーザーが IP アドレス 10.20.30.40 から SSH ポートで EC2 インスタンスにアクセスしています。このインスタンスに対して、この IP アドレスからのみアクセスできるように設定する安全な方法はどれですか？",
+    "choices_ja": [
+      "セキュリティグループでポート 22 を IP 10.20.30.40 に対して開放する。",
+      "セキュリティグループでポート 22 を IP 10.20.30.40/32 に対して開放する。",
+      "セキュリティグループでポート 22 を IP 10.20.30.40/24 に対して開放する。",
+      "セキュリティグループでポート 22 を IP 10.20.30.40/0 に対して開放する。"
+    ]
   },
   {
     "id": 285,
@@ -1619,7 +2242,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 89
+    "domain_seq": 89,
+    "question_ja": "Amazon EC2 リソースへのアクセスを制御する際、各 Amazon EBS スナップショットには、どの AWS アカウントがスナップショットを使用できるかを制御する [...] 属性があります。",
+    "choices_ja": [
+      "createVolumePermission",
+      "LaunchPermission",
+      "SharePermission",
+      "RequestPermission"
+    ]
   },
   {
     "id": 286,
@@ -1637,7 +2267,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 90
+    "domain_seq": 90,
+    "question_ja": "Auto Scaling を使用しているアプリケーション層のインスタンスのインスタンスタイプを変更することにしました。インスタンスタイプの定義はどの箇所で変更しますか？",
+    "choices_ja": [
+      "Auto Scaling ポリシー",
+      "Auto Scaling グループ",
+      "Auto Scaling タグ",
+      "Auto Scaling ランチ構成"
+    ]
   },
   {
     "id": 290,
@@ -1655,7 +2292,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 91
+    "domain_seq": 91,
+    "question_ja": "A/An [...] は、1つ以上のインスタンスに到達できるトラフィックを制御するファイアウォールとして機能します。",
+    "choices_ja": [
+      "セキュリティグループ",
+      "ACL",
+      "IAM",
+      "プライベートIPアドレス"
+    ]
   },
   {
     "id": 291,
@@ -1673,7 +2317,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 92
+    "domain_seq": 92,
+    "question_ja": "あなたのマネージャーは、最近誰かが設定した複数のVPN接続へのアクセス権をあなたに与えました。彼女は、これらのVPN間の通信が安全であることを確認するよう求めています。これらのリモートオフィス間の主要またはバックアップ接続として、低コストのハブアンドスポークモデルを提供するのに最適なサービスはどれでしょうか？",
+    "choices_ja": [
+      "Amazon CloudFront",
+      "AWS Direct Connect",
+      "AWS CloudHSM",
+      "AWS VPN CloudHub"
+    ]
   },
   {
     "id": 293,
@@ -1691,7 +2342,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 93
+    "domain_seq": 93,
+    "question_ja": "ユーザーが配置グループ内に10台のEC2インスタンスを起動しました。EC2-ClassicではなくVPCにインスタンスを起動することで得られる利点として正しいものはどれですか？",
+    "choices_ja": [
+      "ここに挙げたすべての利点",
+      "インスタンスが稼働中でもセキュリティグループのメンバーシップを変更できる",
+      "インスタンスに対して起動や停止をまたいで保持される固定のプライベートIPアドレスを割り当てられる",
+      "ネットワークインターフェイスを定義し、1つ以上のネットワークインターフェイスをインスタンスにアタッチできる"
+    ]
   },
   {
     "id": 294,
@@ -1710,7 +2368,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 94
+    "domain_seq": 94,
+    "question_ja": "HQリージョンでは、すべてのリージョンからデータを読み取り、クロスリージョンのレポートを作成して各オフィスにメールで送信する毎時バッチ処理を実行しています。このバッチ処理はできるだけ速く完了させて物流を迅速に最適化する必要があります。要件を満たすためにどのようにデータベースアーキテクチャを構築しますか？",
+    "choices_ja": [
+      "各リージョンの展開に対して、リージョン内にマスターを置き、HQリージョンにリードレプリカを配置したRDS MySQLを使用する。",
+      "各リージョンの展開に対して、リージョン内にマスターを置いたEC2上のMySQLを使用し、毎時EBSスナップショットをHQリージョンに送信する。",
+      "各リージョンの展開に対して、リージョン内にマスターを置いたRDS MySQLを使用し、毎時RDSスナップショットをHQリージョンに送信する。",
+      "各リージョンの展開に対して、リージョン内にマスターを置いたEC2上のMySQLを使用し、S3を使って毎時データファイルをHQリージョンにコピーする。",
+      "Direct Connectを使用してすべてのリージョンのMySQL展開をHQリージョンに接続し、バッチ処理のネットワーク遅延を減らす。"
+    ]
   },
   {
     "id": 300,
@@ -1728,7 +2394,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 95
+    "domain_seq": 95,
+    "question_ja": "・・・がなければ、複数の AWS アカウントを作成し、それぞれに請求や AWS 製品のサブスクリプションを持たせるか、従業員が単一の AWS アカウントのセキュリティ認証情報を共有しなければなりません。",
+    "choices_ja": [
+      "Amazon RDS",
+      "Amazon Glacier",
+      "Amazon EMR",
+      "Amazon IAM"
+    ]
   },
   {
     "id": 305,
@@ -1750,7 +2423,16 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 96
+    "domain_seq": 96,
+    "question_ja": "レガシーアプリケーションをデータセンター内の仮想マシンからAmazon VPCに移行する任務があります。しかし、このアプリは複数のオンプレミスサービスへのアクセスが必要で、アプリを設定した人物は既に会社にいません。さらに、ドキュメントも存在しません。VPC内で動作するアプリケーションが再設定なしで内部の依存サービスにアクセスできるようにするには、どの方法が適切でしょうか？（3つ選択してください）",
+    "choices_ja": [
+      "VPCと内部サービスのネットワークを接続するAWS Direct Connectリンク",
+      "VPN接続を可能にするInternet Gateway",
+      "VPCインスタンスに割り当てられたElastic IPアドレス",
+      "オンプレミスのIPアドレス空間と重複しないIPアドレス空間",
+      "インスタンスが依存先のIPアドレスを解決できるようにするAmazon Route 53のエントリ",
+      "現在の仮想マシンのVM Import"
+    ]
   },
   {
     "id": 306,
@@ -1768,7 +2450,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 97
+    "domain_seq": 97,
+    "question_ja": "ある企業が、これまで利用したことのないAWSリージョンにサービスを展開する必要があります。現在、その企業はAmazon EC2インスタンス用のIAMロールを持っており、そのロールによりインスタンスはAmazon DynamoDBにアクセスできます。新しいリージョンのEC2インスタンスにも同じ権限を持たせたい場合、どのようにすればよいでしょうか？",
+    "choices_ja": [
+      "新しいリージョンで新たにIAMロールと関連ポリシーを作成する。",
+      "既存のIAMロールを新しいリージョンのAmazon EC2インスタンスに割り当てる。",
+      "IAMロールと関連ポリシーを新しいリージョンにコピーし、インスタンスにアタッチする。",
+      "インスタンスのAmazon Machine Image (AMI)を作成し、AMIコピー機能を使って目的のリージョンにコピーする。"
+    ]
   },
   {
     "id": 319,
@@ -1786,7 +2475,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 98
+    "domain_seq": 98,
+    "question_ja": "ユーザーが EC2 上でホストされるアプリケーションを作成しました。このアプリケーションは DynamoDB にアクセスして特定のデータを取得します。アプリケーションは DynamoDB SDK を使って EC2 インスタンスから接続しています。このシナリオにおけるセキュリティのベストプラクティスとして正しいものはどれですか？",
+    "choices_ja": [
+      "ユーザーは DynamoDB へのアクセス権を持つ IAM ユーザーを作成し、その認証情報をアプリケーション内で使用して DynamoDB に接続すべきである。",
+      "ユーザーは DynamoDB へのアクセス権を持つ IAM ロールを EC2 インスタンスにアタッチすべきである。",
+      "ユーザーはアプリケーションのデプロイを許可するために EC2 へのアクセス権を持つ IAM ロールを作成すべきである。",
+      "ユーザーは DynamoDB と EC2 へのアクセス権を持つ IAM ユーザーを作成し、そのユーザーをアプリケーションに関連付けてルートアカウントの認証情報を使わないようにすべきである。"
+    ]
   },
   {
     "id": 320,
@@ -1804,7 +2500,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 99
+    "domain_seq": 99,
+    "question_ja": "20台のEC2インスタンスで構成されたクラスターのセキュリティグループを設定した後、セキュリティグループの設定に誤りがあることに気づきました。すぐにセキュリティグループの設定を変更しました。設定の変更はいつ反映されますか？",
+    "choices_ja": [
+      "設定はセキュリティグループ内のすべてのインスタンスに対して即時に反映されます。",
+      "設定はすべてのインスタンスを再起動したときにのみ反映されます。",
+      "設定はすべてのインスタンスに対して30分後に反映されます。",
+      "設定はセキュリティグループに新たに追加されたインスタンスにのみ反映されます。"
+    ]
   },
   {
     "id": 325,
@@ -1822,7 +2525,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 100
+    "domain_seq": 100,
+    "question_ja": "管理者は Amazon CloudFormation を使って、ウェブ層とアプリケーション層からなり、ストレージに Amazon DynamoDB を利用する 3 層ウェブアプリケーションをデプロイしています。CloudFormation テンプレートを作成する際、API 認証情報を公開せずにアプリケーションインスタンスが DynamoDB テーブルにアクセスできるようにするには、どの方法が適切ですか？",
+    "choices_ja": [
+      "必要な DynamoDB テーブルへの読み書き権限を持つ IAM ロールを作成し、そのロールをインスタンスプロファイルを参照してアプリケーションインスタンスに関連付ける。",
+      "CloudFormation テンプレートのパラメータセクションを使い、既存の IAM ユーザーのアクセスキーとシークレットキーをユーザーに入力させ、そのユーザーに必要な DynamoDB テーブルへの読み書き権限を付与する。",
+      "必要な DynamoDB テーブルへの読み書き権限を持つ IAM ロールを作成し、そのロールをアプリケーションインスタンスのインスタンスプロファイルプロパティで参照する。",
+      "CloudFormation テンプレート内で必要な DynamoDB テーブルへの読み書き権限を持つ IAM ユーザーを作成し、GetAtt 関数でアクセスキーとシークレットキーを取得して、ユーザーデータ経由でアプリケーションインスタンスに渡す。"
+    ]
   },
   {
     "id": 328,
@@ -1840,7 +2550,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 101
+    "domain_seq": 101,
+    "question_ja": "Amazon S3 は、ユーザーが作成したバケットやオブジェクトに対して、他の操作を自動的に許可しません。",
+    "choices_ja": [
+      "ファイル",
+      "バケットまたはオブジェクト",
+      "バケットまたはファイル",
+      "オブジェクトまたはファイル"
+    ]
   },
   {
     "id": 329,
@@ -1858,7 +2575,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 102
+    "domain_seq": 102,
+    "question_ja": "ある企業が Glacier のセキュリティ要件を確認したいと考えています。以下のうち、AWS Glacier のデータセキュリティに関して正しい記述はどれですか？",
+    "choices_ja": [
+      "Glacier に保存されるすべてのデータは AES-256 のサーバー側暗号化で保護されています。",
+      "Glacier に保存されるすべてのデータは AES-128 のサーバー側暗号化で保護されています。",
+      "ユーザーは Glacier に保存されるデータを暗号化するためにサーバー側暗号化のフラグを設定できます。",
+      "Glacier に保存されるデータはデフォルトで暗号化されていません。"
+    ]
   },
   {
     "id": 333,
@@ -1876,7 +2600,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 103
+    "domain_seq": 103,
+    "question_ja": "EC2-Classicでインスタンスを起動する際に、VPC用に作成したセキュリティグループを指定できますか？",
+    "choices_ja": [
+      "いいえ、VPCインスタンスを起動する際にはEC2-Classic用に作成したセキュリティグループを指定できます。",
+      "はい。",
+      "いいえ。",
+      "いいえ、EC2-Classic用に作成したセキュリティグループはVPC以外のインスタンスにのみ指定できます。"
+    ]
   },
   {
     "id": 334,
@@ -1896,7 +2627,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 104
+    "domain_seq": 104,
+    "question_ja": "VPC-1 への接続のフォールトトレランスを高める方法として適切なものはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "VPC-2 とオンプレミスネットワーク間にインターネット経由のハードウェアVPNを確立する。",
+      "VPC-1 とオンプレミスネットワーク間にインターネット経由のハードウェアVPNを確立する。",
+      "VPC-2 と同じリージョンに新しい AWS Direct Connect 接続とプライベート仮想インターフェイスを確立する。",
+      "VPC-1 とは異なる AWS リージョンに新しい AWS Direct Connect 接続とプライベート仮想インターフェイスを確立する。",
+      "VPC-1 と同じ AWS リージョンに新しい AWS Direct Connect 接続とプライベート仮想インターフェイスを確立する。"
+    ]
   },
   {
     "id": 337,
@@ -1914,7 +2653,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 105
+    "domain_seq": 105,
+    "question_ja": "AWS Identity and Access Management は次のどのインターフェースで利用できますか？",
+    "choices_ja": [
+      "コマンドラインインターフェース（CLI）のみ。",
+      "AWS Management Console、CLI、および IAM Query API。",
+      "AWS Management Console と IAM Query API。",
+      "上記すべて。"
+    ]
   },
   {
     "id": 340,
@@ -1932,7 +2678,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 106
+    "domain_seq": 106,
+    "question_ja": "米国に拠点を置く企業が、ヨーロッパでのウェブ展開を拡大しています。同社はAWSのインフラをノーザンバージニア（us-east-1）からダブリン（eu-west-1）リージョンへ拡張したいと考えています。両大陸のユーザーに同等の体験を提供するために適切な方法はどれでしょうか？",
+    "choices_ja": [
+      "各リージョンにパブリック向けのロードバランサーを設置し、ウェブトラフィックを負荷分散し、HTTPヘルスチェックを有効にする。",
+      "各リージョンにパブリック向けのロードバランサーを設置し、ウェブトラフィックを負荷分散し、スティッキーセッションを有効にする。",
+      "Amazon Route 53を使用し、ジオロケーションルーティングポリシーを適用して両リージョンにトラフィックを分散する。",
+      "Amazon Route 53を使用し、加重ルーティングポリシーを適用して両リージョンにトラフィックを分散する。"
+    ]
   },
   {
     "id": 343,
@@ -1950,7 +2703,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 107
+    "domain_seq": 107,
+    "question_ja": "Amazon RDS において、セキュリティグループは主に何のために使用されますか？",
+    "choices_ja": [
+      "データベースエンジンのメンテナンス期間を定義する",
+      "Amazon RDS インスタンスをサブネット内で起動する",
+      "DB インスタンスの作成、説明、変更、削除を行う",
+      "DB インスタンス上のデータベースに接続できる IP アドレスや EC2 インスタンスを制御する"
+    ]
   },
   {
     "id": 346,
@@ -1968,7 +2728,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 108
+    "domain_seq": 108,
+    "question_ja": "EC2 インスタンスをディレクトリドメインにシームレスに参加させることができます。このインスタンスにリモートで接続するために必要な接続条件は何ですか？",
+    "choices_ja": [
+      "接続元のネットワークからインスタンスへのIP接続が必要です。",
+      "リモート接続するために正しい暗号化キーが必要です。",
+      "インスタンスに接続するために十分な帯域幅が必要です。",
+      "リモート接続するためにMFA認証を使用する必要があります。"
+    ]
   },
   {
     "id": 350,
@@ -1985,7 +2752,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 109
+    "domain_seq": 109,
+    "question_ja": "正誤問題：DBセキュリティグループにルールを追加する際、ポート番号やプロトコルを指定する必要はありますか？",
+    "choices_ja": [
+      "使用するROMによる",
+      "はい",
+      "いいえ"
+    ]
   },
   {
     "id": 354,
@@ -2007,7 +2780,16 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 110
+    "domain_seq": 110,
+    "question_ja": "顧客は本社にゲートウェイキャッシュボリュームを持つ AWS Storage Gateway を導入しています。本社と支社間のリンクが切断されました。支社がデータにアクセスするために可能な方法はどれですか？（3つ選択してください）",
+    "choices_ja": [
+      "ファイルが保存されている Amazon S3 バケットに HTTPS GET を使用する。",
+      "Amazon S3 バケットにライフサイクルポリシーを適用して復元する。",
+      "Amazon Glacier Restore API を呼び出して、4～6時間以内に別の Amazon S3 バケットにファイルをロードする。",
+      "Amazon EC2 で新しい AWS Storage Gateway インスタンス AMI を起動し、ゲートウェイスナップショットから復元する。",
+      "ゲートウェイスナップショットから Amazon EBS ボリュームを作成し、Amazon EC2 インスタンスにマウントする。",
+      "支社に AWS Storage Gateway の仮想 iSCSI デバイスを起動し、ゲートウェイスナップショットから復元する。"
+    ]
   },
   {
     "id": 358,
@@ -2025,7 +2807,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 111
+    "domain_seq": 111,
+    "question_ja": "貴社は以前、オンプレミスのデータセンターとAWS間で動的ルーティングを使用した頻繁に利用されるVPN接続を構成していました。最近、DirectConnect接続をプロビジョニングし、新しい接続の利用を開始したいと考えています。AWSコンソールでDirectConnectの設定を行った後、ユーザーにとって最もスムーズな移行を実現するためには、次のうちどの方法が適切でしょうか？",
+    "choices_ja": [
+      "ルーティングループを避けるために既存のVPN接続を削除します。DirectConnectルーターに適切な設定を行い、ネットワークトラフィックがDirectConnectを利用していることを確認します。",
+      "DirectConnectルーターのBGP優先度をVPNルーターより高く設定します。ネットワークトラフィックがDirectConnectを利用していることを確認してから、既存のVPN接続を削除します。",
+      "VPCのルートテーブルをDirectConnect接続を指すように更新します。DirectConnectルーターに適切な設定を行い、ネットワークトラフィックがDirectConnectを利用していることを確認してからVPN接続を削除します。",
+      "DirectConnectルーターを設定します。VPCのルートテーブルをDirectConnect接続を指すように更新します。VPN接続のBGP優先度を高く設定し、ネットワークトラフィックがDirectConnect接続を利用していることを確認します。"
+    ]
   },
   {
     "id": 359,
@@ -2043,7 +2832,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 112
+    "domain_seq": 112,
+    "question_ja": "Amazon Relational Database Service (Amazon RDS) で複数のデータベースインスタンスを設定した後、データベースのパフォーマンスと状態を監視する必要があると判断しました。どのようにすればよいでしょうか？",
+    "choices_ja": [
+      "DBインスタンス、DBスナップショット、DBパラメーターグループ、またはDBセキュリティグループに変更があった際に通知を受け取るために、Amazon RDSのイベントに登録する。",
+      "無料のAmazon CloudWatchサービスを使って、DBインスタンスのパフォーマンスと状態を監視する。",
+      "挙げられたすべての方法がデータベースのパフォーマンスと状態を追跡できる。",
+      "Amazon RDSコンソールやAmazon RDS APIを使ってデータベースのログファイルを表示、ダウンロード、または監視する。さらに、一部のデータベースログファイルはデータベーステーブルに読み込んでクエリを実行できる。"
+    ]
   },
   {
     "id": 362,
@@ -2061,7 +2857,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 113
+    "domain_seq": 113,
+    "question_ja": "複数のプログラマーがAPIやSDKのテストを行っており、ネットワークのセキュリティに非常に不安があります。何が起きているのか全く分からないため、CloudTrailが役立つかもしれないと考えていますが、その機能についてはよく分かっていません。次のうち、AWSサービスのCloudTrailを最も正しく説明しているものはどれですか？",
+    "choices_ja": [
+      "AWS CloudTrailを使うと、アカウントのAWS APIコールと関連イベントの履歴を取得できます。",
+      "AWS CloudTrailを使うと、アカウントのIAMユーザーの履歴を取得できます。",
+      "AWS CloudTrailを使うと、アカウントのS3ログファイルの履歴を取得できます。",
+      "AWS CloudTrailを使うと、アカウントで使用されたCloudFormationのJSONスクリプトの履歴を取得できます。"
+    ]
   },
   {
     "id": 363,
@@ -2078,7 +2881,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 114
+    "domain_seq": 114,
+    "question_ja": "IAM システムで作成するすべてのユーザーは、最初にどのような権限を持っていますか？",
+    "choices_ja": [
+      "部分的な権限",
+      "完全な権限",
+      "権限なし"
+    ]
   },
   {
     "id": 364,
@@ -2096,7 +2905,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 115
+    "domain_seq": 115,
+    "question_ja": "Amazon S3 ではファイルごとに読み取りおよび/または書き込みアクセス権を設定できます。しかし、すでに100個のファイルがあるバケット全体をパブリックにアクセス可能にしたいと考えています。100個のファイルを個別に設定するのは避けたい場合、最適な方法はどれですか？",
+    "choices_ja": [
+      "バケットを新しいリージョンに移動する",
+      "バケットにバケットポリシーを追加する",
+      "ファイルを新しいバケットに移動する",
+      "S3 の代わりに Amazon EBS を使用する"
+    ]
   },
   {
     "id": 369,
@@ -2114,7 +2930,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 116
+    "domain_seq": 116,
+    "question_ja": "ある組織が、エンドユーザーがモバイル端末で写真を撮影し、アプリ内に保存できるモバイルアプリケーションを開発しました。このアプリは内部的にデータをAWS S3にアップロードします。組織は、各ユーザーが自分のGoogle IDを使って直接S3にデータをアップロードできるようにしたいと考えています。モバイルアプリはどのようにこれを実現すればよいでしょうか？",
+    "choices_ja": [
+      "モバイルアプリ向けのAWS Webアイデンティティフェデレーションを使用し、各ユーザーに対して一時的なセキュリティ認証情報を生成する。",
+      "Google IDでAWS S3に接続することはできない。",
+      "ユーザーがGoogle IDで登録するたびにIAMユーザーを作成し、IAMを使ってS3にファイルをアップロードする。",
+      "ログインIDにGoogleの要素が含まれている場合に誰でもアップロードを許可する条件付きのバケットポリシーを作成する。"
+    ]
   },
   {
     "id": 371,
@@ -2132,7 +2955,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 117
+    "domain_seq": 117,
+    "question_ja": "クライアントのECサイトでHTTPSプロトコルを使用するため、セキュリティ証明書を設定する必要があります。SSLサーバー証明書を管理するためにアクセスすべきAWSサービスはどれですか？",
+    "choices_ja": [
+      "AWS Directory Service",
+      "AWS Identity & Access Management",
+      "AWS CloudFormation",
+      "Amazon Route 53"
+    ]
   },
   {
     "id": 378,
@@ -2148,7 +2978,12 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 118
+    "domain_seq": 118,
+    "question_ja": "True または False: IAM がなければ、特定のユーザーやシステムが実行できるタスクや利用できる AWS リソースを制御することはできません。",
+    "choices_ja": [
+      "True",
+      "False"
+    ]
   },
   {
     "id": 383,
@@ -2166,7 +3001,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 119
+    "domain_seq": 119,
+    "question_ja": "AWSで使用される2つの権限タイプは何ですか？",
+    "choices_ja": [
+      "リソースベースとプロダクトベース",
+      "プロダクトベースとサービスベース",
+      "サービスベース",
+      "ユーザーベースとリソースベース"
+    ]
   },
   {
     "id": 384,
@@ -2184,7 +3026,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 120
+    "domain_seq": 120,
+    "question_ja": "AWS CloudHSM において、キーやデータの損失を防ぐために AWS が推奨する高可用性構成で 2 台以上の HSM アプライアンスを使用する方法に加えて、Luna SA パーティションのリモートバックアップおよびリストアを行うには、どの製品を購入する必要がありますか？",
+    "choices_ja": [
+      "Luna Restore HS",
+      "Luna Backup HS",
+      "Luna HS",
+      "Luna SA HS"
+    ]
   },
   {
     "id": 385,
@@ -2202,7 +3051,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 121
+    "domain_seq": 121,
+    "question_ja": "ある組織は、S3オブジェクトの保存データを保護する法的要件があります。データのセキュリティを確保するために、以下のうち組織が有効にする必要がないものはどれですか？",
+    "choices_ja": [
+      "S3オブジェクトのMFA削除",
+      "クライアント側暗号化",
+      "バケットのバージョニング",
+      "データのレプリケーション"
+    ]
   },
   {
     "id": 389,
@@ -2220,7 +3076,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 122
+    "domain_seq": 122,
+    "question_ja": "AWS Storage Gateway は何を提供しますか？",
+    "choices_ja": [
+      "オンプレミスのIT環境とクラウドストレージを統合できるようにします。",
+      "Amazon S3 への直接の暗号化接続を提供します。",
+      "オンプレミスでクラウドストレージを利用できるバックアップソリューションです。",
+      "クラウドでのバックアップ用に暗号化されたSSLエンドポイントを提供します。"
+    ]
   },
   {
     "id": 391,
@@ -2238,7 +3101,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 123
+    "domain_seq": 123,
+    "question_ja": "大規模なセキュリティ侵害の後、マネージャーからAWSのすべてのユーザーとその認証情報のレポート作成を依頼されました。IAMで、アカウント内のすべてのユーザーとパスワード、アクセスキー、MFAデバイス、署名証明書などの各種認証情報の状態を一覧にした認証情報レポートを生成してダウンロードできることがわかりました。認証情報レポートの利用に関して、次のうち誤っている記述はどれですか？",
+    "choices_ja": [
+      "認証情報レポートはダウンロードされるXMLファイルです。",
+      "認証情報レポートはAWS Management Console、AWS CLI、またはIAM APIを使って取得できます。",
+      "認証情報レポートはパスワードのローテーションなど認証情報のライフサイクル要件の監査に利用できます。",
+      "認証情報レポートは最短で4時間に1回生成できます。"
+    ]
   },
   {
     "id": 393,
@@ -2257,7 +3127,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 124
+    "domain_seq": 124,
+    "question_ja": "AWS Acceptable Use Policy によると、EC2 インスタンスのペネトレーションテストはどうなっていますか？",
+    "choices_ja": [
+      "AWS によって実施される場合があり、顧客の依頼に応じて実施される。",
+      "AWS によって実施される場合があり、定期的に実施されている。",
+      "あらゆる状況で明確に禁止されている。",
+      "顧客が自身のインスタンスに対して、事前に AWS の許可を得て実施できる。",
+      "顧客が自身のインスタンスに対して、EC2 インスタンスからのみ実施できる。"
+    ]
   },
   {
     "id": 398,
@@ -2275,7 +3153,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 125
+    "domain_seq": 125,
+    "question_ja": "あなたはソリューションアーキテクトとして、企業のお客様がeコマースプラットフォームをAmazon Virtual Private Cloud（VPC）に移行する支援を依頼されました。前任のアーキテクトはすでに3層構成のVPCを展開しています。構成は以下の通りです。VPC: vpc-2f8bc447、IGW: igw-2d8bc445、NACL: ad-208bc448。サブネットとルートテーブルは以下の通りです。Webサーバー: subnet-258bc44d、アプリケーションサーバー: subnet-248bc44c、データベースサーバー: subnet-9189c6f9。ルートテーブル: rtb-218bc449、rtb-238bc44b。関連付けは、subnet-258bc44d: rtb-218bc449、subnet-248bc44c: rtb-238bc44b、subnet-9189c6f9: rtb-238bc44bです。これからVPCにEC2インスタンスを展開します。Webサーバーはインターネットに直接アクセスできる必要がありますが、アプリケーションサーバーとデータベースサーバーは直接インターネットにアクセスできてはいけません。リモートでアプリケーションサーバーとデータベースサーバーを管理し、これらのサーバーがインターネットからアップデートを取得できるようにするには、どの設定が適切でしょうか？",
+    "choices_ja": [
+      "subnet-258bc44dにバスチオンとNATインスタンスを作成し、rtb-238bc44bからNATインスタンスへのルートを追加する。",
+      "rtb-238bc44bからigw-2d8bc445へのルートを追加し、subnet-248bc44cにバスチオンとNATインスタンスを配置する。",
+      "subnet-248bc44cにバスチオンとNATインスタンスを作成し、rtb-238bc44bからsubnet-258bc44dへのルートを追加する。",
+      "subnet-258bc44dにバスチオンとNATインスタンスを作成し、rtb-238bc44bからigw-2d8bc445へのルートを追加し、subnet-258bc44dとsubnet-248bc44c間のアクセスを許可する新しいNACLを設定する。"
+    ]
   },
   {
     "id": 400,
@@ -2293,7 +3178,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 126
+    "domain_seq": 126,
+    "question_ja": "A/An [...] とは、ユーザー、グループ、ロールなどのエンティティに対して、1つ以上のリソースへのアクセスを許可または拒否する概念のことです。",
+    "choices_ja": [
+      "ユーザー",
+      "AWS アカウント",
+      "リソース",
+      "権限"
+    ]
   },
   {
     "id": 407,
@@ -2311,7 +3203,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 127
+    "domain_seq": 127,
+    "question_ja": "AWS CloudHSM サービスでは、高可用性 (HA) と呼ばれるリソースが定義されています。これは複数の物理 HSM に分散配置されることが多い、パーティションのグループを表す仮想パーティションです。",
+    "choices_ja": [
+      "プロキシグループ",
+      "パーティショングループ",
+      "機能グループ",
+      "リレーショナルグループ"
+    ]
   },
   {
     "id": 410,
@@ -2327,7 +3226,12 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 128
+    "domain_seq": 128,
+    "question_ja": "正誤問題：IAM を使って RDS リソースへのアクセスを制御する場合、使用できるキー名は大文字と小文字が区別されます。例えば、aws:CurrentTime は AWS:currenttime と同じではありません。",
+    "choices_ja": [
+      "正しい",
+      "誤り"
+    ]
   },
   {
     "id": 414,
@@ -2345,7 +3249,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 129
+    "domain_seq": 129,
+    "question_ja": "貴社は最近、必要に応じてバーストコンピューティング容量を追加するために、データセンターをAWSのVPCに拡張しました。ネットワーク運用センター（NOC）のメンバーは、必要に応じてAWS Management ConsoleにアクセスしてAmazon EC2インスタンスを管理できる必要があります。各NOCメンバーのために新しいIAMユーザーを作成し、それらのユーザーに再度AWS Management Consoleにサインインさせたくありません。以下のうち、NOCメンバーのニーズを満たすオプションはどれですか？",
+    "choices_ja": [
+      "OAuth 2.0を使用して一時的なAWSセキュリティ認証情報を取得し、NOCメンバーがAWS Management Consoleにサインインできるようにする。",
+      "Webアイデンティティフェデレーションを使用して一時的なAWSセキュリティ認証情報を取得し、NOCメンバーがAWS Management Consoleにサインインできるようにする。",
+      "オンプレミスのSAML 2.0準拠のアイデンティティプロバイダー（IdP）を使用して、AWSシングルサインオン（SSO）エンドポイント経由でNOCメンバーにフェデレーテッドアクセスを付与し、AWS Management Consoleにアクセスさせる。",
+      "オンプレミスのSAML 2.0準拠のアイデンティティプロバイダー（IdP）を使用して一時的なセキュリティ認証情報を取得し、NOCメンバーがAWS Management Consoleにサインインできるようにする。"
+    ]
   },
   {
     "id": 415,
@@ -2363,7 +3274,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 130
+    "domain_seq": 130,
+    "question_ja": "Elastic Load Balancer (ELB) を初めて設定しましたが、正しく構成されていないようです。ELB を使用する前に、ロードバランサーのリスナーを設定する必要があることがわかりました。ELB はどのプロトコルを使ってアプリケーションのロードバランシングをサポートしていますか？",
+    "choices_ja": [
+      "HTTP と HTTPS",
+      "HTTP、HTTPS、TCP、SSL、および SSH",
+      "HTTP、HTTPS、TCP、および SSL",
+      "HTTP、HTTPS、TCP、SSL、および SFTP"
+    ]
   },
   {
     "id": 424,
@@ -2381,7 +3299,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 131
+    "domain_seq": 131,
+    "question_ja": "現在、AWSのUS-Eastリージョンでウェブアプリケーションを運用しています。このアプリケーションはオートスケールされたEC2インスタンスのレイヤーとRDSのマルチAZデータベース上で動作しています。ITセキュリティのコンプライアンス担当者から、EC2、IAM、RDSリソースに対する変更を追跡するための信頼性が高く耐久性のあるログ記録ソリューションの開発を依頼されました。このソリューションはログデータの完全性と機密性を確保しなければなりません。どのソリューションを推奨しますか？",
+    "choices_ja": [
+      "新しいCloudTrailトレイルを作成し、ログを保存するための新しいS3バケットを1つ用意し、グローバルサービスオプションを選択します。ログを保存するS3バケットにはIAMロール、S3バケットポリシー、およびMFA Deleteを設定します。",
+      "新しいCloudTrailを作成し、ログを保存するための新しいS3バケットを1つ用意します。SNSを設定してログファイル配信通知を管理システムに送信します。ログを保存するS3バケットにはIAMロールとS3バケットポリシーを設定します。",
+      "新しいCloudTrailトレイルを作成し、既存のS3バケットをログ保存用に使用し、グローバルサービスオプションを選択します。ログを保存するS3バケットにはS3 ACLとMFA Deleteを設定します。",
+      "AWS Management Console用、AWS SDK用、コマンドラインツール用にそれぞれ3つの新しいCloudTrailトレイルと3つの新しいS3バケットを作成します。ログを保存するS3バケットにはIAMロールとS3バケットポリシーを設定します。"
+    ]
   },
   {
     "id": 426,
@@ -2399,7 +3324,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 132
+    "domain_seq": 132,
+    "question_ja": "次のうち、Amazon EC2 のセキュリティグループについて正しいものはどれですか？",
+    "choices_ja": [
+      "EC2-Classic のアウトバウンドルールは変更できます。",
+      "セキュリティグループが1つのインスタンスのトラフィックのみを制御している場合に限り、ルールを変更できます。",
+      "新しいインスタンスが作成されたときにのみ、セキュリティグループのルールを変更できます。",
+      "セキュリティグループのルールはいつでも変更できます。"
+    ]
   },
   {
     "id": 427,
@@ -2417,7 +3349,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 133
+    "domain_seq": 133,
+    "question_ja": "VPC のセキュリティを設定する必要があり、Amazon VPC には VPC のセキュリティを強化するために利用できる 2 つの機能、セキュリティグループとネットワーク ACL（アクセスコントロールリスト）があることを知っています。すでにセキュリティグループについて調べており、現在は ACL について理解しようとしています。以下のうち、ACL に関して誤っている記述はどれですか？",
+    "choices_ja": [
+      "許可ルールと拒否ルールの両方をサポートする。",
+      "ステートフルである：戻りのトラフィックはルールに関係なく自動的に許可される。",
+      "トラフィックを許可するか判断する際に、ルールを番号順に処理する。",
+      "サブネットレベルで動作する（第二の防御層）。"
+    ]
   },
   {
     "id": 429,
@@ -2434,7 +3373,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 134
+    "domain_seq": 134,
+    "question_ja": "AWS マネジメントコンソールを使って IAM ユーザーを削除すると、そのユーザーに紐づく署名証明書やアクセスキーも IAM によって削除されます。これは正しいでしょうか？",
+    "choices_ja": [
+      "誤りです。",
+      "これは設定可能です。",
+      "正しいです。"
+    ]
   },
   {
     "id": 436,
@@ -2452,7 +3397,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 135
+    "domain_seq": 135,
+    "question_ja": "EBS ボリュームを暗号化できますか？",
+    "choices_ja": [
+      "はい。AWS マネジメントコンソール、API、または CLI を使って新しい EBS ボリュームを作成する際に暗号化を有効にできます。",
+      "いいえ。EBS ボリュームの生のブロックレベル暗号化を行うにはサードパーティ製ソフトウェアを使用すべきです。",
+      "はい。ただし、EBS にデータをロードする前に暗号化するためにサードパーティの API を使用する必要があります。",
+      "はい。Amazon API を通じて特別な 'ebs_encrypt' コマンドで暗号化できます。"
+    ]
   },
   {
     "id": 437,
@@ -2470,7 +3422,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 136
+    "domain_seq": 136,
+    "question_ja": "各サーバーには少なくともいくつのセキュリティグループを割り当てる必要がありますか？",
+    "choices_ja": [
+      "3つ",
+      "2つ",
+      "4つ",
+      "1つ"
+    ]
   },
   {
     "id": 438,
@@ -2488,7 +3447,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 137
+    "domain_seq": 137,
+    "question_ja": "MySQL サーバーエンジンで、アプリケーションと DB インスタンス間の接続を SSL で暗号化することは可能ですか？",
+    "choices_ja": [
+      "はい。",
+      "VPC 内のみ。",
+      "特定のリージョンのみ。",
+      "いいえ。"
+    ]
   },
   {
     "id": 445,
@@ -2506,7 +3472,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 138
+    "domain_seq": 138,
+    "question_ja": "複数のアベイラビリティゾーンに登録されたAmazon EC2インスタンスへのトラフィックを均等に分散する機能は次のうちどれですか？",
+    "choices_ja": [
+      "Elastic Load Balancingのリクエストルーティング",
+      "Amazon Route 53の加重ルーティングポリシー",
+      "Elastic Load Balancingのクロスゾーン負荷分散",
+      "Amazon Route 53のレイテンシールーティングポリシー"
+    ]
   },
   {
     "id": 449,
@@ -2529,7 +3502,17 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 139
+    "domain_seq": 139,
+    "question_ja": "AWS CloudTrail に関して正しいものはどれですか？（3つ選択してください）",
+    "choices_ja": [
+      "CloudTrail はグローバルに有効化されている。",
+      "CloudTrail はデフォルトで有効化されている。",
+      "CloudTrail はリージョンごとに有効化されている。",
+      "CloudTrail はサービスごとに有効化されている。",
+      "ログは集約のために単一の Amazon S3 バケットに配信できる。",
+      "CloudTrail はリージョン内のすべての利用可能なサービスに対して有効化されている。",
+      "ログは生成されたリージョンでのみ処理および配信される。"
+    ]
   },
   {
     "id": 450,
@@ -2548,7 +3531,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 140
+    "domain_seq": 140,
+    "question_ja": "EC2 インスタンスに SSH で接続できない場合、接続を回復するために確認し修正すべきことはどれですか？",
+    "choices_ja": [
+      "セキュリティグループを調整して、あなたの IP からの TCP ポート 443 のアウトバウンドトラフィックを許可する",
+      "JAM ロールを設定してセキュリティグループの設定変更を許可する",
+      "インスタンスのセキュリティグループを変更して、あなたの IP からの ICMP パケットのインバウンドを許可する",
+      "インスタンスのセキュリティグループを調整して、あなたの IP からのポート 22 のインバウンドトラフィックを許可する",
+      "最新のオペレーティングシステムのセキュリティパッチを適用する"
+    ]
   },
   {
     "id": 452,
@@ -2568,7 +3559,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 141
+    "domain_seq": 141,
+    "question_ja": "顧客は AWS への Direct Connect 接続を確立しています。リンクは確立され、顧客側からルートがアドバタイズされていますが、VPC 内の EC2 インスタンスからデータセンター内のサーバーに接続できません。この状況を改善するために有効な解決策はどれでしょうか？（2つ選択してください）",
+    "choices_ja": [
+      "ターゲットに IPsec VPN 接続を指定してルートテーブルにルートを追加する",
+      "仮想プライベートゲートウェイ（VGW）へのルート伝播を有効にする",
+      "カスタマーゲートウェイ（CGW）へのルート伝播を有効にする",
+      "すべてのインスタンスで 'route' コマンドを使ってルートテーブルを変更する",
+      "インスタンスの VPC サブネットのルートテーブルに、オンプレミス環境へのルートを追加する"
+    ]
   },
   {
     "id": 456,
@@ -2586,7 +3585,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 142
+    "domain_seq": 142,
+    "question_ja": "次のコマンドは Amazon EC2 のセキュリティグループに関して何を行いますか？ ec2-create-group CreateSecurityGroup",
+    "choices_ja": [
+      "ユーザーが作成したセキュリティグループをまとめて新しいグループを作成し、アクセスを簡単にする。",
+      "アカウントで使用するための新しいセキュリティグループを作成する。",
+      "セキュリティグループの中に新しいグループを作成する。",
+      "セキュリティグループの中に新しいルールを作成する。"
+    ]
   },
   {
     "id": 459,
@@ -2604,7 +3610,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 143
+    "domain_seq": 143,
+    "question_ja": "ユーザーは、最初に請求時間に最も近いインスタンスを削除するように AutoScaling の終了ポリシーを定義しています。AutoScaling は US-East-1A リージョンに3つ、US-East-1B リージョンに2つのインスタンスを起動しました。US-East-1B リージョンのインスタンスのうち1つが請求時間に最も近く稼働しています。終了処理を実行する際、AutoScaling はどのインスタンスを最初に終了しますか？",
+    "choices_ja": [
+      "US-East-1A のランダムなインスタンス",
+      "US-East-1B の請求時間に最も近いインスタンス",
+      "US-East-1A の請求時間に最も近いインスタンス",
+      "US-East-1B のランダムなインスタンス"
+    ]
   },
   {
     "id": 460,
@@ -2622,7 +3635,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 144
+    "domain_seq": 144,
+    "question_ja": "Amazon VPC のパブリックサブネットに3台のインスタンスがあり、これらのインスタンスはインターネット上の他のホストと正常に通信できます。同じサブネット内に、同じAMIとセキュリティグループ設定を使って4台目のインスタンスを起動しましたが、このインスタンスはインターネットからアクセスできません。インターネットアクセスを可能にするにはどうすればよいですか？",
+    "choices_ja": [
+      "パブリックサブネットにNATインスタンスを配置する",
+      "4台目のインスタンスにElastic IPアドレスを割り当てる",
+      "4台目のインスタンスのホストOSにパブリックルーティング可能なIPアドレスを設定する",
+      "パブリックサブネットのルーティングテーブルを変更する"
+    ]
   },
   {
     "id": 461,
@@ -2640,7 +3660,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 145
+    "domain_seq": 145,
+    "question_ja": "Amazon S3 の「Server Side Encryption」オプションは何を提供しますか？",
+    "choices_ja": [
+      "クラウド上で暗号化された仮想ディスクを提供する。",
+      "Amazon S3 には存在せず、Amazon EC2 のみで利用可能である。",
+      "サーバー側で Amazon S3 に送信するファイルを暗号化する。",
+      "安全な転送のために SSL エンドポイントを使ってファイルをアップロードできる。"
+    ]
   },
   {
     "id": 464,
@@ -2658,7 +3685,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 146
+    "domain_seq": 146,
+    "question_ja": "IAMサービスにおけるGROUPとは何ですか？",
+    "choices_ja": [
+      "複数のAWSアカウントの集合体。",
+      "GROUPで指定された権限を持つEC2インスタンスのグループ。",
+      "IAMにはGROUPはなく、USERとRESOURCEのみが存在する。",
+      "ユーザーの集合体。"
+    ]
   },
   {
     "id": 466,
@@ -2676,7 +3710,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 147
+    "domain_seq": 147,
+    "question_ja": "ユーザーはオンラインでもオフラインでも遊べるモバイルゲームを作成し、EC2上でホストする予定です。誰かが最高得点を更新したり、あるマイルストーンを達成した場合に、全ての同僚にメールで通知したいと考えています。以下のAWSサービスのうち、この目的を達成するのに役立つものはどれですか？",
+    "choices_ja": [
+      "AWS Simple Workflow Service",
+      "AWS Simple Email Service",
+      "Amazon Cognito",
+      "AWS Simple Queue Service"
+    ]
   },
   {
     "id": 469,
@@ -2694,7 +3735,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 148
+    "domain_seq": 148,
+    "question_ja": "ユーザーは US East リージョンに EC2 インスタンスを1台、US West リージョンに EC2 インスタンスを1台起動しました。さらに US East リージョンに RDS インスタンスを起動しています。両方の EC2 インスタンスから RDS へアクセスできるようにするにはどうすればよいでしょうか？",
+    "choices_ja": [
+      "US West リージョンから US East リージョンの RDS へアクセスすることはできません。",
+      "US West リージョンのセキュリティグループに US East リージョンのインスタンスからのリクエストを許可し、RDS のセキュリティグループのインバウンドルールに US East の EC2 グループを設定する。",
+      "US East リージョンのセキュリティグループに US West リージョンのインスタンスからのトラフィックを許可し、RDS のセキュリティグループのインバウンドルールに US East の EC2 グループを設定する。",
+      "RDS のセキュリティグループのインバウンドルールに両方のインスタンスのセキュリティグループを設定する。"
+    ]
   },
   {
     "id": 475,
@@ -2712,7 +3760,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 149
+    "domain_seq": 149,
+    "question_ja": "Amazon RDS の DB を作成する際、最初に設定するのは、どの IP アドレスや EC2 インスタンスが DB インスタンスにアクセスできるかを制御する DB の何ですか？",
+    "choices_ja": [
+      "セキュリティプール",
+      "セキュアゾーン",
+      "セキュリティトークンプール",
+      "セキュリティグループ"
+    ]
   },
   {
     "id": 478,
@@ -2730,7 +3785,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 150
+    "domain_seq": 150,
+    "question_ja": "Company Bはモバイル向けの新しいゲームアプリをリリースします。ユーザーは既存のソーシャルメディアアカウントでログインし、データ収集を効率化します。Company Bは、モバイルアプリから直接DynamoDBのScore Dataテーブルにプレイヤーデータとスコア情報を保存したいと考えています。ユーザーがゲームを保存すると、進行状況のデータはGame StateというS3バケットに保存されます。DynamoDBとS3にデータを保存する最適な方法はどれでしょうか？",
+    "choices_ja": [
+      "Score DataのDynamoDBテーブルとGame StateのS3バケットへのアクセス権を持つEC2ロールを割り当てたEC2インスタンスを使用し、モバイルアプリとはWebサービスで通信する。",
+      "Webアイデンティティフェデレーションを使い、Score DataのDynamoDBテーブルとGame StateのS3バケットへのアクセス権を持つロールを引き受ける一時的なセキュリティ認証情報を使用する。",
+      "AmazonアカウントでサインインできるLogin with Amazonを使い、モバイルアプリにScore DataのDynamoDBテーブルとGame StateのS3バケットへのアクセス権を提供する。",
+      "Score DataのDynamoDBテーブルとGame StateのS3バケットへのアクセス権を持つロールを割り当てたアクセス認証情報を持つIAMユーザーを作成し、モバイルアプリに配布する。"
+    ]
   },
   {
     "id": 484,
@@ -2753,7 +3815,16 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 151
+    "domain_seq": 151,
+    "question_ja": "オンプレミスのインフラストラクチャとAmazon VPC間の接続ソリューションを設計しています。オンプレミスのサーバーはVPC内のインスタンスと通信します。インターネット経由でIPSecトンネルを確立し、VPNゲートウェイを使用してAWS対応のカスタマーゲートウェイでIPSecトンネルを終端します。上記のようにIPSecトンネルを実装することで達成できる目的はどれですか？（4つ選択してください）",
+    "choices_ja": [
+      "通信中のデータのエンドツーエンド保護",
+      "エンドツーエンドのID認証",
+      "インターネット上のデータ暗号化",
+      "インターネット経由のデータ通信の保護",
+      "VPNゲートウェイとカスタマーゲートウェイ間のピア認証",
+      "インターネット上のデータ整合性保護"
+    ]
   },
   {
     "id": 491,
@@ -2771,7 +3842,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 152
+    "domain_seq": 152,
+    "question_ja": "CloudFormationでJSONテンプレートを使ってスタックを設定してみて、少し理解を深めようとしています。5〜6個ほどスタックを作成しましたが、これらのスタックに対して料金が発生しているのか気になり始めました。AWSのスタックリソースに関する課金ポリシーはどのようになっていますか？",
+    "choices_ja": [
+      "スタックリソースがトラフィックを受けていなければ料金は発生しません。",
+      "スタックをすぐに削除しても、稼働していた時間に対して料金が発生します。",
+      "スタックを60分以内に削除した場合は料金が発生しませんが、それ以外は稼働時間に対して料金が発生します。",
+      "スタックを30分以内に削除した場合は料金が発生しませんが、それ以外は稼働時間に対して料金が発生します。"
+    ]
   },
   {
     "id": 493,
@@ -2789,7 +3867,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 153
+    "domain_seq": 153,
+    "question_ja": "ルートユーザーとしてサインインしていますが、アカウント内のあるAmazon S3バケットにアクセスできません。考えられる理由は何ですか？",
+    "choices_ja": [
+      "IAMユーザーがAmazon S3バケットにバケットポリシーを割り当てたが、ルートユーザーをプリンシパルとして指定していなかった",
+      "S3バケットが満杯である",
+      "S3バケットが許可されている最大オブジェクト数に達している",
+      "間違ったアベイラビリティゾーンにいる"
+    ]
   },
   {
     "id": 501,
@@ -2807,7 +3892,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 154
+    "domain_seq": 154,
+    "question_ja": "AWS アカウント（ルートアカウントレベル）で使用できる MFA デバイスのデフォルトの最大数はいくつですか？",
+    "choices_ja": [
+      "1",
+      "5",
+      "15",
+      "10"
+    ]
   },
   {
     "id": 509,
@@ -2825,7 +3917,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 155
+    "domain_seq": 155,
+    "question_ja": "VPC環境でデータ漏洩防止ソリューションを設計しています。VPC内のインスタンスがインターネット上のソフトウェアデポや配布物にアクセスして製品のアップデートを行えるようにしたいと考えています。これらのデポや配布物は、サードパーティのCONsを介してURLでアクセス可能です。VPCインスタンスからインターネット上のその他のホストへのすべてのアウトバウンド接続は明示的に拒否したい場合、どのオプションを検討しますか？",
+    "choices_ja": [
+      "VPC内にウェブプロキシサーバーを構築し、アウトバウンドアクセスに対してURLベースのルールを適用する。デフォルトルートは削除する。",
+      "セキュリティグループを実装し、アウトバウンドルールでソフトウェアデポへのトラフィックのみを許可するよう設定する。",
+      "すべてのインスタンスをプライベートVPCサブネットに移動し、すべてのルーティングテーブルからデフォルトルートを削除して、ソフトウェアデポと配布物への特定ルートのみを追加する。",
+      "ネットワークACLを特定の宛先すべてに適用し、暗黙の拒否ルールを設定する。"
+    ]
   },
   {
     "id": 513,
@@ -2846,7 +3945,16 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 156
+    "domain_seq": 156,
+    "question_ja": "災害復旧のために、別のリージョンに本番環境のミラーイメージを作成したいと考えています。次のうち、2つのリージョンで再作成する必要がないAWSリソースはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "Route 53のレコードセット",
+      "IAMロール",
+      "Elastic IPアドレス（EIP）",
+      "EC2キーペア",
+      "起動設定",
+      "セキュリティグループ"
+    ]
   },
   {
     "id": 516,
@@ -2864,7 +3972,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 157
+    "domain_seq": 157,
+    "question_ja": "IAM ユーザーポリシーを設定している際に、一部のサービスがリソースベースの権限をサポートしていることに気づきました。リソースベースの権限とは、IAM ユーザーやグループではなく、そのサービスのリソースに直接ポリシーをアタッチできるものです。リソースレベルの権限に関して、以下のうち正しいものはどれですか？",
+    "choices_ja": [
+      "すべてのサービスがすべてのアクションに対してリソースレベルの権限をサポートしている。",
+      "Amazon CloudFront はリソースレベルの権限をサポートしている。",
+      "すべてのサービスが一部のアクションに対してのみリソースレベルの権限をサポートしている。",
+      "一部のサービスが一部のアクションに対してのみリソースレベルの権限をサポートしている。"
+    ]
   },
   {
     "id": 517,
@@ -2882,7 +3997,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 158
+    "domain_seq": 158,
+    "question_ja": "非常に機密性の高いデータを AWS S3 に保存しており、アクセス制御に関してあらゆる可能な方法でセキュリティを確保したいと考えています。AWS S3 で利用可能なアクセス制御の仕組みはどれですか？",
+    "choices_ja": [
+      "(IAM) ポリシー、アクセスコントロールリスト（ACL）、バケットポリシー、クエリ文字列認証",
+      "(IAM) ポリシー、アクセスコントロールリスト（ACL）、バケットポリシー",
+      "アクセスコントロールリスト（ACL）、バケットポリシー、クエリ文字列認証",
+      "(IAM) ポリシー、アクセスコントロールリスト（ACL）、バケットポリシー、クエリ文字列認証、暗号化"
+    ]
   },
   {
     "id": 518,
@@ -2900,7 +4022,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 159
+    "domain_seq": 159,
+    "question_ja": "AWS Direct Connect を導入しています。AWS Direct Connect 経由で Amazon S3 などの AWS パブリックサービスエンドポイントを利用したいと考えています。一方で、その他のインターネットトラフィックは既存のインターネットサービスプロバイダーへのリンクを使いたいです。Amazon S3 などのサービスにアクセスするために、AWS Direct Connect をどのように設定するのが正しいでしょうか？",
+    "choices_ja": [
+      "AWS Direct Connect リンクにパブリックインターフェイスを設定します。AWS Direct Connect リンク経由で Amazon S3 を指す静的ルートを設定し、BGP を使って AWS へのデフォルトルートを広告します。",
+      "AWS Direct Connect リンクにプライベートインターフェイスを作成します。AWS Direct Connect リンク経由で Amazon S3 を指す静的ルートを設定し、VPC 内のネットワークへの特定ルートを設定します。",
+      "AWS Direct Connect リンクにパブリックインターフェイスを作成します。BGP ルートを既存のルーティングインフラに再配布し、ネットワークへの特定ルートを AWS に広告します。",
+      "AWS Direct Connect リンクにプライベートインターフェイスを作成します。BGP ルートを既存のルーティングインフラに再配布し、AWS へのデフォルトルートを広告します。"
+    ]
   },
   {
     "id": 519,
@@ -2918,7 +4047,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 160
+    "domain_seq": 160,
+    "question_ja": "初めてAmazon Virtual Private Cloud（Amazon VPC）ネットワークを設定するため、AWS Management ConsoleのVPCウィザードを使うことにしました。AWS Management ConsoleのAmazon VPCページで「Start VPC Wizard」を起動した後に選べるネットワークアーキテクチャとして、次のうち該当しないものはどれですか？",
+    "choices_ja": [
+      "パブリックサブネットのみのVPC",
+      "パブリックサブネットのみとハードウェアVPNアクセスのあるVPC",
+      "パブリックおよびプライベートサブネットとハードウェアVPNアクセスのあるVPC",
+      "プライベートサブネットのみとハードウェアVPNアクセスのあるVPC"
+    ]
   },
   {
     "id": 522,
@@ -2936,7 +4072,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 161
+    "domain_seq": 161,
+    "question_ja": "REST/Query リクエストに署名する際、追加のセキュリティ対策として、リクエストを Secure Sockets Layer (SSL) を使って送信するにはどれを使用すべきですか？",
+    "choices_ja": [
+      "HTTP",
+      "Internet Protocol Security (IPsec)",
+      "TLS (Transport Layer Security)",
+      "HTTPS"
+    ]
   },
   {
     "id": 524,
@@ -2953,7 +4096,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 162
+    "domain_seq": 162,
+    "question_ja": "アプリケーションとDBインスタンス間の接続をSSLで暗号化できますか？",
+    "choices_ja": [
+      "はい。",
+      "VPC内のみです。",
+      "特定のリージョンのみです。"
+    ]
   },
   {
     "id": 525,
@@ -2974,7 +4123,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 163
+    "domain_seq": 163,
+    "question_ja": "EC2 インスタンス上にデプロイされたアプリケーションが DynamoDB テーブルにデータを書き込むために必要な項目はどれですか？EC2 インスタンスにセキュリティキーを保存することは許可されていないものとします。（3つ選択してください）",
+    "choices_ja": [
+      "DynamoDB テーブルへの書き込みアクセスを許可する IAM ロールを作成する。",
+      "実行中の EC2 インスタンスに IAM ロールを割り当てる。",
+      "DynamoDB テーブルへの書き込みアクセスを許可する IAM ユーザーを作成する。",
+      "実行中の EC2 インスタンスに IAM ユーザーを割り当てる。",
+      "起動設定に IAM ロールを含めて EC2 インスタンスを起動する。"
+    ]
   },
   {
     "id": 528,
@@ -2992,7 +4149,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 164
+    "domain_seq": 164,
+    "question_ja": "IAM は、作成したグループに自動的に権限を割り当てるために使用できる複数のポリシーテンプレートを提供しています。[...] ポリシーテンプレートは、Admins グループに AWS アカウント情報を除くすべてのアカウントリソースへのアクセス権を付与します。",
+    "choices_ja": [
+      "読み取り専用アクセス",
+      "パワーユーザーアクセス",
+      "AWS CloudFormation 読み取り専用アクセス",
+      "管理者アクセス"
+    ]
   },
   {
     "id": 530,
@@ -3010,7 +4174,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 165
+    "domain_seq": 165,
+    "question_ja": "EC2-Classicでインスタンスを起動した後に、EC2のセキュリティグループを変更できますか？",
+    "choices_ja": [
+      "はい、EC2-Classicでインスタンスを起動した後にセキュリティグループを変更できます。",
+      "いいえ、EC2-Classicでインスタンスを起動した後にセキュリティグループを変更できません。",
+      "はい、セキュリティグループからルールを削除した場合のみ変更できます。",
+      "はい、セキュリティグループにルールを追加した場合のみ変更できます。"
+    ]
   },
   {
     "id": 534,
@@ -3028,7 +4199,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 166
+    "domain_seq": 166,
+    "question_ja": "AWS Identity and Access Management は、AWS のユーザーとユーザー権限を管理するためのウェブサービスです。IAM ユーザーポリシーのサポートに加えて、一部のサービスではリソースベースの権限もサポートしています。次のうち、リソースベースの権限をサポートしているサービスはどれですか？",
+    "choices_ja": [
+      "Amazon SNS、Amazon SQS、AWS Direct Connect",
+      "Amazon S3、Amazon SQS、Amazon ElastiCache",
+      "Amazon S3、Amazon SNS、Amazon SQS、Amazon Glacier、Amazon EB",
+      "Amazon Glacier、Amazon SNS、Amazon CloudWatch"
+    ]
   },
   {
     "id": 535,
@@ -3046,7 +4224,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 167
+    "domain_seq": 167,
+    "question_ja": "以下の Amazon EC2 のポリシーは何を許可していますか？ { 'Statement':[{ 'Effect': 'Allow', 'Action':'ec2: Describe*', 'Resource':'*' }] }",
+    "choices_ja": [
+      "ユーザーがすべての EC2 リソースに対して 'Describe' で始まるアクションを実行できるように許可する。",
+      "AMI をパートナーと共有する。",
+      "アカウント内で AMI を共有する。",
+      "グループに対してインスタンスの説明、起動、停止、開始、終了のみを許可する。"
+    ]
   },
   {
     "id": 536,
@@ -3064,7 +4249,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 168
+    "domain_seq": 168,
+    "question_ja": "AWS Lambda に DynamoDB Stream へのアクセス権限を付与するために使用する IAM ロールはどれですか？",
+    "choices_ja": [
+      "Dynamic ロール",
+      "Invocation ロール",
+      "Execution ロール",
+      "Event Source ロール"
+    ]
   },
   {
     "id": 537,
@@ -3082,7 +4274,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 169
+    "domain_seq": 169,
+    "question_ja": "ホストゾーン内のリソースレコードセットは、異なるドメインのサフィックス（例えば、www.blog.acme.com と www.acme.ca）を持つことができますか？",
+    "choices_ja": [
+      "はい、最大で3つの異なるTLDまで可能です。",
+      "はい、可能です。",
+      "はい、TLDによって可能です。",
+      "いいえ、できません。"
+    ]
   },
   {
     "id": 543,
@@ -3103,7 +4302,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 170
+    "domain_seq": 170,
+    "question_ja": "フォーチュン500に入るあなたの会社は、Amazon S3の利用とハードウェアの追加購入を比較するTCO分析を実施しました。その結果、全従業員に個人用ドキュメントの保存のためAmazon S3の利用権限を付与することになりました。企業のADまたはLDAPディレクトリからのシングルサインオンを組み込み、各ユーザーがバケット内の指定されたユーザーフォルダにのみアクセスできるように制限するソリューションを構築するには、次のうちどれを考慮する必要がありますか？（3つ選択）",
+    "choices_ja": [
+      "フェデレーションプロキシまたはIDプロバイダーの設定",
+      "AWS Security Token Serviceを使って一時的なトークンを発行する",
+      "バケット内の各フォルダにタグ付けする",
+      "IAMロールの設定",
+      "アクセスが必要な企業ディレクトリの各ユーザーに対応するIAMユーザーを作成する"
+    ]
   },
   {
     "id": 544,
@@ -3124,7 +4331,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 171
+    "domain_seq": 171,
+    "question_ja": "会社のポリシーで、保存時の機密データの暗号化が求められています。EC2インスタンスにアタッチされたEBSデータボリュームに保存するデータを保護するための選択肢を検討しています。これらのうち、保存時のデータを暗号化する方法として適切なものはどれですか？（3つ選択してください）",
+    "choices_ja": [
+      "サードパーティ製のボリューム暗号化ツールを導入する。",
+      "何もしなくてよい。EBSボリュームはデフォルトで暗号化されている。",
+      "EBSに保存する前にアプリケーション内でデータを暗号化する。",
+      "ファイルシステムレベルでネイティブのデータ暗号化ドライバーを使って暗号化する。",
+      "サーバー上で動作するすべてのサービスに対してSSL/TLSを実装する。"
+    ]
   },
   {
     "id": 550,
@@ -3142,7 +4357,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 172
+    "domain_seq": 172,
+    "question_ja": "既存のユーザーに対して IAM セキュリティ認証情報を作成できますか？",
+    "choices_ja": [
+      "はい、既存のユーザーにはセキュリティ認証情報を関連付けることができます。",
+      "いいえ、IAM では認証情報を設定するユーザーはすべて新規ユーザーでなければなりません。",
+      "いいえ、セキュリティ認証情報はグループ内で作成され、その後ユーザーがグループに関連付けられます。",
+      "はい、ただし通常のセキュリティ認証情報ではなく IAM 認証情報のみです。"
+    ]
   },
   {
     "id": 554,
@@ -3161,7 +4383,15 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 173
+    "domain_seq": 173,
+    "question_ja": "AWS IAM（Identity and Access Management）をオンプレミスのLDAP（Lightweight Directory Access Protocol）ディレクトリサービスと連携させるために使用できる手法はどれですか？",
+    "choices_ja": [
+      "LDAPアカウント識別子とAWS認証情報を参照するIAMポリシーを使用する。",
+      "SAML（Security Assertion Markup Language）を使用してAWSとLDAP間のシングルサインオンを有効にする。",
+      "アイデンティティブローカーからAWS Security Token Serviceを使用して短期間のAWS認証情報を発行する。",
+      "LDAP認証情報が更新されたときにIAMロールを使ってIAM認証情報を自動的にローテーションする。",
+      "LDAP認証情報を使って特定のEC2インスタンスタイプの起動を制限するユーザーグループを制御する。"
+    ]
   },
   {
     "id": 555,
@@ -3179,7 +4409,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 174
+    "domain_seq": 174,
+    "question_ja": "お客様のオンプレミスのデータセンターをAWSに拡張するソリューションを構築しています。お客様はVPCへの50Mbpsの専用かつプライベートな接続を求めています。この要件を満たすAWSの製品または機能はどれですか？",
+    "choices_ja": [
+      "Amazon VPCピアリング",
+      "Elastic IPアドレス",
+      "AWS Direct Connect",
+      "Amazon VPC仮想プライベートゲートウェイ"
+    ]
   },
   {
     "id": 556,
@@ -3197,7 +4434,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 175
+    "domain_seq": 175,
+    "question_ja": "顧客はバックアップおよびアーカイブのインフラストラクチャの一環として、Amazon Simple Storage Service (S3) と Amazon Glacier を活用したいと考えています。顧客はこの統合をサポートするためにサードパーティ製ソフトウェアを使用する予定です。サードパーティ製ソフトウェアのアクセスを 'company-backup' という名前の Amazon S3 バケットのみに制限するには、どの方法が適切でしょうか？",
+    "choices_ja": [
+      "Amazon Glacier のアーカイブ 'company backup' にある Amazon S3 API に限定したカスタムバケットポリシー",
+      "'company-backup' にある Amazon S3 API に限定したカスタムバケットポリシー",
+      "Amazon Glacier のアーカイブ 'company backup' にある Amazon S3 API に限定したカスタム IAM ユーザーポリシー",
+      "'company-backup' にある Amazon S3 API に限定したカスタム IAM ユーザーポリシー"
+    ]
   },
   {
     "id": 561,
@@ -3215,7 +4459,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 176
+    "domain_seq": 176,
+    "question_ja": "Amazon Web Services への専用接続を所有する方法はありますか？",
+    "choices_ja": [
+      "VPC への暗号化トンネルを作成できますが、接続自体は所有できません。",
+      "はい、それは Amazon Dedicated Connection と呼ばれます。",
+      "いいえ、AWS はパブリックインターネットからのアクセスのみを許可しています。",
+      "はい、それは Direct Connect と呼ばれます。"
+    ]
   },
   {
     "id": 562,
@@ -3233,7 +4484,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 177
+    "domain_seq": 177,
+    "question_ja": "次のうち、Amazon EC2 インスタンスへのアクセスを制御するために使用できる方法はどれですか？",
+    "choices_ja": [
+      "DB セキュリティグループ",
+      "IAM ポリシー",
+      "どれでもない",
+      "EC2 セキュリティグループ"
+    ]
   },
   {
     "id": 563,
@@ -3251,7 +4509,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 178
+    "domain_seq": 178,
+    "question_ja": "あなたのクライアントは大量のデータをAmazon S3に保存していますが、転送中にデータが盗まれることを心配しています。AWSではすべてのデータが転送中に暗号化されていることは知っていますが、AWSのサーバーサイド暗号化について説明する際に誤っているものはどれですか？",
+    "choices_ja": [
+      "Amazon S3のサーバーサイド暗号化は強力な多要素暗号化を採用している。",
+      "Amazon S3のサーバーサイド暗号化は、256ビットのAdvanced Encryption Standard（AES-256）という最も強力なブロック暗号の一つを使ってデータを暗号化する。",
+      "サーバーサイド暗号化では、データの暗号化・復号化、暗号鍵、および関連ツールを自分で管理する。",
+      "サーバーサイド暗号化はデータの保存時の暗号化に関するものであり、Amazon S3はデータをディスクに書き込む際に暗号化する。"
+    ]
   },
   {
     "id": 575,
@@ -3269,7 +4534,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 179
+    "domain_seq": 179,
+    "question_ja": "AWS 上でマルチプラットフォーム対応のウェブアプリケーションを設計しています。このアプリケーションは EC2 インスタンス上で動作し、PC、タブレット、スマートフォンからアクセスされます。対応するプラットフォームは Windows、macOS、iOS、Android です。プラットフォームごとに異なるスティッキーセッションと SSL 証明書の設定が必要です。最もコスト効率が高く、パフォーマンスに優れたアーキテクチャ構成はどれでしょうか？",
+    "choices_ja": [
+      "オンプレミスでセッション状態と SSL 証明書を管理するハイブリッド構成を設定し、VPC 内でプラットフォームごとに異なる EC2 インスタンスグループでウェブアプリケーションを実行する。",
+      "すべてのプラットフォーム向けに1つの ELB を設定し、その下の複数インスタンスに負荷を分散する。各 EC2 インスタンスは特定のプラットフォーム向けの全機能を実装する。",
+      "2つの ELB を設定する。1つ目の ELB はすべてのプラットフォームの SSL 証明書を処理し、2つ目の ELB はすべてのプラットフォームのセッションスティッキーを処理する。各 ELB ごとにプラットフォーム別のウェブアプリケーションを処理する EC2 インスタンスグループを実行する。",
+      "共通コンポーネントを実行する EC2 インスタンスまたはインスタンスグループに複数の ELB を割り当て、プラットフォームごとに1つの ELB を設定する。セッションスティッキーと SSL 終端は ELB で行う。"
+    ]
   },
   {
     "id": 578,
@@ -3287,7 +4559,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 180
+    "domain_seq": 180,
+    "question_ja": "ある組織は、EBS ボリュームに保存されているデータの保存時の保護を法的に義務付けられています。データ保護を実現するために、以下のどのオプションを利用できますか？",
+    "choices_ja": [
+      "データの複製",
+      "データの暗号化",
+      "データのスナップショット",
+      "ここに挙げられたすべてのオプション"
+    ]
   },
   {
     "id": 579,
@@ -3305,7 +4584,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 181
+    "domain_seq": 181,
+    "question_ja": "あるウェブデザイン会社は現在、250人の顧客が大容量のグラフィックファイルをアップロード・ダウンロードするために複数のFTPサーバーを運用しています。彼らはこのシステムをよりスケーラブルにするためにAWSに移行したいと考えていますが、顧客のプライバシーを維持しつつコストを最小限に抑えたいと考えています。どのAWSアーキテクチャを推奨しますか？",
+    "choices_ja": [
+      "顧客にFTPクライアントの代わりにS3クライアントを使ってもらう。単一のS3バケットを作成し、顧客ごとにIAMユーザーを作成する。IAMユーザーをグループにまとめ、そのグループにバケット内のサブディレクトリへのアクセスを許可するIAMポリシー（'username'ポリシー変数を使用）を割り当てる。",
+      "Reduced Redundancy Storageを有効にした単一のS3バケットを作成し、顧客にFTPクライアントの代わりにS3クライアントを使ってもらう。顧客ごとにバケットを作成し、そのバケットに対して該当顧客のみアクセスを許可するバケットポリシーを設定する。",
+      "FTPサーバーのオートスケーリンググループを作成し、ネットワークトラフィックが一定の閾値を下回った場合に自動的にスケールインするスケーリングポリシーを設定する。各インスタンスのユーザーデータ起動スクリプトでS3からFTPユーザーの中央リストを読み込む。",
+      "Requester Paysを有効にした単一のS3バケットを作成し、顧客にFTPクライアントの代わりにS3クライアントを使ってもらう。顧客ごとにバケットを作成し、そのバケットに対して該当顧客のみアクセスを許可するバケットポリシーを設定する。"
+    ]
   },
   {
     "id": 584,
@@ -3323,7 +4609,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 182
+    "domain_seq": 182,
+    "question_ja": "CloudWatch アラームをトリガーするために設定できるしきい値について、最も適切に説明しているのはどれですか？",
+    "choices_ja": [
+      "目標値を設定し、その値が指定した値より大きい（>）、以上（>=）、小さい（<）、または以下（<=）の場合にアラームが発動するように選択する。",
+      "しきい値は CloudWatch ではなく IAM で設定する必要がある。",
+      "設定できるのはデフォルトのしきい値のみで、自分でしきい値を選ぶことはできない。",
+      "目標値を設定し、その値がこのしきい値に達したときにアラームが発動するように選択する。"
+    ]
   },
   {
     "id": 590,
@@ -3341,7 +4634,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 183
+    "domain_seq": 183,
+    "question_ja": "デフォルトのセキュリティグループの初期設定として正しい組み合わせを選んでください。",
+    "choices_ja": [
+      "インバウンドトラフィックを許可しない、アウトバウンドトラフィックはすべて許可、同じセキュリティグループに関連付けられたインスタンス同士の通信を許可する。",
+      "インバウンドトラフィックをすべて許可、アウトバウンドトラフィックを許可しない、同じセキュリティグループに関連付けられたインスタンス同士の通信を許可する。",
+      "インバウンドトラフィックを許可しない、アウトバウンドトラフィックはすべて許可、同じセキュリティグループに関連付けられたインスタンス同士の通信を許可しない。",
+      "インバウンドトラフィックをすべて許可、アウトバウンドトラフィックもすべて許可、同じセキュリティグループに関連付けられたインスタンス同士の通信を許可しない。"
+    ]
   },
   {
     "id": 595,
@@ -3359,7 +4659,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 184
+    "domain_seq": 184,
+    "question_ja": "クライアントのためにオンラインゲームサイトを構築している最中で、要件の一つに大量のデータを容易に処理できることがあります。このデータ処理に非常に役立つAWSサービスはどれですか？",
+    "choices_ja": [
+      "Amazon S3",
+      "AWS Data Pipeline",
+      "AWS Direct Connect",
+      "Amazon EMR"
+    ]
   },
   {
     "id": 596,
@@ -3377,7 +4684,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 185
+    "domain_seq": 185,
+    "question_ja": "あなたのチームは、TomcatベースのJavaアプリケーションを開発、テスト、本番環境にデプロイする必要があります。調査の結果、開発者ツールとの連携が強力なElastic Beanstalkと、管理が容易なRDSを使用することにしました。QAチームのリーダーからは、毎晩本番データのサニタイズ済みセットを環境にロールバックする必要があると指摘されています。同様に、組織内の他のソフトウェアチームも、VPC内のEC2インスタンスからその復元済みデータにアクセスしたいと考えています。これらの要件を満たす、永続性とセキュリティの最適な構成はどれでしょうか？",
+    "choices_ja": [
+      "Elastic Beanstalkの定義の一部としてRDSインスタンスを作成し、そのセキュリティグループをアプリケーションのサブネット内のホストからのアクセスを許可するよう変更する。",
+      "RDSインスタンスを別途作成し、そのIPアドレスをアプリケーションのDB接続文字列に追加する。セキュリティグループを変更して、VPCのIPアドレスブロック内のホストからのアクセスを許可する。",
+      "RDSインスタンスを別途作成し、そのDNS名を環境変数としてアプリのDB接続文字列に渡す。クライアントマシン用のセキュリティグループを作成し、それをRDSインスタンスのセキュリティグループのDBトラフィックの有効な送信元として追加する。",
+      "RDSインスタンスを別途作成し、そのDNS名を環境変数としてDB接続文字列に渡す。セキュリティグループを変更して、アプリケーションのサブネット内のホストからのアクセスを許可する。"
+    ]
   },
   {
     "id": 599,
@@ -3395,7 +4709,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 186
+    "domain_seq": 186,
+    "question_ja": "アプリケーションはどのようにAWS認証情報を使用してS3バケットに安全にアクセスすべきですか？",
+    "choices_ja": [
+      "アプリケーションのソースコードから取得したAWSアカウントのアクセスキーを使用する。",
+      "S3バケットへの一覧アクセス権限を持つIAMユーザーをアプリケーション用に作成し、そのIAMユーザーとしてインスタンスを起動し、EC2インスタンスのユーザーデータからIAMユーザーの認証情報を取得する。",
+      "S3バケット内のオブジェクトへの一覧アクセスを許可するIAMロールをEC2用に作成し、そのロールを割り当ててインスタンスを起動し、EC2インスタンスのメタデータからロールの認証情報を取得する。",
+      "S3バケットへの一覧アクセス権限を持つIAMユーザーをアプリケーション用に作成し、アプリケーションユーザーのみが読み取り可能な一時ディレクトリからIAMユーザーの認証情報を取得する。"
+    ]
   },
   {
     "id": 606,
@@ -3413,7 +4734,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 187
+    "domain_seq": 187,
+    "question_ja": "VPC のセキュリティを設定する必要があり、Amazon VPC には VPC のセキュリティを強化するために使用できる 2 つの機能、セキュリティグループとネットワーク ACL があることを知っています。まずセキュリティグループについて調べ始めました。以下のうち、セキュリティグループに関して誤っている記述はどれですか？",
+    "choices_ja": [
+      "ステートフルである：戻りのトラフィックはルールに関係なく自動的に許可される。",
+      "トラフィックを許可するかどうか判断する前にすべてのルールを評価する。",
+      "許可ルールと拒否ルールの両方をサポートする。",
+      "インスタンスレベルで動作する（最初の防御層）。"
+    ]
   },
   {
     "id": 609,
@@ -3431,7 +4759,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 188
+    "domain_seq": 188,
+    "question_ja": "組織には開発用、テスト用、本番用の3つの別々のAWSアカウントがあります。テストチームに本番アカウント内の特定のAWSリソースへのアクセス権を与えたい場合、どのようにすればよいでしょうか？",
+    "choices_ja": [
+      "あるアカウントのリソースに別のアカウントからアクセスすることはできません。",
+      "クロスアカウントアクセスが可能なIAMロールを作成する。",
+      "テストアカウントにIAMユーザーを作成し、IAMポリシーで本番環境へのアクセスを許可する。",
+      "クロスアカウントアクセスが可能なIAMユーザーを作成する。"
+    ]
   },
   {
     "id": 610,
@@ -3449,7 +4784,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 189
+    "domain_seq": 189,
+    "question_ja": "福利厚生の登録会社が、AWS上のVPC内で3層構成のウェブアプリケーションをホストしています。この構成にはパブリックWeb層にNAT（Network Address Translation）インスタンスが含まれています。新しい会計年度の福利厚生登録期間に向けて、想定される負荷に十分なキャパシティと余裕が確保されています。登録は順調に2日間進みましたが、その後Web層が応答しなくなりました。CloudWatchやその他の監視ツールで調査したところ、福利厚生会社に顧客がいない国から、特定の15のIPアドレス群によるポート80への非常に大量で予期しないインバウンドトラフィックが発生していることが判明しました。Web層のインスタンスは過負荷で、管理者はSSHでさえ接続できない状態です。この攻撃に対して有効な対策はどれでしょうか？",
+    "choices_ja": [
+      "Web層に関連付けられたカスタムルートテーブルを作成し、攻撃元IPアドレスをIGW（Internet Gateway）からブロックする。",
+      "Web層サブネットのNATインスタンスのEIP（Elastic IP Address）を変更し、メインルートテーブルを新しいEIPで更新する。",
+      "攻撃元IPアドレスをポート80でブロックするために、15個のSecurity Groupルールを作成する。",
+      "Web層サブネットに関連付けられたインバウンドのNACL（Network Access Control List）を作成し、攻撃元IPアドレスを拒否するルールを設定する。"
+    ]
   },
   {
     "id": 611,
@@ -3467,7 +4809,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 190
+    "domain_seq": 190,
+    "question_ja": "IAM ロールが割り当てられていない状態で Amazon EC2 インスタンスを起動しました。後から、そのインスタンスに IAM ロールを割り当てて実行したいと考えています。実行中の Amazon EC2 インスタンスに IAM ロールを割り当てるためには、どのような操作を行う必要がありますか？",
+    "choices_ja": [
+      "インスタンスのイメージを作成し、IAM ロールが割り当てられた状態でイメージを登録し、Amazon EBS ボリュームのマッピングを行う。",
+      "既存の IAM ロールと同じ権限を持つ新しい IAM ロールを作成し、それを実行中のインスタンスに割り当てる。",
+      "インスタンスのイメージを作成し、希望する IAM ロールと同じ権限を持つ新しい IAM ロールを追加して、そのロールが割り当てられた状態でイメージの登録を解除する。",
+      "インスタンスのイメージを作成し、そのイメージを使って希望する IAM ロールが割り当てられた新しいインスタンスを起動する。"
+    ]
   },
   {
     "id": 612,
@@ -3485,7 +4834,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 191
+    "domain_seq": 191,
+    "question_ja": "AWS Direct Connect は、リージョン内のすべてのアベイラビリティゾーンにアクセスできますか？",
+    "choices_ja": [
+      "接続の種類によります。",
+      "はい。",
+      "いいえ。",
+      "リージョンにアベイラビリティゾーンが1つだけの場合のみです。複数ある場合は、1つのアベイラビリティゾーンにしか直接アクセスできません。"
+    ]
   },
   {
     "id": 620,
@@ -3503,7 +4859,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 192
+    "domain_seq": 192,
+    "question_ja": "Amazon RDS はインスタンスをプロビジョニングする際に SSL 証明書を作成し、DB インスタンスにインストールします。これらの証明書は認証局によって署名されています。[...] は https://rds.amazonaws.com/doc/rds-ssl-ca-cert.pem に保存されています。",
+    "choices_ja": [
+      "秘密鍵",
+      "外部キー",
+      "公開鍵",
+      "保護鍵"
+    ]
   },
   {
     "id": 622,
@@ -3521,7 +4884,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 193
+    "domain_seq": 193,
+    "question_ja": "パブリックサブネットに手動でNAT AMIを起動しました。ネットワークは適切に設定されており、セキュリティグループとネットワークACLも正しく設定されています。プライベートサブネット内のインスタンスはNATにアクセスでき、NATはインターネットにアクセスできます。しかし、プライベートインスタンスからインターネットにアクセスできません。プライベートインスタンスからのアクセスを許可するために必要な追加の手順は何ですか？",
+    "choices_ja": [
+      "プライベートインスタンスでSource/Destinationチェックを有効にする",
+      "NATインスタンスでSource/Destinationチェックを有効にする",
+      "プライベートインスタンスでSource/Destinationチェックを無効にする",
+      "NATインスタンスでSource/Destinationチェックを無効にする"
+    ]
   },
   {
     "id": 626,
@@ -3539,7 +4909,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 194
+    "domain_seq": 194,
+    "question_ja": "以下のコマンドを実行すると何が起こりますか？ ec2-run ami-e3a5408a -n 20 -g appserver",
+    "choices_ja": [
+      "appserver グループのメンバーとしてインスタンスを20台起動する。",
+      "appserver という名前のセキュリティグループに20個のルールを作成する。",
+      "appserver グループのメンバーとしてインスタンスを20台終了する。",
+      "20個のセキュリティグループを起動する。"
+    ]
   },
   {
     "id": 630,
@@ -3557,7 +4934,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 195
+    "domain_seq": 195,
+    "question_ja": "特定のエンティティに複数のポリシーをアタッチできますか？",
+    "choices_ja": [
+      "はい、常に可能です。",
+      "GovCloud内の場合のみ可能です。",
+      "いいえ、できません。",
+      "VPC内の場合のみ可能です。"
+    ]
   },
   {
     "id": 633,
@@ -3575,7 +4959,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 196
+    "domain_seq": 196,
+    "question_ja": "Amazon EC2-Classic に 100 を超えるルールを適用するにはどうすればよいですか？",
+    "choices_ja": [
+      "セキュリティグループを追加することで可能です。",
+      "1つのセキュリティグループで 100 を超えるルールを使う必要がある場合は、必要なルールを指定したデフォルトのセキュリティグループを作成する必要があります。",
+      "デフォルトで Amazon EC2 のセキュリティグループは 500 ルールをサポートしています。",
+      "Amazon EC2 インスタンスのセキュリティグループには 100 を超えるルールを追加できません。"
+    ]
   },
   {
     "id": 638,
@@ -3593,7 +4984,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 197
+    "domain_seq": 197,
+    "question_ja": "ec2-revoke RevokeSecurityGroup Ingress コマンドの役割は何ですか？",
+    "choices_ja": [
+      "ルールから1つ以上のセキュリティグループを削除する。",
+      "Amazon EC2 インスタンスから1つ以上のセキュリティグループを削除する。",
+      "セキュリティグループから1つ以上のルールを削除する。",
+      "アカウントからセキュリティグループを削除する。"
+    ]
   },
   {
     "id": 648,
@@ -3611,7 +5009,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 198
+    "domain_seq": 198,
+    "question_ja": "ある企業のウェブアプリケーションは、VPC内のApplication Load Balancerの背後で稼働する複数のAmazon EC2インスタンスで構成されています。データはAmazon RDS for MySQLのDBインスタンスに格納されています。企業はAWS環境内の疑わしいまたは予期しない挙動を自動的に検出し対応する機能を必要としています。すでにAWS WAFはアーキテクチャに組み込まれています。脅威から保護するためにソリューションアーキテクトは次に何をすべきでしょうか？",
+    "choices_ja": [
+      "Amazon GuardDutyを使って脅威検出を行う。Amazon EventBridge（Amazon CloudWatch Events）を設定してGuardDutyの検出結果をフィルタリングし、AWS Lambda関数を呼び出してAWS WAFのルールを調整する。",
+      "AWS Firewall Managerを使って脅威検出を行う。Amazon EventBridge（Amazon CloudWatch Events）を設定してFirewall Managerの検出結果をフィルタリングし、AWS Lambda関数を呼び出してAWS WAFのWeb ACLを調整する。",
+      "Amazon Inspectorを使って脅威検出を行い、AWS WAFのルールを更新する。VPCのネットワークACLを作成してウェブアプリケーションへのアクセスを制限する。",
+      "Amazon Macieを使って脅威検出を行い、AWS WAFのルールを更新する。VPCのネットワークACLを作成してウェブアプリケーションへのアクセスを制限する。"
+    ]
   },
   {
     "id": 649,
@@ -3629,7 +5034,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 199
+    "domain_seq": 199,
+    "question_ja": "ある企業が、Amazon Aurora データベースに接続する複数の Amazon EC2 インスタンスを運用する計画を立てています。企業は、EC2 インスタンスと Aurora DB クラスターをデプロイするための AWS CloudFormation テンプレートを作成しました。企業は、インスタンスが安全にデータベースへ認証できるようにしたいと考えています。また、静的なデータベース認証情報を管理したくありません。これらの要件を最も少ない運用負荷で満たすソリューションはどれですか？",
+    "choices_ja": [
+      "ユーザー名とパスワードを持つデータベースユーザーを作成する。CloudFormation テンプレートにデータベースのユーザー名とパスワードのパラメータを追加し、インスタンス起動時にこれらのパラメータを EC2 インスタンスに渡す。",
+      "ユーザー名とパスワードを持つデータベースユーザーを作成する。ユーザー名とパスワードを AWS Systems Manager Parameter Store に保存し、EC2 インスタンスが Parameter Store から認証情報を取得するように設定する。",
+      "DB クラスターを IAM データベース認証を使うように設定する。IAM 認証用のデータベースユーザーを作成し、EC2 インスタンスにロールを関連付けて、インスタンス上のアプリケーションがデータベースにアクセスできるようにする。",
+      "DB クラスターを IAM データベース認証（IAM ユーザーを使用）で設定する。IAM ユーザー名と一致する名前のデータベースユーザーを作成し、IAM ユーザーを EC2 インスタンスに関連付けて、インスタンス上のアプリケーションがデータベースにアクセスできるようにする。"
+    ]
   },
   {
     "id": 650,
@@ -3647,7 +5059,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 200
+    "domain_seq": 200,
+    "question_ja": "企業が Amazon CloudFront のディストリビューションで SSL/TLS 証明書を使用するよう設定したいと考えています。企業はディストリビューションのデフォルトのドメイン名を使いたくなく、代わりに別のドメイン名を使用したいと考えています。追加費用をかけずに証明書を展開するにはどの方法が適切ですか？",
+    "choices_ja": [
+      "AWS Certificate Manager (ACM) で us-east-1 リージョンから Amazon 発行のプライベート証明書をリクエストする。",
+      "AWS Certificate Manager (ACM) で us-west-1 リージョンから Amazon 発行のプライベート証明書をリクエストする。",
+      "AWS Certificate Manager (ACM) で us-east-1 リージョンから Amazon 発行のパブリック証明書をリクエストする。",
+      "AWS Certificate Manager (ACM) で us-west-1 リージョンから Amazon 発行のパブリック証明書をリクエストする。"
+    ]
   },
   {
     "id": 651,
@@ -3665,7 +5084,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 201
+    "domain_seq": 201,
+    "question_ja": "ある企業が運用データを作成し、Amazon S3 バケットに保存しています。年次監査のために、外部コンサルタントが S3 バケットに保存されている年次報告書にアクセスする必要があります。外部コンサルタントは7日間、その報告書にアクセスする必要があります。企業は外部コンサルタントが報告書のみにアクセスできるようにするソリューションを実装しなければなりません。最も運用効率の高い方法はどれですか？",
+    "choices_ja": [
+      "新しい S3 バケットを作成し、パブリックな静的ウェブサイトとしてホストするよう設定する。運用データを新しい S3 バケットに移行し、S3 ウェブサイトの URL を外部コンサルタントと共有する。",
+      "S3 バケットへのパブリックアクセスを7日間有効にする。外部コンサルタントが監査を完了したらアクセスを解除する。",
+      "報告書にアクセスできる新しい IAM ユーザーを作成し、アクセスキーを外部コンサルタントに提供する。7日後にアクセスキーを無効化する。",
+      "報告書の場所に必要なアクセス権を持つ presigned URL を生成し、その URL を外部コンサルタントと共有する。"
+    ]
   },
   {
     "id": 653,
@@ -3683,7 +5109,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 202
+    "domain_seq": 202,
+    "question_ja": "ある企業は、500マイル（804.7 km）離れたプライマリおよびセカンダリのデータセンターを高速ファイバー光ケーブルで接続しています。企業は、ミッションクリティカルなワークロードのために、データセンターとAWS上のVPC間で高可用性かつ安全なネットワーク接続を必要としています。ソリューションアーキテクトは、最大の冗長性を提供する接続ソリューションを選択しなければなりません。どのソリューションがこれらの要件を満たしますか？",
+    "choices_ja": [
+      "プライマリデータセンターから2つのAWS Direct Connect接続を、それぞれ別の2つのDirect Connectロケーションの別々のデバイスに終端する。",
+      "プライマリおよびセカンダリの各データセンターから1つずつのAWS Direct Connect接続を、それぞれ同じデバイスの1つのDirect Connectロケーションに終端する。",
+      "プライマリおよびセカンダリの各データセンターから2つずつのAWS Direct Connect接続を、それぞれ別の2つのDirect Connectロケーションの別々のデバイスに終端する。",
+      "プライマリおよびセカンダリの各データセンターから1つずつのAWS Direct Connect接続を、それぞれ別々の2つのデバイスの1つのDirect Connectロケーションに終端する。"
+    ]
   },
   {
     "id": 657,
@@ -3701,7 +5134,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 203
+    "domain_seq": 203,
+    "question_ja": "ある企業が AWS クラウド上で機密性の高いアーカイブデータファイルを生成するアプリケーションを運用しています。企業はアプリケーションのデータストレージを再設計したいと考えています。データファイルを暗号化し、データが暗号化されて AWS に送信される前に第三者がアクセスできないようにしたいと考えています。すでに Amazon S3 バケットは作成済みです。どのソリューションがこれらの要件を満たしますか？",
+    "choices_ja": [
+      "Amazon S3 管理の暗号化キーを使ったクライアントサイド暗号化を S3 バケットに設定し、アプリケーションでアーカイブファイルをこのバケットに保存するように設定する。",
+      "AWS KMS キーを使ったサーバーサイド暗号化（SSE-KMS）を S3 バケットに設定し、アプリケーションでアーカイブファイルをこのバケットに保存するように設定する。",
+      "AWS KMS キーを使った二重レイヤーのサーバーサイド暗号化（SSE-KMS）を S3 バケットに設定し、アプリケーションでアーカイブファイルをこのバケットに保存するように設定する。",
+      "AWS Key Management Service（AWS KMS）に保存されたキーを使ったクライアントサイド暗号化をアプリケーションで行い、アーカイブファイルを S3 バケットに保存するように設定する。"
+    ]
   },
   {
     "id": 662,
@@ -3719,7 +5159,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 204
+    "domain_seq": 204,
+    "question_ja": "ある企業が VPC 内の複数の Amazon EC2 インスタンスでウェブアプリケーションを運用しています。このアプリケーションは機密データを Amazon S3 バケットに書き込む必要があります。データはパブリックインターネットを経由して送信してはいけません。どのソリューションがこれらの要件を満たしますか？",
+    "choices_ja": [
+      "Amazon S3 用のゲートウェイ VPC エンドポイントを作成し、VPC のルートテーブルにそのエンドポイントへのルートを追加する。",
+      "S3 バケットをターゲットとする内部 Network Load Balancer を作成する。",
+      "S3 バケットを VPC 内に配置し、VPC のルートテーブルにバケットへのルートを追加する。",
+      "VPC と S3 のリージョナルエンドポイント間に AWS Direct Connect 接続を作成する。"
+    ]
   },
   {
     "id": 664,
@@ -3737,7 +5184,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 205
+    "domain_seq": 205,
+    "question_ja": "グローバル企業が AWS 上でワークロードを運用しています。同社のアプリケーションは、機密データの保存と分析のために複数の AWS リージョンにまたがる Amazon S3 バケットを使用しています。同社は毎日複数の S3 バケットに数百万のオブジェクトを保存しています。バージョニングが有効になっていないすべての S3 バケットを特定したいと考えています。どのソリューションがこの要件を満たしますか？",
+    "choices_ja": [
+      "AWS Config のマネージドルールを使用して、バージョン管理が有効でない S3 バケットを特定する",
+      "Amazon S3 Storage Lens を使用して、リージョン全体でバージョニングが有効でないすべての S3 バケットを特定する",
+      "IAM Access Analyzer for S3 を有効にして、リージョン全体でバージョニングが有効でないすべての S3 バケットを特定する",
+      "S3 マルチリージョンアクセスポイントを作成して、リージョン全体でバージョニングが有効でないすべての S3 バケットを特定する"
+    ]
   },
   {
     "id": 666,
@@ -3755,7 +5209,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 206
+    "domain_seq": 206,
+    "question_ja": "ある会社には、Production アカウントと Development アカウントの2つの AWS アカウントがあります。Development アカウントでコードの変更が準備できており、それを Production アカウントに反映させる必要があります。アルファフェーズでは、開発チームのシニア開発者2名のみが Production アカウントへのアクセスを必要としています。ベータフェーズでは、テストを行うためにより多くの開発者がアクセスを必要とする可能性があります。ソリューションアーキテクトは何を推奨すべきでしょうか？",
+    "choices_ja": [
+      "各アカウントで AWS マネジメントコンソールを使って2つのポリシードキュメントを作成し、アクセスが必要な開発者にポリシーを割り当てる。",
+      "Development アカウントに IAM ロールを作成し、そのロールに Production アカウントへのアクセス権を付与する。開発者がそのロールを引き受けられるようにする。",
+      "Production アカウントに IAM ロールを作成し、信頼ポリシーで Development アカウントを指定する。開発者がそのロールを引き受けられるようにする。",
+      "Production アカウントに IAM グループを作成し、そのグループを信頼ポリシーのプリンシパルとして追加する。開発者をそのグループに追加する。"
+    ]
   },
   {
     "id": 668,
@@ -3773,7 +5234,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 207
+    "domain_seq": 207,
+    "question_ja": "開発チームは開発、ステージング、本番環境で複数のAWSアカウントを使用しています。チームメンバーは大きなAmazon EC2インスタンスを起動していますが、これらは十分に活用されていません。ソリューションアーキテクトは、すべてのアカウントで大きなインスタンスの起動を防止する必要があります。最小限の運用負荷でこの要件を満たすにはどうすればよいでしょうか？",
+    "choices_ja": [
+      "IAMポリシーを更新して大きなEC2インスタンスの起動を拒否します。すべてのユーザーにポリシーを適用します。",
+      "AWS Resource Access Managerで大きなEC2インスタンスの起動を防ぐリソースを定義します。",
+      "各アカウントに大きなEC2インスタンスの起動を拒否するIAMロールを作成し、開発者のIAMグループにそのロールへのアクセス権を付与します。",
+      "管理アカウントでAWS Organizationsの組織を作成し、デフォルトポリシーを設定します。大きなEC2インスタンスの起動を拒否するサービスコントロールポリシーを作成し、すべてのAWSアカウントに適用します。"
+    ]
   },
   {
     "id": 669,
@@ -3791,7 +5259,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 208
+    "domain_seq": 208,
+    "question_ja": "ある企業が数百台のオンプレミスの仮想マシン（VM）をAmazon EC2インスタンスに移行しました。これらのインスタンスは多様なWindows Serverのバージョンと複数のLinuxディストリビューションで構成されています。企業はオペレーティングシステムのインベントリ管理と更新を自動化するソリューションを求めています。また、各インスタンスの共通の脆弱性の概要を毎月の定期レビュー用に取得する必要があります。これらの要件を満たすためにソリューションアーキテクトは何を推奨すべきでしょうか？",
+    "choices_ja": [
+      "すべてのEC2インスタンスを管理するためにAWS Systems Manager Patch Managerを設定し、AWS Security Hubで月次レポートを作成するように構成する。",
+      "すべてのEC2インスタンスを管理するためにAWS Systems Manager Patch Managerを設定し、Amazon Inspectorを導入して月次レポートを構成する。",
+      "AWS Shield Advancedを設定し、月次レポートを構成する。AWS Configを導入してEC2インスタンスのパッチ適用を自動化する。",
+      "Amazon GuardDutyをアカウントに設定してすべてのEC2インスタンスを監視し、AWS Configを導入してEC2インスタンスのパッチ適用を自動化する。"
+    ]
   },
   {
     "id": 679,
@@ -3809,7 +5284,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 209
+    "domain_seq": 209,
+    "question_ja": "ある企業が AWS 上にデータレイクを構築しています。データレイクは Amazon S3 と Amazon RDS for PostgreSQL のデータで構成されています。企業は、データレイク内のすべてのデータソースを含むデータの可視化を提供するレポーティングソリューションを必要としています。経営陣のみがすべての可視化に完全アクセスでき、その他の社員は限定的なアクセスのみ許可される必要があります。この要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "Amazon QuickSight で分析を作成します。すべてのデータソースに接続し、新しいデータセットを作成します。ダッシュボードを公開してデータを可視化します。適切な IAM ロールとダッシュボードを共有します。",
+      "Amazon QuickSight で分析を作成します。すべてのデータソースに接続し、新しいデータセットを作成します。ダッシュボードを公開してデータを可視化します。適切なユーザーとグループとダッシュボードを共有します。",
+      "Amazon S3 のデータに対して AWS Glue のテーブルとクローラーを作成します。AWS Glue の ETL ジョブを作成してレポートを生成します。レポートを Amazon S3 に公開し、S3 バケットポリシーでアクセスを制限します。",
+      "Amazon S3 のデータに対して AWS Glue のテーブルとクローラーを作成します。Amazon Athena Federated Query を使って Amazon RDS for PostgreSQL のデータにアクセスします。Amazon Athena でレポートを生成します。レポートを Amazon S3 に公開し、S3 バケットポリシーでアクセスを制限します。"
+    ]
   },
   {
     "id": 690,
@@ -3827,7 +5309,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 210
+    "domain_seq": 210,
+    "question_ja": "ある企業が、自社のAWSクラウド環境においてAmazon S3バケットに不正な設定変更がないかを確認する必要があります。この目的を達成するために、ソリューションアーキテクトは何をすべきでしょうか？",
+    "choices_ja": [
+      "適切なルールを設定してAWS Configを有効化する。",
+      "適切なチェックを設定してAWS Trusted Advisorを有効化する。",
+      "適切な評価テンプレートを設定してAmazon Inspectorを有効化する。",
+      "Amazon S3のサーバーアクセスログを有効化し、Amazon EventBridge（Amazon CloudWatch Events）を設定する。"
+    ]
   },
   {
     "id": 691,
@@ -3845,7 +5334,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 211
+    "domain_seq": 211,
+    "question_ja": "ある企業が新しいアプリケーションを立ち上げ、Amazon CloudWatch ダッシュボードにアプリケーションのメトリクスを表示します。プロダクトマネージャーは定期的にこのダッシュボードにアクセスする必要がありますが、AWS アカウントを持っていません。ソリューションアーキテクトは最小権限の原則に従ってプロダクトマネージャーにアクセスを提供しなければなりません。どの方法がこれらの要件を満たしますか？",
+    "choices_ja": [
+      "CloudWatch コンソールからダッシュボードを共有します。プロダクトマネージャーのメールアドレスを入力し、共有手順を完了します。ダッシュボードの共有可能なリンクをプロダクトマネージャーに提供します。",
+      "プロダクトマネージャー専用の IAM ユーザーを作成します。CloudWatchReadOnlyAccess AWS 管理ポリシーをユーザーにアタッチします。新しいログイン情報をプロダクトマネージャーに共有します。正しいダッシュボードのブラウザ URL をプロダクトマネージャーに共有します。",
+      "企業の従業員用に IAM ユーザーを作成します。ViewOnlyAccess AWS 管理ポリシーを IAM ユーザーにアタッチします。新しいログイン情報をプロダクトマネージャーに共有します。プロダクトマネージャーに CloudWatch コンソールにアクセスし、ダッシュボードセクションで名前からダッシュボードを探すよう依頼します。",
+      "パブリックサブネットにバスチオンサーバーを展開します。プロダクトマネージャーがダッシュボードにアクセスする必要があるときにサーバーを起動し、RDP 資格情報を共有します。バスチオンサーバー上で、ブラウザが適切な権限を持つキャッシュされた AWS 資格情報でダッシュボードの URL を開くよう設定します。"
+    ]
   },
   {
     "id": 697,
@@ -3863,7 +5359,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 212
+    "domain_seq": 212,
+    "question_ja": "ある企業が AWS クラウド上でパブリック向けのウェブアプリケーションを立ち上げる準備をしています。アーキテクチャは、Elastic Load Balancer（ELB）配下の VPC 内にある Amazon EC2 インスタンスで構成されています。DNS はサードパーティのサービスを利用しています。ソリューションアーキテクトは、大規模な DDoS 攻撃を検知し防御するためのソリューションを提案する必要があります。どのソリューションが要件を満たしますか？",
+    "choices_ja": [
+      "アカウントで Amazon GuardDuty を有効化する",
+      "EC2 インスタンスで Amazon Inspector を有効化する",
+      "AWS Shield を有効化し、Amazon Route 53 を割り当てる",
+      "AWS Shield Advanced を有効化し、ELB に割り当てる"
+    ]
   },
   {
     "id": 698,
@@ -3881,7 +5384,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 213
+    "domain_seq": 213,
+    "question_ja": "ある企業がAWSクラウド上でアプリケーションを構築しています。このアプリケーションは2つのAWSリージョンにあるAmazon S3バケットにデータを保存します。企業は、S3バケットに保存されるすべてのデータを暗号化するために、AWS Key Management Service (AWS KMS) のカスタマーマネージドキーを使用しなければなりません。両方のS3バケットのデータは同じKMSキーで暗号化および復号される必要があります。データとキーはそれぞれの2つのリージョンに保存されなければなりません。最小限の運用負荷でこれらの要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "各リージョンにS3バケットを作成し、Amazon S3管理の暗号化キー（SSE-S3）を使ったサーバーサイド暗号化を設定する。S3バケット間でレプリケーションを設定する。",
+      "カスタマーマネージドのマルチリージョンKMSキーを作成し、各リージョンにS3バケットを作成する。S3バケット間でレプリケーションを設定し、アプリケーションでクライアントサイド暗号化にKMSキーを使用するように設定する。",
+      "カスタマーマネージドKMSキーとS3バケットを各リージョンに作成し、Amazon S3管理の暗号化キー（SSE-S3）を使ったサーバーサイド暗号化を設定する。S3バケット間でレプリケーションを設定する。",
+      "カスタマーマネージドKMSキーとS3バケットを各リージョンに作成し、AWS KMSキー（SSE-KMS）を使ったサーバーサイド暗号化を設定する。S3バケット間でレプリケーションを設定する。"
+    ]
   },
   {
     "id": 699,
@@ -3899,7 +5409,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 214
+    "domain_seq": 214,
+    "question_ja": "ある企業が最近、AWSアカウント内のAmazon EC2インスタンスでさまざまな新しいワークロードを開始しました。この企業は、インスタンスにリモートで安全にアクセスし管理するための戦略を立てる必要があります。ネイティブなAWSサービスを使い、AWS Well-Architected Frameworkに準拠した繰り返し可能なプロセスを実装したいと考えています。最も運用負荷が少ない方法はどれでしょうか？",
+    "choices_ja": [
+      "EC2シリアルコンソールを使って各インスタンスのターミナルインターフェースに直接アクセスし管理する。",
+      "既存および新規の各インスタンスに適切なIAMロールをアタッチし、AWS Systems Manager Session Managerを使ってリモートSSHセッションを確立する。",
+      "管理用のSSHキーペアを作成し、公開鍵を各EC2インスタンスにロードする。パブリックサブネットに踏み台ホストを配置して各インスタンスの管理用トンネルを提供する。",
+      "AWS Site-to-Site VPN接続を確立し、管理者にオンプレミスのローカルマシンからVPNトンネル経由でSSHキーを使ってインスタンスに直接接続するよう指示する。"
+    ]
   },
   {
     "id": 702,
@@ -3917,7 +5434,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 215
+    "domain_seq": 215,
+    "question_ja": "ある企業はデータ層にAmazon RDS for PostgreSQLを使用しています。この企業はデータベースのパスワードローテーションを実施する必要があります。最小限の運用負荷でこの要件を満たすにはどの方法が適切ですか？",
+    "choices_ja": [
+      "パスワードをAWS Secrets Managerに保存し、シークレットの自動ローテーションを有効にする。",
+      "パスワードをAWS Systems Manager Parameter Storeに保存し、パラメータの自動ローテーションを有効にする。",
+      "パスワードをAWS Systems Manager Parameter Storeに保存し、パスワードをローテーションするAWS Lambda関数を作成する。",
+      "パスワードをAWS Key Management Service (AWS KMS)に保存し、カスタマーマスターキー（CMK）の自動ローテーションを有効にする。"
+    ]
   },
   {
     "id": 704,
@@ -3935,7 +5459,14 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 216
+    "domain_seq": 216,
+    "question_ja": "ある企業は AWS Control Tower を使ってマルチアカウント戦略を展開しています。各開発者に個別の AWS アカウントを提供しています。この企業は、開発者が発生させる AWS リソースのコストを制限するための管理策を実装したいと考えています。最も運用負荷が少ない方法はどれでしょうか？",
+    "choices_ja": [
+      "各開発者に、自分の名前を値とする CostCenter キーのタグをすべてのリソースに付けるよう指示する。required-tags AWS Config マネージドルールでタグの有無をチェックし、タグがないリソースを終了する AWS Lambda 関数を作成する。AWS Cost Explorer を設定して、毎日各開発者に支出レポートを送信する。",
+      "AWS Budgets を使って各開発者アカウントの予算を設定する。実績および予測値の予算アラートを設定し、割り当てられた予算を超えた場合や超える見込みがある場合に開発者に通知する。AWS Budgets のアクションを使い、割り当てられた予算に達した際に開発者の IAM ロールに DenyAll ポリシーを適用して追加リソースの起動を防ぐ。",
+      "AWS Cost Explorer を使って各開発者アカウントのコストを監視・報告する。Cost Explorer を設定して、毎日各開発者に支出レポートを送信する。AWS Cost Anomaly Detection を使って異常な支出を検出し、アラートを提供する。",
+      "AWS Service Catalog を使って、開発者が限られたコスト範囲内でリソースを起動できるようにする。各 AWS アカウントに AWS Lambda 関数を作成し、毎営業日の終わりに稼働中のリソースを停止する。Lambda 関数を設定して、毎営業日の開始時にリソースを再開する。"
+    ]
   },
   {
     "id": 706,
@@ -3957,7 +5488,16 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 217
+    "domain_seq": 217,
+    "question_ja": "ソリューションアーキテクトは、3層構成のウェブアプリケーションを設計しています。アーキテクチャはインターネットに面したApplication Load Balancer（ALB）と、プライベートサブネット上のAmazon EC2インスタンスでホストされるウェブ層で構成されています。ビジネスロジックを実行するアプリケーション層もプライベートサブネット上のEC2インスタンスで動作します。データベース層は、プライベートサブネット上のEC2インスタンスで動作するMicrosoft SQL Serverで構成されています。セキュリティは会社にとって最優先事項です。ソリューションアーキテクトはどの組み合わせのセキュリティグループ設定を使用すべきでしょうか？（3つ選択してください）",
+    "choices_ja": [
+      "ウェブ層のセキュリティグループを、ALBのセキュリティグループからのインバウンドHTTPSトラフィックを許可するように設定する。",
+      "ウェブ層のセキュリティグループを、0.0.0.0/0へのアウトバウンドHTTPSトラフィックを許可するように設定する。",
+      "データベース層のセキュリティグループを、アプリケーション層のセキュリティグループからのインバウンドMicrosoft SQL Serverトラフィックを許可するように設定する。",
+      "データベース層のセキュリティグループを、ウェブ層のセキュリティグループへのアウトバウンドHTTPSトラフィックおよびMicrosoft SQL Serverトラフィックを許可するように設定する。",
+      "アプリケーション層のセキュリティグループを、ウェブ層のセキュリティグループからのインバウンドHTTPSトラフィックを許可するように設定する。",
+      "アプリケーション層のセキュリティグループを、ウェブ層のセキュリティグループへのアウトバウンドHTTPSトラフィックおよびMicrosoft SQL Serverトラフィックを許可するように設定する。"
+    ]
   },
   {
     "id": 709,
@@ -3975,6 +5515,13 @@
     "domain": 1,
     "tags": [],
     "explanation": "",
-    "domain_seq": 218
+    "domain_seq": 218,
+    "question_ja": "ある企業が、Amazon Elastic Block Store (Amazon EBS) を接続ストレージとして使用する Amazon EC2 インスタンスにアプリケーションをリホストする計画を立てています。ソリューションアーキテクトは、新たに作成されるすべての Amazon EBS ボリュームがデフォルトで暗号化されるように設計しなければなりません。また、暗号化されていない EBS ボリュームの作成を防止する必要があります。これらの要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "EC2 アカウント属性を設定して、新しい EBS ボリュームを常に暗号化するようにする。",
+      "AWS Config を使用し、encrypted-volumes ルールを設定する。デフォルトの AWS Key Management Service (AWS KMS) キーを適用する。",
+      "AWS Systems Manager を設定して、EBS ボリュームの暗号化されたコピーを作成する。EC2 インスタンスを再設定して暗号化ボリュームを使用する。",
+      "AWS Key Management Service (AWS KMS) でカスタマー管理キーを作成する。AWS Migration Hub を設定して、ワークロード移行時にそのキーを使用する。"
+    ]
   }
 ]

@@ -16,7 +16,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 1
+    "domain_seq": 1,
+    "question_ja": "Amazon CloudWatch が受信して集約するデータの最小時間間隔はどれですか？",
+    "choices_ja": [
+      "1秒",
+      "5秒",
+      "1分",
+      "3分",
+      "5分"
+    ]
   },
   {
     "id": 3,
@@ -34,7 +42,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 2
+    "domain_seq": 2,
+    "question_ja": "ユーザーが EC2 インスタンスを起動しましたが、起動直後にインスタンスが終了しました。以下のうち、この現象の原因として考えられないものはどれですか？",
+    "choices_ja": [
+      "ユーザーアカウントが最大ボリューム数の上限に達している",
+      "AMI が存在しない。これは必須の要素である",
+      "スナップショットが破損している",
+      "ユーザーアカウントが最大 EC2 インスタンス数の上限に達している"
+    ]
   },
   {
     "id": 6,
@@ -54,7 +69,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 3
+    "domain_seq": 3,
+    "question_ja": "次のうち、Amazon S3 に関して正しい記述はどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "Amazon S3 はあらゆる種類の PUT または DELETE に対して書き込み後の読み取り整合性を提供する。",
+      "あらゆる種類の PUT または DELETE に対して整合性は保証されない。",
+      "PUT リクエストに対する成功応答は、完全なオブジェクトが保存された場合にのみ返される。",
+      "上書き PUT の後、部分的に保存されたオブジェクトはすぐに GET で読み取れる。",
+      "S3 は上書き PUT と DELETE に対して最終的整合性を提供する。"
+    ]
   },
   {
     "id": 10,
@@ -71,7 +94,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 4
+    "domain_seq": 4,
+    "question_ja": "Windows Server に接続されたストライプドストレージの拡張性の制限により、Amazon RDS は現在、[...] DB インスタンスのストレージ容量を増やすことをサポートしていません。",
+    "choices_ja": [
+      "SQL Server",
+      "MySQL",
+      "Oracle"
+    ]
   },
   {
     "id": 12,
@@ -89,7 +118,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 5
+    "domain_seq": 5,
+    "question_ja": "Amazon EC2 Container Serviceでは、他のコンテナタイプはサポートされていますか？",
+    "choices_ja": [
+      "はい、EC2 Container Serviceは必要なあらゆるコンテナサービスをサポートしています。",
+      "はい、EC2 Container ServiceはMicrosoftのコンテナサービスもサポートしています。",
+      "いいえ、現在EC2 Container ServiceがサポートしているコンテナプラットフォームはDockerのみです。",
+      "はい、EC2 Container ServiceはMicrosoftのコンテナサービスとOpenstackをサポートしています。"
+    ]
   },
   {
     "id": 16,
@@ -107,7 +143,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 6
+    "domain_seq": 6,
+    "question_ja": "インスタンスにパブリックIPアドレスを割り当てたい場合、どのIPアドレスを使用すべきですか？",
+    "choices_ja": [
+      "Elastic IPアドレス",
+      "クラスBのIPアドレス",
+      "クラスAのIPアドレス",
+      "動的IPアドレス"
+    ]
   },
   {
     "id": 17,
@@ -125,7 +168,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 7
+    "domain_seq": 7,
+    "question_ja": "Amazon RDS は SOAP を通じて [...] のみサポートしています。",
+    "choices_ja": [
+      "HTTP または HTTPS",
+      "TCP/IP",
+      "HTTP",
+      "HTTPS"
+    ]
   },
   {
     "id": 23,
@@ -143,7 +193,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 8
+    "domain_seq": 8,
+    "question_ja": "MySQL のバージョン番号は X.Y.Z の形式で表されます。このうち X は何を示していますか？",
+    "choices_ja": [
+      "リリースレベル",
+      "マイナーバージョン",
+      "バージョン番号",
+      "メジャーバージョン"
+    ]
   },
   {
     "id": 25,
@@ -161,7 +218,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 9
+    "domain_seq": 9,
+    "question_ja": "AWS のあらゆるストレージオプションを知っていると思った矢先に、Amazon S3 の Reduced Redundancy Storage (RRS) という言葉を耳にしました。Reduced Redundancy Storage (RRS) を使うのに最適なシナリオはどれですか？",
+    "choices_ja": [
+      "大量のデータ",
+      "機密データ",
+      "重要でない、または再現可能なデータ",
+      "重要なデータ"
+    ]
   },
   {
     "id": 28,
@@ -179,7 +243,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 10
+    "domain_seq": 10,
+    "question_ja": "Launch Db Instance ウィザードのどこでバックアップとメンテナンスのオプションを選択できますか？",
+    "choices_ja": [
+      "DB INSTANCE DETAILS の下",
+      "REVIEW の下",
+      "MANAGEMENT OPTIONS の下",
+      "ENGINE SELECTION の下"
+    ]
   },
   {
     "id": 30,
@@ -197,7 +268,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 11
+    "domain_seq": 11,
+    "question_ja": "Amazon EC2 で、EBS ボリュームが detaching 状態のままの場合、[...] をクリックして強制的にデタッチできます。",
+    "choices_ja": [
+      "Force Detach（強制デタッチ）",
+      "Detach Instance（インスタンスのデタッチ）",
+      "AttachVolume（ボリュームのアタッチ）",
+      "AttachInstance（インスタンスのアタッチ）"
+    ]
   },
   {
     "id": 36,
@@ -215,7 +293,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 12
+    "domain_seq": 12,
+    "question_ja": "クライアントが1時間以内に利用を開始する必要があるため、迅速にメール送信サービスを構築する必要があります。Amazon Simple Email Service（Amazon SES）が適切な選択肢のようですが、設定方法はいくつかあります。クライアントのニーズに最も合ったSESの設定方法はどれでしょうか？",
+    "choices_ja": [
+      "Amazon SESコンソール",
+      "AWS CloudFormation",
+      "SMTPインターフェイス",
+      "AWS Elastic Beanstalk"
+    ]
   },
   {
     "id": 37,
@@ -233,7 +318,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 13
+    "domain_seq": 13,
+    "question_ja": "ユーザーが CloudWatch で EC2 の CPU 使用率メトリクスを監視しています。特定の時間帯に対して1週間の期間でフィルタリングしたところ、興味深いパターンを見つけました。ユーザーはそのデータポイントをより詳細な期間で拡大表示したいと考えています。CloudWatch で簡単にそれを行うにはどうすればよいでしょうか？",
+    "choices_ja": [
+      "ユーザーはマウスでその期間を選択し、マウスを離すことで特定の期間を拡大できます。",
+      "ユーザーはその期間の集計データを指定して特定の期間を拡大できます。",
+      "ユーザーはマウスでその期間をダブルクリックして特定の期間を拡大できます。",
+      "ユーザーは時間範囲で期間を指定して特定の期間を拡大できます。"
+    ]
   },
   {
     "id": 41,
@@ -251,7 +343,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 14
+    "domain_seq": 14,
+    "question_ja": "ユーザーが VPC インスタンスに 1 つの EBS ボリュームをアタッチしました。ユーザーは可能な限り最高のデータの耐障害性を実現したいと考えています。以下のうち、耐障害性の向上に役立つ方法はどれですか？",
+    "choices_ja": [
+      "RAID 1 構成でさらにもう 1 つのボリュームをアタッチする。",
+      "RAID 0 構成でさらにもう 1 つのボリュームをアタッチする。",
+      "複数のボリュームを接続し、RAID でストライピングする。",
+      "EBS ボリュームをルートデバイスとして使用する。"
+    ]
   },
   {
     "id": 44,
@@ -269,7 +368,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 15
+    "domain_seq": 15,
+    "question_ja": "各 DB インスタンスクラスに対して、関連付け可能な最大ストレージ容量はどれですか？",
+    "choices_ja": [
+      "5GB",
+      "1TB",
+      "2TB",
+      "500GB"
+    ]
   },
   {
     "id": 46,
@@ -287,7 +393,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 16
+    "domain_seq": 16,
+    "question_ja": "インスタンスを起動する際に /dev/sdc=none と指定するとどうなりますか？",
+    "choices_ja": [
+      "/dev/sdc がインスタンスの作成を妨げる",
+      "/dev/sdc がインスタンスの削除を妨げる",
+      "/dev/sdc の値を 'zero' に設定する",
+      "/dev/sdc がインスタンスにアタッチされるのを防ぐ"
+    ]
   },
   {
     "id": 47,
@@ -305,7 +418,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 17
+    "domain_seq": 17,
+    "question_ja": "Amazon EC2 リソースにタグを付けることについて、正しい記述はどれですか？",
+    "choices_ja": [
+      "リソースを終了する際にリソース識別子を指定する必要はない。",
+      "タグだけを基にリソースを終了、停止、または削除できる。",
+      "タグだけを基にリソースを終了、停止、または削除することはできない。",
+      "リソースを停止する際にリソース識別子を指定する必要はない。"
+    ]
   },
   {
     "id": 50,
@@ -323,7 +443,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 18
+    "domain_seq": 18,
+    "question_ja": "VPC の [...] とは、バックエンドの RDS DB インスタンス用に指定したいサブネット（通常はプライベートサブネット）の集合のことです。",
+    "choices_ja": [
+      "DB サブネットセット",
+      "RDS サブネットグループ",
+      "DB サブネットグループ",
+      "DB サブネットコレクション"
+    ]
   },
   {
     "id": 52,
@@ -341,7 +468,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 19
+    "domain_seq": 19,
+    "question_ja": "バックアップの保持期間は変更可能です。設定できる有効な値は、0（日数を保持しない場合）から最大で[...]日までです。",
+    "choices_ja": [
+      "0",
+      "45",
+      "35",
+      "15",
+      "5"
+    ]
   },
   {
     "id": 58,
@@ -359,7 +494,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 20
+    "domain_seq": 20,
+    "question_ja": "ローカルの Oracle データベースから Amazon RDS の DB インスタンスに数百メガバイトのデータをインポートする必要があります。これを実現するために AWS が推奨する方法はどれですか？",
+    "choices_ja": [
+      "Oracle のエクスポート/インポートユーティリティ",
+      "Oracle SQL Developer",
+      "Oracle Data Pump",
+      "DBMS_FILE_TRANSFER"
+    ]
   },
   {
     "id": 59,
@@ -377,7 +519,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 21
+    "domain_seq": 21,
+    "question_ja": "AWSサポートの文脈において、なぜEC2インスタンスが20分間到達不能でなければならず、顧客がすぐにサポートチケットを開けないのですか？",
+    "choices_ja": [
+      "ほとんどの到達不能の問題は20分以内に自動プロセスで解決されるため。",
+      "AWSが定期メンテナンスを行う際、すべてのEC2インスタンスは毎日20分間到達不能になるため。",
+      "すべてのEC2インスタンスは起動直後に20分間到達不能になるため。",
+      "ここに挙げたすべての理由によるため。"
+    ]
   },
   {
     "id": 60,
@@ -395,7 +544,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 22
+    "domain_seq": 22,
+    "question_ja": "HTTP クエリベースのリクエストとは、HTTP 動詞の GET または POST を使用し、'Action' という名前のクエリパラメータを含む HTTP リクエストのことです。",
+    "choices_ja": [
+      "Action",
+      "Value",
+      "Reset",
+      "Retrieve"
+    ]
   },
   {
     "id": 62,
@@ -413,7 +569,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 23
+    "domain_seq": 23,
+    "question_ja": "コマンドラインツールを使ってスナップショットを作成する際、どのコマンドを使用すべきですか？",
+    "choices_ja": [
+      "ec2-deploy-snapshot",
+      "ec2-fresh-snapshot",
+      "ec2-create-snapshot",
+      "ec2-new-snapshot"
+    ]
   },
   {
     "id": 63,
@@ -431,7 +594,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 24
+    "domain_seq": 24,
+    "question_ja": "すべての Amazon EC2 インスタンスは起動時に2つのIPアドレスが割り当てられますが、そのうち1つは Amazon EC2 ネットワーク内からのみアクセス可能です。これはどのIPアドレスですか？",
+    "choices_ja": [
+      "複数のIPアドレス",
+      "パブリックIPアドレス",
+      "プライベートIPアドレス",
+      "Elastic IPアドレス"
+    ]
   },
   {
     "id": 64,
@@ -449,7 +619,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 25
+    "domain_seq": 25,
+    "question_ja": "S3 ベースの AMI を使用している EC2 インスタンスを終了すると、ルートボリューム上のデータはどうなりますか？",
+    "choices_ja": [
+      "データは自動的に EBS スナップショットとして保存される。",
+      "データは自動的に EBS ボリュームとして保存される。",
+      "インスタンスが再起動されるまでデータは利用できない。",
+      "データは自動的に削除される。"
+    ]
   },
   {
     "id": 65,
@@ -467,7 +644,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 26
+    "domain_seq": 26,
+    "question_ja": "最初のロードバランサーを作成し、EC2インスタンスをロードバランサーに登録しました。Elastic Load Balancingは登録されたすべてのEC2インスタンスのヘルスチェックを定期的に実施し、ロードバランサーのDNS名に対するすべての着信リクエストを、登録されていて正常なEC2インスタンスに自動的に分散します。デフォルトで、ロードバランサーはインスタンスのヘルスチェックにどのプロトコルを使用しますか？",
+    "choices_ja": [
+      "HTTPS",
+      "HTTP",
+      "ICMP",
+      "IPv6"
+    ]
   },
   {
     "id": 68,
@@ -485,7 +669,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 27
+    "domain_seq": 27,
+    "question_ja": "Amazon SES をメールソリューションとして利用していますが、その制限についてよくわかっていません。以下のうち正しい記述はどれですか？",
+    "choices_ja": [
+      "本番アクセスを取得した新しい Amazon SES ユーザーは、24時間あたり最大1,000通、1秒あたり最大10通のメールを送信できます。",
+      "すべての Amazon SES 送信者は同じ送信制限を持っています。",
+      "送信制限は受信者数ではなくメッセージ数に基づいています。",
+      "すべての Amazon SES 送信者はそれぞれ異なる送信制限を持っています。"
+    ]
   },
   {
     "id": 71,
@@ -503,7 +694,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 28
+    "domain_seq": 28,
+    "question_ja": "SQL Server の [...] 機能は、ソースデータベースから DB インスタンスへ効率的にデータをコピーする方法です。指定したデータを ASCII ファイルなどのデータファイルに書き込みます。",
+    "choices_ja": [
+      "バルクコピー",
+      "グループコピー",
+      "デュアルコピー",
+      "マスコピー"
+    ]
   },
   {
     "id": 74,
@@ -521,7 +719,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 29
+    "domain_seq": 29,
+    "question_ja": "EC2インスタンスを起動しようとしていますが、インスタンスがすぐに終了ステータスになってしまいます。これが起こる原因として考えにくいものはどれですか？",
+    "choices_ja": [
+      "AMIに必要な部分が欠けている",
+      "スナップショットが破損している",
+      "まずEBSにストレージを作成する必要がある",
+      "ボリュームの上限に達している"
+    ]
   },
   {
     "id": 83,
@@ -539,7 +744,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 30
+    "domain_seq": 30,
+    "question_ja": "Amazon RDS の SQL Server エンジンを使用する場合、SQL Server Express エディションの Microsoft SQL Server DB インスタンスの最大サイズはどれですか？",
+    "choices_ja": [
+      "DB あたり 10GB",
+      "DB あたり 100GB",
+      "DB あたり 2TB",
+      "DB あたり 1TB"
+    ]
   },
   {
     "id": 85,
@@ -557,7 +769,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 31
+    "domain_seq": 31,
+    "question_ja": "Amazon EBS は、任意の Amazon EC2 ボリュームのバックアップを作成する機能を提供していますが、それは何と呼ばれていますか？",
+    "choices_ja": [
+      "スナップショット",
+      "イメージ",
+      "インスタンスバックアップ",
+      "ミラー"
+    ]
   },
   {
     "id": 90,
@@ -575,7 +794,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 32
+    "domain_seq": 32,
+    "question_ja": "Amazon EC2 のウェブサービスは、[...] ウェブサービスメッセージングプロトコルを使ってアクセスできます。このインターフェースは Web Services Description Language (WSDL) ドキュメントで記述されています。",
+    "choices_ja": [
+      "SOAP",
+      "DCOM",
+      "CORBA",
+      "XML-RPC"
+    ]
   },
   {
     "id": 91,
@@ -595,7 +821,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 33
+    "domain_seq": 33,
+    "question_ja": "暗号化された Amazon Elastic Block Store (EBS) ボリュームについて正しいものはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "すべての Amazon EBS ボリュームタイプでサポートされている。",
+      "スナップショットは自動的に暗号化される。",
+      "すべてのインスタンスタイプで利用可能である。",
+      "既存のボリュームを暗号化できる。",
+      "共有ボリュームを暗号化できる。"
+    ]
   },
   {
     "id": 92,
@@ -613,7 +847,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 34
+    "domain_seq": 34,
+    "question_ja": "Federated Storage Engine は現在、Amazon RDS for MySQL でサポートされていますか？",
+    "choices_ja": [
+      "Oracle RDS インスタンスのみ対応。",
+      "はい。",
+      "いいえ。",
+      "VPC 内のみ対応。"
+    ]
   },
   {
     "id": 93,
@@ -631,7 +872,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 35
+    "domain_seq": 35,
+    "question_ja": "API を使ってスナップショットを作成する際、どのアクションを使用すべきですか？",
+    "choices_ja": [
+      "MakeSnapShot",
+      "FreshSnapshot",
+      "DeploySnapshot",
+      "CreateSnapshot"
+    ]
   },
   {
     "id": 95,
@@ -649,7 +897,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 36
+    "domain_seq": 36,
+    "question_ja": "Will my standby RDS instance be in the same Region as my primary?",
+    "choices_ja": [
+      "Only for Oracle RDS types.",
+      "Yes.",
+      "Only if configured at launch.",
+      "No."
+    ]
   },
   {
     "id": 97,
@@ -667,7 +922,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 37
+    "domain_seq": 37,
+    "question_ja": "'Key' の文字列値に ':aws:' をプレフィックスとして付けることはできますか？",
+    "choices_ja": [
+      "GovCloud のみ可能です。",
+      "S3 のみで、EC2 ではできません。",
+      "はい、可能です。",
+      "いいえ、できません。"
+    ]
   },
   {
     "id": 98,
@@ -685,7 +947,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 38
+    "domain_seq": 38,
+    "question_ja": "ユーザーは EBS ボリュームの耐久性と可用性を高めたいと考えています。どの操作を行うべきでしょうか？",
+    "choices_ja": [
+      "定期的にスナップショットを取得する",
+      "AMI を作成する",
+      "より大容量の EBS を作成する",
+      "EBS に定期的にアクセスする"
+    ]
   },
   {
     "id": 99,
@@ -703,7 +972,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 39
+    "domain_seq": 39,
+    "question_ja": "Amazon RDS は何の略ですか？",
+    "choices_ja": [
+      "Regional Data Server（リージョナルデータサーバー）",
+      "Relational Database Service（リレーショナルデータベースサービス）",
+      "特に意味はない",
+      "Regional Database Service（リージョナルデータベースサービス）"
+    ]
   },
   {
     "id": 102,
@@ -721,7 +997,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 40
+    "domain_seq": 40,
+    "question_ja": "Amazon EBS ボリュームは、Amazon EC2 インスタンスの稼働期間とは独立して永続化しますか？",
+    "choices_ja": [
+      "はい、ただしインスタンスからデタッチされている場合のみです。",
+      "いいえ、EBS ボリュームをインスタンスにアタッチすることはできません。",
+      "いいえ、依存しています。",
+      "はい、永続化します。"
+    ]
   },
   {
     "id": 112,
@@ -739,7 +1022,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 41
+    "domain_seq": 41,
+    "question_ja": "Amazon EC2 の課金はいつ開始されますか？",
+    "choices_ja": [
+      "配布のステータス列が Creating から Deployed に変わったときに開始されます。",
+      "EC2 コンソールのメイン画面でインスタンス作成オプションをクリックした瞬間に開始されます。",
+      "インスタンスの稼働時間が 720 インスタンス時間に達したときに開始されます。",
+      "Amazon EC2 が AMI インスタンスの起動シーケンスを開始したときに開始されます。"
+    ]
   },
   {
     "id": 113,
@@ -757,7 +1047,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 42
+    "domain_seq": 42,
+    "question_ja": "ユーザーが大量のオブジェクトをAWS S3に保存しています。ユーザーはオブジェクト間で検索機能を実装したいと考えています。どのようにすれば実現できますか？",
+    "choices_ja": [
+      "S3のインデックス機能を使う。",
+      "検索対象のメタデータでオブジェクトにタグを付ける。",
+      "S3のクエリ機能を使う。",
+      "検索機能のためにS3のメタデータを保存する独自のDBシステムを作る。"
+    ]
   },
   {
     "id": 115,
@@ -775,7 +1072,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 43
+    "domain_seq": 43,
+    "question_ja": "A group can contain many users. Can a user belong to multiple groups?",
+    "choices_ja": [
+      "Yes always.",
+      "No.",
+      "Yes but only if they are using two factor authentication.",
+      "Yes but only in VPC."
+    ]
   },
   {
     "id": 116,
@@ -792,7 +1096,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 44
+    "domain_seq": 44,
+    "question_ja": "DynamoDBはインプレースのアトミック更新をサポートしていますか？",
+    "choices_ja": [
+      "定義されていません。",
+      "はい。",
+      "インプレースの非アトミック更新はサポートしています。"
+    ]
   },
   {
     "id": 119,
@@ -808,7 +1118,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 45
+    "domain_seq": 45,
+    "question_ja": "インスタンスが起動中または停止中のときに、プライマリ（eth0）のネットワークインターフェイスを切り離すことはできますか？",
+    "choices_ja": [
+      "はい、可能です。",
+      "いいえ、できません。"
+    ]
   },
   {
     "id": 121,
@@ -826,7 +1141,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 46
+    "domain_seq": 46,
+    "question_ja": "Elastic Beanstalk と CloudFormation の違いを最もよく表している説明はどれですか？",
+    "choices_ja": [
+      "Elastic Beanstalk は Elastic Load Balancing を使用しますが、CloudFormation は使用しません。",
+      "CloudFormation は Elastic Beanstalk よりもアプリケーションのデプロイが速いです。",
+      "Elastic Beanstalk は CloudFormation よりもアプリケーションのデプロイが速いです。",
+      "CloudFormation は Elastic Beanstalk よりもはるかに強力で、カスタムリソースを設計・スクリプト化できるためです。"
+    ]
   },
   {
     "id": 124,
@@ -844,7 +1166,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 47
+    "domain_seq": 47,
+    "question_ja": "正しいか誤りか：インスタンスのブロックデバイスマッピングを確認すると、EBS ボリュームのみが表示され、インスタンスストアボリュームは表示されません。",
+    "choices_ja": [
+      "インスタンスタイプによる。",
+      "誤り。",
+      "API コールを使うかどうかによる。",
+      "正しい。"
+    ]
   },
   {
     "id": 125,
@@ -862,7 +1191,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 48
+    "domain_seq": 48,
+    "question_ja": "AWS CloudFormation は Amazon EC2 のタグ付けをサポートしていますか？",
+    "choices_ja": [
+      "はい、AWS CloudFormation は Amazon EC2 のタグ付けをサポートしています。",
+      "いいえ、CloudFormation はタグ付けを一切サポートしていません。",
+      "いいえ、Amazon EC2 のタグ付けはサポートしていません。",
+      "テンプレート内で Amazon EC2 のタグ付けが定義されているかによります。"
+    ]
   },
   {
     "id": 126,
@@ -878,7 +1214,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 49
+    "domain_seq": 49,
+    "question_ja": "DBインスタンスまたはそのインスタンスに関連付けられたDBパラメータグループを変更した場合、変更を反映させるためにインスタンスを再起動する必要がありますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 130,
@@ -896,7 +1237,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 50
+    "domain_seq": 50,
+    "question_ja": "デフォルトで、EC2 コンソールを使って自動的に作成され、インスタンスにアタッチされた ENI は、アタッチされたインスタンスが終了したときにどうなりますか？",
+    "choices_ja": [
+      "そのまま残る",
+      "終了する",
+      "ハイバネートする",
+      "一時停止する"
+    ]
   },
   {
     "id": 131,
@@ -914,7 +1262,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 51
+    "domain_seq": 51,
+    "question_ja": "EC2 インスタンスが再起動（意図的または意図しない場合）した場合、インスタンスストア内のデータはどうなりますか？",
+    "choices_ja": [
+      "セキュリティ上の理由でインスタンスストアのデータは削除される。",
+      "インスタンスストアのデータは保持される。",
+      "インスタンスストアのデータは一部残る。",
+      "インスタンスストアのデータは失われる。"
+    ]
   },
   {
     "id": 134,
@@ -932,7 +1287,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 52
+    "domain_seq": 52,
+    "question_ja": "VPC 内のインスタンスにネットワークインターフェイスをアタッチする際、次のうち正しい記述はどれですか？",
+    "choices_ja": [
+      "インスタンスの種類ごとに5つのENIをアタッチできます。",
+      "好きなだけ多くのENIをアタッチできます。",
+      "アタッチできるENIの数はインスタンスの種類によって異なります。",
+      "インスタンスの種類に関係なく合計で100個のENIをアタッチできます。"
+    ]
   },
   {
     "id": 135,
@@ -950,7 +1312,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 53
+    "domain_seq": 53,
+    "question_ja": "これはなぜですか？",
+    "choices_ja": [
+      "セキュリティ上の理由です。",
+      "ハードウェアの制限です。",
+      "パブリック（IPv4）インターネットアドレスは希少な資源です。",
+      "インスタンスあたりのネットワークインターフェイスは5つまでです。"
+    ]
   },
   {
     "id": 136,
@@ -966,7 +1335,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 54
+    "domain_seq": 54,
+    "question_ja": "「ユーザー」は複数の AWS アカウントに関連付けることができますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 141,
@@ -984,7 +1358,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 55
+    "domain_seq": 55,
+    "question_ja": "すべての Amazon EC2 インスタンスは起動時に2つのIPアドレスが割り当てられます。それはどのIPアドレスですか？",
+    "choices_ja": [
+      "2つの Elastic IP アドレス",
+      "プライベート IP アドレスと Elastic IP アドレス",
+      "パブリック IP アドレスと Elastic IP アドレス",
+      "プライベート IP アドレスとパブリック IP アドレス"
+    ]
   },
   {
     "id": 144,
@@ -1002,7 +1383,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 56
+    "domain_seq": 56,
+    "question_ja": "どの DNS 名は Amazon EC2 内でのみ解決可能ですか？",
+    "choices_ja": [
+      "パブリック DNS 名",
+      "内部 DNS 名",
+      "外部 DNS 名",
+      "グローバル DNS 名"
+    ]
   },
   {
     "id": 147,
@@ -1020,7 +1408,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 57
+    "domain_seq": 57,
+    "question_ja": "Amazon EC2 では、いつインスタンス時間単位で課金されますか？",
+    "choices_ja": [
+      "EC2 インスタンスが実行中の状態にあるとき。",
+      "インスタンスが Amazon S3 コンソールから終了したとき。",
+      "インスタンスがまだ EC2 コンソールに存在するとき。",
+      "EC2 インスタンスが停止したとき。"
+    ]
   },
   {
     "id": 149,
@@ -1038,7 +1433,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 58
+    "domain_seq": 58,
+    "question_ja": "Amazon EC2 Container Service のコンポーネントにおいて、タスクを配置できるコンテナインスタンスの論理的なグループの名前は何ですか？",
+    "choices_ja": [
+      "クラスター",
+      "コンテナインスタンス",
+      "コンテナ",
+      "タスク定義"
+    ]
   },
   {
     "id": 151,
@@ -1056,7 +1458,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 59
+    "domain_seq": 59,
+    "question_ja": "スナップショットが完了するまでのステータスは何ですか？",
+    "choices_ja": [
+      "実行中",
+      "作業中",
+      "進行中",
+      "保留中"
+    ]
   },
   {
     "id": 153,
@@ -1072,7 +1481,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 60
+    "domain_seq": 60,
+    "question_ja": "正しいか誤りか：発電機や冷却設備のような共通の障害ポイントは、Availability Zones間で共有されていますか？",
+    "choices_ja": [
+      "正しい",
+      "誤り"
+    ]
   },
   {
     "id": 157,
@@ -1090,7 +1504,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 61
+    "domain_seq": 61,
+    "question_ja": "AWS のデフォルトリージョンはどれですか？",
+    "choices_ja": [
+      "eu-west-1",
+      "us-east-1",
+      "us-east-2",
+      "ap-southeast-1"
+    ]
   },
   {
     "id": 162,
@@ -1106,7 +1527,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 62
+    "domain_seq": 62,
+    "question_ja": "正しいか誤りか：新しい DB インスタンスでは、自動バックアップがデフォルトで有効になっていますか？",
+    "choices_ja": [
+      "はい",
+      "いいえ"
+    ]
   },
   {
     "id": 166,
@@ -1124,7 +1550,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 63
+    "domain_seq": 63,
+    "question_ja": "Amazon EBS ボリュームの情報を確認するには、Amazon EC2 コンソール（https://console.aws.amazon.com/ec2/）を開き、ナビゲーションパネルでどこをクリックしますか？",
+    "choices_ja": [
+      "EBS",
+      "Describe",
+      "詳細",
+      "ボリューム"
+    ]
   },
   {
     "id": 170,
@@ -1142,7 +1575,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 64
+    "domain_seq": 64,
+    "question_ja": "Amazonインスタンス上でデータベースを実行したい場合、最も推奨されるAmazonのストレージオプションはどれですか？",
+    "choices_ja": [
+      "Amazonインスタンスストレージ",
+      "Amazon EBS",
+      "Amazonインスタンス内でデータベースを実行することはできません",
+      "Amazon S3"
+    ]
   },
   {
     "id": 171,
@@ -1160,7 +1600,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 65
+    "domain_seq": 65,
+    "question_ja": "A customer is leveraging Amazon Simple Storage Service in eu-west-1 to store static content for a web-based property. The customer is storing objects using the Standard Storage class. Where are the customers objects replicated?",
+    "choices_ja": [
+      "A single facility in eu-west-1 and a single facility in eu-central-1.",
+      "A single facility in eu-west-1 and a single facility in us-east-1.",
+      "Multiple facilities in eu-west-1.",
+      "A single facility in eu-west-1."
+    ]
   },
   {
     "id": 176,
@@ -1178,7 +1625,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 66
+    "domain_seq": 66,
+    "question_ja": "タグのキーの最大長は何文字ですか？",
+    "choices_ja": [
+      "512文字（Unicode）",
+      "64文字（Unicode）",
+      "256文字（Unicode）",
+      "128文字（Unicode）"
+    ]
   },
   {
     "id": 177,
@@ -1194,7 +1648,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 67
+    "domain_seq": 67,
+    "question_ja": "Amazon RDS は Telnet、Secure Shell (SSH)、または Windows リモートデスクトップ接続を使った直接ホストアクセスを許可していますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 184,
@@ -1212,7 +1671,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 68
+    "domain_seq": 68,
+    "question_ja": "ルートデバイスとして使用されている EBS ボリュームのスナップショットを作成する際に、EC2 インスタンスをシャットダウンする必要がありますか？",
+    "choices_ja": [
+      "いいえ、インスタンスを削除する前にシャットダウンするだけで十分です。",
+      "はい。",
+      "いいえ、スナップショット作成時にインスタンスは自動的に停止されます。",
+      "いいえ。"
+    ]
   },
   {
     "id": 189,
@@ -1230,7 +1696,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 69
+    "domain_seq": 69,
+    "question_ja": "CPU 使用率が常に 80% の場合、90 分経過時点でアラームの状態はどうなりますか？",
+    "choices_ja": [
+      "ALERT",
+      "ALARM",
+      "正常 (OK)",
+      "データ不足 (INSUFFICIENT_DATA)"
+    ]
   },
   {
     "id": 191,
@@ -1248,7 +1721,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 70
+    "domain_seq": 70,
+    "question_ja": "What are the four levels of AWS Premium Support?",
+    "choices_ja": [
+      "Basic, Developer, Business, Enterprise.",
+      "Basic, Startup, Business, Enterprise.",
+      "Free, Bronze, Silver, Gold.",
+      "All support is free."
+    ]
   },
   {
     "id": 192,
@@ -1266,7 +1746,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 71
+    "domain_seq": 71,
+    "question_ja": "What is the default maximum number of Access Keys per user?",
+    "choices_ja": [
+      "10.",
+      "15.",
+      "2.",
+      "20."
+    ]
   },
   {
     "id": 194,
@@ -1284,7 +1771,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 72
+    "domain_seq": 72,
+    "question_ja": "What does Amazon S3 stand for?",
+    "choices_ja": [
+      "Simple Storage Solution.",
+      "Storage Storage Storage (triple redundancy Storage).",
+      "Storage Server Solution.",
+      "Simple Storage Service."
+    ]
   },
   {
     "id": 199,
@@ -1302,7 +1796,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 73
+    "domain_seq": 73,
+    "question_ja": "Amazon EBS ボリュームの監視データのうち、5 分間隔で自動的に無料で利用できるものは何と呼ばれますか？",
+    "choices_ja": [
+      "Basic（ベーシック）",
+      "Primary（プライマリー）",
+      "Detailed（詳細）",
+      "Local（ローカル）"
+    ]
   },
   {
     "id": 201,
@@ -1320,7 +1821,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 74
+    "domain_seq": 74,
+    "question_ja": "Amazon Elastic Compute Cloud のどの機能をインスタンス内から問い合わせて、インスタンスのプロパティにアクセスできますか？",
+    "choices_ja": [
+      "インスタンスユーザーデータ",
+      "リソースタグ",
+      "インスタンスメタデータ",
+      "Amazon Machine Image"
+    ]
   },
   {
     "id": 202,
@@ -1336,7 +1844,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 75
+    "domain_seq": 75,
+    "question_ja": "スナップショットをパブリックにすると、すべてのスナップショットデータが全員と共有されます。AWS Marketplaceのプロダクトコードが付いたスナップショットをパブリックにすることはできますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 211,
@@ -1354,7 +1867,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 76
+    "domain_seq": 76,
+    "question_ja": "Changes to the backup window take effect [...].",
+    "choices_ja": [
+      "from the next billing cycle.",
+      "after 30 minutes.",
+      "immediately.",
+      "after 24 hours."
+    ]
   },
   {
     "id": 212,
@@ -1371,7 +1891,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 77
+    "domain_seq": 77,
+    "question_ja": "Location of Instances are [...].",
+    "choices_ja": [
+      "regional.",
+      "based on Availability Zone.",
+      "global."
+    ]
   },
   {
     "id": 214,
@@ -1389,7 +1915,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 78
+    "domain_seq": 78,
+    "question_ja": "What is the minimum charge for the data transferred between Amazon RDS and Amazon EC2 Instances in the same Availability Zone?",
+    "choices_ja": [
+      "USD 0.10 per GB.",
+      "No charge. It is free.",
+      "USD 0.02 per GB",
+      "USD 0.01 per GB."
+    ]
   },
   {
     "id": 218,
@@ -1407,7 +1940,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 79
+    "domain_seq": 79,
+    "question_ja": "Which one of the following answers is not a possible state of Amazon CloudWatch Alarm?",
+    "choices_ja": [
+      "INSUFFICIENT_DATA.",
+      "ALARM.",
+      "OK.",
+      "STATUS_CHECK_FAILED."
+    ]
   },
   {
     "id": 221,
@@ -1425,7 +1965,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 80
+    "domain_seq": 80,
+    "question_ja": "AWS Storage Gateway に大量のデータを保存しており、マネージャーから請求の計算方法、特に Virtual Tape Shelf の使用状況について質問されました。正しい回答はどれですか？",
+    "choices_ja": [
+      "Amazon Glacier に保存した仮想テープのデータに対して請求され、仮想テープのサイズに基づいて課金されます。",
+      "Amazon Glacier に保存した仮想テープのデータに対して請求され、仮想テープのサイズではなく使用した容量の割合に基づいて課金されます。",
+      "Amazon S3 に保存した仮想テープのデータに対して請求され、仮想テープのサイズではなく使用した容量の割合に基づいて課金されます。",
+      "Amazon S3 に保存した仮想テープのデータに対して請求され、仮想テープのサイズに基づいて課金されます。"
+    ]
   },
   {
     "id": 229,
@@ -1443,7 +1990,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 81
+    "domain_seq": 81,
+    "question_ja": "RDS DB インスタンスを起動する際、どのページでアベイラビリティゾーンを選択できますか？",
+    "choices_ja": [
+      "REVIEW（確認）",
+      "DB INSTANCE DETAILS（DB インスタンスの詳細）",
+      "MANAGEMENT OPTIONS（管理オプション）",
+      "ADDITIONAL CONFIGURATION（追加設定）"
+    ]
   },
   {
     "id": 231,
@@ -1461,7 +2015,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 82
+    "domain_seq": 82,
+    "question_ja": "お客様のためにいくつかの EBS ボリュームを設定しています。お客様からは RAID（冗長化された安価なディスクのアレイ）を含む構成を希望されています。AWS では RAID の設定に関していくつかの推奨事項があります。Amazon EBS に対して推奨されていない RAID 構成はどれですか？",
+    "choices_ja": [
+      "RAID 5 のみ",
+      "RAID 5 と RAID 6",
+      "RAID 1 のみ",
+      "RAID 1 と RAID 6"
+    ]
   },
   {
     "id": 235,
@@ -1479,7 +2040,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 83
+    "domain_seq": 83,
+    "question_ja": "デフォルトでは、起動時に作成されインスタンスにアタッチされた EBS ボリュームは、そのインスタンスが終了されると削除されます。この動作は、インスタンスを起動する際にフラグ[...]の値を false に変更することで変更できます。",
+    "choices_ja": [
+      "Delete On Termination（終了時に削除）",
+      "Remove On Deletion（削除時に削除）",
+      "Remove On Termination（終了時に削除）",
+      "Terminate On Deletion（削除時に終了）"
+    ]
   },
   {
     "id": 236,
@@ -1497,7 +2065,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 84
+    "domain_seq": 84,
+    "question_ja": "この機能を支援する AWS サービスはどれですか？",
+    "choices_ja": [
+      "AWS Simple Queue Service",
+      "AWS Simple Notification Service",
+      "AWS Simple Workflow Service",
+      "AWS Simple Email Service"
+    ]
   },
   {
     "id": 242,
@@ -1515,7 +2090,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 85
+    "domain_seq": 85,
+    "question_ja": "上司から、部署向けにシンプルなファイル同期サービスを構築するよう依頼されました。コストをあまりかけたくなく、ファイルの変更があった際にはメールで通知を受け取りたいとのことです。メール通知のために最適なAmazonサービスはどれだと思いますか？",
+    "choices_ja": [
+      "Amazon SES",
+      "Amazon CloudSearch",
+      "Amazon SWF",
+      "Amazon AppStream"
+    ]
   },
   {
     "id": 246,
@@ -1531,7 +2113,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 86
+    "domain_seq": 86,
+    "question_ja": "Amazon RDS の SQL Server エンジンで SQL Server Audit 機能はサポートされていますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 247,
@@ -1547,7 +2134,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 87
+    "domain_seq": 87,
+    "question_ja": "Windowsでリモートデスクトップクライアントを起動するコマンドラインの指示は何ですか？",
+    "choices_ja": [
+      "desk.cpl",
+      "mstsc"
+    ]
   },
   {
     "id": 249,
@@ -1565,7 +2157,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 88
+    "domain_seq": 88,
+    "question_ja": "プライマリとスタンバイ間でデータをレプリケートする際のデータ転送料金はいくらですか？",
+    "choices_ja": [
+      "標準のデータ転送料金と同じです。",
+      "標準のデータ転送料金の2倍です。",
+      "料金はかかりません。無料です。",
+      "標準のデータ転送料金の半分です。"
+    ]
   },
   {
     "id": 251,
@@ -1583,7 +2182,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 89
+    "domain_seq": 89,
+    "question_ja": "AWSで作成されるリソースは、固有の識別子である何によって識別されますか？",
+    "choices_ja": [
+      "Amazon Resource Number",
+      "Amazon Resource Nametag",
+      "Amazon Resource Name",
+      "Amazon Resource Namespace"
+    ]
   },
   {
     "id": 258,
@@ -1601,7 +2207,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 90
+    "domain_seq": 90,
+    "question_ja": "[...] は「シェアナッシング」アーキテクチャを体現しており、大きなデータベースをいくつかの小さなデータベースに分割することを基本としています。データベースを分割する一般的な方法には、1. 同じクエリで結合されないテーブルを異なるホストに分ける、または 2. テーブルを複数のホストに複製し、ハッシュアルゴリズムを使ってどのホストに更新を送るかを決定する、などがあります。",
+    "choices_ja": [
+      "シャーディング",
+      "障害復旧",
+      "フェデレーション",
+      "DOL操作"
+    ]
   },
   {
     "id": 263,
@@ -1618,7 +2231,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 91
+    "domain_seq": 91,
+    "question_ja": "アップグレード前に新しいバージョンでDBインスタンスをテストできますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。",
+      "VPC内のみ可能です。"
+    ]
   },
   {
     "id": 267,
@@ -1636,7 +2255,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 92
+    "domain_seq": 92,
+    "question_ja": "統合請求を利用する際には、2つのアカウントタイプがあります。それは何ですか？",
+    "choices_ja": [
+      "支払いアカウントとリンクアカウント",
+      "親アカウントと子アカウント",
+      "メインアカウントとサブアカウント",
+      "メインアカウントとセカンダリアカウント"
+    ]
   },
   {
     "id": 270,
@@ -1654,7 +2280,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 93
+    "domain_seq": 93,
+    "question_ja": "インスタンスメタデータへのすべてのリクエストの基本URIはどれですか？",
+    "choices_ja": [
+      "http://254.169.169.254/latest/",
+      "http://169.169.254.254/latest/",
+      "http://127.0.0.1/latest/",
+      "http://169.254.169.254/latest/"
+    ]
   },
   {
     "id": 271,
@@ -1672,7 +2305,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 94
+    "domain_seq": 94,
+    "question_ja": "EC2 の GET リクエストを URL として使用する際、[...] はウェブサービスのエントリーポイントとなる URL です。",
+    "choices_ja": [
+      "トークン",
+      "エンドポイント",
+      "アクション",
+      "該当なし"
+    ]
   },
   {
     "id": 274,
@@ -1690,7 +2330,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 95
+    "domain_seq": 95,
+    "question_ja": "ユーザーが placement group 内に 10 台の EC2 インスタンスを起動しました。placement group に関して正しい記述はどれですか？",
+    "choices_ja": [
+      "すべてのインスタンスは同じアベイラビリティゾーン（AZ）内でなければならない。",
+      "すべてのインスタンスは複数のリージョンにまたがって配置できる。",
+      "placement group に 5 台を超えるインスタンスを配置することはできない。",
+      "すべてのインスタンスは同じリージョン内でなければならない。"
+    ]
   },
   {
     "id": 288,
@@ -1708,7 +2355,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 96
+    "domain_seq": 96,
+    "question_ja": "あなたの会社には複数のIT部門があり、それぞれ独自のVPCを持っています。いくつかのVPCは同じAWSアカウント内にあり、他は異なるAWSアカウントにあります。IT部門同士が互いのリソースに完全にアクセスできるよう、すべてのVPCをピアリング接続したいと考えています。VPCピアリングにはいくつかの制限があります。次のうち、VPCピアリングに関して誤っている記述はどれですか？",
+    "choices_ja": [
+      "プライベートDNSの値はピアリングされたVPC間のインスタンス間で解決できません。",
+      "同じ2つのVPC間で最大3つのVPCピアリング接続を同時に持つことができます。",
+      "異なるリージョンのVPC間でVPCピアリング接続を作成することはできません。",
+      "1つのVPCあたり、アクティブおよび保留中のVPCピアリング接続の数に制限があります。"
+    ]
   },
   {
     "id": 292,
@@ -1726,7 +2380,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 97
+    "domain_seq": 97,
+    "question_ja": "仮想プライベートクラウド（VPC）ネットワークで管理用ネットワークをネットワークインターフェイスを使って作成する必要があります。ネットワークインターフェイスの設定に関するベストプラクティスについて、次のうち誤っている記述はどれですか。",
+    "choices_ja": [
+      "インスタンスが起動中または停止中でも、セカンダリ（ethN）ネットワークインターフェイスはデタッチできます。ただし、プライマリ（eth0）インターフェイスはデタッチできません。",
+      "複数のネットワークインターフェイスを持つインスタンスを起動すると、インスタンスのOS上でインターフェイス、プライベートIPアドレス、およびルートテーブルが自動的に設定されます。",
+      "あるサブネットのネットワークインターフェイスを、同じVPC内の別のサブネットのインスタンスにアタッチできますが、ネットワークインターフェイスとインスタンスは同じアベイラビリティゾーン内にある必要があります。",
+      "インスタンスに別のネットワークインターフェイスをアタッチすることは、デュアルホームインスタンスのネットワーク帯域幅を増やす、または倍増させる有効な方法です。"
+    ]
   },
   {
     "id": 296,
@@ -1744,7 +2405,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 98
+    "domain_seq": 98,
+    "question_ja": "お客様が10TBのアーカイブデータをAmazon Glacierに移行したいと考えています。お客様のインターネット接続速度は1Mbpsです。データをAmazon Glacierに最も速く取り込む方法として適切なサービスまたは機能はどれですか？",
+    "choices_ja": [
+      "Amazon Glacierのマルチパートアップロード",
+      "AWS Storage Gateway",
+      "VM Import/Export",
+      "AWS Import/Export"
+    ]
   },
   {
     "id": 297,
@@ -1762,7 +2430,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 99
+    "domain_seq": 99,
+    "question_ja": "マネージャーから、インターネットトラフィックの送受信が可能なパブリックサブネットと、インターネットから直接トラフィックを受け取れないが、パブリックサブネットのNATインスタンスを経由してインターネットへの通信を開始し応答を受け取れるプライベートサブネットを設定するよう依頼されました。これにより、以下の3つのルールを許可する必要があります：インバウンドのSSHトラフィック、パブリックサブネットのWebサーバーがプライベートサブネットのMS SQLサーバーに読み書きする通信、パブリックサブネットのMicrosoft Terminal ServicesゲートウェイからのインバウンドRDPトラフィック。これらに対応するポート番号は何でしょうか？",
+    "choices_ja": [
+      "ポート22、1433、3389",
+      "ポート21、1433、3389",
+      "ポート25、1433、3389",
+      "ポート22、1343、3999"
+    ]
   },
   {
     "id": 298,
@@ -1778,7 +2453,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 100
+    "domain_seq": 100,
+    "question_ja": "EC2 インスタンスがあるサブネット内の ENI（Elastic Network Interface）に接続されています。インスタンスが再起動（意図的または意図しない場合）した場合、インスタンス上のデータはどうなりますか？",
+    "choices_ja": [
+      "データは失われる。",
+      "データは保持される。"
+    ]
   },
   {
     "id": 299,
@@ -1796,7 +2476,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 101
+    "domain_seq": 101,
+    "question_ja": "タグ付けできる Amazon EC2 リソースを選択してください。",
+    "choices_ja": [
+      "キーペア",
+      "Elastic IP アドレス",
+      "プレースメントグループ",
+      "Amazon EBS スナップショット"
+    ]
   },
   {
     "id": 301,
@@ -1814,7 +2501,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 102
+    "domain_seq": 102,
+    "question_ja": "EC2 インスタンスがあるサブネットの ENI（Elastic Network Interface）に接続されています。この EC2 インスタンスに別のサブネットの ENI をアタッチするとどうなりますか？",
+    "choices_ja": [
+      "EC2 インスタンスは古いサブネットのルールに従う。",
+      "EC2 インスタンスは両方のサブネットのルールに従う。",
+      "不可能で、2つの ENI に接続できない。",
+      "EC2 インスタンスは新しいサブネットのルールに従う。"
+    ]
   },
   {
     "id": 304,
@@ -1830,7 +2524,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 103
+    "domain_seq": 103,
+    "question_ja": "EBS スナップショットはどのように実行されますか？",
+    "choices_ja": [
+      "非同期で",
+      "同期で"
+    ]
   },
   {
     "id": 307,
@@ -1849,7 +2548,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 104
+    "domain_seq": 104,
+    "question_ja": "Amazon Elastic Compute Cloud (EC2) インスタンスを起動し、それぞれのインスタンスにあらかじめ決められたプライベートIPアドレスを割り当てたい場合、どうすればよいですか？",
+    "choices_ja": [
+      "プライベートな Amazon Machine Image (AMI) からインスタンスを起動する。",
+      "インスタンスに連続した Elastic IP アドレスのグループを割り当てる。",
+      "Amazon Virtual Private Cloud (VPC) 内でインスタンスを起動する。",
+      "Placement Group 内でインスタンスを起動する。",
+      "標準の EC2 インスタンスを使用する。各インスタンスにはすでにプライベートな DNS が割り当てられているため。"
+    ]
   },
   {
     "id": 309,
@@ -1867,7 +2574,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 105
+    "domain_seq": 105,
+    "question_ja": "You have a Business support plan with AWS. One of your EC2 instances is running Microsoft Windows Server 2008 R2 and you are having problems with the software. Can you receive support from AWS for this software?",
+    "choices_ja": [
+      "Yes.",
+      "No, AWS does not support any third-party software.",
+      "No, Microsoft Windows Server 2008 R2 is not supported.",
+      "No, you need to be on the enterprise support plan."
+    ]
   },
   {
     "id": 312,
@@ -1885,7 +2599,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 106
+    "domain_seq": 106,
+    "question_ja": "Amazon EC2 において、Amazon EBS スナップショットを共有する際、AWS Marketplace のプロダクトコードが付いたスナップショットをパブリックにすることはできますか？",
+    "choices_ja": [
+      "はい、ただし米国のプロバイダーに限ります。",
+      "はい、パブリックにすることができます。",
+      "いいえ、パブリックにすることはできません。",
+      "はい、システムによって自動的にパブリックにされます。"
+    ]
   },
   {
     "id": 313,
@@ -1903,7 +2624,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 107
+    "domain_seq": 107,
+    "question_ja": "ある会社が同じリージョン内に3つのVPC（Dev、Test、Prod）を持つAWSアカウントを所有しています。TestはProdとDevの両方とピアリング接続されています。すべてのVPCは重複しないCIDRブロックを持っています。会社はDevからProdへマイナーなコードリリースを迅速に展開して市場投入までの時間を短縮したいと考えています。どの選択肢がこの目的を達成するのに役立ちますか？",
+    "choices_ja": [
+      "ProdとDevの間に新しいピアリング接続を作成し、適切なルートを設定する。",
+      "ピアリング接続をターゲットとしてDevのルートテーブルにProdへの新しいエントリを作成する。",
+      "Devに2つ目のゲートウェイをアタッチし、Prodのルートテーブルにそのゲートウェイをターゲットとする新しいエントリを追加する。",
+      "同じアカウント内でVPCは重複しないCIDRブロックを持っており、ルートテーブルにはすべてのVPCに対するローカルルートが含まれている。"
+    ]
   },
   {
     "id": 317,
@@ -1921,7 +2649,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 108
+    "domain_seq": 108,
+    "question_ja": "Elastic Load Balancer 1台とそれに接続された EC2 インスタンス 2台を作成する CloudFormation テンプレートを書きました。スタック作成時にロードバランサーの DNS 名を返すには、テンプレートのどのセクションを編集すればよいですか？",
+    "choices_ja": [
+      "Resources（リソース）",
+      "Outputs（出力）",
+      "Parameters（パラメータ）",
+      "Mappings（マッピング）"
+    ]
   },
   {
     "id": 318,
@@ -1939,7 +2674,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 109
+    "domain_seq": 109,
+    "question_ja": "AWS CloudFormation は、Amazon Web Services のリソースをモデル化して設定するのに役立つサービスです。これにより、リソースの管理にかける時間を減らし、AWS 上で動作するアプリケーションに集中できます。Amazon EC2 インスタンスや Amazon RDS DB インスタンスなど、必要な AWS リソースをすべて記述したテンプレートを作成すると、AWS CloudFormation がそれらのリソースのプロビジョニングと設定を自動で行います。このテンプレートにはどのようなフォーマットが必要ですか？",
+    "choices_ja": [
+      "JSON 形式のドキュメント",
+      "CSS 形式のドキュメント",
+      "XML 形式のドキュメント",
+      "HTML 形式のドキュメント"
+    ]
   },
   {
     "id": 322,
@@ -1957,7 +2699,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 110
+    "domain_seq": 110,
+    "question_ja": "データセット全体で頻繁に多くのランダムな読み書きが発生するデータベース形式のアプリケーションに最適なAmazonのストレージはどれだと思いますか？",
+    "choices_ja": [
+      "どれでもない",
+      "Amazon Instance Storage",
+      "どれでもよい",
+      "Amazon EBS"
+    ]
   },
   {
     "id": 323,
@@ -1975,7 +2724,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 111
+    "domain_seq": 111,
+    "question_ja": "Amazon RDS の Oracle DB エンジンにおいて、Database Diagnostic Pack と Database Tuning Pack はどのエディションでのみ利用可能ですか？",
+    "choices_ja": [
+      "Oracle Standard Edition",
+      "Oracle Express Edition",
+      "Oracle Enterprise Edition",
+      "該当なし"
+    ]
   },
   {
     "id": 324,
@@ -1993,7 +2749,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 112
+    "domain_seq": 112,
+    "question_ja": "スタンバイの RDS インスタンスはプライマリと同じアベイラビリティゾーンに配置されますか？",
+    "choices_ja": [
+      "Oracle RDS タイプの場合のみ。",
+      "はい。",
+      "起動時に設定した場合のみ。",
+      "いいえ。"
+    ]
   },
   {
     "id": 327,
@@ -2009,7 +2772,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 113
+    "domain_seq": 113,
+    "question_ja": "正しいか誤りか：手動で作成したDBスナップショットは、DBインスタンスが削除された後に削除される。",
+    "choices_ja": [
+      "正しい",
+      "誤り"
+    ]
   },
   {
     "id": 330,
@@ -2027,7 +2795,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 114
+    "domain_seq": 114,
+    "question_ja": "Amazon EBS は何の略ですか？",
+    "choices_ja": [
+      "Elastic Block Storage",
+      "Elastic Business Server",
+      "Elastic Blade Server",
+      "Elastic Block Store"
+    ]
   },
   {
     "id": 332,
@@ -2045,7 +2820,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 115
+    "domain_seq": 115,
+    "question_ja": "Amazon SWF は何の略ですか？",
+    "choices_ja": [
+      "Simple Web Flow",
+      "Simple Work Flow",
+      "Simple Wireless Forms",
+      "Simple Web Form"
+    ]
   },
   {
     "id": 336,
@@ -2061,7 +2843,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 116
+    "domain_seq": 116,
+    "question_ja": "通常、アプリケーションは結果の処理に時間をかける前に、リクエストでエラーが発生したかどうかを確認したいものです。Amazon RDS API のレスポンスでエラーが発生したかどうかを最も簡単に確認する方法は、レスポンス内の [...] ノードを探すことです。",
+    "choices_ja": [
+      "incorrect（誤り）",
+      "error（エラー）"
+    ]
   },
   {
     "id": 338,
@@ -2079,7 +2866,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 117
+    "domain_seq": 117,
+    "question_ja": "[...] は、データをバイトまたはビットの連続した単位（ブロック）で移動させるストレージデバイスです。",
+    "choices_ja": [
+      "ブロックマップ",
+      "ストレージブロック",
+      "マッピングデバイス",
+      "ブロックデバイス"
+    ]
   },
   {
     "id": 344,
@@ -2097,7 +2891,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 118
+    "domain_seq": 118,
+    "question_ja": "AWS の無料利用枠の EC2 はどのくらいの期間利用できますか？",
+    "choices_ja": [
+      "無期限です。",
+      "サインアップから12ヶ月間です。",
+      "サインアップから1ヶ月間です。",
+      "サインアップから6ヶ月間です。"
+    ]
   },
   {
     "id": 347,
@@ -2115,7 +2916,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 119
+    "domain_seq": 119,
+    "question_ja": "Amazon DynamoDB はインクリメントとデクリメントの両方のアトミック操作をサポートしていますか？",
+    "choices_ja": [
+      "インクリメントのみ。デクリメントは DynamoDB のデータモデル上、本質的に不可能です。",
+      "いいえ。インクリメントもデクリメントもサポートしていません。",
+      "はい。インクリメントとデクリメントの両方をサポートしています。",
+      "デクリメントのみ。インクリメントは DynamoDB のデータモデル上、本質的に不可能です。"
+    ]
   },
   {
     "id": 349,
@@ -2133,7 +2941,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 120
+    "domain_seq": 120,
+    "question_ja": "Amazon EBS ボリュームがインスタンスのルートデバイスである場合、インスタンスを停止せずにデタッチできますか？",
+    "choices_ja": [
+      "はい、ただし Windows インスタンスの場合のみ。",
+      "はい。",
+      "いいえ。",
+      "はい、ただし Linux インスタンスの場合のみ。"
+    ]
   },
   {
     "id": 351,
@@ -2151,7 +2966,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 121
+    "domain_seq": 121,
+    "question_ja": "EBS ボリュームを削除する前に、後で同じボリュームを再作成したい場合、何ができますか？",
+    "choices_ja": [
+      "EBS ボリュームのコピーを作成する（スナップショットではない）",
+      "ボリュームのスナップショットを保存する",
+      "内容を EC2 インスタンスにダウンロードする",
+      "データを物理ディスクにバックアップする"
+    ]
   },
   {
     "id": 356,
@@ -2169,7 +2991,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 122
+    "domain_seq": 122,
+    "question_ja": "'Key' の文字列値に 'laws' を接頭辞として付けることはできますか？",
+    "choices_ja": [
+      "いいえ。",
+      "EC2 のみ可能で、S3 では不可。",
+      "はい。",
+      "S3 のみ可能で、EC2 では不可。"
+    ]
   },
   {
     "id": 366,
@@ -2191,7 +3020,16 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 123
+    "domain_seq": 123,
+    "question_ja": "次のうち、Amazon DynamoDB のユースケースとして適切なものはどれですか？（3つ選択してください）",
+    "choices_ja": [
+      "BLOBデータの保存",
+      "ウェブセッションの管理",
+      "JSONドキュメントの保存",
+      "Amazon S3オブジェクトのメタデータ保存",
+      "リレーショナル結合や複雑な更新の実行",
+      "アクセス頻度の低い大量データの保存"
+    ]
   },
   {
     "id": 367,
@@ -2209,7 +3047,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 124
+    "domain_seq": 124,
+    "question_ja": "頻繁かつ細かい更新が必要なデータベースをAWS上に構築するよう依頼されました。適度なストレージ容量が必要ですが、最適な選択肢がわかりません。上記の条件でインスタンス上にデータベースを構築する場合、推奨されるストレージオプションはどれですか？",
+    "choices_ja": [
+      "Amazon S3",
+      "Amazon EBS",
+      "AWS Storage Gateway",
+      "Amazon Glacier"
+    ]
   },
   {
     "id": 370,
@@ -2227,7 +3072,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 125
+    "domain_seq": 125,
+    "question_ja": "You must increase storage size in increments of at least [...].",
+    "choices_ja": [
+      "40.",
+      "20.",
+      "50.",
+      "10."
+    ]
   },
   {
     "id": 373,
@@ -2243,7 +3095,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 126
+    "domain_seq": 126,
+    "question_ja": "正誤問題：ポイントインタイムリカバリやDBスナップショットからの復元操作を行うと、新しいエンドポイントを持つ新しいDBインスタンスが作成されます。これは正しいでしょうか？",
+    "choices_ja": [
+      "正しい",
+      "誤り"
+    ]
   },
   {
     "id": 375,
@@ -2261,7 +3118,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 127
+    "domain_seq": 127,
+    "question_ja": "初めて Amazon Virtual Private Cloud (Amazon VPC) を設定するため、AWS コンソールの VPC ウィザードを使って簡単に設定しようとしています。VPC ウィザードを使ってデフォルトサブネットに起動したインスタンスについて、正しい説明はどれですか？",
+    "choices_ja": [
+      "デフォルトサブネットに起動したインスタンスは、パブリック IP アドレスと10個のプライベート IP アドレスを受け取る。",
+      "デフォルトサブネットに起動したインスタンスは、パブリック IP アドレスとプライベート IP アドレスの両方を受け取る。",
+      "デフォルトサブネットに起動したインスタンスは IP アドレスを受け取らず、手動で設定する必要がある。",
+      "デフォルトサブネットに起動したインスタンスは、パブリック IP アドレスと5個のプライベート IP アドレスを受け取る。"
+    ]
   },
   {
     "id": 392,
@@ -2279,7 +3143,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 128
+    "domain_seq": 128,
+    "question_ja": "BusinessレベルのPremium Supportケースの最大応答時間はどれですか？",
+    "choices_ja": [
+      "30分",
+      "1時間",
+      "12時間",
+      "10分"
+    ]
   },
   {
     "id": 395,
@@ -2295,7 +3166,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 129
+    "domain_seq": 129,
+    "question_ja": "正しいか誤りか：DBインスタンスに既存のタグと同じキーを持つタグを追加した場合、新しい値が古い値を上書きします。",
+    "choices_ja": [
+      "正しい",
+      "誤り"
+    ]
   },
   {
     "id": 402,
@@ -2313,7 +3189,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 130
+    "domain_seq": 130,
+    "question_ja": "登録済みのAMIで使用されているEBSボリュームのルートデバイスのスナップショットを削除できますか？",
+    "choices_ja": [
+      "API経由のみ可能です。",
+      "コンソール経由のみ可能です。",
+      "はい、可能です。",
+      "いいえ、できません。"
+    ]
   },
   {
     "id": 403,
@@ -2331,7 +3214,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 131
+    "domain_seq": 131,
+    "question_ja": "MySQL のインストールでデフォルトで使用されるポートはどれですか。",
+    "choices_ja": [
+      "3306",
+      "443",
+      "80",
+      "1158"
+    ]
   },
   {
     "id": 408,
@@ -2349,7 +3239,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 132
+    "domain_seq": 132,
+    "question_ja": "Amazon EC2 では、部分的なインスタンス時間の課金はどのように行われますか？",
+    "choices_ja": [
+      "その時間内に使用した秒単位で課金される。",
+      "使用した分単位で課金される。",
+      "部分的な時間を合算して1時間単位で課金される。",
+      "1時間分の料金として課金される。"
+    ]
   },
   {
     "id": 411,
@@ -2367,7 +3264,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 133
+    "domain_seq": 133,
+    "question_ja": "AWS CloudFormation 用の JSON 形式のテキストファイルを作成する必要があります。これは初めてのテンプレートで、テンプレートにはいくつかの主要なセクションがありますが、動作させるために必須なのはそのうちの1つだけです。必須のセクションはどれですか？",
+    "choices_ja": [
+      "Mappings（マッピング）",
+      "Outputs（出力）",
+      "Resources（リソース）",
+      "Conditions（条件）"
+    ]
   },
   {
     "id": 416,
@@ -2385,7 +3289,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 134
+    "domain_seq": 134,
+    "question_ja": "t2.medium の EC2 インスタンスタイプを起動するには、どのタイプの Amazon Machine Image (AMI) を使用する必要がありますか？",
+    "choices_ja": [
+      "インスタンスストアのハードウェア仮想化 (HVM) AMI",
+      "インスタンスストアのパラバーチャル (PV) AMI",
+      "Amazon EBS バックのハードウェア仮想化 (HVM) AMI",
+      "Amazon EBS バックのパラバーチャル (PV) AMI"
+    ]
   },
   {
     "id": 417,
@@ -2403,7 +3314,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 135
+    "domain_seq": 135,
+    "question_ja": "ユーザーは VPC 内にサブネットを作成し、その中に EC2 インスタンスを起動しました。インスタンス起動時に IP アドレスの割り当てオプションは選択していません。ユーザーは 3 つの Elastic IP を持っており、そのうちの 1 つをコンソールから VPC インスタンスに割り当てようとしています。しかし、IP 割り当て画面にインスタンスが表示されません。インスタンスが IP 割り当て画面に表示されない考えられる理由は何でしょうか？",
+    "choices_ja": [
+      "IP アドレスがすでに別のインスタンスに割り当てられている可能性がある",
+      "IP アドレスがサブネットのアベイラビリティゾーンと異なるゾーンに属している",
+      "ユーザーがインターネットゲートウェイを作成していない",
+      "IP アドレスが EC2 Classic に属しているため、VPC に割り当てられない"
+    ]
   },
   {
     "id": 419,
@@ -2421,7 +3339,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 136
+    "domain_seq": 136,
+    "question_ja": "Amazon EC2 は [...] を提供します。これは、HTTP の GET または POST 動詞を使用する HTTP または HTTPS リクエストです。",
+    "choices_ja": [
+      "ウェブデータベース",
+      ".NET フレームワーク",
+      "クエリアPI",
+      "C ライブラリ"
+    ]
   },
   {
     "id": 420,
@@ -2439,7 +3364,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 137
+    "domain_seq": 137,
+    "question_ja": "次のうち、監視するためにカスタム CloudWatch メトリクスが必要なのはどれですか？",
+    "choices_ja": [
+      "EC2 インスタンスのメモリ使用率",
+      "EC2 インスタンスのCPU使用率",
+      "EC2 インスタンスのディスク使用状況",
+      "EC2 インスタンスのデータ転送量"
+    ]
   },
   {
     "id": 422,
@@ -2457,7 +3389,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 138
+    "domain_seq": 138,
+    "question_ja": "Elastic IP アドレス（EIP）は、動的なクラウドコンピューティング向けに設計された静的な IP アドレスです。EIP を使うことで、インスタンスやソフトウェアの障害を迅速に別のインスタンスにアドレスを再割り当てすることで隠すことができます。EIP は特定の EC2 インスタンスではなく AWS アカウントに紐づいており、明示的に解放するまでアカウントに関連付けられたままです。デフォルトで、各 AWS アカウントはリージョンごとに最大いくつの EIP を利用できますか？",
+    "choices_ja": [
+      "0",
+      "5",
+      "無制限",
+      "10"
+    ]
   },
   {
     "id": 423,
@@ -2475,7 +3414,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 139
+    "domain_seq": 139,
+    "question_ja": "どの Amazon ストレージが、生の未フォーマットの外部ブロックデバイスのように動作し、インスタンスにアタッチできますか？",
+    "choices_ja": [
+      "どれでもない",
+      "Amazon Instance Storage",
+      "Amazon EBS",
+      "すべての選択肢"
+    ]
   },
   {
     "id": 425,
@@ -2493,7 +3439,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 140
+    "domain_seq": 140,
+    "question_ja": "DynamoDB はインプレースのアトミック更新をサポートしていますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。",
+      "インプレースの非アトミック更新はサポートしています。",
+      "定義されていません。"
+    ]
   },
   {
     "id": 428,
@@ -2511,7 +3464,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 141
+    "domain_seq": 141,
+    "question_ja": "ユーザーが既存のインスタンスから「Launch More like this」オプションを使って類似のEC2インスタンスを起動しようとしています。しかし、選択したインスタンスのAMIが削除されています。この場合どうなりますか？",
+    "choices_ja": [
+      "AWSは「Launch More like this」オプションにAMIを必要としません。",
+      "AWSはインスタンスを起動しますが、新しいAMIは作成しません。",
+      "AWSは新しいAMIを作成してインスタンスを起動します。",
+      "AWSはAMIが登録解除されているというエラーを返します。"
+    ]
   },
   {
     "id": 430,
@@ -2529,7 +3489,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 142
+    "domain_seq": 142,
+    "question_ja": "お客様がデータセンターでChefの構成管理を使用しています。既存のChefレシピをAWSで活用できるように設計されたサービスはどれですか？",
+    "choices_ja": [
+      "Amazon Simple Workflow Service",
+      "AWS Elastic Beanstalk",
+      "AWS CloudFormation",
+      "AWS OpsWorks"
+    ]
   },
   {
     "id": 431,
@@ -2545,7 +3512,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 143
+    "domain_seq": 143,
+    "question_ja": "Amazon RDS for SQL Server は現在、msdb データベースへのデータインポートをサポートしていますか？",
+    "choices_ja": [
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 432,
@@ -2563,7 +3535,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 144
+    "domain_seq": 144,
+    "question_ja": "現在 EC2 インスタンスにアタッチされている EBS ボリュームを、別のアベイラビリティゾーンに移行するにはどうすればよいですか？",
+    "choices_ja": [
+      "ボリュームをデタッチして、別の AZ にある別の EC2 インスタンスにアタッチする。",
+      "単に別の AZ に新しいボリュームを作成し、元のボリュームをソースとして指定する。",
+      "ボリュームのスナップショットを作成し、そのスナップショットから別の AZ に新しいボリュームを作成する。",
+      "ボリュームをデタッチしてから、ec2-migrate-volume コマンドを使って別の AZ に移動する。"
+    ]
   },
   {
     "id": 435,
@@ -2580,7 +3559,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 145
+    "domain_seq": 145,
+    "question_ja": "DB インスタンスのストレージサイズを縮小することは可能ですか？",
+    "choices_ja": [
+      "使用している ROM によります。",
+      "はい。",
+      "いいえ。"
+    ]
   },
   {
     "id": 439,
@@ -2598,7 +3583,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 146
+    "domain_seq": 146,
+    "question_ja": "マネージャーから、ユーザーごとに異なる請求書が届いていて非常に混乱しているため、請求内容をもっと分かりやすくしてほしいと相談されました。この要望に最も適した解決策はどれでしょうか？",
+    "choices_ja": [
+      "AWS 請求の集約",
+      "統合請求",
+      "繰延請求",
+      "集約請求"
+    ]
   },
   {
     "id": 441,
@@ -2614,7 +3606,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 147
+    "domain_seq": 147,
+    "question_ja": "請求月の途中でDBインスタンスに割り当てたストレージ容量を増やした場合、どのように課金されますか？",
+    "choices_ja": [
+      "使用した中で最も大きいストレージ容量に対して課金されます。",
+      "日割り計算で課金されます。"
+    ]
   },
   {
     "id": 444,
@@ -2630,7 +3627,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 148
+    "domain_seq": 148,
+    "question_ja": "正誤問題：REST または Query リクエストは、HTTP 動詞（GET や POST など）と、呼び出す API を指定する Action または Operation という名前のパラメータを使った HTTP または HTTPS リクエストである。",
+    "choices_ja": [
+      "正しい",
+      "誤り"
+    ]
   },
   {
     "id": 446,
@@ -2648,7 +3650,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 149
+    "domain_seq": 149,
+    "question_ja": "グループは[...]できません。",
+    "choices_ja": [
+      "3階層以上にネストできない。",
+      "ネストできない。",
+      "4階層以上にネストできない。",
+      "2階層以上にネストできない。"
+    ]
   },
   {
     "id": 448,
@@ -2664,7 +3673,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 150
+    "domain_seq": 150,
+    "question_ja": "Micro インスタンスのシステムリソースは、Oracle の推奨構成を満たしていますか？",
+    "choices_ja": [
+      "はい、完全に満たしています。",
+      "はい、ただし特定の状況に限ります。"
+    ]
   },
   {
     "id": 454,
@@ -2682,7 +3696,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 151
+    "domain_seq": 151,
+    "question_ja": "EC2-Classic と EC2-VPC プラットフォームで Elastic IP Address (EIP) を使用する際、次のうち正しくない記述はどれですか？",
+    "choices_ja": [
+      "EC2-VPC プラットフォームでは、インスタンスを停止しても Elastic IP Address (EIP) はインスタンスに関連付けられたままです。",
+      "EC2-Classic プラットフォームでは、インスタンスを停止すると Elastic IP Address (EIP) の関連付けが解除されます。",
+      "EC2-VPC プラットフォームでインスタンスにセカンダリネットワークインターフェイスをアタッチしている場合、そのインスタンスから Elastic IP Address (EIP) の関連付けを解除しても、新しいパブリック IP アドレスは自動的に割り当てられず、手動で EIP を関連付ける必要があります。",
+      "EC2-Classic プラットフォームでは、インスタンスから Elastic IP Address (EIP) の関連付けを解除すると、数分以内に自動的に新しいパブリック IP アドレスが割り当てられます。"
+    ]
   },
   {
     "id": 470,
@@ -2700,7 +3721,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 152
+    "domain_seq": 152,
+    "question_ja": "データベースのスナップショットを取得している間、I/O操作はどうなりますか？",
+    "choices_ja": [
+      "バックアップ中はデータベースへのI/O操作が1時間停止する。",
+      "バックアップ中は数分間、データベースへのI/O操作がレプリカ（利用可能な場合）に送られる。",
+      "I/O操作は通常通り機能する。",
+      "バックアップ中は数分間、データベースへのI/O操作が停止する。"
+    ]
   },
   {
     "id": 471,
@@ -2718,7 +3746,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 153
+    "domain_seq": 153,
+    "question_ja": "EBS ルートボリュームを持つ EC2 インスタンスを停止した場合、一時ストアボリューム上のデータはどうなりますか？",
+    "choices_ja": [
+      "データは自動的に EBS ボリュームに保存される。",
+      "インスタンスが再起動されるまでデータは利用できない。",
+      "データは削除され、アクセスできなくなる。",
+      "データは自動的に EBS スナップショットとして保存される。"
+    ]
   },
   {
     "id": 472,
@@ -2736,7 +3771,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 154
+    "domain_seq": 154,
+    "question_ja": "・・・は耐久性の高いブロックレベルのストレージボリュームで、単一の稼働中のAmazon EC2インスタンスにアタッチできます。",
+    "choices_ja": [
+      "Amazon S3",
+      "Amazon EBS",
+      "どれでもない",
+      "すべて"
+    ]
   },
   {
     "id": 476,
@@ -2754,7 +3796,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 155
+    "domain_seq": 155,
+    "question_ja": "パブリックサブネットにNAT（Network Address Translation）デバイスとして使用するインスタンスを起動し、プライベートサブネットのインターネット向けトラフィックのルートテーブルのターゲットをそのNATデバイスに変更しました。しかし、プライベートサブネット内のインスタンスからインターネットへのアウトバウンド接続ができません。問題を解決するためにどの手順を実行すればよいでしょうか？",
+    "choices_ja": [
+      "NATインスタンスのSource/Destination Check属性を無効にする。",
+      "プライベートサブネット内のインスタンスにElastic IPアドレスを割り当てる。",
+      "NATインスタンスに2つ目のElastic Network Interface（ENI）を追加し、それをプライベートサブネットに配置する。",
+      "プライベートサブネット内のインスタンスに2つ目のElastic Network Interface（ENI）を追加し、それをパブリックサブネットに配置する。"
+    ]
   },
   {
     "id": 477,
@@ -2772,7 +3821,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 156
+    "domain_seq": 156,
+    "question_ja": "AWS Import/Export ジョブの一覧を取得するには、次のうちどれを使用しますか？",
+    "choices_ja": [
+      "Amazon RDS",
+      "AWS Import/Export Web Service ツール",
+      "Amazon S3 REST API",
+      "AWS Elastic Beanstalk"
+    ]
   },
   {
     "id": 479,
@@ -2790,7 +3846,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 157
+    "domain_seq": 157,
+    "question_ja": "DB インスタンスのストレージ容量やファイルシステムのリソースが不足すると、ステータスが [...] に変わり、DB インスタンスは利用できなくなります。",
+    "choices_ja": [
+      "storage-overflow",
+      "storage-full",
+      "storage-exceed",
+      "storage-overage"
+    ]
   },
   {
     "id": 481,
@@ -2808,7 +3871,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 158
+    "domain_seq": 158,
+    "question_ja": "Amazonアカウントでデフォルトで割り当てられるElastic IPの数はいくつですか？",
+    "choices_ja": [
+      "1つのElastic IP",
+      "3つのElastic IP",
+      "5つのElastic IP",
+      "0のElastic IP"
+    ]
   },
   {
     "id": 482,
@@ -2826,7 +3896,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 159
+    "domain_seq": 159,
+    "question_ja": "CLI を使って EC2 インスタンスのパブリック IP アドレスを取得する最適な方法はどれですか？",
+    "choices_ja": [
+      "タグを使う",
+      "traceroute を使う",
+      "ipconfig を使う",
+      "インスタンスメタデータを使う"
+    ]
   },
   {
     "id": 485,
@@ -2844,7 +3921,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 160
+    "domain_seq": 160,
+    "question_ja": "過去2年間にわたり大量のデータをAmazon Glacierに保存してきましたが、これに制限があるかどうか気になり始めました。正しい答えはどれですか？",
+    "choices_ja": [
+      "データの総容量には制限がありますが、保存できるアーカイブの数は無制限です。",
+      "データの総容量は無制限ですが、保存できるアーカイブの数には制限があります。",
+      "データの総容量も保存できるアーカイブの数も無制限です。",
+      "データの総容量も保存できるアーカイブの数も制限があります。"
+    ]
   },
   {
     "id": 486,
@@ -2862,7 +3946,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 161
+    "domain_seq": 161,
+    "question_ja": "EBS スナップショットはどのようにして Amazon S3 に保存されますか？",
+    "choices_ja": [
+      "指数関数的に",
+      "増分方式で",
+      "EBS スナップショットは Amazon S3 に保存されません",
+      "減分方式で"
+    ]
   },
   {
     "id": 488,
@@ -2880,7 +3971,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 162
+    "domain_seq": 162,
+    "question_ja": "US East (Virginia) リージョンに Elastic IP アドレスを持つ Amazon EC2 インスタンスが3台あり、そのリージョンに適したユーザーに対して3つのIPアドレスに均等にリクエストを分散したいと考えています。他のリージョンでリクエストを分散するには、EC2インスタンスは何台あれば十分でしょうか？",
+    "choices_ja": [
+      "3台",
+      "9台",
+      "2台",
+      "1台"
+    ]
   },
   {
     "id": 492,
@@ -2898,7 +3996,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 163
+    "domain_seq": 163,
+    "question_ja": "Amazon CloudFormation は何を提供しますか？",
+    "choices_ja": [
+      "Amazon EC2 インスタンスのオートスケーリング設定機能",
+      "どれでもない",
+      "Amazon Web Services のリソースをテンプレート化して作成する機能",
+      "Amazon Web Services のネットワークリソースをマッピングするテンプレート"
+    ]
   },
   {
     "id": 494,
@@ -2916,7 +4021,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 164
+    "domain_seq": 164,
+    "question_ja": "EBS スナップショットの作成が開始されたが完了していない場合、EBS ボリュームはどうなりますか？",
+    "choices_ja": [
+      "スナップショット作成中でも使用できる。",
+      "スナップショットが完了するまで、EC2 インスタンスへのアタッチやデタッチはできない。",
+      "スナップショット作成中は読み取り専用モードで使用できる。",
+      "スナップショットが完了するまで使用できない。"
+    ]
   },
   {
     "id": 495,
@@ -2934,7 +4046,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 165
+    "domain_seq": 165,
+    "question_ja": "Amazon SES は何の略ですか？",
+    "choices_ja": [
+      "Simple Elastic Server",
+      "Simple Email Service",
+      "Software Email Solution",
+      "Software Enabled Server"
+    ]
   },
   {
     "id": 497,
@@ -2951,7 +4070,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 166
+    "domain_seq": 166,
+    "question_ja": "自動バックアップを無効にすると、ポイントインタイムリカバリも無効になりますか？",
+    "choices_ja": [
+      "設定されていれば無効にできます。",
+      "決して無効になりません。",
+      "無効になります。"
+    ]
   },
   {
     "id": 500,
@@ -2968,7 +4093,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 167
+    "domain_seq": 167,
+    "question_ja": "AWSプラットフォームにマルチファクター認証トークンサービスを統合できますか？",
+    "choices_ja": [
+      "はい、プライベートなマルチファクタートークンデバイスを統合してAWSプラットフォームのユーザー認証に利用できます。",
+      "いいえ、マルチファクタートークンデバイスをAWSプラットフォームに統合することはできません。",
+      "はい、AWSのマルチファクタートークンデバイスを使ってAWSプラットフォームのユーザー認証が可能です。"
+    ]
   },
   {
     "id": 506,
@@ -2986,7 +4117,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 168
+    "domain_seq": 168,
+    "question_ja": "お客様から再び、機密データのセキュリティについて懸念が寄せられ、最新の問い合わせでAWSの古いストレージデバイスがどう扱われるのか尋ねられました。この質問に対して最適な回答はどれでしょうか？",
+    "choices_ja": [
+      "AWSはディスクを再フォーマットして再利用します。",
+      "AWSは廃棄プロセスの一環として、DoD 5220.22-Mで詳細に定められた手法を用いてデータを破壊します。",
+      "AWSは廃棄プロセスの一環として、自社の独自ソフトウェアを使ってデータを破壊します。",
+      "AWSは廃棄プロセスの一環として、第三者のセキュリティ組織にデータ破壊を委託します。"
+    ]
   },
   {
     "id": 507,
@@ -3006,7 +4144,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 169
+    "domain_seq": 169,
+    "question_ja": "Amazon VPC のサブネットの特徴として正しいものはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "各サブネットは高可用性環境を提供するために少なくとも2つのアベイラビリティゾーンにまたがっている。",
+      "各サブネットは単一のアベイラビリティゾーンに対応している。",
+      "CIDR ブロックのマスク /25 がサポートされる最小範囲である。",
+      "デフォルトでは、すべてのサブネットはプライベート・パブリックに関わらず相互にルーティングできる。",
+      "プライベートサブネット内のインスタンスは、Elastic IP を持っている場合にのみインターネットと通信できる。"
+    ]
   },
   {
     "id": 508,
@@ -3024,7 +4170,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 170
+    "domain_seq": 170,
+    "question_ja": "次の特徴を持つ AWS インスタンスのアドレスはどれですか？「インスタンスを停止すると、その Elastic IP アドレスはマッピング解除され、インスタンスを再起動する際に再度マッピングする必要がある。」",
+    "choices_ja": [
+      "A と B の両方。",
+      "どれでもない。",
+      "VPC アドレス。",
+      "EC2 アドレス。"
+    ]
   },
   {
     "id": 510,
@@ -3042,7 +4195,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 171
+    "domain_seq": 171,
+    "question_ja": "クラウド上で稼働する分離されたデータベース環境（Amazon RDS）を何と呼びますか？",
+    "choices_ja": [
+      "DBインスタンス",
+      "DBユニット",
+      "DBサーバー",
+      "DBボリューム"
+    ]
   },
   {
     "id": 511,
@@ -3060,7 +4220,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 172
+    "domain_seq": 172,
+    "question_ja": "ユーザーが AWS SES を使って大量のメールを送信していますが、一部の受信者にメールが届いていません。これは ISP によって認証されていないためです。ユーザーはすべてのメールを確実に配信するためにどうすればよいでしょうか？",
+    "choices_ja": [
+      "DKIM を使ってメールを送信する",
+      "SMTP を使ってメールを送信する",
+      "AWS サポートにチケットを開いて ISP の認証を依頼する",
+      "開発アカウントからメールを送信して ISP を認証する"
+    ]
   },
   {
     "id": 512,
@@ -3078,7 +4245,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 173
+    "domain_seq": 173,
+    "question_ja": "ECUとは何ですか？",
+    "choices_ja": [
+      "Extended Cluster User（拡張クラスターユーザー）",
+      "どれでもない",
+      "Elastic Computer Usage（弾力的なコンピュータ使用量）",
+      "Elastic Compute Unit（弾力的コンピュートユニット）"
+    ]
   },
   {
     "id": 514,
@@ -3097,7 +4271,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 174
+    "domain_seq": 174,
+    "question_ja": "RAID構成されたEBSボリュームをストレージに使用しているEC2上のリレーショナルデータベースをバックアップする際に、書き込みができない時間を最小限に抑え、一貫性のあるバックアップを取得する手順はどれですか？",
+    "choices_ja": [
+      "1. EBSボリュームをデタッチする 2. ボリュームのEBSスナップショットを開始する 3. EBSボリュームを再アタッチする",
+      "1. EC2インスタンスを停止する 2. EBSボリュームのスナップショットを取得する",
+      "1. ディスクI/Oを一時停止する 2. EC2インスタンスのイメージを作成する 3. ディスクI/Oを再開する",
+      "1. ディスクI/Oを一時停止する 2. ボリュームのEBSスナップショットを開始する 3. ディスクI/Oを再開する",
+      "1. ディスクI/Oを一時停止する 2. ボリュームのEBSスナップショットを開始する 3. スナップショットの完了を待つ 4. ディスクI/Oを再開する"
+    ]
   },
   {
     "id": 520,
@@ -3115,7 +4297,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 175
+    "domain_seq": 175,
+    "question_ja": "正しいか誤りか：VPC は複数のサブネットを含みますが、それぞれのサブネットは複数のアベイラビリティゾーンにまたがることができますか？",
+    "choices_ja": [
+      "これは VPC のセットアップ時に要求した場合のみ当てはまります。",
+      "これは正しいです。",
+      "これは誤りです。",
+      "これは米国リージョンのみ当てはまります。"
+    ]
   },
   {
     "id": 521,
@@ -3131,7 +4320,12 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 176
+    "domain_seq": 176,
+    "question_ja": "Amazon RDS の自動バックアップと DB スナップショットは、現在どのストレージエンジンでのみサポートされていますか？",
+    "choices_ja": [
+      "InnoDB",
+      "MyISAM"
+    ]
   },
   {
     "id": 523,
@@ -3149,7 +4343,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 177
+    "domain_seq": 177,
+    "question_ja": "EBS ボリュームのストライピングオプションの中で、次の欠点を持つものはどれですか？「すべての書き込みをボリュームのペアにミラーリングするため、RAID 0 と比べてインスタンスから EBS への I/O 要求量が倍増し、ストライピングできる量が制限される」",
+    "choices_ja": [
+      "RAID 0",
+      "RAID 1+0 (RAID 10)",
+      "RAID 1",
+      "RAID"
+    ]
   },
   {
     "id": 526,
@@ -3167,7 +4368,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 178
+    "domain_seq": 178,
+    "question_ja": "Amazon EC2 が提供するオンデマンドインスタンスの購入オプションについて正しい説明を選んでください。",
+    "choices_ja": [
+      "長期契約や前払いなしで、使用したインスタンス分を時間単位で支払う。",
+      "インスタンスに対して低額の一括前払いを行い、1年または3年の期間で予約し、これらのインスタンスに対して大幅に低い時間単価を支払う。",
+      "長期契約や前払いを伴い、使用したインスタンス分を時間単位で支払う。",
+      "インスタンスに対して高額の一括前払いを行い、1年または3年の期間で予約し、これらのインスタンスに対して大幅に高い時間単価を支払う。"
+    ]
   },
   {
     "id": 529,
@@ -3185,7 +4393,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 179
+    "domain_seq": 179,
+    "question_ja": "S3におけるRRSとは何の略ですか？",
+    "choices_ja": [
+      "冗長性除去システム",
+      "リレーショナル権限ストレージ",
+      "リージョナル権限標準",
+      "Reduced Redundancy Storage（低冗長化ストレージ）"
+    ]
   },
   {
     "id": 531,
@@ -3203,7 +4418,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 180
+    "domain_seq": 180,
+    "question_ja": "タグ付けできない Amazon EC2 リソースを選択してください。",
+    "choices_ja": [
+      "イメージ（AMIs、カーネル、RAMディスク）",
+      "Amazon EBS ボリューム",
+      "Elastic IP アドレス",
+      "VPC"
+    ]
   },
   {
     "id": 538,
@@ -3221,7 +4443,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 181
+    "domain_seq": 181,
+    "question_ja": "Amazon Elastic Compute Cloud において、同じネットワーク内（EC2-Classic または VPC）でインスタンス間の通信に使用されるものはどれですか？",
+    "choices_ja": [
+      "プライベート IP アドレス",
+      "Elastic IP アドレス",
+      "固定 IP アドレス",
+      "パブリック IP アドレス"
+    ]
   },
   {
     "id": 539,
@@ -3239,7 +4468,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 182
+    "domain_seq": 182,
+    "question_ja": "ユーザーは、EC2上でモバイルゲームをホストし、高スコアの達成や新機能の追加時にアクティブユーザーへ通知を送信する予定です。ユーザーはモバイル端末でオンラインのときにこの通知を受け取りたいと考えています。以下のAWSサービスのうち、この機能を実現できるものはどれでしょうか？",
+    "choices_ja": [
+      "AWS Simple Notification Service",
+      "AWS Simple Email Service",
+      "AWS Mobile Communication Service",
+      "AWS Simple Queue Service"
+    ]
   },
   {
     "id": 540,
@@ -3257,7 +4493,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 183
+    "domain_seq": 183,
+    "question_ja": "標準のAWS AMIテンプレートには含まれていないアプリケーションのために、顧客向けにAmazon Machine Image（AMI）を作成する必要があります。AWSでAMIを作成する代替手段にはどのようなものがありますか？",
+    "choices_ja": [
+      "サードパーティからAMIを購入できるが、自分でAMIを作成することはできない。",
+      "サードパーティからAMIを購入することも、自分でAMIを作成することもできる。",
+      "AMIはAWSのみが作成でき、利用可能になるまで待つ必要がある。",
+      "AMIはAWSのみが作成でき、作成を依頼する必要がある。"
+    ]
   },
   {
     "id": 541,
@@ -3274,7 +4517,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 184
+    "domain_seq": 184,
+    "question_ja": "DB インスタンスがアイドル状態でも料金は発生しますか？",
+    "choices_ja": [
+      "はい。",
+      "GovCloud で稼働している場合のみ。",
+      "VPC 内で稼働している場合のみ。"
+    ]
   },
   {
     "id": 545,
@@ -3292,7 +4541,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 185
+    "domain_seq": 185,
+    "question_ja": "超高速なゲームサーバーを構築するための依頼があり、データベースには Amazon DynamoDB を使用することにしました。Amazon DynamoDB はテーブル内のデータに効率的にアクセスするために、プライマリキー属性のインデックスを作成・管理します。セカンダリインデックスとは、テーブルの属性の一部と、クエリ操作をサポートするための代替キーを含むデータ構造のことです。DynamoDB がサポートするセカンダリインデックスの種類はいくつありますか？",
+    "choices_ja": [
+      "2種類",
+      "16種類",
+      "4種類",
+      "必要なだけ"
+    ]
   },
   {
     "id": 547,
@@ -3310,7 +4566,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 186
+    "domain_seq": 186,
+    "question_ja": "AWS Import/Export を使って、S3 バケットから複数の支店にデータを送信したいと考えています。10台のストレージユニットを AWS に送る場合、どうすればよいですか？",
+    "choices_ja": [
+      "発送前にディスクが暗号化されていることを確認する。",
+      "発送前にディスクをフォーマットしておく。",
+      "ディスクの容量が1TB以上であることを確認する。",
+      "各デバイスごとに別々のジョブリクエストを提出する。"
+    ]
   },
   {
     "id": 549,
@@ -3327,7 +4590,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 187
+    "domain_seq": 187,
+    "question_ja": "ボリュームのステータスチェックを実行した際に、ステータスが insufficient-data と表示されるのはどういう意味ですか？",
+    "choices_ja": [
+      "チェックがまだボリューム上で進行中である可能性がある",
+      "チェックに合格した",
+      "チェックに失敗した"
+    ]
   },
   {
     "id": 558,
@@ -3345,7 +4614,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 188
+    "domain_seq": 188,
+    "question_ja": "VPCネットワークのテストとして、EC2インスタンスを意図的に停止させてインスタンスのフェイルオーバーが正しく行われるか確認しています。このテストにかかるAWSの料金を支払うお客様から、これらのインスタンスに対して料金が発生しているかどうか質問されました。EC2インスタンスの課金方法について知っている範囲で説明しようとしていますが、お客様に対してどのように説明するのが適切でしょうか？",
+    "choices_ja": [
+      "課金はAmazon EC2のAMIインスタンスが完全に起動した時点で開始され、インスタンスがシャットダウンを開始した時点で終了します。",
+      "課金は稼働開始から1時間経過後に開始され、インスタンスが終了した時点で終了します。",
+      "課金はAmazon EC2がAMIインスタンスの起動シーケンスを開始した時点で開始され、インスタンスがシャットダウンした時点で終了します。",
+      "課金はAmazon EC2がAMIインスタンスの起動シーケンスを開始した時点で開始され、インスタンスがシャットダウンを開始した時点で終了します。"
+    ]
   },
   {
     "id": 560,
@@ -3363,7 +4639,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 189
+    "domain_seq": 189,
+    "question_ja": "社内のデータセンターにあるサーバーを、EBS ボリューム付きの EC2 インスタンスに移行しています。サーバーのディスク使用量は約500GBなので、AWS Import/Export で使用するために2TBのディスクにすべてのデータをコピーしました。データが Amazon に到着した後、どこにインポートされますか？",
+    "choices_ja": [
+      "2TBのEBSボリュームにインポートされる。",
+      "1TBのオブジェクトが2つあるS3バケットにインポートされる。",
+      "500GBのEBSボリュームにインポートされる。",
+      "2TBのスナップショットとしてS3バケットにインポートされる。"
+    ]
   },
   {
     "id": 565,
@@ -3381,7 +4664,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 190
+    "domain_seq": 190,
+    "question_ja": "Amazon EC2 で、デフォルトで割り当てられる Elastic IP アドレスの数はいくつですか？",
+    "choices_ja": [
+      "10",
+      "2",
+      "5",
+      "20"
+    ]
   },
   {
     "id": 567,
@@ -3399,7 +4689,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 191
+    "domain_seq": 191,
+    "question_ja": "Amazon CloudWatch の無料利用枠を使用した場合、メトリクスの更新頻度はどのくらいですか？",
+    "choices_ja": [
+      "5分ごと",
+      "500ミリ秒ごと",
+      "30秒ごと",
+      "1分ごと"
+    ]
   },
   {
     "id": 568,
@@ -3417,7 +4714,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 192
+    "domain_seq": 192,
+    "question_ja": "Amazon RDS の DB インスタンスのサイズを変更すると、アップグレードは次のメンテナンスウィンドウで実行されます。メンテナンスウィンドウを待たずに今すぐアップグレードを実行したい場合は、どのオプションを指定しますか？",
+    "choices_ja": [
+      "Apply Now",
+      "Apply Soon",
+      "Apply This",
+      "Apply Immediately"
+    ]
   },
   {
     "id": 571,
@@ -3435,7 +4739,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 193
+    "domain_seq": 193,
+    "question_ja": "インスタンスが終了すると、デフォルトで Amazon EBS のルートデバイスボリュームはどうなりますか？",
+    "choices_ja": [
+      "Amazon EBS のルートデバイスボリュームは IA に移動される",
+      "Amazon EBS のルートデバイスボリュームは Amazon RDS にコピーされる",
+      "Amazon EBS のルートデバイスボリュームは自動的に削除される",
+      "Amazon EBS のルートデバイスボリュームは削除するまで残る"
+    ]
   },
   {
     "id": 574,
@@ -3453,7 +4764,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 194
+    "domain_seq": 194,
+    "question_ja": "企業は既存のセキュリティ制御を活用しながら、仮想プライベートクラウド内で顧客向けに仮想デスクトップを展開する必要があります。どのAWSサービスと機能の組み合わせがこの要件を満たしますか？",
+    "choices_ja": [
+      "仮想プライベートネットワーク接続、AWS Directory Services、および Classic Link",
+      "仮想プライベートネットワーク接続、AWS Directory Services、および Amazon Workspaces",
+      "AWS Directory Service、Amazon Workspaces、および AWS Identity and Access Management",
+      "Amazon Elastic Compute Cloud および AWS Identity and Access Management"
+    ]
   },
   {
     "id": 576,
@@ -3471,7 +4789,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 195
+    "domain_seq": 195,
+    "question_ja": "ある企業が、2層構成で高可用性のウェブアプリケーションをAWSに展開しています。ウェブ層のCPU使用率を抑えつつ、静的コンテンツの耐久性の高いストレージを提供するサービスはどれですか？",
+    "choices_ja": [
+      "Amazon EBSボリューム",
+      "Amazon S3",
+      "Amazon EC2インスタンスストア",
+      "Amazon RDSインスタンス"
+    ]
   },
   {
     "id": 577,
@@ -3489,7 +4814,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 196
+    "domain_seq": 196,
+    "question_ja": "誤っている記述を選んでください。",
+    "choices_ja": [
+      "Amazon EC2では、インスタンスが停止または終了するとプライベートIPアドレスはAmazon EC2にのみ返されます。",
+      "Amazon VPCでは、インスタンスが停止してもプライベートIPアドレスは保持されます。",
+      "Amazon VPCでは、インスタンスが停止するとプライベートIPアドレスは保持されません。",
+      "Amazon EC2では、プライベートIPアドレスはインスタンスのライフタイム中に専属的に関連付けられます。"
+    ]
   },
   {
     "id": 581,
@@ -3507,7 +4839,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 197
+    "domain_seq": 197,
+    "question_ja": "Amazon S3 のアップロードは失敗時に再開できますか、それとも最初からやり直す必要がありますか？",
+    "choices_ja": [
+      "最初からやり直す必要がある。",
+      "アップロード前に「失敗時に再開」オプションを設定すれば再開できる。",
+      "失敗時に再開できる。",
+      "ファイルサイズによる。"
+    ]
   },
   {
     "id": 586,
@@ -3525,7 +4864,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 198
+    "domain_seq": 198,
+    "question_ja": "Amazon EC2 は何を提供しますか？",
+    "choices_ja": [
+      "クラウド上の仮想サーバー。",
+      "コード（Java、PHP、Python）を実行するプラットフォームで、時間単位で課金される。",
+      "クラウド上のコンピュータークラスター。",
+      "顧客がリモートで管理する物理サーバー。"
+    ]
   },
   {
     "id": 591,
@@ -3543,7 +4889,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 199
+    "domain_seq": 199,
+    "question_ja": "ハードディスクに保存している大量のデータをクラウドに移行する必要があり、その最適な方法として AWS Import/Export を利用し、ハードディスクを AWS に郵送することにしました。AWS Import/Export に関して誤っている記述はどれですか？",
+    "choices_ja": [
+      "Amazon S3 からエクスポートできる。",
+      "Amazon Glacier にインポートできる。",
+      "Amazon Glacier からエクスポートできる。",
+      "Amazon EBS にインポートできる。"
+    ]
   },
   {
     "id": 592,
@@ -3560,7 +4913,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 200
+    "domain_seq": 200,
+    "question_ja": "MySQL ベースの RDS インスタンスを新しいサポート対象バージョンにアップグレードするかどうか、またそのタイミングを制御できますか？",
+    "choices_ja": [
+      "いいえ。",
+      "VPC 内のみ可能です。",
+      "はい。"
+    ]
   },
   {
     "id": 597,
@@ -3580,7 +4939,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 201
+    "domain_seq": 201,
+    "question_ja": "Amazon S3 の特徴はどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "Amazon S3 はほぼ無制限のサイズのオブジェクトを保存できます。",
+      "Amazon S3 はプロビジョンド IOPS を提供します。",
+      "Amazon S3 は無制限のデータ量を保存できます。",
+      "Amazon S3 はリレーショナルデータベースのホスティングに適しています。",
+      "オブジェクトは URL を通じて直接アクセス可能です。"
+    ]
   },
   {
     "id": 600,
@@ -3598,7 +4965,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 202
+    "domain_seq": 202,
+    "question_ja": "VPC を設定しており、その中にパブリックサブネットを作成する必要があります。このサブネットがパブリックサブネットと見なされるために満たすべき要件はどれですか？",
+    "choices_ja": [
+      "サブネットのトラフィックはインターネットゲートウェイにルーティングされず、仮想プライベートゲートウェイにルーティングされている。",
+      "サブネットのトラフィックがインターネットゲートウェイにルーティングされている。",
+      "サブネットのトラフィックはインターネットゲートウェイにルーティングされていない。",
+      "これらの中にパブリックサブネットと見なせるものはない。"
+    ]
   },
   {
     "id": 601,
@@ -3616,7 +4990,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 203
+    "domain_seq": 203,
+    "question_ja": "EBS スナップショットにアクセスすることは可能ですか？",
+    "choices_ja": [
+      "はい、Amazon S3 の API を通じて可能です。",
+      "はい、Amazon EC2 の API を通じて可能です。",
+      "いいえ、EBS スナップショットにはアクセスできません。新しい EBS ボリュームを作成するためにのみ使用できます。",
+      "EBS はスナップショットを提供していません。"
+    ]
   },
   {
     "id": 602,
@@ -3634,7 +5015,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 204
+    "domain_seq": 204,
+    "question_ja": "Amazon EC2 は何種類のブロックデバイスをサポートしていますか？",
+    "choices_ja": [
+      "4種類",
+      "5種類",
+      "2種類",
+      "1種類"
+    ]
   },
   {
     "id": 603,
@@ -3651,7 +5039,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 205
+    "domain_seq": 205,
+    "question_ja": "SQL Server はログイン情報とパスワードを master データベースに保存します。",
+    "choices_ja": [
+      "設定すれば保存できますが、デフォルトでは保存しません。",
+      "保存しません。",
+      "保存します。"
+    ]
   },
   {
     "id": 613,
@@ -3669,7 +5063,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 206
+    "domain_seq": 206,
+    "question_ja": "S3 RRS の耐久性はどのくらいですか？",
+    "choices_ja": [
+      "99.99%",
+      "99.95%",
+      "99.995%",
+      "99.999999999%"
+    ]
   },
   {
     "id": 614,
@@ -3687,7 +5088,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 207
+    "domain_seq": 207,
+    "question_ja": "あなたの組織は複雑なトランザクションデータベースの設計を行っています。さまざまな理由から、これまでEBS上で構築されてきました。EBSを使ってデータベースを設計したお客様に対して、AWSはバックアップについてどのように推奨していますか？",
+    "choices_ja": [
+      "バックアップはデータベース管理システムを通じてAmazon S3に保存する。",
+      "バックアップはデータベース管理システムを通じてAWS Storage Gatewayに保存する。",
+      "定期的にスナップショットを取得していれば、それ以上のバックアップは不要である。",
+      "バックアップはデータベース管理システムを通じてAmazon Glacierに保存する。"
+    ]
   },
   {
     "id": 615,
@@ -3705,7 +5113,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 208
+    "domain_seq": 208,
+    "question_ja": "VPC ネットワーク内にロードバランサーを作成する必要があります。ロードバランサーは内部（プライベート）またはインターネット向け（パブリック）に設定できます。内部ロードバランサーにすると、DNS 名が作成され、そのロードバランサーのプライベート IP アドレスが含まれます。内部ロードバランサーはインターネットに公開されません。インターネット向けロードバランサーにすると、DNS 名が作成され、パブリック IP アドレスが含まれます。インターネット向けロードバランサーをインターネットに接続するには、このロードバランサーはどこに配置する必要がありますか？",
+    "choices_ja": [
+      "ロードバランサーはインターネットゲートウェイを使ってインターネットに接続されたサブネットに配置する必要があります。",
+      "ロードバランサーはインターネットに接続されていないサブネットに配置する必要があります。",
+      "ロードバランサーはインターネットに接続されたサブネットに配置してはいけません。",
+      "ロードバランサーは完全に自分の IP 範囲の外に配置する必要があります。"
+    ]
   },
   {
     "id": 616,
@@ -3723,7 +5138,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 209
+    "domain_seq": 209,
+    "question_ja": "Amazon CloudWatch で、DB インスタンスに十分な空きストレージ容量があるか確認するためには、どのメトリクスをチェックすべきですか？",
+    "choices_ja": [
+      "Free Storage",
+      "Free Storage Space",
+      "Free Storage Volume",
+      "Free DB Storage Space"
+    ]
   },
   {
     "id": 621,
@@ -3741,7 +5163,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 210
+    "domain_seq": 210,
+    "question_ja": "EBS バックの EC2 インスタンスのエフェメラルボリューム上のデータは、インスタンスが終了したり障害が発生した場合にどうなりますか？",
+    "choices_ja": [
+      "データは自動的に別のボリュームにコピーされる。",
+      "ボリュームのスナップショットが S3 に保存される。",
+      "データは保持される。",
+      "データは削除される。"
+    ]
   },
   {
     "id": 623,
@@ -3759,7 +5188,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 211
+    "domain_seq": 211,
+    "question_ja": "Multipart Upload API を使って Amazon S3 にオブジェクトをアップロードできることを知りました。試してみようとしていますが、その利点についてはよくわかっていません。次のうち、multipart upload を使うことの利点ではないものはどれですか？",
+    "choices_ja": [
+      "最終的なオブジェクトサイズがわかる前にアップロードを開始できる。",
+      "ネットワークの問題から迅速に回復できる。",
+      "オブジェクトのアップロードを一時停止して再開できる。",
+      "通常のアップロードよりもセキュリティが高い。"
+    ]
   },
   {
     "id": 624,
@@ -3777,7 +5213,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 212
+    "domain_seq": 212,
+    "question_ja": "Amazon EC2 インスタンス、イメージ、その他の Amazon EC2 リソースを管理しやすくするために、各リソースに独自のメタデータを割り当てることができます。それはどのような形式ですか？",
+    "choices_ja": [
+      "特別なフィルター",
+      "関数",
+      "タグ",
+      "ワイルドカード"
+    ]
   },
   {
     "id": 625,
@@ -3794,7 +5237,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 213
+    "domain_seq": 213,
+    "question_ja": "Amazon EBS ボリュームは、Amazon EC2 インスタンスの稼働期間とは独立して持続しますか？",
+    "choices_ja": [
+      "いいえ。",
+      "作成時に指定した場合のみ。",
+      "はい。"
+    ]
   },
   {
     "id": 629,
@@ -3812,7 +5261,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 214
+    "domain_seq": 214,
+    "question_ja": "ENI をインスタンスにアタッチする際の「warm attach」とは何を指しますか？",
+    "choices_ja": [
+      "インスタンスが停止しているときに ENI をアタッチすること。",
+      "この質問は意味が通じません。",
+      "インスタンスが稼働中に ENI をアタッチすること。",
+      "インスタンスの起動プロセス中に ENI をアタッチすること。"
+    ]
   },
   {
     "id": 631,
@@ -3830,7 +5286,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 215
+    "domain_seq": 215,
+    "question_ja": "デフォルトでは、EBS ボリュームを Windows インスタンスにアタッチすると、インスタンス上で任意のドライブレターとして表示されることがあります。EBS ボリュームのドライブレターを指定通りに設定するには、[...] サービスの設定を変更できます。",
+    "choices_ja": [
+      "EBS Config Service",
+      "AMI Config Service",
+      "EC2 Config Service",
+      "EC2-AMI Config Service"
+    ]
   },
   {
     "id": 632,
@@ -3848,7 +5311,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 216
+    "domain_seq": 216,
+    "question_ja": "スナップショットを特定の AWS アカウントのみに公開するための正しい手順を選択してください。",
+    "choices_ja": [
+      "すべてのアカウントに対してパブリックを選択し、スナップショットを公開したいアカウントにチェックを入れて保存する。",
+      "プライベートを選択し、対象の AWS アカウントの ID を入力して保存する。",
+      "パブリックを選択し、対象の AWS アカウントの ID を入力して保存する。",
+      "パブリックを選択し、対象の AWS アカウントの ID をプライベートとしてマークして保存する。"
+    ]
   },
   {
     "id": 635,
@@ -3866,7 +5336,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 217
+    "domain_seq": 217,
+    "question_ja": "http://status.aws.amazon.com/ にアクセスすると何が確認できますか？",
+    "choices_ja": [
+      "Amazon CloudWatch",
+      "Amazon RDS のステータス",
+      "AWS サービスヘルスダッシュボード",
+      "AWS Cloud Monitor"
+    ]
   },
   {
     "id": 637,
@@ -3884,7 +5361,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 218
+    "domain_seq": 218,
+    "question_ja": "ユーザーが米国東部リージョンでEC2インスタンスを起動しています。Availability Zoneの選択に関して、AWSが推奨する方法はどれですか？",
+    "choices_ja": [
+      "インスタンス起動時には必ずAZを選択する。",
+      "高可用性のために常にUS-East-1-aゾーンを選択する。",
+      "AZは選択せず、AWSに任せる。",
+      "インスタンス起動時にユーザーがAvailability Zoneを選択することはできない。"
+    ]
   },
   {
     "id": 639,
@@ -3902,7 +5386,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 219
+    "domain_seq": 219,
+    "question_ja": "正しい記述を選んでください。",
+    "choices_ja": [
+      "リソースを停止する際にリソース識別子を指定する必要はありません。",
+      "タグだけを基にリソースを終了、停止、または削除できます。",
+      "タグだけを基にリソースを終了、停止、または削除することはできません。",
+      "リソースを終了する際にリソース識別子を指定する必要はありません。"
+    ]
   },
   {
     "id": 640,
@@ -3920,7 +5411,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 220
+    "domain_seq": 220,
+    "question_ja": "Amazon EC2 インスタンスで詳細モニタリングを有効にした場合、メトリクスデータが CloudWatch に送信される間隔はどのくらいですか？",
+    "choices_ja": [
+      "15分",
+      "5分",
+      "1分",
+      "45秒"
+    ]
   },
   {
     "id": 643,
@@ -3938,7 +5436,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 221
+    "domain_seq": 221,
+    "question_ja": "DynamoDB のデータモデルは何ですか？",
+    "choices_ja": [
+      "DynamoDB はスキーマレスなので、データモデルはありません。",
+      "'Items'（キーと1つ以上の属性を持つ）と、名前と値を持つ 'Attribute'。",
+      "'Table'（Items の集合）、'Items'（キーと1つ以上の属性を持つ）、および名前と値を持つ 'Attribute'。",
+      "'Database'（複数の 'Table' の集合）、'Table'（複数の 'Items' の集合）、'Items'（複数の 'Attributes' の集合）、'Attributes'。"
+    ]
   },
   {
     "id": 644,
@@ -3956,7 +5461,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 222
+    "domain_seq": 222,
+    "question_ja": "Amazon EC2 の placement group とは何ですか？",
+    "choices_ja": [
+      "単一の Availability Zone 内にある EC2 インスタンスのグループです。",
+      "ウェブコンテンツのエッジロケーションです。",
+      "ウェブコンテンツの EC2 インスタンスを実行する AWS リージョンです。",
+      "複数の Availability Zone にまたがるために使われるグループです。"
+    ]
   },
   {
     "id": 674,
@@ -3974,7 +5486,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 223
+    "domain_seq": 223,
+    "question_ja": "ある企業は AWS Organizations を利用して、各事業部ごとに専用の AWS アカウントを作成し、各事業部のアカウントを独立して管理できるようにしています。あるアカウントのルートユーザーのメールアドレスに送信された通知を、ルートメールの受信者が見逃してしまいました。企業は今後すべての通知を見逃さないようにしたいと考えています。なお、今後の通知はアカウント管理者に限定する必要があります。この要件を満たす解決策はどれですか？",
+    "choices_ja": [
+      "会社のメールサーバーを設定し、AWS アカウントのルートユーザーのメールアドレスに送信される通知メールを組織内の全ユーザーに転送する。",
+      "すべての AWS アカウントのルートユーザーのメールアドレスを、アラートに対応できる数名の管理者に届く配信リストとして設定する。AWS Organizations コンソールまたはプログラムで AWS アカウントの代替連絡先を設定する。",
+      "すべての AWS アカウントのルートユーザーのメールを、アラートの監視と適切なグループへの転送を担当する1人の管理者に送信するよう設定する。",
+      "既存のすべての AWS アカウントと新規作成されるアカウントに同じルートユーザーメールアドレスを使用するよう設定する。AWS Organizations コンソールまたはプログラムで AWS アカウントの代替連絡先を設定する。"
+    ]
   },
   {
     "id": 683,
@@ -3992,7 +5511,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 224
+    "domain_seq": 224,
+    "question_ja": "ある企業が AWS 上に 3 層構成のウェブアプリケーションを展開しています。ウェブサーバーは VPC のパブリックサブネットに配置されており、アプリケーションサーバーとデータベースサーバーは同じ VPC のプライベートサブネットに配置されています。企業は AWS Marketplace からサードパーティ製の仮想ファイアウォールアプライアンスを検査用 VPC に導入しています。このアプライアンスは IP パケットを受け入れることができる IP インターフェースで構成されています。ソリューションアーキテクトは、ウェブアプリケーションに対して、トラフィックがウェブサーバーに到達する前にすべてのトラフィックをアプライアンスで検査できるように統合する必要があります。最小限の運用負荷でこれらの要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "アプリケーションの VPC のパブリックサブネットに Network Load Balancer を作成し、トラフィックをアプライアンスにルーティングしてパケット検査を行う。",
+      "アプリケーションの VPC のパブリックサブネットに Application Load Balancer を作成し、トラフィックをアプライアンスにルーティングしてパケット検査を行う。",
+      "検査用 VPC に transit gateway を展開し、ルートテーブルを設定して受信パケットを transit gateway 経由でルーティングする。",
+      "検査用 VPC に Gateway Load Balancer を展開し、Gateway Load Balancer エンドポイントを作成して受信パケットを受け取り、アプライアンスに転送する。"
+    ]
   },
   {
     "id": 692,
@@ -4010,6 +5536,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 225
+    "domain_seq": 225,
+    "question_ja": "ある企業がアプリケーションをAWSに移行しています。アプリケーションは異なるアカウントに展開されており、AWS Organizationsを使ってアカウントを一元管理しています。セキュリティチームは、全アカウントでのシングルサインオン（SSO）ソリューションを必要としています。ユーザーとグループは引き続きオンプレミスの自己管理型Microsoft Active Directoryで管理しなければなりません。これらの要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "AWS SSOコンソールからAWS Single Sign-On（AWS SSO）を有効にします。AWS Directory Service for Microsoft Active Directoryを使い、企業の自己管理型Microsoft Active DirectoryとAWS SSOを接続するために、一方向のフォレストトラストまたは一方向のドメイントラストを作成します。",
+      "AWS SSOコンソールからAWS Single Sign-On（AWS SSO）を有効にします。AWS Directory Service for Microsoft Active Directoryを使い、企業の自己管理型Microsoft Active DirectoryとAWS SSOを接続するために、双方向のフォレストトラストを作成します。",
+      "AWS Directory Serviceを使用します。企業の自己管理型Microsoft Active Directoryと双方向のトラスト関係を作成します。",
+      "オンプレミスにアイデンティティプロバイダー（IdP）を展開します。AWS SSOコンソールからAWS Single Sign-On（AWS SSO）を有効にします。"
+    ]
   }
 ]
