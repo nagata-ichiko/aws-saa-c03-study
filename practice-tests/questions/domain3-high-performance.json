@@ -2384,5 +2384,615 @@
       "Amazon Kinesis Video Streamsを使ってクリックストリームデータを収集し、AWS Glueでリアルタイム処理する。",
       "Amazon Managed Service for Apache Flink（旧称Amazon Kinesis Data Analytics）を使ってクリックストリームデータを収集し、AWS Lambdaでリアルタイム処理する。"
     ]
+  },
+  {
+    "id": 721,
+    "question": "A company runs a web application that experiences sudden traffic spikes. The application tier uses Amazon EC2 instances managed by an Auto Scaling group. The team wants to scale out proactively before demand peaks, based on historical usage patterns. Which Auto Scaling policy type should they use?",
+    "choices": [
+      "A. Target tracking scaling policy",
+      "B. Step scaling policy",
+      "C. Predictive scaling policy",
+      "D. Simple scaling policy"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "auto-scaling",
+      "predictive-scaling",
+      "ec2"
+    ],
+    "explanation": "",
+    "domain_seq": 95,
+    "question_ja": "あるウェブアプリケーションでは、トラフィックが突然急増します。アプリケーション層は Auto Scaling グループで管理された Amazon EC2 インスタンスを使用しています。チームは、過去の使用パターンに基づいて、ピーク需要の前にプロアクティブにスケールアウトしたいと考えています。どの Auto Scaling ポリシーを使用すべきですか？",
+    "choices_ja": [
+      "A. ターゲット追跡スケーリングポリシー",
+      "B. ステップスケーリングポリシー",
+      "C. 予測スケーリングポリシー",
+      "D. シンプルスケーリングポリシー"
+    ]
+  },
+  {
+    "id": 722,
+    "question": "A company hosts a global e-commerce platform. Static assets like images and CSS files must be delivered with the lowest possible latency to users worldwide. The assets are stored in Amazon S3. Which solution best meets this requirement?",
+    "choices": [
+      "A. Enable S3 Transfer Acceleration on the bucket",
+      "B. Distribute the assets using Amazon CloudFront with the S3 bucket as the origin",
+      "C. Use AWS Global Accelerator to route traffic to the S3 bucket",
+      "D. Replicate the S3 bucket to multiple AWS Regions using Cross-Region Replication"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "cloudfront",
+      "s3",
+      "caching",
+      "cdn"
+    ],
+    "explanation": "",
+    "domain_seq": 96,
+    "question_ja": "あるグローバルな EC サイトでは、画像や CSS ファイルなどの静的アセットを世界中のユーザーに最小のレイテンシーで配信する必要があります。アセットは Amazon S3 に保存されています。この要件を最もよく満たすソリューションはどれですか？",
+    "choices_ja": [
+      "A. バケットの S3 Transfer Acceleration を有効にする",
+      "B. S3 バケットをオリジンとして Amazon CloudFront を使用してアセットを配信する",
+      "C. AWS Global Accelerator を使用して S3 バケットへのトラフィックをルーティングする",
+      "D. Cross-Region Replication を使用して S3 バケットを複数の AWS リージョンにレプリケートする"
+    ]
+  },
+  {
+    "id": 723,
+    "question": "A financial services company runs a high-frequency trading application that requires extremely low network latency between EC2 instances. The instances need to communicate with each other at speeds close to the theoretical network limit. Which EC2 placement strategy should the solutions architect recommend?",
+    "choices": [
+      "A. Spread placement group",
+      "B. Partition placement group",
+      "C. Cluster placement group",
+      "D. Dedicated Hosts"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "placement-groups",
+      "ec2",
+      "networking",
+      "low-latency"
+    ],
+    "explanation": "",
+    "domain_seq": 97,
+    "question_ja": "ある金融サービス会社では、EC2 インスタンス間で極めて低いネットワークレイテンシーを必要とする高頻度取引アプリケーションを実行しています。インスタンスは理論上のネットワーク上限に近い速度で互いに通信する必要があります。ソリューションアーキテクトはどの EC2 配置戦略を推奨すべきですか？",
+    "choices_ja": [
+      "A. スプレッド配置グループ",
+      "B. パーティション配置グループ",
+      "C. クラスター配置グループ",
+      "D. Dedicated Hosts"
+    ]
+  },
+  {
+    "id": 724,
+    "question": "A company's DynamoDB table is experiencing hot partition issues due to a poorly distributed partition key. Read operations on a specific set of items are causing throttling. The application does not require strongly consistent reads. Which solution will improve read performance with minimal application changes? (Choose two)",
+    "choices": [
+      "A. Enable DynamoDB Accelerator (DAX) in front of the table",
+      "B. Switch the partition key to a more uniformly distributed attribute",
+      "C. Add a Global Secondary Index (GSI) on the hot attribute",
+      "D. Use Amazon ElastiCache for Redis to cache query results",
+      "E. Enable DynamoDB Streams and process reads from the stream"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [
+      "dynamodb",
+      "dax",
+      "elasticache",
+      "caching",
+      "performance"
+    ],
+    "explanation": "",
+    "domain_seq": 98,
+    "question_ja": "ある会社の DynamoDB テーブルは、パーティションキーの分散が悪く、ホットパーティションの問題が発生しています。特定のアイテムへの読み取り操作によってスロットリングが発生しています。アプリケーションは強整合性の読み取りを必要としません。アプリケーションの変更を最小限に抑えて読み取りパフォーマンスを向上させるソリューションはどれですか？（2 つ選んでください）",
+    "choices_ja": [
+      "A. テーブルの前に DynamoDB Accelerator (DAX) を有効にする",
+      "B. パーティションキーをより均一に分散された属性に変更する",
+      "C. ホット属性に Global Secondary Index (GSI) を追加する",
+      "D. Amazon ElastiCache for Redis を使用してクエリ結果をキャッシュする",
+      "E. DynamoDB Streams を有効にしてストリームから読み取りを処理する"
+    ]
+  },
+  {
+    "id": 725,
+    "question": "A media company needs to analyze petabytes of video metadata stored in Amazon S3 using standard SQL queries without loading data into a separate database. Query performance must be optimized for large scans. Which service should they use?",
+    "choices": [
+      "A. Amazon Redshift Spectrum",
+      "B. Amazon Athena with columnar file formats such as Parquet",
+      "C. AWS Glue ETL jobs",
+      "D. Amazon EMR with Apache Hive"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "athena",
+      "s3",
+      "analytics",
+      "data-lake"
+    ],
+    "explanation": "",
+    "domain_seq": 99,
+    "question_ja": "あるメディア会社では、Amazon S3 に保存されたペタバイト規模の動画メタデータを、別のデータベースにデータをロードすることなく標準的な SQL クエリで分析する必要があります。クエリのパフォーマンスは大規模スキャンに対して最適化される必要があります。どのサービスを使用すべきですか？",
+    "choices_ja": [
+      "A. Amazon Redshift Spectrum",
+      "B. Parquet などのカラム型ファイル形式を使用した Amazon Athena",
+      "C. AWS Glue ETL ジョブ",
+      "D. Apache Hive を使用した Amazon EMR"
+    ]
+  },
+  {
+    "id": 726,
+    "question": "A solutions architect is designing a system to ingest and process millions of IoT sensor readings per second in real time. The processed data must be available for dashboards within seconds. Which combination of services best meets these requirements? (Choose two)",
+    "choices": [
+      "A. Amazon Kinesis Data Streams to ingest the data",
+      "B. Amazon SQS Standard Queue to buffer sensor readings",
+      "C. AWS Lambda to process records from the stream",
+      "D. Amazon Redshift as the real-time dashboard data store",
+      "E. Amazon Kinesis Data Firehose to load data directly into Amazon S3"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [
+      "kinesis",
+      "lambda",
+      "streaming",
+      "real-time",
+      "iot"
+    ],
+    "explanation": "",
+    "domain_seq": 100,
+    "question_ja": "ソリューションアーキテクトは、毎秒数百万の IoT センサー読み取りをリアルタイムで取り込んで処理するシステムを設計しています。処理されたデータは数秒以内にダッシュボードで利用できる必要があります。これらの要件を最もよく満たすサービスの組み合わせはどれですか？（2 つ選んでください）",
+    "choices_ja": [
+      "A. データを取り込むための Amazon Kinesis Data Streams",
+      "B. センサー読み取りをバッファリングするための Amazon SQS Standard Queue",
+      "C. ストリームからレコードを処理するための AWS Lambda",
+      "D. リアルタイムダッシュボードのデータストアとしての Amazon Redshift",
+      "E. データを Amazon S3 に直接ロードするための Amazon Kinesis Data Firehose"
+    ]
+  },
+  {
+    "id": 727,
+    "question": "A company runs a read-heavy relational database workload on Amazon RDS for MySQL. The database is experiencing high CPU utilization due to read queries. The development team wants to offload read traffic with minimal application-level changes. Which solution should a solutions architect recommend?",
+    "choices": [
+      "A. Create an RDS read replica and update the application to direct read queries to the replica endpoint",
+      "B. Enable Multi-AZ on the existing RDS instance",
+      "C. Migrate the database to Amazon Aurora Serverless",
+      "D. Add Amazon ElastiCache for Memcached in front of the database"
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "rds",
+      "read-replica",
+      "database-performance"
+    ],
+    "explanation": "",
+    "domain_seq": 101,
+    "question_ja": "ある会社では、Amazon RDS for MySQL で読み取り負荷の高いリレーショナルデータベースワークロードを実行しています。読み取りクエリにより、データベースの CPU 使用率が高くなっています。開発チームは、アプリケーションレベルの変更を最小限に抑えて読み取りトラフィックをオフロードしたいと考えています。ソリューションアーキテクトが推奨すべきソリューションはどれですか？",
+    "choices_ja": [
+      "A. RDS リードレプリカを作成し、読み取りクエリをレプリカエンドポイントに向けるようにアプリケーションを更新する",
+      "B. 既存の RDS インスタンスで Multi-AZ を有効にする",
+      "C. データベースを Amazon Aurora Serverless に移行する",
+      "D. データベースの前に Amazon ElastiCache for Memcached を追加する"
+    ]
+  },
+  {
+    "id": 728,
+    "question": "A company is deploying a new application that requires a load balancer capable of routing requests based on the URL path (e.g., /api/* to one target group and /static/* to another). Which load balancer type supports this requirement?",
+    "choices": [
+      "A. Classic Load Balancer",
+      "B. Network Load Balancer (NLB)",
+      "C. Application Load Balancer (ALB)",
+      "D. Gateway Load Balancer (GWLB)"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "alb",
+      "elb",
+      "load-balancing",
+      "path-routing"
+    ],
+    "explanation": "",
+    "domain_seq": 102,
+    "question_ja": "ある会社では、URL パス（例: /api/* を一方のターゲットグループへ、/static/* を別のターゲットグループへ）に基づいてリクエストをルーティングできるロードバランサーが必要な新しいアプリケーションをデプロイしています。この要件をサポートするロードバランサーの種類はどれですか？",
+    "choices_ja": [
+      "A. Classic Load Balancer",
+      "B. Network Load Balancer (NLB)",
+      "C. Application Load Balancer (ALB)",
+      "D. Gateway Load Balancer (GWLB)"
+    ]
+  },
+  {
+    "id": 729,
+    "question": "A company needs a load balancer that supports ultra-low latency, handles millions of requests per second, and preserves the client's source IP address for a TCP-based application. Which load balancer type should be selected?",
+    "choices": [
+      "A. Application Load Balancer (ALB)",
+      "B. Network Load Balancer (NLB)",
+      "C. Gateway Load Balancer (GWLB)",
+      "D. Classic Load Balancer"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "nlb",
+      "elb",
+      "load-balancing",
+      "tcp",
+      "low-latency"
+    ],
+    "explanation": "",
+    "domain_seq": 103,
+    "question_ja": "ある会社では、TCP ベースのアプリケーションに対して、超低レイテンシーをサポートし、毎秒数百万のリクエストを処理し、クライアントのソース IP アドレスを保持するロードバランサーが必要です。どのロードバランサーの種類を選択すべきですか？",
+    "choices_ja": [
+      "A. Application Load Balancer (ALB)",
+      "B. Network Load Balancer (NLB)",
+      "C. Gateway Load Balancer (GWLB)",
+      "D. Classic Load Balancer"
+    ]
+  },
+  {
+    "id": 730,
+    "question": "A gaming company's global application experiences high latency for players in Asia and South America. The origin servers are in us-east-1. The application uses TCP connections and cannot use HTTP caching. Which AWS service would most improve global latency for end users?",
+    "choices": [
+      "A. Amazon CloudFront",
+      "B. AWS Global Accelerator",
+      "C. Amazon Route 53 latency-based routing",
+      "D. S3 Transfer Acceleration"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "global-accelerator",
+      "networking",
+      "low-latency",
+      "global"
+    ],
+    "explanation": "",
+    "domain_seq": 104,
+    "question_ja": "あるゲーム会社のグローバルアプリケーションでは、アジアと南米のプレイヤーに対して高いレイテンシーが発生しています。オリジンサーバーは us-east-1 にあります。アプリケーションは TCP 接続を使用し、HTTP キャッシュは使用できません。エンドユーザーのグローバルレイテンシーを最も改善する AWS サービスはどれですか？",
+    "choices_ja": [
+      "A. Amazon CloudFront",
+      "B. AWS Global Accelerator",
+      "C. Amazon Route 53 レイテンシーベースルーティング",
+      "D. S3 Transfer Acceleration"
+    ]
+  },
+  {
+    "id": 731,
+    "question": "A company has an Aurora MySQL cluster with one writer and two reader instances. A reporting application runs complex analytical queries that are degrading performance for transactional workloads on the writer instance. The company wants to isolate reporting queries without adding operational complexity. Which solution should a solutions architect recommend?",
+    "choices": [
+      "A. Create an Aurora Replica and configure the reporting application to use the reader endpoint",
+      "B. Deploy an Amazon Redshift cluster and replicate data from Aurora using AWS DMS",
+      "C. Enable Aurora Parallel Query on the existing cluster",
+      "D. Add an ElastiCache layer between the reporting application and Aurora"
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "aurora",
+      "read-replica",
+      "database-performance",
+      "reporting"
+    ],
+    "explanation": "",
+    "domain_seq": 105,
+    "question_ja": "ある会社では、1 つのライターと 2 つのリーダーインスタンスを持つ Aurora MySQL クラスターがあります。レポートアプリケーションが複雑な分析クエリを実行しており、ライターインスタンスのトランザクションワークロードのパフォーマンスが低下しています。会社は運用の複雑さを増やさずにレポートクエリを分離したいと考えています。ソリューションアーキテクトが推奨すべきソリューションはどれですか？",
+    "choices_ja": [
+      "A. Aurora レプリカを作成し、レポートアプリケーションがリーダーエンドポイントを使用するように設定する",
+      "B. Amazon Redshift クラスターをデプロイし、AWS DMS を使用して Aurora からデータをレプリケートする",
+      "C. 既存のクラスターで Aurora Parallel Query を有効にする",
+      "D. レポートアプリケーションと Aurora の間に ElastiCache レイヤーを追加する"
+    ]
+  },
+  {
+    "id": 732,
+    "question": "A company needs to store session state for a web application. The state must be shared across multiple EC2 instances behind an Application Load Balancer, must support sub-millisecond latency, and must automatically expire session data after 30 minutes. Which solution best meets these requirements?",
+    "choices": [
+      "A. Store session data in Amazon RDS with a scheduled Lambda function to purge expired records",
+      "B. Use Amazon ElastiCache for Redis with TTL configured on each session key",
+      "C. Use Amazon ElastiCache for Memcached with TTL configured on each session key",
+      "D. Store session data in an Amazon DynamoDB table with a TTL attribute"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "elasticache",
+      "redis",
+      "session-management",
+      "caching"
+    ],
+    "explanation": "",
+    "domain_seq": 106,
+    "question_ja": "ある会社では、ウェブアプリケーションのセッション状態を保存する必要があります。状態は Application Load Balancer の背後にある複数の EC2 インスタンス間で共有され、サブミリ秒のレイテンシーをサポートし、30 分後にセッションデータを自動的に期限切れにする必要があります。これらの要件を最もよく満たすソリューションはどれですか？",
+    "choices_ja": [
+      "A. Amazon RDS にセッションデータを保存し、スケジュールされた Lambda 関数で期限切れレコードを削除する",
+      "B. 各セッションキーに TTL を設定した Amazon ElastiCache for Redis を使用する",
+      "C. 各セッションキーに TTL を設定した Amazon ElastiCache for Memcached を使用する",
+      "D. TTL 属性を持つ Amazon DynamoDB テーブルにセッションデータを保存する"
+    ]
+  },
+  {
+    "id": 733,
+    "question": "A company is building a high-performance computing (HPC) workload that processes genomics data. The workload requires shared file system access across hundreds of EC2 instances with throughput measured in hundreds of GB/s and sub-millisecond latencies. Which storage solution should the solutions architect choose?",
+    "choices": [
+      "A. Amazon EFS with Max I/O performance mode",
+      "B. Amazon FSx for Windows File Server",
+      "C. Amazon FSx for Lustre",
+      "D. Amazon S3 with S3 Transfer Acceleration"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "fsx-lustre",
+      "hpc",
+      "storage-performance",
+      "shared-filesystem"
+    ],
+    "explanation": "",
+    "domain_seq": 107,
+    "question_ja": "ある会社では、ゲノムデータを処理する高性能コンピューティング（HPC）ワークロードを構築しています。このワークロードは、数百の EC2 インスタンス間での共有ファイルシステムアクセスを必要とし、スループットは数百 GB/s、レイテンシーはサブミリ秒が求められます。ソリューションアーキテクトが選択すべきストレージソリューションはどれですか？",
+    "choices_ja": [
+      "A. Max I/O パフォーマンスモードの Amazon EFS",
+      "B. Amazon FSx for Windows File Server",
+      "C. Amazon FSx for Lustre",
+      "D. S3 Transfer Acceleration を使用した Amazon S3"
+    ]
+  },
+  {
+    "id": 734,
+    "question": "A solutions architect needs to design a data warehouse solution that handles complex queries over terabytes of structured sales data. The queries involve large table joins and aggregations. The team wants columnar storage and massively parallel processing (MPP). Which service should they use?",
+    "choices": [
+      "A. Amazon RDS for PostgreSQL with read replicas",
+      "B. Amazon Aurora Global Database",
+      "C. Amazon Redshift",
+      "D. Amazon DynamoDB with GSIs"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "redshift",
+      "data-warehouse",
+      "analytics",
+      "mpp"
+    ],
+    "explanation": "",
+    "domain_seq": 108,
+    "question_ja": "ソリューションアーキテクトは、テラバイト規模の構造化された販売データに対して複雑なクエリを処理するデータウェアハウスソリューションを設計する必要があります。クエリには大規模なテーブル結合と集計が含まれます。チームはカラム型ストレージと大規模並列処理（MPP）を求めています。どのサービスを使用すべきですか？",
+    "choices_ja": [
+      "A. リードレプリカを使用した Amazon RDS for PostgreSQL",
+      "B. Amazon Aurora Global Database",
+      "C. Amazon Redshift",
+      "D. GSI を使用した Amazon DynamoDB"
+    ]
+  },
+  {
+    "id": 735,
+    "question": "A company runs a Lambda-based API that serves a global user base. The API experiences cold start latency when serving the first request after idle periods, which degrades user experience for premium customers. Which solution eliminates cold start latency for these customers?",
+    "choices": [
+      "A. Increase the Lambda function memory allocation",
+      "B. Enable Lambda Provisioned Concurrency for the function",
+      "C. Deploy the Lambda function in multiple AWS Regions",
+      "D. Use Amazon API Gateway caching to avoid invoking Lambda"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "lambda",
+      "provisioned-concurrency",
+      "serverless",
+      "cold-start"
+    ],
+    "explanation": "",
+    "domain_seq": 109,
+    "question_ja": "ある会社では、グローバルユーザーベースにサービスを提供する Lambda ベースの API を実行しています。アイドル時間後の最初のリクエストでコールドスタートのレイテンシーが発生し、プレミアム顧客のユーザーエクスペリエンスが低下しています。これらの顧客に対するコールドスタートのレイテンシーを排除するソリューションはどれですか？",
+    "choices_ja": [
+      "A. Lambda 関数のメモリ割り当てを増やす",
+      "B. 関数の Lambda プロビジョニング済み同時実行を有効にする",
+      "C. Lambda 関数を複数の AWS リージョンにデプロイする",
+      "D. Amazon API Gateway キャッシュを使用して Lambda の呼び出しを回避する"
+    ]
+  },
+  {
+    "id": 736,
+    "question": "A company uploads large files (5–50 GB) to Amazon S3 from on-premises servers located far from the nearest AWS Region. The uploads are taking too long and sometimes failing. Which features should a solutions architect enable to improve upload speed and reliability? (Choose two)",
+    "choices": [
+      "A. S3 Transfer Acceleration",
+      "B. S3 Multipart Upload",
+      "C. S3 Cross-Region Replication",
+      "D. S3 Intelligent-Tiering",
+      "E. S3 Event Notifications"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [
+      "s3",
+      "transfer-acceleration",
+      "multipart-upload",
+      "storage-performance"
+    ],
+    "explanation": "",
+    "domain_seq": 110,
+    "question_ja": "ある会社では、最寄りの AWS リージョンから遠い場所にあるオンプレミスサーバーから Amazon S3 に大きなファイル（5〜50 GB）をアップロードしています。アップロードに時間がかかりすぎており、失敗することもあります。アップロード速度と信頼性を向上させるために、ソリューションアーキテクトが有効にすべき機能はどれですか？（2 つ選んでください）",
+    "choices_ja": [
+      "A. S3 Transfer Acceleration",
+      "B. S3 マルチパートアップロード",
+      "C. S3 Cross-Region Replication",
+      "D. S3 Intelligent-Tiering",
+      "E. S3 イベント通知"
+    ]
+  },
+  {
+    "id": 737,
+    "question": "A company uses Amazon API Gateway with Lambda integrations. The REST API serves mostly repeated identical requests for product catalog data that changes every 5 minutes. API Gateway costs are high due to request volume. Which configuration change would reduce Lambda invocations and improve response time?",
+    "choices": [
+      "A. Enable API Gateway stage-level caching with a 5-minute TTL",
+      "B. Deploy a CloudFront distribution in front of API Gateway",
+      "C. Migrate from REST API to HTTP API in API Gateway",
+      "D. Enable throttling on the API Gateway usage plan"
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "api-gateway",
+      "caching",
+      "serverless",
+      "lambda"
+    ],
+    "explanation": "",
+    "domain_seq": 111,
+    "question_ja": "ある会社では、Lambda 統合を使用した Amazon API Gateway を使用しています。REST API は、5 分ごとに変更される製品カタログデータに対して、ほとんど同一の繰り返しリクエストを処理しています。リクエスト量が多いため、API Gateway のコストが高くなっています。Lambda の呼び出しを削減してレスポンスタイムを向上させる設定変更はどれですか？",
+    "choices_ja": [
+      "A. TTL を 5 分に設定して API Gateway ステージレベルのキャッシュを有効にする",
+      "B. API Gateway の前に CloudFront ディストリビューションをデプロイする",
+      "C. API Gateway で REST API から HTTP API に移行する",
+      "D. API Gateway 使用量プランでスロットリングを有効にする"
+    ]
+  },
+  {
+    "id": 738,
+    "question": "An enterprise application writes to an Amazon EBS volume with high I/O requirements — consistently 50,000 IOPS with 256 KiB I/O size. The current gp2 volume is hitting performance limits. Which EBS volume type should the solutions architect migrate to?",
+    "choices": [
+      "A. gp3 with 16,000 IOPS configured",
+      "B. io2 Block Express",
+      "C. st1 (throughput optimized HDD)",
+      "D. sc1 (cold HDD)"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "ebs",
+      "io2",
+      "storage-performance",
+      "iops"
+    ],
+    "explanation": "",
+    "domain_seq": 112,
+    "question_ja": "あるエンタープライズアプリケーションは、高い I/O 要件を持つ Amazon EBS ボリュームに書き込みを行っています — 256 KiB の I/O サイズで継続的に 50,000 IOPS が必要です。現在の gp2 ボリュームはパフォーマンスの限界に達しています。ソリューションアーキテクトが移行すべき EBS ボリュームタイプはどれですか？",
+    "choices_ja": [
+      "A. 16,000 IOPS に設定した gp3",
+      "B. io2 Block Express",
+      "C. st1（スループット最適化 HDD）",
+      "D. sc1（コールド HDD）"
+    ]
+  },
+  {
+    "id": 739,
+    "question": "A company has a DynamoDB table used by a mobile application. Queries frequently look up items using a non-primary-key attribute (email address). Currently the application performs full table scans for these lookups, causing high read capacity consumption. What is the most efficient solution?",
+    "choices": [
+      "A. Create a Global Secondary Index (GSI) with email as the partition key",
+      "B. Create a Local Secondary Index (LSI) with email as the sort key",
+      "C. Enable DynamoDB Streams and maintain a separate lookup table",
+      "D. Migrate the table to Amazon Aurora and use SQL queries"
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "dynamodb",
+      "gsi",
+      "database-performance",
+      "indexing"
+    ],
+    "explanation": "",
+    "domain_seq": 113,
+    "question_ja": "ある会社では、モバイルアプリケーションで使用される DynamoDB テーブルがあります。クエリは頻繁にプライマリキー以外の属性（メールアドレス）を使用してアイテムを検索します。現在、アプリケーションはこれらの検索に完全なテーブルスキャンを実行しており、読み取りキャパシティの消費が高くなっています。最も効率的なソリューションはどれですか？",
+    "choices_ja": [
+      "A. メールアドレスをパーティションキーとして Global Secondary Index (GSI) を作成する",
+      "B. メールアドレスをソートキーとして Local Secondary Index (LSI) を作成する",
+      "C. DynamoDB Streams を有効にして別の検索テーブルを維持する",
+      "D. テーブルを Amazon Aurora に移行し、SQL クエリを使用する"
+    ]
+  },
+  {
+    "id": 740,
+    "question": "A company runs a third-party network virtual appliance (firewall) that must inspect all inbound and outbound VPC traffic across multiple VPCs in the same AWS account. The solution must scale automatically and maintain high availability. Which load balancer type is purpose-built for this use case?",
+    "choices": [
+      "A. Application Load Balancer (ALB) with sticky sessions",
+      "B. Network Load Balancer (NLB) in each VPC",
+      "C. Gateway Load Balancer (GWLB)",
+      "D. Classic Load Balancer with connection draining"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [
+      "gwlb",
+      "load-balancing",
+      "network-appliance",
+      "security"
+    ],
+    "explanation": "",
+    "domain_seq": 114,
+    "question_ja": "ある会社では、同じ AWS アカウント内の複数の VPC にわたるすべての受信および送信 VPC トラフィックを検査する必要があるサードパーティのネットワーク仮想アプライアンス（ファイアウォール）を実行しています。ソリューションは自動的にスケールし、高可用性を維持する必要があります。このユースケースに特化したロードバランサーの種類はどれですか？",
+    "choices_ja": [
+      "A. スティッキーセッションを使用した Application Load Balancer (ALB)",
+      "B. 各 VPC の Network Load Balancer (NLB)",
+      "C. Gateway Load Balancer (GWLB)",
+      "D. 接続ドレインを使用した Classic Load Balancer"
+    ]
   }
 ]

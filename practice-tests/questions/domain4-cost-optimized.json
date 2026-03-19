@@ -1031,5 +1031,889 @@
       "Lambda、Fargate、Amazon EC2 用の Compute Savings Plan を購入する",
       "Amazon EC2 と Fargate 用の EC2 インスタンス Savings Plan を購入する"
     ]
+  },
+  {
+    "id": 741,
+    "question": "A company stores log files in Amazon S3. The logs are frequently accessed for the first 30 days, rarely accessed for the next 60 days, and then never accessed again. Which S3 storage configuration minimizes costs while meeting these access requirements?",
+    "choices": [
+      "Store logs in S3 Standard. Create a lifecycle policy to transition to S3 Glacier after 30 days and delete after 90 days.",
+      "Store logs in S3 Standard. Create a lifecycle policy to transition to S3 Standard-IA after 30 days, then to S3 Glacier Deep Archive after 90 days, and delete after 365 days.",
+      "Store logs in S3 Standard. Create a lifecycle policy to transition to S3 Standard-IA after 30 days and delete after 90 days.",
+      "Store logs in S3 Intelligent-Tiering with no lifecycle policy."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "S3",
+      "lifecycle",
+      "storage-class"
+    ],
+    "explanation": "",
+    "domain_seq": 42,
+    "question_ja": "ある企業がログファイルを Amazon S3 に保存しています。ログは最初の30日間は頻繁にアクセスされ、次の60日間はほとんどアクセスされず、その後は二度とアクセスされません。これらのアクセス要件を満たしつつコストを最小化する S3 ストレージ設定はどれですか？",
+    "choices_ja": [
+      "S3 Standard にログを保存する。30日後に S3 Glacier に移行し、90日後に削除するライフサイクルポリシーを作成する。",
+      "S3 Standard にログを保存する。30日後に S3 Standard-IA に移行し、90日後に S3 Glacier Deep Archive に移行し、365日後に削除するライフサイクルポリシーを作成する。",
+      "S3 Standard にログを保存する。30日後に S3 Standard-IA に移行し、90日後に削除するライフサイクルポリシーを作成する。",
+      "S3 Intelligent-Tiering にログを保存し、ライフサイクルポリシーは設定しない。"
+    ]
+  },
+  {
+    "id": 742,
+    "question": "A company runs a development environment on Amazon EC2 instances that are only used during business hours (8 AM to 6 PM, Monday to Friday). Which solution provides the MOST cost savings?",
+    "choices": [
+      "Use Reserved Instances with a 1-year term for the development instances.",
+      "Use AWS Instance Scheduler to automatically stop and start instances based on a schedule.",
+      "Use Spot Instances for the development environment.",
+      "Migrate the development environment to AWS Lambda functions."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "EC2",
+      "Instance-Scheduler",
+      "cost-optimization"
+    ],
+    "explanation": "",
+    "domain_seq": 43,
+    "question_ja": "ある企業が Amazon EC2 インスタンスで開発環境を実行しています。インスタンスは営業時間（月曜〜金曜、午前8時〜午後6時）のみ使用されます。最もコスト削減効果が高いソリューションはどれですか？",
+    "choices_ja": [
+      "開発インスタンスに1年間の Reserved Instances を使用する。",
+      "AWS Instance Scheduler を使用してスケジュールに基づきインスタンスを自動的に停止・起動する。",
+      "開発環境に Spot Instances を使用する。",
+      "開発環境を AWS Lambda 関数に移行する。"
+    ]
+  },
+  {
+    "id": 743,
+    "question": "A company wants to reduce data transfer costs for an application that makes frequent API calls to Amazon S3 from Amazon EC2 instances in a VPC. Which solution will reduce these costs?",
+    "choices": [
+      "Enable S3 Transfer Acceleration on the bucket.",
+      "Create a gateway VPC endpoint for Amazon S3.",
+      "Use an S3 bucket in a different Region closer to users.",
+      "Enable S3 Requester Pays on the bucket."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "VPC-endpoint",
+      "S3",
+      "data-transfer"
+    ],
+    "explanation": "",
+    "domain_seq": 44,
+    "question_ja": "ある企業が VPC 内の Amazon EC2 インスタンスから Amazon S3 への頻繁な API 呼び出しを行うアプリケーションのデータ転送コストを削減したいと考えています。コストを削減するソリューションはどれですか？",
+    "choices_ja": [
+      "バケットで S3 Transfer Acceleration を有効にする。",
+      "Amazon S3 用のゲートウェイ VPC エンドポイントを作成する。",
+      "ユーザーに近い別のリージョンの S3 バケットを使用する。",
+      "バケットで S3 Requester Pays を有効にする。"
+    ]
+  },
+  {
+    "id": 744,
+    "question": "A company is running a steady-state production workload on Amazon EC2. The workload runs 24/7 and is expected to continue for at least 3 years. The company wants to minimize compute costs. Which purchasing option should the company choose?",
+    "choices": [
+      "On-Demand Instances",
+      "Spot Instances",
+      "Compute Savings Plans with a 3-year term and All Upfront payment",
+      "Reserved Instances with a 1-year term and No Upfront payment"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Savings-Plans",
+      "EC2",
+      "Reserved-Instances"
+    ],
+    "explanation": "",
+    "domain_seq": 45,
+    "question_ja": "ある企業が Amazon EC2 で安定した本番ワークロードを実行しています。ワークロードは24時間365日稼働し、少なくとも3年間継続する予定です。コンピューティングコストを最小化するために、どの購入オプションを選択すべきですか？",
+    "choices_ja": [
+      "オンデマンドインスタンス",
+      "スポットインスタンス",
+      "3年間の Compute Savings Plans（全額前払い）",
+      "1年間の Reserved Instances（前払いなし）"
+    ]
+  },
+  {
+    "id": 745,
+    "question": "A company has an application with unpredictable traffic patterns. The application uses Amazon DynamoDB. During peak hours, the application experiences throttling. During off-peak hours, the provisioned capacity is mostly unused. Which solution optimizes cost while handling traffic spikes?",
+    "choices": [
+      "Increase the provisioned read and write capacity units to handle peak traffic.",
+      "Switch the DynamoDB table to on-demand capacity mode.",
+      "Use DynamoDB Auto Scaling with a target utilization of 90%.",
+      "Add a DynamoDB Accelerator (DAX) cluster in front of the table."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "DynamoDB",
+      "on-demand",
+      "capacity"
+    ],
+    "explanation": "",
+    "domain_seq": 46,
+    "question_ja": "ある企業のアプリケーションはトラフィックパターンが予測不可能です。アプリケーションは Amazon DynamoDB を使用しています。ピーク時にスロットリングが発生し、オフピーク時にはプロビジョンドキャパシティがほとんど未使用です。トラフィックスパイクに対応しつつコストを最適化するソリューションはどれですか？",
+    "choices_ja": [
+      "ピークトラフィックに対応するためにプロビジョンド読み取り・書き込みキャパシティユニットを増やす。",
+      "DynamoDB テーブルをオンデマンドキャパシティモードに切り替える。",
+      "ターゲット使用率90%で DynamoDB Auto Scaling を使用する。",
+      "テーブルの前に DynamoDB Accelerator (DAX) クラスターを追加する。"
+    ]
+  },
+  {
+    "id": 746,
+    "question": "A company wants to receive alerts when its monthly AWS spending exceeds specific thresholds. Which AWS service should the company use?",
+    "choices": [
+      "AWS Cost Explorer",
+      "AWS Budgets",
+      "AWS Trusted Advisor",
+      "AWS Compute Optimizer"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Budgets",
+      "cost-monitoring"
+    ],
+    "explanation": "",
+    "domain_seq": 47,
+    "question_ja": "ある企業が月間の AWS 支出が特定のしきい値を超えた場合にアラートを受け取りたいと考えています。どの AWS サービスを使用すべきですか？",
+    "choices_ja": [
+      "AWS Cost Explorer",
+      "AWS Budgets",
+      "AWS Trusted Advisor",
+      "AWS Compute Optimizer"
+    ]
+  },
+  {
+    "id": 747,
+    "question": "A company is running Amazon EC2 instances with the m5.xlarge instance type. AWS Compute Optimizer recommends that the instances are over-provisioned. Which actions should a solutions architect take to reduce costs? (Choose two.)",
+    "choices": [
+      "Change the instance type to a smaller size such as m5.large based on Compute Optimizer recommendations.",
+      "Switch to Graviton-based instances such as m6g.large for better price-performance.",
+      "Purchase Reserved Instances for the current m5.xlarge instance type.",
+      "Migrate the workload to AWS Lambda.",
+      "Enable detailed monitoring in CloudWatch to gather more data before making changes."
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "multi": true,
+    "domain": 4,
+    "tags": [
+      "Compute-Optimizer",
+      "right-sizing",
+      "Graviton"
+    ],
+    "explanation": "",
+    "domain_seq": 48,
+    "question_ja": "ある企業が m5.xlarge インスタンスタイプの Amazon EC2 インスタンスを実行しています。AWS Compute Optimizer はインスタンスが過剰にプロビジョニングされていると推奨しています。コストを削減するためにソリューションアーキテクトが取るべきアクションはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "Compute Optimizer の推奨に基づき、m5.large などのより小さいインスタンスタイプに変更する。",
+      "m6g.large などの Graviton ベースのインスタンスに切り替え、価格性能比を向上させる。",
+      "現在の m5.xlarge インスタンスタイプの Reserved Instances を購入する。",
+      "ワークロードを AWS Lambda に移行する。",
+      "変更前により多くのデータを収集するため、CloudWatch で詳細モニタリングを有効にする。"
+    ]
+  },
+  {
+    "id": 748,
+    "question": "A company has a web application that uses Amazon Aurora MySQL. The database experiences heavy read traffic during business hours but very little traffic at night and on weekends. Which Aurora feature will optimize costs for this workload pattern?",
+    "choices": [
+      "Aurora Global Database",
+      "Aurora Serverless v2",
+      "Aurora Multi-Master",
+      "Aurora cross-Region read replicas"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Aurora",
+      "Serverless",
+      "auto-scaling"
+    ],
+    "explanation": "",
+    "domain_seq": 49,
+    "question_ja": "ある企業のウェブアプリケーションが Amazon Aurora MySQL を使用しています。データベースは営業時間中に大量の読み取りトラフィックがありますが、夜間や週末にはほとんどトラフィックがありません。このワークロードパターンのコストを最適化する Aurora の機能はどれですか？",
+    "choices_ja": [
+      "Aurora Global Database",
+      "Aurora Serverless v2",
+      "Aurora Multi-Master",
+      "Aurora のクロスリージョンリードレプリカ"
+    ]
+  },
+  {
+    "id": 749,
+    "question": "A company processes batch jobs that can tolerate interruptions. The jobs typically take 2-4 hours to complete. The company wants to minimize the cost of running these jobs on Amazon EC2. Which purchasing option is MOST cost-effective?",
+    "choices": [
+      "On-Demand Instances",
+      "Spot Instances",
+      "Dedicated Hosts",
+      "Reserved Instances with a 1-year term"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Spot",
+      "EC2",
+      "batch"
+    ],
+    "explanation": "",
+    "domain_seq": 50,
+    "question_ja": "ある企業が中断を許容できるバッチジョブを処理しています。ジョブは通常2〜4時間で完了します。Amazon EC2 でこれらのジョブを実行するコストを最小化したいと考えています。最もコスト効率の良い購入オプションはどれですか？",
+    "choices_ja": [
+      "オンデマンドインスタンス",
+      "スポットインスタンス",
+      "Dedicated Hosts",
+      "1年間の Reserved Instances"
+    ]
+  },
+  {
+    "id": 750,
+    "question": "A company wants to analyze its AWS spending trends over the past 12 months and forecast future costs. Which AWS tool should the company use?",
+    "choices": [
+      "AWS Budgets",
+      "AWS Cost Explorer",
+      "AWS Pricing Calculator",
+      "AWS Trusted Advisor"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Cost-Explorer",
+      "cost-analysis"
+    ],
+    "explanation": "",
+    "domain_seq": 51,
+    "question_ja": "ある企業が過去12か月間の AWS 支出の傾向を分析し、将来のコストを予測したいと考えています。どの AWS ツールを使用すべきですか？",
+    "choices_ja": [
+      "AWS Budgets",
+      "AWS Cost Explorer",
+      "AWS Pricing Calculator",
+      "AWS Trusted Advisor"
+    ]
+  },
+  {
+    "id": 751,
+    "question": "A company has multiple AWS accounts under AWS Organizations. The company wants to maximize volume discounts for Amazon EC2 and Amazon S3 usage. Which feature of AWS Organizations helps achieve this?",
+    "choices": [
+      "Service control policies (SCPs)",
+      "Consolidated billing",
+      "AWS Resource Access Manager (RAM)",
+      "Tag policies"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Organizations",
+      "consolidated-billing"
+    ],
+    "explanation": "",
+    "domain_seq": 52,
+    "question_ja": "ある企業が AWS Organizations の下に複数の AWS アカウントを持っています。Amazon EC2 と Amazon S3 の使用量に対するボリュームディスカウントを最大化したいと考えています。これを実現する AWS Organizations の機能はどれですか？",
+    "choices_ja": [
+      "サービスコントロールポリシー (SCP)",
+      "一括請求（コンソリデーテッドビリング）",
+      "AWS Resource Access Manager (RAM)",
+      "タグポリシー"
+    ]
+  },
+  {
+    "id": 752,
+    "question": "A company has an application that processes images stored in Amazon S3. The application only needs to read specific columns from CSV metadata files stored alongside the images. Which S3 feature can reduce data retrieval costs?",
+    "choices": [
+      "S3 Transfer Acceleration",
+      "S3 Select",
+      "S3 Batch Operations",
+      "S3 Object Lambda"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "S3-Select",
+      "data-retrieval"
+    ],
+    "explanation": "",
+    "domain_seq": 53,
+    "question_ja": "ある企業のアプリケーションが Amazon S3 に保存された画像を処理しています。アプリケーションは画像と一緒に保存された CSV メタデータファイルの特定の列のみを読み取る必要があります。データ取得コストを削減できる S3 の機能はどれですか？",
+    "choices_ja": [
+      "S3 Transfer Acceleration",
+      "S3 Select",
+      "S3 Batch Operations",
+      "S3 Object Lambda"
+    ]
+  },
+  {
+    "id": 753,
+    "question": "A company runs a containerized application on Amazon ECS. The application has a mix of critical tasks that must always run and non-critical background tasks that can tolerate interruptions. Which combination of actions minimizes costs? (Choose two.)",
+    "choices": [
+      "Use ECS with EC2 launch type for all tasks.",
+      "Run critical tasks on Fargate with On-Demand pricing.",
+      "Run non-critical background tasks on Fargate Spot.",
+      "Purchase Compute Savings Plans for both task types.",
+      "Use a single Fargate task definition for all tasks."
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "multi": true,
+    "domain": 4,
+    "tags": [
+      "ECS",
+      "Fargate",
+      "Fargate-Spot"
+    ],
+    "explanation": "",
+    "domain_seq": 54,
+    "question_ja": "ある企業がコンテナ化されたアプリケーションを Amazon ECS で実行しています。アプリケーションには常に実行する必要がある重要なタスクと、中断を許容できる非重要なバックグラウンドタスクが混在しています。コストを最小化するアクションの組み合わせはどれですか？（2つ選択してください）",
+    "choices_ja": [
+      "すべてのタスクに EC2 起動タイプの ECS を使用する。",
+      "重要なタスクをオンデマンド料金の Fargate で実行する。",
+      "非重要なバックグラウンドタスクを Fargate Spot で実行する。",
+      "両方のタスクタイプに Compute Savings Plans を購入する。",
+      "すべてのタスクに単一の Fargate タスク定義を使用する。"
+    ]
+  },
+  {
+    "id": 754,
+    "question": "A company uses Amazon EBS gp2 volumes for its EC2 instances. The volumes are 500 GiB each but only use 3,000 IOPS. A solutions architect wants to reduce storage costs without impacting performance. What should the solutions architect recommend?",
+    "choices": [
+      "Migrate to gp3 volumes and configure 3,000 IOPS.",
+      "Migrate to io2 volumes for better performance.",
+      "Migrate to st1 volumes for lower cost.",
+      "Enable EBS encryption to reduce costs."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "EBS",
+      "gp3",
+      "storage-cost"
+    ],
+    "explanation": "",
+    "domain_seq": 55,
+    "question_ja": "ある企業が EC2 インスタンスに Amazon EBS gp2 ボリュームを使用しています。ボリュームはそれぞれ 500 GiB ですが、3,000 IOPS しか使用していません。ソリューションアーキテクトはパフォーマンスに影響を与えずにストレージコストを削減したいと考えています。何を推奨すべきですか？",
+    "choices_ja": [
+      "gp3 ボリュームに移行し、3,000 IOPS を設定する。",
+      "より良いパフォーマンスのために io2 ボリュームに移行する。",
+      "コスト削減のために st1 ボリュームに移行する。",
+      "コスト削減のために EBS 暗号化を有効にする。"
+    ]
+  },
+  {
+    "id": 755,
+    "question": "A company wants to identify unusual spending patterns in its AWS accounts and receive automated alerts. Which AWS service provides this capability with the LEAST operational overhead?",
+    "choices": [
+      "AWS Budgets with custom budget alerts",
+      "Amazon CloudWatch billing alarms",
+      "AWS Cost Anomaly Detection",
+      "AWS Trusted Advisor cost optimization checks"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Cost-Anomaly-Detection",
+      "monitoring"
+    ],
+    "explanation": "",
+    "domain_seq": 56,
+    "question_ja": "ある企業が AWS アカウントの異常な支出パターンを特定し、自動アラートを受け取りたいと考えています。最も運用オーバーヘッドが少ないこの機能を提供する AWS サービスはどれですか？",
+    "choices_ja": [
+      "カスタム予算アラート付きの AWS Budgets",
+      "Amazon CloudWatch 請求アラーム",
+      "AWS Cost Anomaly Detection",
+      "AWS Trusted Advisor コスト最適化チェック"
+    ]
+  },
+  {
+    "id": 756,
+    "question": "A company hosts a large genomics dataset in Amazon S3 and wants to share it with external research institutions. The company does not want to pay for the data transfer costs incurred by external users downloading the dataset. Which S3 feature should the company enable?",
+    "choices": [
+      "A. S3 Transfer Acceleration",
+      "B. S3 Requester Pays",
+      "C. S3 Cross-Region Replication",
+      "D. S3 Intelligent-Tiering"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "S3",
+      "cost-optimization",
+      "requester-pays"
+    ],
+    "explanation": "S3 Requester Pays buckets shift the cost of requests and data downloads to the requester rather than the bucket owner. This is ideal for shared public datasets where the provider does not want to absorb the transfer costs of external consumers. S3 Transfer Acceleration speeds up uploads but does not shift costs. Cross-Region Replication copies data to another region but does not address who pays for downloads. S3 Intelligent-Tiering optimizes storage costs but does not affect who pays for data transfer.",
+    "domain_seq": 57,
+    "question_ja": "ある企業は Amazon S3 に大規模なゲノムデータセットをホストしており、外部の研究機関と共有したいと考えています。企業は外部ユーザーがデータセットをダウンロードする際のデータ転送コストを負担したくありません。この企業が有効にすべき S3 の機能はどれですか？",
+    "choices_ja": [
+      "A. S3 Transfer Acceleration",
+      "B. S3 Requester Pays",
+      "C. S3 Cross-Region Replication",
+      "D. S3 Intelligent-Tiering"
+    ]
+  },
+  {
+    "id": 757,
+    "question": "A cloud operations team notices unexpected spikes in AWS costs at the end of each month but cannot identify the root cause quickly. They want an automated service that uses machine learning to detect unusual spending patterns and alert them. Which AWS service should they use?",
+    "choices": [
+      "A. AWS Budgets",
+      "B. AWS Cost Explorer",
+      "C. AWS Cost Anomaly Detection",
+      "D. AWS Trusted Advisor"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "cost-management",
+      "anomaly-detection",
+      "Cost Anomaly Detection"
+    ],
+    "explanation": "AWS Cost Anomaly Detection uses machine learning to continuously monitor AWS spending and automatically detect unusual cost patterns. It can send alerts when anomalies are detected, helping teams investigate unexpected charges quickly. AWS Budgets allows setting cost thresholds and alerts but does not use ML to detect anomalies automatically. AWS Cost Explorer provides visualizations and forecasts but requires manual analysis. AWS Trusted Advisor provides cost optimization checks but does not perform ML-based anomaly detection on spend patterns.",
+    "domain_seq": 58,
+    "question_ja": "クラウド運用チームは毎月末に AWS コストの予期しない急増に気づいていますが、根本原因を迅速に特定できません。機械学習を使用して異常な支出パターンを自動的に検出し、アラートを送信するサービスを必要としています。どの AWS サービスを使用すべきですか？",
+    "choices_ja": [
+      "A. AWS Budgets",
+      "B. AWS Cost Explorer",
+      "C. AWS Cost Anomaly Detection",
+      "D. AWS Trusted Advisor"
+    ]
+  },
+  {
+    "id": 758,
+    "question": "A solutions architect wants to identify underutilized Amazon EC2 instances and unassociated Elastic IP addresses to reduce costs. Which AWS service provides automated checks specifically for these cost optimization opportunities?",
+    "choices": [
+      "A. AWS Config",
+      "B. Amazon CloudWatch",
+      "C. AWS Trusted Advisor",
+      "D. AWS Systems Manager"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Trusted Advisor",
+      "cost-optimization",
+      "EC2"
+    ],
+    "explanation": "AWS Trusted Advisor provides automated best practice checks across five categories, including cost optimization. Specific cost checks include identifying low-utilization EC2 instances, unassociated Elastic IP addresses, idle load balancers, and underutilized EBS volumes. AWS Config tracks configuration changes and compliance but does not provide cost optimization recommendations. Amazon CloudWatch monitors metrics and logs but does not proactively recommend cost savings. AWS Systems Manager provides operational management capabilities but not cost optimization checks.",
+    "domain_seq": 59,
+    "question_ja": "ソリューションアーキテクトは、コスト削減のために使用率の低い Amazon EC2 インスタンスと関連付けられていない Elastic IP アドレスを特定したいと考えています。これらのコスト最適化の機会に特化した自動チェックを提供する AWS サービスはどれですか？",
+    "choices_ja": [
+      "A. AWS Config",
+      "B. Amazon CloudWatch",
+      "C. AWS Trusted Advisor",
+      "D. AWS Systems Manager"
+    ]
+  },
+  {
+    "id": 759,
+    "question": "A company serves static web content globally using Amazon CloudFront. Their origin is an Application Load Balancer in us-east-1. They are seeing high origin request rates and elevated costs due to cache misses from multiple CloudFront edge locations hitting the origin directly. Which CloudFront feature would reduce origin load and lower data transfer costs?",
+    "choices": [
+      "A. CloudFront signed URLs",
+      "B. CloudFront Origin Shield",
+      "C. CloudFront Lambda@Edge",
+      "D. CloudFront field-level encryption"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "CloudFront",
+      "cost-optimization",
+      "Origin Shield"
+    ],
+    "explanation": "CloudFront Origin Shield adds a centralized caching layer between edge locations and the origin. This collapses cache misses from multiple edge locations into fewer requests to the origin, reducing origin load and associated data transfer costs. Signed URLs restrict access to content but do not reduce origin requests. Lambda@Edge allows running code at edge locations but is not designed to consolidate cache misses. Field-level encryption adds security for sensitive data fields but does not improve caching efficiency.",
+    "domain_seq": 60,
+    "question_ja": "ある企業は Amazon CloudFront を使用してグローバルに静的 Web コンテンツを配信しています。オリジンは us-east-1 の Application Load Balancer です。複数の CloudFront エッジロケーションが直接オリジンにアクセスするキャッシュミスにより、オリジンへのリクエスト数が多く、コストが増大しています。オリジンの負荷を軽減しデータ転送コストを削減する CloudFront の機能はどれですか？",
+    "choices_ja": [
+      "A. CloudFront 署名付き URL",
+      "B. CloudFront Origin Shield",
+      "C. CloudFront Lambda@Edge",
+      "D. CloudFront フィールドレベル暗号化"
+    ]
+  },
+  {
+    "id": 760,
+    "question": "A company runs a production MySQL database on Amazon RDS with consistent usage 24 hours a day, 7 days a week. The workload is stable and predictable with no anticipated changes for the next two years. What is the MOST cost-effective purchasing option?",
+    "choices": [
+      "A. On-Demand Instances",
+      "B. RDS Spot Instances",
+      "C. Reserved Instances with a 1-year No Upfront term",
+      "D. Reserved Instances with a 3-year All Upfront term"
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "RDS",
+      "Reserved Instances",
+      "cost-optimization"
+    ],
+    "explanation": "For stable, predictable workloads running continuously over multiple years, Reserved Instances provide significant savings over On-Demand pricing. A 3-year All Upfront Reserved Instance offers the deepest discount (up to 60-65% compared to On-Demand). Since the workload is stable for two years, committing to a 3-year term with full upfront payment is the most cost-effective option. On-Demand is the most expensive for continuous usage. RDS does not offer Spot Instances. A 1-year No Upfront term provides savings but less than the 3-year All Upfront option.",
+    "domain_seq": 61,
+    "question_ja": "ある企業は Amazon RDS で本番 MySQL データベースを週 7 日 24 時間稼働させています。ワークロードは安定しており予測可能で、今後 2 年間は変更が予定されていません。最もコスト効率の高い購入オプションはどれですか？",
+    "choices_ja": [
+      "A. オンデマンドインスタンス",
+      "B. RDS スポットインスタンス",
+      "C. 1 年間・前払いなしの Reserved Instances",
+      "D. 3 年間・全額前払いの Reserved Instances"
+    ]
+  },
+  {
+    "id": 761,
+    "question": "A company uses Amazon ElastiCache for Redis as a session store for a web application. The cache cluster runs continuously and the workload is steady and predictable. The team wants to reduce costs without changing the architecture. What should they do?",
+    "choices": [
+      "A. Switch to ElastiCache for Memcached",
+      "B. Purchase ElastiCache Reserved Nodes",
+      "C. Enable ElastiCache Auto Scaling",
+      "D. Use ElastiCache Serverless"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "ElastiCache",
+      "Reserved Nodes",
+      "cost-optimization"
+    ],
+    "explanation": "ElastiCache Reserved Nodes allow you to commit to using specific node types for 1 or 3 years in exchange for a significant discount (up to 55%) compared to On-Demand node pricing. For steady, predictable workloads running continuously, Reserved Nodes provide the best cost savings without any architectural changes. Switching to Memcached changes the engine and may break functionality. ElastiCache does not support traditional Auto Scaling in the same way as EC2. ElastiCache Serverless is a different deployment model that could change costs but also changes the architecture.",
+    "domain_seq": 62,
+    "question_ja": "ある企業は Web アプリケーションのセッションストアとして Amazon ElastiCache for Redis を使用しています。キャッシュクラスターは継続的に稼働しており、ワークロードは安定して予測可能です。チームはアーキテクチャを変更せずにコストを削減したいと考えています。何をすべきですか？",
+    "choices_ja": [
+      "A. ElastiCache for Memcached に切り替える",
+      "B. ElastiCache Reserved Nodes を購入する",
+      "C. ElastiCache Auto Scaling を有効にする",
+      "D. ElastiCache Serverless を使用する"
+    ]
+  },
+  {
+    "id": 762,
+    "question": "A company uses Amazon EFS to store log files that are frequently accessed for the first 30 days but rarely accessed afterward. The files must remain accessible at all times. Which solution reduces storage costs while maintaining accessibility?",
+    "choices": [
+      "A. Use EFS Standard storage class for all files",
+      "B. Enable EFS Lifecycle Management to transition files to EFS Infrequent Access after 30 days",
+      "C. Copy files to Amazon S3 Glacier after 30 days and delete from EFS",
+      "D. Use Amazon EBS gp3 volumes instead of EFS"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "EFS",
+      "Infrequent Access",
+      "lifecycle",
+      "cost-optimization"
+    ],
+    "explanation": "EFS Lifecycle Management automatically moves files that have not been accessed for a specified period (7, 14, 30, 60, or 90 days) to the EFS Infrequent Access (EFS-IA) storage class, which costs significantly less than EFS Standard. Files in EFS-IA remain accessible through the same file system interface — applications do not need to change. Keeping all files in EFS Standard is the most expensive option. Copying to S3 Glacier would break the seamless file system access. EBS gp3 is block storage and not suitable as a shared file system replacement for EFS.",
+    "domain_seq": 63,
+    "question_ja": "ある企業は Amazon EFS を使用してログファイルを保存しています。ファイルは最初の 30 日間は頻繁にアクセスされますが、その後はほとんどアクセスされません。ファイルは常にアクセス可能である必要があります。アクセス性を維持しながらストレージコストを削減するソリューションはどれですか？",
+    "choices_ja": [
+      "A. すべてのファイルに EFS Standard ストレージクラスを使用する",
+      "B. EFS ライフサイクル管理を有効にして、30 日後にファイルを EFS Infrequent Access に移行する",
+      "C. 30 日後にファイルを Amazon S3 Glacier にコピーして EFS から削除する",
+      "D. EFS の代わりに Amazon EBS gp3 ボリュームを使用する"
+    ]
+  },
+  {
+    "id": 763,
+    "question": "A large enterprise has multiple AWS accounts for different business units. They want to reduce costs by taking advantage of volume pricing discounts across all accounts. What should they implement?",
+    "choices": [
+      "A. Create separate billing contacts for each account",
+      "B. Use AWS Organizations with consolidated billing",
+      "C. Purchase Reserved Instances in each account individually",
+      "D. Enable AWS Cost Explorer in each account"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "AWS Organizations",
+      "consolidated billing",
+      "cost-optimization"
+    ],
+    "explanation": "AWS Organizations consolidated billing combines the usage from all member accounts into a single bill for the management account. This allows the organization to reach higher usage tiers for volume pricing discounts on services like Amazon S3 (where per-GB pricing decreases at higher usage tiers) and benefit from Reserved Instance and Savings Plans sharing across accounts. Separate billing contacts do not aggregate usage. Purchasing Reserved Instances individually per account misses the cross-account sharing benefit. Enabling Cost Explorer per account provides visibility but does not reduce costs through volume discounts.",
+    "domain_seq": 64,
+    "question_ja": "大企業は異なるビジネスユニット向けに複数の AWS アカウントを持っています。すべてのアカウントにわたってボリューム価格割引を活用してコストを削減したいと考えています。何を実装すべきですか？",
+    "choices_ja": [
+      "A. 各アカウントに個別の請求連絡先を作成する",
+      "B. 統合請求を使用した AWS Organizations を導入する",
+      "C. 各アカウントで個別に Reserved Instances を購入する",
+      "D. 各アカウントで AWS Cost Explorer を有効にする"
+    ]
+  },
+  {
+    "id": 764,
+    "question": "A company runs a batch processing workload on Amazon EC2. The workload can tolerate interruptions and runs for several hours each day. They want to minimize EC2 costs while ensuring the workload completes reliably. Which EC2 Auto Scaling configuration should they use?",
+    "choices": [
+      "A. An Auto Scaling group using only On-Demand Instances",
+      "B. An Auto Scaling group using only Spot Instances",
+      "C. An Auto Scaling mixed instances policy with a base of On-Demand Instances and Spot Instances for additional capacity",
+      "D. An Auto Scaling group using Dedicated Instances"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "EC2 Auto Scaling",
+      "Spot Instances",
+      "mixed instances policy",
+      "cost-optimization"
+    ],
+    "explanation": "A mixed instances policy in EC2 Auto Scaling allows you to combine On-Demand and Spot Instances in a single Auto Scaling group. By specifying a base capacity of On-Demand Instances (ensuring a minimum reliable capacity) and using Spot Instances for additional capacity, you achieve significant cost savings (Spot can be up to 90% cheaper) while maintaining reliability. Using only Spot Instances risks capacity gaps if Spot is interrupted. Only On-Demand Instances misses the Spot savings. Dedicated Instances are more expensive and primarily used for compliance/licensing requirements.",
+    "domain_seq": 65,
+    "question_ja": "ある企業は Amazon EC2 でバッチ処理ワークロードを実行しています。ワークロードは中断に耐えられ、毎日数時間実行されます。EC2 コストを最小限に抑えながら、ワークロードを確実に完了させたいと考えています。どの EC2 Auto Scaling 設定を使用すべきですか？",
+    "choices_ja": [
+      "A. オンデマンドインスタンスのみを使用した Auto Scaling グループ",
+      "B. スポットインスタンスのみを使用した Auto Scaling グループ",
+      "C. オンデマンドインスタンスをベースに、追加容量にスポットインスタンスを使用する Auto Scaling 混合インスタンスポリシー",
+      "D. Dedicated Instances を使用した Auto Scaling グループ"
+    ]
+  },
+  {
+    "id": 765,
+    "question": "A company is migrating containerized microservices to AWS. The workloads are non-critical development and testing jobs that can be interrupted. They want the lowest cost option for running containers without managing EC2 instances. Which two options should the solutions architect recommend? (Choose two)",
+    "choices": [
+      "A. AWS Fargate with On-Demand capacity",
+      "B. AWS Fargate Spot",
+      "C. Amazon ECS on EC2 with On-Demand Instances",
+      "D. Amazon ECS on EC2 with Spot Instances",
+      "E. AWS Lambda with container image support"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "multi": true,
+    "domain": 4,
+    "tags": [
+      "Fargate Spot",
+      "ECS",
+      "Spot Instances",
+      "containers",
+      "cost-optimization"
+    ],
+    "explanation": "Fargate Spot runs Fargate tasks on spare AWS capacity at up to 70% discount compared to regular Fargate On-Demand pricing. It is ideal for interruption-tolerant, non-critical workloads without requiring EC2 instance management. Amazon ECS on EC2 with Spot Instances is another low-cost option but requires managing the EC2 instances. Regular Fargate On-Demand is serverless but more expensive than Spot. ECS on EC2 with On-Demand is not the lowest cost. Lambda with container support is suitable for short-duration event-driven tasks but not for long-running microservices.",
+    "domain_seq": 66,
+    "question_ja": "ある企業はコンテナ化されたマイクロサービスを AWS に移行しています。ワークロードは非クリティカルな開発・テストジョブで、中断が許容されます。EC2 インスタンスを管理せずにコンテナを実行する最低コストのオプションを必要としています。ソリューションアーキテクトが推奨すべき 2 つのオプションはどれですか？（2 つ選んでください）",
+    "choices_ja": [
+      "A. オンデマンド容量の AWS Fargate",
+      "B. AWS Fargate Spot",
+      "C. オンデマンドインスタンスを使用した Amazon ECS on EC2",
+      "D. スポットインスタンスを使用した Amazon ECS on EC2",
+      "E. コンテナイメージサポートを使用した AWS Lambda"
+    ]
+  },
+  {
+    "id": 766,
+    "question": "A data analytics company stores large datasets in Amazon S3 and Amazon S3 Glacier. Analysts frequently run queries that only need a small subset of data from large files. Data retrieval costs are high. Which services should the company use to reduce costs by retrieving only the required data? (Choose two)",
+    "choices": [
+      "A. S3 Select",
+      "B. S3 Transfer Acceleration",
+      "C. Glacier Select",
+      "D. S3 Replication",
+      "E. S3 Batch Operations"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "multi": true,
+    "domain": 4,
+    "tags": [
+      "S3 Select",
+      "Glacier Select",
+      "cost-optimization",
+      "data-retrieval"
+    ],
+    "explanation": "S3 Select allows querying a subset of data in an S3 object using SQL expressions, returning only the needed data rather than the entire object. This reduces data transfer costs and speeds up queries. Glacier Select provides similar capability for data stored in S3 Glacier, allowing SQL-based filtering to retrieve only the relevant portion of archived data. S3 Transfer Acceleration speeds up uploads to S3 but does not reduce retrieval costs. S3 Replication copies data across regions or accounts but does not reduce retrieval costs. S3 Batch Operations performs bulk operations on S3 objects but does not filter data during retrieval.",
+    "domain_seq": 67,
+    "question_ja": "データ分析企業は大規模なデータセットを Amazon S3 および Amazon S3 Glacier に保存しています。アナリストは大きなファイルの一部のデータのみを必要とするクエリを頻繁に実行します。データ取得コストが高くなっています。必要なデータのみを取得してコストを削減するために使用すべきサービスはどれですか？（2 つ選んでください）",
+    "choices_ja": [
+      "A. S3 Select",
+      "B. S3 Transfer Acceleration",
+      "C. Glacier Select",
+      "D. S3 Replication",
+      "E. S3 Batch Operations"
+    ]
+  },
+  {
+    "id": 767,
+    "question": "A company's application runs on Amazon EC2 instances in a VPC and frequently accesses Amazon S3 to read and write large amounts of data. They are experiencing high NAT Gateway data processing charges. What is the most cost-effective solution to eliminate these charges?",
+    "choices": [
+      "A. Use S3 Transfer Acceleration to bypass NAT Gateway",
+      "B. Create a VPC endpoint (Gateway type) for Amazon S3",
+      "C. Move the EC2 instances to a public subnet",
+      "D. Enable S3 Cross-Region Replication to a bucket in the same region"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "VPC endpoint",
+      "NAT Gateway",
+      "S3",
+      "cost-optimization"
+    ],
+    "explanation": "A VPC Gateway endpoint for Amazon S3 allows EC2 instances in private subnets to access S3 directly without routing traffic through a NAT Gateway. Gateway endpoints for S3 and DynamoDB are free — there is no charge for using them or for data processed through them. This eliminates NAT Gateway data processing charges for S3 traffic. S3 Transfer Acceleration is for faster uploads from outside AWS and does not eliminate NAT Gateway charges. Moving EC2 instances to a public subnet requires assigning public IPs and changes the security posture. S3 Cross-Region Replication does not address NAT Gateway costs.",
+    "domain_seq": 68,
+    "question_ja": "ある企業のアプリケーションは VPC 内の Amazon EC2 インスタンスで実行され、Amazon S3 に大量のデータを頻繁に読み書きしています。NAT Gateway のデータ処理料金が高くなっています。これらの料金を排除する最もコスト効率の高いソリューションはどれですか？",
+    "choices_ja": [
+      "A. S3 Transfer Acceleration を使用して NAT Gateway をバイパスする",
+      "B. Amazon S3 用の VPC エンドポイント（ゲートウェイタイプ）を作成する",
+      "C. EC2 インスタンスをパブリックサブネットに移動する",
+      "D. 同じリージョンのバケットへの S3 Cross-Region Replication を有効にする"
+    ]
+  },
+  {
+    "id": 768,
+    "question": "A company is planning to migrate its on-premises applications to AWS. They want to estimate the total cost of migrating and running their workloads in AWS, and track the migration progress across multiple servers and databases. Which AWS service provides both migration tracking and cost estimation capabilities?",
+    "choices": [
+      "A. AWS Cost Explorer",
+      "B. AWS Migration Hub",
+      "C. AWS Application Discovery Service",
+      "D. AWS Database Migration Service"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "Migration Hub",
+      "cost-estimation",
+      "migration"
+    ],
+    "explanation": "AWS Migration Hub provides a central location to track the progress of application migrations across multiple AWS and partner migration tools. It integrates with AWS tools and provides visibility into migration status. It also works with AWS Migration Evaluator (formerly TSO Logic) to provide cost estimation and business case analysis for migrations. AWS Cost Explorer analyzes existing AWS spending but does not track migrations. AWS Application Discovery Service collects on-premises server data to help plan migrations but does not track migration progress. AWS DMS migrates databases but does not provide overall migration tracking or cost estimation.",
+    "domain_seq": 69,
+    "question_ja": "ある企業はオンプレミスのアプリケーションを AWS に移行する計画を立てています。AWS でのワークロードの移行と実行にかかる総コストを見積もり、複数のサーバーとデータベースにわたる移行の進捗を追跡したいと考えています。移行追跡とコスト見積もりの両方の機能を提供する AWS サービスはどれですか？",
+    "choices_ja": [
+      "A. AWS Cost Explorer",
+      "B. AWS Migration Hub",
+      "C. AWS Application Discovery Service",
+      "D. AWS Database Migration Service"
+    ]
+  },
+  {
+    "id": 769,
+    "question": "A large organization wants to implement a strategy to accurately allocate AWS costs to individual teams and projects. Currently, it is difficult to determine which team or project is responsible for which charges. Which approach should they implement?",
+    "choices": [
+      "A. Create separate VPCs for each team",
+      "B. Implement a consistent resource tagging strategy and activate cost allocation tags in the Billing console",
+      "C. Use AWS Config rules to enforce resource naming conventions",
+      "D. Enable AWS CloudTrail in all regions to track resource creation"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "tagging",
+      "cost-allocation",
+      "cost-management"
+    ],
+    "explanation": "A consistent tagging strategy (e.g., tagging all resources with Team, Project, Environment tags) combined with activating those tags as cost allocation tags in the AWS Billing console allows detailed cost breakdowns by team, project, or environment in Cost Explorer and detailed billing reports. This is the standard approach for cost allocation in multi-team organizations. Creating separate VPCs per team adds architectural complexity and does not automatically separate billing. AWS Config rules help enforce compliance but do not directly enable cost allocation. CloudTrail tracks API activity for security/auditing but does not allocate costs.",
+    "domain_seq": 70,
+    "question_ja": "大規模な組織は、AWS コストを個々のチームやプロジェクトに正確に配賦する戦略を実装したいと考えています。現在、どのチームやプロジェクトがどの料金に責任があるかを判断するのが困難です。どのアプローチを実装すべきですか？",
+    "choices_ja": [
+      "A. 各チーム用に個別の VPC を作成する",
+      "B. 一貫したリソースタグ付け戦略を実装し、請求コンソールでコスト配賦タグを有効化する",
+      "C. AWS Config ルールを使用してリソースの命名規則を適用する",
+      "D. すべてのリージョンで AWS CloudTrail を有効にしてリソース作成を追跡する"
+    ]
+  },
+  {
+    "id": 770,
+    "question": "A company runs a DynamoDB table that handles a highly variable workload — traffic spikes unpredictably and the team cannot accurately forecast read/write capacity needs. They are currently using provisioned capacity mode and frequently experiencing throttling. Which DynamoDB configuration change would improve both performance and cost efficiency?",
+    "choices": [
+      "A. Switch to DynamoDB on-demand capacity mode",
+      "B. Purchase DynamoDB Reserved Capacity",
+      "C. Enable DynamoDB Streams",
+      "D. Enable DynamoDB global tables"
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [
+      "DynamoDB",
+      "on-demand",
+      "Reserved Capacity",
+      "cost-optimization"
+    ],
+    "explanation": "DynamoDB on-demand capacity mode automatically scales to handle any amount of traffic without requiring capacity planning. You pay only for the read and write requests you consume, making it cost-efficient for unpredictable or variable workloads where the alternative would be over-provisioning to avoid throttling. For stable, predictable workloads, provisioned capacity with Reserved Capacity offers better pricing, but for highly variable workloads, on-demand mode eliminates throttling and removes the need to over-provision. DynamoDB Streams capture data change events and are unrelated to capacity planning. Global tables replicate data across regions for multi-region applications, which increases costs.",
+    "domain_seq": 71,
+    "question_ja": "ある企業は非常に変動の多いワークロードを処理する DynamoDB テーブルを運用しています。トラフィックが予測不可能に急増し、チームは読み取り/書き込みキャパシティのニーズを正確に予測できません。現在プロビジョンドキャパシティモードを使用しており、頻繁にスロットリングが発生しています。パフォーマンスとコスト効率の両方を改善する DynamoDB の設定変更はどれですか？",
+    "choices_ja": [
+      "A. DynamoDB オンデマンドキャパシティモードに切り替える",
+      "B. DynamoDB Reserved Capacity を購入する",
+      "C. DynamoDB Streams を有効にする",
+      "D. DynamoDB グローバルテーブルを有効にする"
+    ]
   }
 ]

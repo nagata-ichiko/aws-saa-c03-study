@@ -3347,5 +3347,318 @@
       "Amazon RDS Proxy を使ってアプリケーションを Aurora PostgreSQL に接続する。",
       "AWS Database Migration Service (AWS DMS) を使ってアプリケーションの SQL クエリを書き換える。"
     ]
+  },
+  {
+    "id": 711,
+    "question": "A company runs a critical web application on Amazon EC2 instances behind an Application Load Balancer. The application uses an Amazon RDS MySQL database. The company requires a recovery time objective (RTO) of less than 1 minute and a recovery point objective (RPO) of less than 5 minutes. Which solution meets these requirements?",
+    "choices": [
+      "A. Enable Multi-AZ on the RDS instance. Configure the EC2 instances in an Auto Scaling group across multiple Availability Zones.",
+      "B. Create a read replica of the RDS instance in another Region. Enable cross-Region replication for EC2 AMIs.",
+      "C. Take daily RDS snapshots and store them in Amazon S3. Use AWS Backup to restore the database when needed.",
+      "D. Enable automated backups on the RDS instance with a 1-day retention period. Manually promote a read replica during a failure."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 2,
+    "tags": [
+      "RDS",
+      "Multi-AZ",
+      "Auto Scaling",
+      "RTO",
+      "RPO",
+      "high-availability"
+    ],
+    "explanation": "",
+    "domain_seq": 133,
+    "question_ja": "ある企業が、Application Load Balancer の背後にある Amazon EC2 インスタンス上で重要なウェブアプリケーションを運用しています。アプリケーションは Amazon RDS MySQL データベースを使用しています。企業は RTO（目標復旧時間）1 分未満、RPO（目標復旧時点）5 分未満を要件としています。この要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "A. RDS インスタンスで Multi-AZ を有効にする。複数の Availability Zone にまたがる Auto Scaling グループに EC2 インスタンスを設定する。",
+      "B. 別のリージョンに RDS インスタンスのリードレプリカを作成する。EC2 AMI のクロスリージョンレプリケーションを有効にする。",
+      "C. 毎日 RDS スナップショットを取得して Amazon S3 に保存する。必要なときに AWS Backup を使用してデータベースを復元する。",
+      "D. RDS インスタンスの自動バックアップを 1 日の保持期間で有効にする。障害発生時にリードレプリカを手動でプロモートする。"
+    ]
+  },
+  {
+    "id": 712,
+    "question": "A company wants to implement a disaster recovery strategy for its on-premises application and database. The application data changes frequently, and the company can tolerate up to 4 hours of downtime but needs to minimize costs. Which disaster recovery strategy should the company use?",
+    "choices": [
+      "A. Multi-Site Active-Active",
+      "B. Warm Standby",
+      "C. Pilot Light",
+      "D. Backup and Restore"
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 2,
+    "tags": [
+      "disaster-recovery",
+      "pilot-light",
+      "RTO",
+      "cost-optimization"
+    ],
+    "explanation": "",
+    "domain_seq": 134,
+    "question_ja": "ある企業が、オンプレミスのアプリケーションとデータベースの災害復旧戦略を実装したいと考えています。アプリケーションデータは頻繁に変更され、最大 4 時間のダウンタイムは許容できますが、コストは最小化する必要があります。企業はどの災害復旧戦略を使用すべきですか？",
+    "choices_ja": [
+      "A. マルチサイト Active-Active",
+      "B. ウォームスタンバイ",
+      "C. パイロットライト",
+      "D. バックアップと復元"
+    ]
+  },
+  {
+    "id": 713,
+    "question": "A Solutions Architect is designing a system where multiple microservices need to communicate asynchronously. Each service must process messages independently without losing any messages if a service becomes temporarily unavailable. The solution must also support different processing speeds between producers and consumers. Which AWS service best meets these requirements?",
+    "choices": [
+      "A. Amazon SNS with fanout to multiple Lambda functions",
+      "B. Amazon SQS with standard queues",
+      "C. Amazon EventBridge with event buses",
+      "D. AWS Step Functions with state machines"
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 2,
+    "tags": [
+      "SQS",
+      "decoupling",
+      "microservices",
+      "asynchronous"
+    ],
+    "explanation": "",
+    "domain_seq": 135,
+    "question_ja": "ソリューションアーキテクトが、複数のマイクロサービスが非同期に通信するシステムを設計しています。各サービスは、サービスが一時的に利用不可能になった場合でもメッセージを失わずに独立してメッセージを処理する必要があります。ソリューションはまた、プロデューサーとコンシューマー間の異なる処理速度をサポートする必要があります。これらの要件を最もよく満たす AWS サービスはどれですか？",
+    "choices_ja": [
+      "A. 複数の Lambda 関数へのファンアウトを伴う Amazon SNS",
+      "B. 標準キューを使用した Amazon SQS",
+      "C. イベントバスを使用した Amazon EventBridge",
+      "D. ステートマシンを使用した AWS Step Functions"
+    ]
+  },
+  {
+    "id": 714,
+    "question": "A company needs to replicate objects stored in an Amazon S3 bucket in us-east-1 to a bucket in eu-west-1 for compliance and disaster recovery. Newly created objects must be replicated, and the company also needs existing objects to be replicated. Which combination of actions should the Solutions Architect take? (Choose two)",
+    "choices": [
+      "A. Enable S3 Cross-Region Replication (CRR) on the source bucket.",
+      "B. Enable S3 Same-Region Replication (SRR) on the source bucket.",
+      "C. Use S3 Batch Replication to replicate existing objects.",
+      "D. Use AWS DataSync to continuously sync new objects between buckets.",
+      "E. Enable S3 Transfer Acceleration on the destination bucket."
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "multi": true,
+    "domain": 2,
+    "tags": [
+      "S3",
+      "cross-region-replication",
+      "S3-batch-replication",
+      "disaster-recovery"
+    ],
+    "explanation": "",
+    "domain_seq": 136,
+    "question_ja": "ある企業が、コンプライアンスと災害復旧のために、us-east-1 の Amazon S3 バケットに保存されているオブジェクトを eu-west-1 のバケットにレプリケートする必要があります。新しく作成されたオブジェクトはレプリケートされる必要があり、企業は既存のオブジェクトもレプリケートする必要があります。ソリューションアーキテクトはどの組み合わせのアクションを取るべきですか？（2 つ選択してください）",
+    "choices_ja": [
+      "A. ソースバケットで S3 クロスリージョンレプリケーション（CRR）を有効にする。",
+      "B. ソースバケットで S3 同一リージョンレプリケーション（SRR）を有効にする。",
+      "C. S3 バッチレプリケーションを使用して既存のオブジェクトをレプリケートする。",
+      "D. AWS DataSync を使用してバケット間で新しいオブジェクトを継続的に同期する。",
+      "E. デスティネーションバケットで S3 Transfer Acceleration を有効にする。"
+    ]
+  },
+  {
+    "id": 715,
+    "question": "A company runs a stateless web application on an Auto Scaling group of Amazon EC2 instances. Traffic to the application is unpredictable with sudden spikes. The company wants the application to scale out quickly during traffic spikes and scale in gradually during low traffic periods to avoid over-terminating instances. Which Auto Scaling policy configuration achieves this?",
+    "choices": [
+      "A. Use a simple scaling policy with a cooldown period of 300 seconds for both scale-out and scale-in.",
+      "B. Use target tracking scaling with a higher scale-in cooldown than scale-out cooldown.",
+      "C. Use scheduled scaling to increase capacity before expected traffic spikes.",
+      "D. Use step scaling with larger steps for scale-out and smaller steps for scale-in."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 2,
+    "tags": [
+      "Auto Scaling",
+      "target-tracking",
+      "scale-in",
+      "scale-out",
+      "cooldown"
+    ],
+    "explanation": "",
+    "domain_seq": 137,
+    "question_ja": "ある企業が、Amazon EC2 インスタンスの Auto Scaling グループ上でステートレスなウェブアプリケーションを実行しています。アプリケーションへのトラフィックは予測不可能で、急激なスパイクがあります。企業はアプリケーションがトラフィックスパイク時に素早くスケールアウトし、低トラフィック期間には過剰なインスタンスの終了を避けるために徐々にスケールインすることを望んでいます。これを実現する Auto Scaling ポリシーの設定はどれですか？",
+    "choices_ja": [
+      "A. スケールアウトとスケールインの両方に 300 秒のクールダウン期間を設けたシンプルスケーリングポリシーを使用する。",
+      "B. スケールアウトのクールダウンよりもスケールインのクールダウンが長いターゲット追跡スケーリングを使用する。",
+      "C. 予想されるトラフィックスパイクの前にキャパシティを増加するスケジュールスケーリングを使用する。",
+      "D. スケールアウトには大きなステップ、スケールインには小さなステップのステップスケーリングを使用する。"
+    ]
+  },
+  {
+    "id": 716,
+    "question": "A company has a primary application in us-east-1 and wants to set up disaster recovery in us-west-2. The application must automatically fail over to the secondary Region if the primary Region becomes unavailable. DNS resolution must detect the failure within 10 seconds. Which Route 53 configuration should the Solutions Architect implement?",
+    "choices": [
+      "A. Weighted routing policy with weights of 100 for primary and 0 for secondary.",
+      "B. Latency-based routing policy with health checks on both endpoints.",
+      "C. Failover routing policy with Route 53 health checks configured on the primary endpoint.",
+      "D. Geolocation routing policy with a default rule pointing to the secondary Region."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 2,
+    "tags": [
+      "Route 53",
+      "failover-routing",
+      "health-checks",
+      "disaster-recovery",
+      "multi-region"
+    ],
+    "explanation": "",
+    "domain_seq": 138,
+    "question_ja": "ある企業が us-east-1 にプライマリアプリケーションを持ち、us-west-2 に災害復旧を設定したいと考えています。プライマリリージョンが利用不可能になった場合、アプリケーションはセカンダリリージョンに自動的にフェイルオーバーする必要があります。DNS 解決は 10 秒以内に障害を検出する必要があります。ソリューションアーキテクトはどの Route 53 設定を実装すべきですか？",
+    "choices_ja": [
+      "A. プライマリに重み 100、セカンダリに重み 0 の重み付きルーティングポリシー。",
+      "B. 両方のエンドポイントにヘルスチェックを設定したレイテンシーベースのルーティングポリシー。",
+      "C. プライマリエンドポイントに Route 53 ヘルスチェックを設定したフェイルオーバールーティングポリシー。",
+      "D. セカンダリリージョンを指すデフォルトルールを持つジオロケーションルーティングポリシー。"
+    ]
+  },
+  {
+    "id": 717,
+    "question": "A company wants to implement a centralized backup solution for Amazon EC2 instances, Amazon RDS databases, Amazon EFS file systems, and Amazon DynamoDB tables across multiple AWS accounts in an AWS Organization. The company requires automated backup schedules, retention policies, and compliance reporting from a single service. Which AWS service meets all these requirements?",
+    "choices": [
+      "A. AWS Systems Manager with automated runbooks for each resource type.",
+      "B. AWS Backup with backup plans and cross-account backup policies.",
+      "C. Amazon Data Lifecycle Manager with lifecycle policies for each resource.",
+      "D. Custom Lambda functions triggered by CloudWatch Events to create snapshots."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 2,
+    "tags": [
+      "AWS Backup",
+      "cross-account",
+      "backup-plans",
+      "Organizations",
+      "compliance"
+    ],
+    "explanation": "",
+    "domain_seq": 139,
+    "question_ja": "ある企業が、AWS Organization 内の複数の AWS アカウントにまたがる Amazon EC2 インスタンス、Amazon RDS データベース、Amazon EFS ファイルシステム、および Amazon DynamoDB テーブルの一元的なバックアップソリューションを実装したいと考えています。企業は単一サービスから自動化されたバックアップスケジュール、保持ポリシー、およびコンプライアンスレポートを必要としています。これらすべての要件を満たす AWS サービスはどれですか？",
+    "choices_ja": [
+      "A. 各リソースタイプの自動化されたランブックを使用した AWS Systems Manager。",
+      "B. バックアッププランとクロスアカウントバックアップポリシーを使用した AWS Backup。",
+      "C. 各リソースのライフサイクルポリシーを使用した Amazon Data Lifecycle Manager。",
+      "D. CloudWatch Events によってトリガーされてスナップショットを作成するカスタム Lambda 関数。"
+    ]
+  },
+  {
+    "id": 718,
+    "question": "A company processes financial transactions that must not be lost. Multiple applications need to receive and process each transaction independently. If one processing application fails, it must not affect other applications or cause message loss. The order of transaction processing within each application is not critical. Which architecture should a Solutions Architect recommend?",
+    "choices": [
+      "A. Publish transactions to an Amazon SNS topic and subscribe an Amazon SQS queue for each processing application.",
+      "B. Send transactions directly to each processing application using Amazon API Gateway.",
+      "C. Store transactions in Amazon DynamoDB and have each application poll for new records.",
+      "D. Use Amazon Kinesis Data Streams with one shard shared among all processing applications."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 2,
+    "tags": [
+      "SNS",
+      "SQS",
+      "fanout",
+      "decoupling",
+      "fault-tolerance"
+    ],
+    "explanation": "",
+    "domain_seq": 140,
+    "question_ja": "ある企業が、失ってはならない金融トランザクションを処理しています。複数のアプリケーションが各トランザクションを独立して受信・処理する必要があります。1 つの処理アプリケーションが失敗しても、他のアプリケーションやメッセージ損失に影響を与えてはなりません。各アプリケーション内でのトランザクション処理の順序は重要ではありません。ソリューションアーキテクトはどのアーキテクチャを推奨すべきですか？",
+    "choices_ja": [
+      "A. Amazon SNS トピックにトランザクションをパブリッシュし、各処理アプリケーション用に Amazon SQS キューをサブスクライブする。",
+      "B. Amazon API Gateway を使用して各処理アプリケーションに直接トランザクションを送信する。",
+      "C. Amazon DynamoDB にトランザクションを保存し、各アプリケーションが新しいレコードをポーリングする。",
+      "D. すべての処理アプリケーションで共有される 1 つのシャードを持つ Amazon Kinesis Data Streams を使用する。"
+    ]
+  },
+  {
+    "id": 719,
+    "question": "A company uses Amazon EFS to share files between multiple Amazon EC2 instances in a single Availability Zone. The company wants to ensure the file system remains accessible if the Availability Zone experiences a failure. The solution must minimize cost while maintaining data durability. Which solution should the Solutions Architect recommend? (Choose two)",
+    "choices": [
+      "A. Mount the EFS file system with the mount target in each Availability Zone used by the EC2 instances.",
+      "B. Enable EFS Replication to replicate the file system to another AWS Region.",
+      "C. Create an AWS Backup plan to back up the EFS file system to Amazon S3 on a daily schedule.",
+      "D. Use EFS One Zone storage class instead of EFS Standard to reduce cost.",
+      "E. Configure EC2 instances in multiple Availability Zones to mount the same EFS file system."
+    ],
+    "correct": [
+      0,
+      4
+    ],
+    "multi": true,
+    "domain": 2,
+    "tags": [
+      "EFS",
+      "multi-AZ",
+      "fault-tolerance",
+      "mount-targets"
+    ],
+    "explanation": "",
+    "domain_seq": 141,
+    "question_ja": "ある企業が、単一の Availability Zone にある複数の Amazon EC2 インスタンス間でファイルを共有するために Amazon EFS を使用しています。企業は、Availability Zone で障害が発生した場合にファイルシステムがアクセス可能であり続けることを保証したいと考えています。ソリューションはデータの耐久性を維持しながらコストを最小化する必要があります。ソリューションアーキテクトはどのソリューションを推奨すべきですか？（2 つ選択してください）",
+    "choices_ja": [
+      "A. EC2 インスタンスが使用する各 Availability Zone のマウントターゲットで EFS ファイルシステムをマウントする。",
+      "B. EFS レプリケーションを有効にして、ファイルシステムを別の AWS リージョンにレプリケートする。",
+      "C. AWS Backup プランを作成して、毎日のスケジュールで EFS ファイルシステムを Amazon S3 にバックアップする。",
+      "D. コストを削減するために EFS Standard の代わりに EFS One Zone ストレージクラスを使用する。",
+      "E. 同じ EFS ファイルシステムをマウントするために複数の Availability Zone に EC2 インスタンスを設定する。"
+    ]
+  },
+  {
+    "id": 720,
+    "question": "A company has an Amazon RDS for PostgreSQL database. A database administrator needs to ensure that point-in-time recovery is possible for any point within the last 14 days. The administrator also wants automated daily snapshots retained for 14 days. The database receives continuous write operations. Which RDS configuration should the administrator apply?",
+    "choices": [
+      "A. Enable automated backups with a backup retention period of 14 days. RDS will automatically enable transaction log backups for point-in-time recovery.",
+      "B. Create a manual snapshot daily using AWS Lambda and retain the last 14 snapshots. Enable read replicas for point-in-time recovery.",
+      "C. Enable automated backups with a 14-day retention period and separately configure AWS Backup to export snapshots to Amazon S3 every 5 minutes.",
+      "D. Use Amazon RDS Proxy to capture all write transactions and store them in Amazon S3 for point-in-time recovery."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 2,
+    "tags": [
+      "RDS",
+      "automated-backups",
+      "point-in-time-recovery",
+      "snapshots",
+      "PostgreSQL"
+    ],
+    "explanation": "",
+    "domain_seq": 142,
+    "question_ja": "ある企業が Amazon RDS for PostgreSQL データベースを持っています。データベース管理者は、過去 14 日間の任意の時点でのポイントインタイムリカバリが可能であることを確認する必要があります。管理者はまた、14 日間保持される自動化された毎日のスナップショットを必要としています。データベースは継続的な書き込み操作を受け取っています。管理者はどの RDS 設定を適用すべきですか？",
+    "choices_ja": [
+      "A. バックアップ保持期間を 14 日に設定した自動バックアップを有効にする。RDS はポイントインタイムリカバリのためのトランザクションログバックアップを自動的に有効にする。",
+      "B. AWS Lambda を使用して毎日手動スナップショットを作成し、最新の 14 個のスナップショットを保持する。ポイントインタイムリカバリのためにリードレプリカを有効にする。",
+      "C. 14 日間の保持期間で自動バックアップを有効にし、AWS Backup を別途設定して 5 分ごとにスナップショットを Amazon S3 にエクスポートする。",
+      "D. Amazon RDS Proxy を使用してすべての書き込みトランザクションをキャプチャし、ポイントインタイムリカバリのために Amazon S3 に保存する。"
+    ]
   }
 ]
