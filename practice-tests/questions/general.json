@@ -1,0 +1,4015 @@
+[
+  {
+    "id": 2,
+    "question": "What is the minimum time interval for the data that Amazon CloudWatch receives and aggregates?",
+    "choices": [
+      "One second.",
+      "Five seconds.",
+      "One minute.",
+      "Three minutes.",
+      "Five minutes."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 1
+  },
+  {
+    "id": 3,
+    "question": "A user has launched an EC2 instance. The instance got terminated as soon as it was launched. Which of the below mentioned options is not a possible reason for this?",
+    "choices": [
+      "The user account has reached the maximum volume limit.",
+      "The AMI is missing. It is the required part.",
+      "The snapshot is corrupt.",
+      "The user account has reached the maximum EC2 instance limit."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 2
+  },
+  {
+    "id": 6,
+    "question": "Which of the following are valid statements about Amazon S3? (Choose 2 answers)",
+    "choices": [
+      "Amazon S3 provides read-after-write consistency for any type of PUT or DELETE.",
+      "Consistency is not guaranteed for any type of PUT or DELETE.",
+      "A successful response to a PUT request only occurs when a complete object is saved.",
+      "Partially saved objects are immediately readable with a GET after an overwrite PU.",
+      "S3 provides eventual consistency for overwrite PUTS and DELETE."
+    ],
+    "correct": [
+      2,
+      4
+    ],
+    "multi": true,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 3
+  },
+  {
+    "id": 10,
+    "question": "Because of the extensibility limitations of striped storage attached to Windows Server, Amazon RDS does not currently support increasing storage on a [...] DB Instance.",
+    "choices": [
+      "SQL Server.",
+      "MySQL.",
+      "Oracle."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 4
+  },
+  {
+    "id": 12,
+    "question": "In Amazon EC2 Container Service, are other container types supported?",
+    "choices": [
+      "Yes, EC2 Container Service supports any container service you need.",
+      "Yes, EC2 Container Service also supports Microsoft container service.",
+      "No, Docker is the only container platform supported by EC2 Container Service presently.",
+      "Yes, EC2 Container Service supports Microsoft container service and Openstack."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 5
+  },
+  {
+    "id": 16,
+    "question": "If I want an instance to have a public IP address, which IP address should I use?",
+    "choices": [
+      "Elastic IP Address.",
+      "Class B IP Address.",
+      "Class A IP Address.",
+      "Dynamic IP Address."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 6
+  },
+  {
+    "id": 17,
+    "question": "Amazon RDS supports SOAP only through [...].",
+    "choices": [
+      "HTTP or HTTPS.",
+      "TCP/IP.",
+      "HTTP.",
+      "HTTPS."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 7
+  },
+  {
+    "id": 23,
+    "question": "In the context of MySQL, version numbers are organized as MySQL version = X.Y.Z. What does X denote here?",
+    "choices": [
+      "Release level.",
+      "Minor version.",
+      "Version number.",
+      "Major version."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 8
+  },
+  {
+    "id": 25,
+    "question": "Just when you thought you knew every possible storage option on AWS you hear someone mention Reduced Redundancy Storage (RRS) within Amazon S3. What is the ideal scenario to use Reduced Redundancy Storage (RRS)?",
+    "choices": [
+      "Huge volumes of data.",
+      "Sensitive data.",
+      "Non-critical or reproducible data.",
+      "Critical data."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 9
+  },
+  {
+    "id": 28,
+    "question": "In the Launch Db Instance Wizard, where can I select the backup and maintenance options?",
+    "choices": [
+      "Under DB INSTANCE DETAILS.",
+      "Under REVI EW.",
+      "Under MANAGEMENT OPTIONS.",
+      "Under ENGINE SELECTION."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 10
+  },
+  {
+    "id": 30,
+    "question": "In Amazon EC2, if your EBS volume stays in the detaching state, you can force the detachment by clicking [...].",
+    "choices": [
+      "Force Detach.",
+      "Detach Instance.",
+      "AttachVolume.",
+      "AttachInstance."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 11
+  },
+  {
+    "id": 36,
+    "question": "You need to quickly set up an email-sending service because a client needs to start using it in the next hour. Amazon Simple Email Service (Amazon SES) seems to be the logical choice but there are several options available to set it up. Which of the following options to set up SES would best meet the needs of the client?",
+    "choices": [
+      "Amazon SES console.",
+      "AWS CloudFormation.",
+      "SMTP Interface.",
+      "AWS Elastic Beanstalk."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 12
+  },
+  {
+    "id": 37,
+    "question": "A user is observing the EC2 CPU utilization metric on CloudWatch. The user has observed some interesting patterns while filtering over the 1 week period for a particular hour. The user wants to zoom that data point to a more granular period. How can the user do that easily with CloudWatch?",
+    "choices": [
+      "The user can zoom a particular period by selecting that period with the mouse and then releasing the mouse.",
+      "The user can zoom a particular period by specifying the aggregation data for that period.",
+      "The user can zoom a particular period by double clicking on that period with the mouse.",
+      "The user can zoom a particular period by specifying the period in the Time Range."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 13
+  },
+  {
+    "id": 41,
+    "question": "A user has attached 1 EBS volume to a VPC instance. The user wants to achieve the best fault tolerance of data possible. Which of the below mentioned options can help achieve fault tolerance?",
+    "choices": [
+      "Attach one more volume with RAID 1 configuration.",
+      "Attach one more volume with RAID 0 configuration.",
+      "Connect multiple volumes and stripe them with RAID.",
+      "Use the EBS volume as a root device."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 14
+  },
+  {
+    "id": 44,
+    "question": "For each DB Instance class, what is the maximum size of associated storage capacity?",
+    "choices": [
+      "5GB.",
+      "1TB.",
+      "2TB.",
+      "500GB."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 15
+  },
+  {
+    "id": 46,
+    "question": "What does specifying the mapping /dev/sdc=none when launching an instance do?",
+    "choices": [
+      "Prevents /dev/sdc from creating the instance.",
+      "Prevents /dev/sdc from deleting the instance.",
+      "Set the value of /dev/sdc to 'zero'.",
+      "Prevents /dev/sdc from attaching to the instance."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 16
+  },
+  {
+    "id": 47,
+    "question": "Which of the following statements is true of tagging an Amazon EC2 resource?",
+    "choices": [
+      "You don't need to specify the resource identifier while terminating a resource.",
+      "You can terminate, stop, or delete a resource based solely on its tags.",
+      "You can't terminate, stop, or delete a resource based solely on its tags.",
+      "You don't need to specify the resource identifier while stopping a resource."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 17
+  },
+  {
+    "id": 50,
+    "question": "A [...] for a VPC is a collection of subnets (typically private) that you may want to designate for your backend RDS DB Instances.",
+    "choices": [
+      "DB Subnet Set.",
+      "RDS Subnet Group.",
+      "DB Subnet Group.",
+      "DB Subnet Collection."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 18
+  },
+  {
+    "id": 52,
+    "question": "You can modify the backup retention period; valid values are 0 (for no backup retention) to a maximum of [...] days.",
+    "choices": [
+      "45.",
+      "35.",
+      "15.",
+      "5."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 19
+  },
+  {
+    "id": 58,
+    "question": "You need to import several hundred megabytes of data from a local Oracle database to an Amazon RDS DB instance. What does AWS recommend you use to accomplish this?",
+    "choices": [
+      "Oracle export/import utilities.",
+      "Oracle SQL Developer.",
+      "Oracle Data Pump.",
+      "DBMS_FILE_TRANSFER."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 20
+  },
+  {
+    "id": 59,
+    "question": "In the context of AWS support, why must an EC2 instance be unreachable for 20 minutes rather than allowing customers to open tickets immediately?",
+    "choices": [
+      "Because most reachability issues are resolved by automated processes in less than 20 minutes.",
+      "Because all EC2 instances are unreachable for 20 minutes every day when AWS does routine maintenance.",
+      "Because all EC2 instances are unreachable for 20 minutes when first launched.",
+      "Because of all the reasons listed here."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 21
+  },
+  {
+    "id": 60,
+    "question": "HTTP Query-based requests are HTTP requests that use the HTTP verb GET or POST and a Query parameter named [...].",
+    "choices": [
+      "Action.",
+      "Value.",
+      "Reset.",
+      "Retrieve."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 22
+  },
+  {
+    "id": 62,
+    "question": "While creating the snapshots using the command line tools, which command should I be using?",
+    "choices": [
+      "ec2-deploy-snapshot.",
+      "ec2-fresh-snapshot.",
+      "ec2-create-snapshot.",
+      "ec2-new-snapshot."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 23
+  },
+  {
+    "id": 63,
+    "question": "All Amazon EC2 instances are assigned two IP addresses at launch, out of which one can only be reached from within the Amazon EC2 network?",
+    "choices": [
+      "Multiple IP address.",
+      "Public IP address.",
+      "Private IP address.",
+      "Elastic IP Address."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 24
+  },
+  {
+    "id": 64,
+    "question": "When an EC2 instance that is backed by an S3-based AMI is terminated, what happens to the data on the root volume?",
+    "choices": [
+      "Data is automatically saved as an EBS snapshot.",
+      "Data is automatically saved as an EBS volume.",
+      "Data is unavailable until the instance is restarted.",
+      "Data is automatically deleted."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 25
+  },
+  {
+    "id": 65,
+    "question": "You've created your first load balancer and have registered your EC2 instances with the load balancer. Elastic Load Balancing routinely performs health checks on all the registered EC2 instances and automatically distributes all incoming requests to the DNS name of your load balancer across your registered, healthy EC2 instances. By default, the load balancer uses the [...] protocol for checking the health of your instances.",
+    "choices": [
+      "HTTPS.",
+      "HTTP.",
+      "ICMP.",
+      "IPv6."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 26
+  },
+  {
+    "id": 68,
+    "question": "You are using Amazon SES as an email solution but are unsure of what its limitations are. Which statement below is correct in regards to that?",
+    "choices": [
+      "New Amazon SES users who have received production access can send up to 1,000 emails per 24-hour period, at a maximum rate of 10 emails per second.",
+      "Every Amazon SES sender has a the same set of sending limits.",
+      "Sending limits are based on messages rather than on recipients.",
+      "Every Amazon SES sender has a unique set of sending limits."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 27
+  },
+  {
+    "id": 71,
+    "question": "The SQL Server [...] feature is an efficient means of copying data from a source database to your DB Instance. It writes the data that you specify to a data file, such as an ASCII file.",
+    "choices": [
+      "bulk copy.",
+      "group copy.",
+      "dual copy.",
+      "mass copy."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 28
+  },
+  {
+    "id": 74,
+    "question": "You are trying to launch an EC2 instance, however the instance seems to go into a terminated status immediately. What would probably not be a reason that this is happening?",
+    "choices": [
+      "The AMI is missing a required part.",
+      "The snapshot is corrupt.",
+      "You need to create storage in EBS first.",
+      "You've reached your volume limit."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 29
+  },
+  {
+    "id": 83,
+    "question": "In the Amazon RDS which uses the SQL Server engine, what is the maximum size for a Microsoft SQL Server DB Instance with SQL Server Express edition?",
+    "choices": [
+      "10GB per DB.",
+      "100GB per DB.",
+      "2TB per DB.",
+      "1TB per DB."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 30
+  },
+  {
+    "id": 85,
+    "question": "Amazon EBS provides the ability to create backups of any Amazon EC2 volume into what is known as [...].",
+    "choices": [
+      "snapshots.",
+      "images.",
+      "instance backups.",
+      "mirrors."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 31
+  },
+  {
+    "id": 90,
+    "question": "The Amazon EC2 web service can be accessed using the [...] web services messaging protocol. This interface is described by a Web Services Description Language (WSDL) document.",
+    "choices": [
+      "SOAP.",
+      "DCOM.",
+      "CORBA.",
+      "XML-RPC."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 32
+  },
+  {
+    "id": 91,
+    "question": "Which of the following are true regarding encrypted Amazon Elastic Block Store (EBS) volumes? (Choose 2 answers)",
+    "choices": [
+      "Supported on all Amazon EBS volume types.",
+      "Snapshots are automatically encrypted.",
+      "Available to all instance types.",
+      "Existing volumes can be encrypted.",
+      "Shared volumes can be encrypted."
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "multi": true,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 33
+  },
+  {
+    "id": 92,
+    "question": "Is Federated Storage Engine currently supported by Amazon RDS for MySQL?",
+    "choices": [
+      "Only for Oracle RDS instances.",
+      "Yes.",
+      "No.",
+      "Only in VPC."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 34
+  },
+  {
+    "id": 93,
+    "question": "While creating the snapshots using the API, which Action should I be using?",
+    "choices": [
+      "MakeSnapShot.",
+      "FreshSnapshot.",
+      "DeploySnapshot.",
+      "CreateSnapshot."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 35
+  },
+  {
+    "id": 95,
+    "question": "Will my standby RDS instance be in the same Region as my primary?",
+    "choices": [
+      "Only for Oracle RDS types.",
+      "Yes.",
+      "Only if configured at launch.",
+      "No."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 36
+  },
+  {
+    "id": 97,
+    "question": "Can the string value of 'Key' be prefixed with :aws:'?",
+    "choices": [
+      "Only in GovCloud.",
+      "Only for S3 not EC2.",
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 37
+  },
+  {
+    "id": 98,
+    "question": "A user wants to increase the durability and availability of the EBS volume. Which of the below mentioned actions should he perform?",
+    "choices": [
+      "Take regular snapshots.",
+      "Create an AM.",
+      "Create EBS with higher capacity.",
+      "Access EBS regularly."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 38
+  },
+  {
+    "id": 99,
+    "question": "What does Amazon RDS stand for?",
+    "choices": [
+      "Regional Data Server.",
+      "Relational Database Service.",
+      "Nothing.",
+      "Regional Database Service."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 39
+  },
+  {
+    "id": 102,
+    "question": "Do Amazon EBS volumes persist independently from the running life of an Amazon EC2 instance?",
+    "choices": [
+      "Yes, they do but only if they are detached from the instance.",
+      "No, you cannot attach EBS volumes to an instance.",
+      "No, they are dependent.",
+      "Yes, they do."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 40
+  },
+  {
+    "id": 112,
+    "question": "When does the billing of an Amazon EC2 system begin?",
+    "choices": [
+      "It starts when the Status column for your distribution changes from Creating to Deployed.",
+      "It starts as soon as you click the create instance option on the main EC2 console.",
+      "It starts when your instance reaches 720 instance hours.",
+      "It starts when Amazon EC2 initiates the boot sequence of an AMI instance."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 41
+  },
+  {
+    "id": 113,
+    "question": "A user is storing a large number of objects on AWS S3. The user wants to implement the search functionality among the objects. How can the user achieve this?",
+    "choices": [
+      "Use the indexing feature of S3.",
+      "Tag the objects with the metadata to search on that.",
+      "Use the query functionality of S3.",
+      "Make your own DB system which stores the S3 metadata for the search functionality."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 42
+  },
+  {
+    "id": 115,
+    "question": "A group can contain many users. Can a user belong to multiple groups?",
+    "choices": [
+      "Yes always.",
+      "No.",
+      "Yes but only if they are using two factor authentication.",
+      "Yes but only in VPC."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 43
+  },
+  {
+    "id": 116,
+    "question": "Does Dynamo DB support in-place atomic updates?",
+    "choices": [
+      "It is not defined.",
+      "Yes.",
+      "It does support in-place non-atomic updates."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 44
+  },
+  {
+    "id": 119,
+    "question": "Can I detach the primary (ethO) network interface when the instance is running or stopped?",
+    "choices": [
+      "Yes, You can.",
+      "No. You cannot."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 45
+  },
+  {
+    "id": 121,
+    "question": "Which of the following statements best describes the differences between Elastic Beanstalk and CloudFormation?",
+    "choices": [
+      "Elastic Beanstalk uses Elastic load balancing and CloudFormation doesn't.",
+      "CloudFormation is faster in deploying applications than Elastic Beanstalk.",
+      "Elastic Beanstalk is faster in deploying applications than CloudFormation.",
+      "CloudFormation is much more powerful than Elastic Beanstalk, because you can actually design and script custom resources."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 46
+  },
+  {
+    "id": 124,
+    "question": "True or False: When you view the block device mapping for your instance, you can see only the EBS volumes, not the instance store volumes.",
+    "choices": [
+      "Depends on the instance type.",
+      "False.",
+      "Depends on whether you use API call.",
+      "True."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 47
+  },
+  {
+    "id": 125,
+    "question": "Does AWS CloudFormation support Amazon EC2 tagging?",
+    "choices": [
+      "Yes, AWS CloudFormation supports Amazon EC2 tagging.",
+      "No, CloudFormation doesn't support any tagging.",
+      "No, it doesn't support Amazon EC2 tagging.",
+      "It depends if the Amazon EC2 tagging has been defined in the template."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 48
+  },
+  {
+    "id": 126,
+    "question": "If I modify a DB Instance or the DB parameter group associated with the instance, should I reboot the instance for the changes to take effect?",
+    "choices": [
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 49
+  },
+  {
+    "id": 130,
+    "question": "By default what are ENIs that are automatically created and attached to instances using the EC2 console set to do when the attached instance terminates?",
+    "choices": [
+      "Remain as is.",
+      "Terminate.",
+      "Hibernate.",
+      "Pause."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 50
+  },
+  {
+    "id": 131,
+    "question": "In EC2, what happens to the data in an instance store if an instance reboots (either intentionally or unintentionally)?",
+    "choices": [
+      "Data is deleted from the instance store for security reasons.",
+      "Data persists in the instance store.",
+      "Data is partially present in the instance store.",
+      "Data in the instance store will be lost."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 51
+  },
+  {
+    "id": 134,
+    "question": "Which of the following statements is true regarding attaching network interfaces to your instances in your VPC?",
+    "choices": [
+      "You can attach 5 ENIs per instance type.",
+      "You can attach as many ENIs as you want.",
+      "The number of ENIs you can attach varies by instance type.",
+      "You can attach 100 ENIs total regardless of instance type."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 52
+  },
+  {
+    "id": 135,
+    "question": "What is the reason for this?",
+    "choices": [
+      "For security reasons.",
+      "Hardware restrictions.",
+      "Public (IPV4) internet addresses are a scarce resource.",
+      "There are only 5 network interfaces per instance."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 53
+  },
+  {
+    "id": 136,
+    "question": "Can a 'user' be associated with multiple AWS accounts?",
+    "choices": [
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 54
+  },
+  {
+    "id": 141,
+    "question": "All Amazon EC2 instances are assigned two IP addresses at launch. Which are those?",
+    "choices": [
+      "2 Elastic IP addresses.",
+      "A private IP address and an Elastic IP address.",
+      "A public IP address and an Elastic IP address.",
+      "A private IP address and a public IP address."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 55
+  },
+  {
+    "id": 144,
+    "question": "Which DNS name can only be resolved within Amazon EC2?",
+    "choices": [
+      "Public DNS name.",
+      "Internal DNS name.",
+      "External DNS name.",
+      "Global DNS name."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 56
+  },
+  {
+    "id": 147,
+    "question": "In Amazon EC2, you are billed instance-hours when [...].",
+    "choices": [
+      "your EC2 instance is in a running state.",
+      "the instance exits from Amazon S3 console.",
+      "your instance still exits the EC2 console.",
+      "EC2 instances stop."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 57
+  },
+  {
+    "id": 149,
+    "question": "In Amazon EC2 Container Service components, what is the name of a logical grouping of container instances on which you can place tasks?",
+    "choices": [
+      "A cluster.",
+      "A container instance.",
+      "A container.",
+      "A task definition."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 58
+  },
+  {
+    "id": 151,
+    "question": "What will be the status of the snapshot until the snapshot is complete?",
+    "choices": [
+      "Running.",
+      "Working.",
+      "Progressing.",
+      "Pending."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 59
+  },
+  {
+    "id": 153,
+    "question": "True or False: Common points of failures like generators and cooling equipment are shared across Availability Zones.",
+    "choices": [
+      "True.",
+      "False."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 60
+  },
+  {
+    "id": 157,
+    "question": "Which is the default region in AWS?",
+    "choices": [
+      "eu-west-1.",
+      "us-east-1.",
+      "us-east-2.",
+      "ap-southeast-1."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 61
+  },
+  {
+    "id": 162,
+    "question": "True or False: Automated backups are enabled by default for a new DB Instance",
+    "choices": [
+      "True.",
+      "False."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 62
+  },
+  {
+    "id": 166,
+    "question": "To view information about an Amazon EBS volume, open the Amazon EC2 console at <https://console.aws.amazon.com/ec2/>, click in the Navigation panel.",
+    "choices": [
+      "EBS.",
+      "Describe.",
+      "Details.",
+      "Volumes."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 63
+  },
+  {
+    "id": 170,
+    "question": "If I want to run a database in an Amazon instance, which is the most recommended Amazon storage option?",
+    "choices": [
+      "Amazon Instance Storage.",
+      "Amazon EBS.",
+      "You can't run a database inside an Amazon instance.",
+      "Amazon S3."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 64
+  },
+  {
+    "id": 171,
+    "question": "A customer is leveraging Amazon Simple Storage Service in eu-west-1 to store static content for a web-based property. The customer is storing objects using the Standard Storage class. Where are the customers objects replicated?",
+    "choices": [
+      "A single facility in eu-west-1 and a single facility in eu-central-1.",
+      "A single facility in eu-west-1 and a single facility in us-east-1.",
+      "Multiple facilities in eu-west-1.",
+      "A single facility in eu-west-1."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 65
+  },
+  {
+    "id": 176,
+    "question": "What is the maximum key length of a tag?",
+    "choices": [
+      "512 Unicode characters.",
+      "64 Unicode characters.",
+      "256 Unicode characters.",
+      "128 Unicode characters."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 66
+  },
+  {
+    "id": 177,
+    "question": "Does Amazon RDS allow direct host access via Telnet, Secure Shell (SSH), or Windows Remote Desktop Connection?",
+    "choices": [
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 67
+  },
+  {
+    "id": 184,
+    "question": "Do you need to shutdown your EC2 instance when you create a snapshot of EBS volumes that serve as root devices?",
+    "choices": [
+      "No, you only need to shutdown an instance before deleting it.",
+      "Yes.",
+      "No, the snapshot would turn off your instance automatically.",
+      "No."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 68
+  },
+  {
+    "id": 189,
+    "question": "What will be the state of the alarm at the end of 90 minutes, if the CPU utilization is constant at 80%?",
+    "choices": [
+      "ALERT.",
+      "ALARM.",
+      "OK.",
+      "INSUFFICIENT_DATA."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 69
+  },
+  {
+    "id": 191,
+    "question": "What are the four levels of AWS Premium Support?",
+    "choices": [
+      "Basic, Developer, Business, Enterprise.",
+      "Basic, Startup, Business, Enterprise.",
+      "Free, Bronze, Silver, Gold.",
+      "All support is free."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 70
+  },
+  {
+    "id": 192,
+    "question": "What is the default maximum number of Access Keys per user?",
+    "choices": [
+      "10.",
+      "15.",
+      "2.",
+      "20."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 71
+  },
+  {
+    "id": 194,
+    "question": "What does Amazon S3 stand for?",
+    "choices": [
+      "Simple Storage Solution.",
+      "Storage Storage Storage (triple redundancy Storage).",
+      "Storage Server Solution.",
+      "Simple Storage Service."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 72
+  },
+  {
+    "id": 199,
+    "question": "What is the type of monitoring data (for Amazon EBS volumes) which is available automatically in 5- minute periods at no charge called?",
+    "choices": [
+      "Basic.",
+      "Primary.",
+      "Detailed.",
+      "Local."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 73
+  },
+  {
+    "id": 201,
+    "question": "Which Amazon Elastic Compute Cloud feature can you query from within the instance to access instance properties?",
+    "choices": [
+      "Instance user data.",
+      "Resource tags.",
+      "Instance metadata.",
+      "Amazon Machine Image."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 74
+  },
+  {
+    "id": 202,
+    "question": "Making your snapshot public shares all snapshot data with everyone. Can the snapshots with AWS Market place product codes be made public?",
+    "choices": [
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 75
+  },
+  {
+    "id": 211,
+    "question": "Changes to the backup window take effect [...].",
+    "choices": [
+      "from the next billing cycle.",
+      "after 30 minutes.",
+      "immediately.",
+      "after 24 hours."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 76
+  },
+  {
+    "id": 212,
+    "question": "Location of Instances are [...].",
+    "choices": [
+      "regional.",
+      "based on Availability Zone.",
+      "global."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 77
+  },
+  {
+    "id": 214,
+    "question": "What is the minimum charge for the data transferred between Amazon RDS and Amazon EC2 Instances in the same Availability Zone?",
+    "choices": [
+      "USD 0.10 per GB.",
+      "No charge. It is free.",
+      "USD 0.02 per GB",
+      "USD 0.01 per GB."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 78
+  },
+  {
+    "id": 218,
+    "question": "Which one of the following answers is not a possible state of Amazon CloudWatch Alarm?",
+    "choices": [
+      "INSUFFICIENT_DATA.",
+      "ALARM.",
+      "OK.",
+      "STATUS_CHECK_FAILED."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 79
+  },
+  {
+    "id": 221,
+    "question": "You have a lot of data stored in the AWS Storage Gateway and your manager has come to you asking about how the billing is calculated, specifically the Virtual Tape Shelf usage. What would be a correct response to this?",
+    "choices": [
+      "You are billed for the virtual tape data you store in Amazon Glacier and are billed for the size of the virtual tape.",
+      "You are billed for the virtual tape data you store in Amazon Glacier and billed for the portion of virtual tape capacity that you use, not for the size of the virtual tape.",
+      "You are billed for the virtual tape data you store in Amazon S3 and billed for the portion of virtual tape capacity that you use, not for the size of the virtual tape.",
+      "You are billed for the virtual tape data you store in Amazon S3 and are billed for the size of the virtual tape."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 80
+  },
+  {
+    "id": 229,
+    "question": "While launching an RDS DB instance, on which page I can select the Availability Zone?",
+    "choices": [
+      "REVIEW.",
+      "DB INSTANCE DETAILS.",
+      "MANAGEMENT OPTIONS.",
+      "ADDITIONAL CONFIGURATION."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 81
+  },
+  {
+    "id": 231,
+    "question": "You are setting up some EBS volumes for a customer who has requested a setup which includes a RAID (redundant array of inexpensive disks). AWS has some recommendations for RAID setups. Which RAID setup is not recommended for Amazon EBS?",
+    "choices": [
+      "RAID 5 only.",
+      "RAID 5 and RAID 6.",
+      "RAID 1 only.",
+      "RAID 1 and RAID 6."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 82
+  },
+  {
+    "id": 235,
+    "question": "By default, EBS volumes that are created and attached to an instance at launch are deleted when that instance is terminated. You can modify this behavior by changing the value of the flag [...] to false when you launch the instance.",
+    "choices": [
+      "Delete On Termination.",
+      "Remove On Deletion.",
+      "Remove On Termination.",
+      "Terminate On Deletion."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 83
+  },
+  {
+    "id": 236,
+    "question": "Which AWS service helps this functionality?",
+    "choices": [
+      "AWS Simple Queue Service.",
+      "AWS Simple Notification Service.",
+      "AWS Simple Workflow Service.",
+      "AWS Simple Email Service."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 84
+  },
+  {
+    "id": 242,
+    "question": "Your supervisor has asked you to build a simple file synchronization service for your department. He doesn't want to spend too much money and he wants to be notified of any changes to files by email. What do you think would be the best Amazon service to use for the email solution?",
+    "choices": [
+      "Amazon SES.",
+      "Amazon CloudSearch.",
+      "Amazon SWF.",
+      "Amazon AppStream."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 85
+  },
+  {
+    "id": 246,
+    "question": "Is the SQL Server Audit feature supported in the Amazon RDS SQL Server engine?",
+    "choices": [
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 86
+  },
+  {
+    "id": 247,
+    "question": "What is the command line instruction for running the remote desktop client in Windows?",
+    "choices": [
+      "desk.cpl.",
+      "mstsc."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 87
+  },
+  {
+    "id": 249,
+    "question": "What is the charge for the data transfer incurred in replicating data between your primary and standby?",
+    "choices": [
+      "Same as the standard data transfer charge.",
+      "Double the standard data transfer charge.",
+      "No charge. It is free.",
+      "Half of the standard data transfer charge."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 88
+  },
+  {
+    "id": 251,
+    "question": "Resources that are created in AWS are identified by a unique identifier called an",
+    "choices": [
+      "Amazon Resource Number.",
+      "Amazon Resource Nametag.",
+      "Amazon Resource Name.",
+      "Amazon Resource Namespace."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 89
+  },
+  {
+    "id": 258,
+    "question": "[...] embodies the 'share-nothing' architecture and essentially involves breaking a large database into several smaller databases. Common ways to split a database include: 1. Splitting tables that are not joined in the same query onto different hosts or 2. Duplicating a table across multiple hosts and then using a hashing algorithm to determine which host receives a given update.",
+    "choices": [
+      "$harding.",
+      "Fai lure recovery.",
+      "Federation.",
+      "DOL operations."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 90
+  },
+  {
+    "id": 263,
+    "question": "Can I test my DB Instance against a new version before upgrading?",
+    "choices": [
+      "Yes.",
+      "No.",
+      "Only in VPC."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 91
+  },
+  {
+    "id": 267,
+    "question": "When using consolidated billing there are two account types. What are they?",
+    "choices": [
+      "Paying account and Linked account.",
+      "Parent account and Child account.",
+      "Main account and Sub account.",
+      "Main account and Secondary account."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 92
+  },
+  {
+    "id": 270,
+    "question": "The base URI for all requests for instance metadata is [...].",
+    "choices": [
+      "<http://254.169.169.254/latest/>.",
+      "<http://169.169.254.254/latest/>.",
+      "<http://127.0.0.1/latest/>.",
+      "<http://169.254.169.254/latest/>."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 93
+  },
+  {
+    "id": 271,
+    "question": "While using the EC2 GET requests as URLs, the [...] is the URL that serves as the entry point for the web service.",
+    "choices": [
+      "token.",
+      "endpoint.",
+      "action.",
+      "None of these."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 94
+  },
+  {
+    "id": 274,
+    "question": "A user has launched 10 EC2 instances inside a placement group. Which of the below mentioned statements is true with respect to the placement group?",
+    "choices": [
+      "All instances must be in the same AZ.",
+      "All instances can be across multiple regions.",
+      "The placement group cannot have more than 5 instances.",
+      "All instances must be in the same region."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 95
+  },
+  {
+    "id": 288,
+    "question": "Your company has multiple IT departments, each with their own VPC. Some VPCs are located within the same AWS account, and others in a different AWS account. You want to peer together all VPCs to enable the IT departments to have full access to each others' resources. There are certain limitations placed on VPC peering. Which of the following statements is incorrect in relation to VPC peering?",
+    "choices": [
+      "Private DNS values cannot be resolved between instances in peered VPCs.",
+      "You can have up to 3 VPC peering connections between the same two VPCs at the same time.",
+      "You cannot create a VPC peering connection between VPCs in different regions.",
+      "You have a limit on the number active and pending VPC peering connections that you can have per VP."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 96
+  },
+  {
+    "id": 292,
+    "question": "You need to create a management network using network interfaces for a virtual private cloud (VPC) network. Which of the following statements is incorrect pertaining to Best Practices for ConfiguringNetwork Interfaces.",
+    "choices": [
+      "You can detach secondary (ethN) network interfaces when the instance is running or stopped. However, you can't detach the primary (eth0) interface.",
+      "Launching an instance with multiple network interfaces automatically configures interfaces, private IP addresses, and route tables on the operating system of the instance.",
+      "You can attach a network interface in one subnet to an instance in another subnet in the same VPC, however, both the network interface and the instance must reside in the same Availability Zone.",
+      "Attaching another network interface to an instance is a valid method to increase or double the network bandwidth to or from the dual-homed instance."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 97
+  },
+  {
+    "id": 296,
+    "question": "You are working with a customer who has 10 TB of archival data that they want to migrate to Amazon Glacier. The customer has a 1-Mbps connection to the Internet. Which service or feature provides the fastest method of getting the data into Amazon Glacier?",
+    "choices": [
+      "Amazon Glacier multipart upload.",
+      "AWS Storage Gateway.",
+      "VM Import/Export.",
+      "AWS Import/Export."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 98
+  },
+  {
+    "id": 297,
+    "question": "Your manager has asked you to set up a public subnet with instances that can send and receive internet traffic, and a private subnet that can't receive traffic directly from the internet, but can initiate traffic to the internet (and receive responses) through a NAT instance in the public subnet. Hence, the following 3 rules need to be allowed: Inbound SSH traffic. Web servers in the public subnet to read and write to MS SQL servers in the private subnet. Inbound RDP traffic from the Microsoft Terminal Services gateway in the public private subnet. What are the respective ports that need to be opened for this?",
+    "choices": [
+      "Ports 22, 1433, 3389.",
+      "Ports 21, 1433, 3389.",
+      "Ports 25, 1433, 3389.",
+      "Ports 22, 1343, 3999."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 99
+  },
+  {
+    "id": 298,
+    "question": "An EC2 instance is connected to an ENI (Elastic Network Interface) in one subnet. What happens to the data on an instance if the instance reboots (intentionally or unintentionally)?",
+    "choices": [
+      "Data will be lost.",
+      "Data persists."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 100
+  },
+  {
+    "id": 299,
+    "question": "Please select the Amazon EC2 resource which can be tagged.",
+    "choices": [
+      "Key pairs.",
+      "Elastic IP addresses.",
+      "Placement groups.",
+      "Amazon EBS snapshots."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 101
+  },
+  {
+    "id": 301,
+    "question": "An EC2 instance is connected to an ENI (Elastic Network Interface) in one subnet. What happens when you attach an ENI of a different subnet to this EC2 instance?",
+    "choices": [
+      "The EC2 instance follows the rules of the older subnet.",
+      "The EC2 instance follows the rules of both the subnets.",
+      "Not possible, cannot be connected to 2 ENIs.",
+      "The EC2 instance follows the rules of the newer subnet."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 102
+  },
+  {
+    "id": 304,
+    "question": "EBS Snapshots occur [...].",
+    "choices": [
+      "Asynchronously.",
+      "Synchronously."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 103
+  },
+  {
+    "id": 307,
+    "question": "If you want to launch Amazon Elastic Compute Cloud (EC2) instances and assign each instance a predetermined private IP address you should:",
+    "choices": [
+      "Launch the instance from a private Amazon Machine Image (AMI).",
+      "Assign a group of sequential Elastic IP address to the instances.",
+      "Launch the instances in the Amazon Virtual Private Cloud (VPC).",
+      "Launch the instances in a Placement Group.",
+      "Use standard EC2 instances since each instance gets a private Domain Name Service (DNS) already."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 104
+  },
+  {
+    "id": 309,
+    "question": "You have a Business support plan with AWS. One of your EC2 instances is running Microsoft Windows Server 2008 R2 and you are having problems with the software. Can you receive support from AWS for this software?",
+    "choices": [
+      "Yes.",
+      "No, AWS does not support any third-party software.",
+      "No, Microsoft Windows Server 2008 R2 is not supported.",
+      "No, you need to be on the enterprise support plan."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 105
+  },
+  {
+    "id": 312,
+    "question": "In Amazon EC2, while sharing an Amazon EBS snapshot, can the snapshots with AWS Marketplace product codes be public?",
+    "choices": [
+      "Yes, but only for US-based providers.",
+      "Yes, they can be public.",
+      "No, they cannot be made public.",
+      "Yes, they are automatically made public by the system."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 106
+  },
+  {
+    "id": 313,
+    "question": "A company has an AWS account that contains three VPCs (Dev, Test, and Prod) in the same region. Test is peered to both Prod and Dev. All VPCs have non-overlapping CIDR blocks. The company wants to push minor code releases from Dev to Prod to speed up time to market. Which of the following options helps the company accomplish this?",
+    "choices": [
+      "Create a new peering connection Between Prod and Dev along with appropriate routes.",
+      "Create a new entry to Prod in the Dev route table using the peering connection as the target.",
+      "Attach a second gateway to Dev. Add a new entry in the Prod route table identifying the gateway as the target.",
+      "The VPCs have non-overlapping Cl DR blocks in the same account. The route tables contain local routes for all VPCs."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 107
+  },
+  {
+    "id": 317,
+    "question": "You have written a CloudFormation template that creates 1 Elastic Load Balancer fronting 2 EC2 Instances. Which section of the template should you edit so that the DNS of the load balancer is returned upon creation of the stack?",
+    "choices": [
+      "Resources.",
+      "Outputs.",
+      "Parameters.",
+      "Mappings."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 108
+  },
+  {
+    "id": 318,
+    "question": "AWS CloudFormation is a service that helps you model and set up your Amazon Web Services resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS. You create a template that describes all the AWS resources that you want (like Amazon EC2 instances or Amazon RDS DB instances), and AWS CloudFormation takes care of provisioning and configuring those resources for you. What formatting is required for this template?",
+    "choices": [
+      "JSON-formatted document.",
+      "CSS-formatted document.",
+      "XML-formatted document.",
+      "HTML-formatted document."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 109
+  },
+  {
+    "id": 322,
+    "question": "Which Amazon storage do you think is the best for my database-style applications that frequently encounter many random reads and writes across the dataset?",
+    "choices": [
+      "None of these.",
+      "Amazon Instance Storage.",
+      "Any of these.",
+      "Amazon EBS."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 110
+  },
+  {
+    "id": 323,
+    "question": "In the Amazon RDS Oracle DB engine, the Database Diagnostic Pack and the Database Tuning Pack are only available with [...].",
+    "choices": [
+      "Oracle Standard Edition.",
+      "Oracle Express Edition.",
+      "Oracle Enterprise Edition.",
+      "None of these."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 111
+  },
+  {
+    "id": 324,
+    "question": "Will my standby RDS instance be in the same Availability Zone as my primary?",
+    "choices": [
+      "Only for Oracle RDS types.",
+      "Yes.",
+      "Only if configured at launch.",
+      "No."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 112
+  },
+  {
+    "id": 327,
+    "question": "True or False: Manually created DB Snapshots are deleted after the DB Instance is deleted.",
+    "choices": [
+      "True.",
+      "False."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 113
+  },
+  {
+    "id": 330,
+    "question": "What does Amazon EBS stand for?",
+    "choices": [
+      "Elastic Block Storage.",
+      "Elastic Business Server.",
+      "Elastic Blade Server.",
+      "Elastic Block Store."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 114
+  },
+  {
+    "id": 332,
+    "question": "What does Amazon SWF stand for?",
+    "choices": [
+      "Simple Web Flow.",
+      "Simple Work Flow.",
+      "Simple Wireless Forms.",
+      "Simple Web Form."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 115
+  },
+  {
+    "id": 336,
+    "question": "Typically, you want your application to check whether a request generated an error before you spend any time processing results. The easiest way to find out if an error occurred is to look for an [...] node in the response from the Amazon RDS API.",
+    "choices": [
+      "incorrect.",
+      "error."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 116
+  },
+  {
+    "id": 338,
+    "question": "A [...] is a storage device that moves data in sequences of bytes or bits (blocks).",
+    "choices": [
+      "block map.",
+      "storage block.",
+      "mapping device.",
+      "block device."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 117
+  },
+  {
+    "id": 344,
+    "question": "How long does an AWS free usage tier EC2 last for?",
+    "choices": [
+      "Forever.",
+      "12 Months upon signup.",
+      "1 Month upon signup.",
+      "6 Months upon signup."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 118
+  },
+  {
+    "id": 347,
+    "question": "Does Amazon DynamoDB support both increment and decrement atomic operations?",
+    "choices": [
+      "Only increment, since decrement are inherently impossible with DynamoDB's data model.",
+      "No, neither increment nor decrement operations.",
+      "Yes, both increment and decrement operations.",
+      "Only decrement, since increment are inherently impossible with DynamoDB's data model."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 119
+  },
+  {
+    "id": 349,
+    "question": "If an Amazon EBS volume is the root device of an instance, can I detach it without stopping the instance?",
+    "choices": [
+      "Yes but only if Windows instance.",
+      "Yes.",
+      "No.",
+      "Yes but only if a Linux instance."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 120
+  },
+  {
+    "id": 351,
+    "question": "Before I delete an EBS volume, what can I do if I want to recreate the volume later?",
+    "choices": [
+      "Create a copy of the EBS volume (not a snapshot).",
+      "Store a snapshot of the volume.",
+      "Download the content to an EC2 instance",
+      "Back up the data in to a physical disk."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 121
+  },
+  {
+    "id": 356,
+    "question": "Can the string value of 'Key' be prefixed with laws?",
+    "choices": [
+      "No.",
+      "Only for EC2 not S3.",
+      "Yes.",
+      "Only for S3 not EC."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 122
+  },
+  {
+    "id": 366,
+    "question": "Which of the following are use cases for Amazon DynamoDB? (Choose 3 answers)",
+    "choices": [
+      "Storing BLOB data.",
+      "Managing web sessions.",
+      "Storing JSON documents.",
+      "Storing metadata for Amazon S3 objects.",
+      "Running relational joins and complex updates.",
+      "Storing large amounts of infrequently accessed data."
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "multi": true,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 123
+  },
+  {
+    "id": 367,
+    "question": "You have been asked to set up a database in AWS that will require frequent and granular updates. You know that you will require a reasonable amount of storage space but are not sure of the best option. What is the recommended storage option when you run a database on an instance with the above criteria?",
+    "choices": [
+      "Amazon S3.",
+      "Amazon EBS.",
+      "AWS Storage Gateway.",
+      "Amazon Glacier."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 124
+  },
+  {
+    "id": 370,
+    "question": "You must increase storage size in increments of at least [...].",
+    "choices": [
+      "40.",
+      "20.",
+      "50.",
+      "10."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 125
+  },
+  {
+    "id": 373,
+    "question": "True or False: When you perform a restore operation to a point in time or from a DB Snapshot, a new DB Instance is created with a new endpoint.",
+    "choices": [
+      "True.",
+      "False."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 126
+  },
+  {
+    "id": 375,
+    "question": "You are setting up your first Amazon Virtual Private Cloud (Amazon VPC) so you decide to use the VPC wizard in the AWS console to help make it easier for you. Which of the following statements is correct regarding instances that you launch into a default subnet via the VPC wizard?",
+    "choices": [
+      "Instances that you launch into a default subnet receive a public IP address and 10 private IP addresses.",
+      "Instances that you launch into a default subnet receive both a public IP address and a private IP address.",
+      "Instances that you launch into a default subnet don't receive any ip addresses and you need to define them manually.",
+      "Instances that you launch into a default subnet receive a public IP address and 5 private IP addresses."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 127
+  },
+  {
+    "id": 392,
+    "question": "What is the maximum response time for a Business level Premium Support case?",
+    "choices": [
+      "30 minutes.",
+      "1 hour.",
+      "12 hours.",
+      "10 minutes."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 128
+  },
+  {
+    "id": 395,
+    "question": "True or False: If you add a tag that has the same key as an existing tag on a DB Instance, the new value overwrites the old value.",
+    "choices": [
+      "True.",
+      "False."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 129
+  },
+  {
+    "id": 402,
+    "question": "Can I delete a snapshot of the root device of an EBS volume used by a registered AMI?",
+    "choices": [
+      "Only via API.",
+      "Only via Console.",
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 130
+  },
+  {
+    "id": 403,
+    "question": "MySQL installations default to port [...].",
+    "choices": [
+      "3306.",
+      "443.",
+      "80.",
+      "1158."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 131
+  },
+  {
+    "id": 408,
+    "question": "In Amazon EC2, partial instance-hours are billed [...].",
+    "choices": [
+      "per second used in the hour.",
+      "per minute used.",
+      "by combining partial segments into full hours.",
+      "as full hours."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 132
+  },
+  {
+    "id": 411,
+    "question": "You need to create a JSON-formatted text file for AWS CloudFormation. This is your first template and the only thing you know is that the templates include several major sections but there is only one that is required for it to work. What is the only section required?",
+    "choices": [
+      "Mappings.",
+      "Outputs.",
+      "Resources.",
+      "Conditions."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 133
+  },
+  {
+    "id": 416,
+    "question": "A t2.medium EC2 instance type must be launched with what type of Amazon Machine Image (AMI)?",
+    "choices": [
+      "An Instance store Hardware Virtual Machine AMI.",
+      "An Instance store Paravirtual AMI.",
+      "An Amazon EBS-backed Hardware Virtual Machine AMI.",
+      "An Amazon EBS-backed Paravirtual AMI."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 134
+  },
+  {
+    "id": 417,
+    "question": "A user has created a subnet in VPC and launched an EC2 instance within it. The user has not selected the option to assign the IP address while launching the instance. The user has 3 elastic IPs and is trying to assign one of the Elastic IPs to the VPC instance from the console. The console does not show any instance in the IP assignment screen. What is a possible reason that the instance is unavailable in the assigned IP console?",
+    "choices": [
+      "The IP address may be attached to one of the instances.",
+      "The IP address belongs to a different zone than the subnet zone.",
+      "The user has not created an internet gateway.",
+      "The IP addresses belong to EC2 Classic; so they cannot be assigned to VPC."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 135
+  },
+  {
+    "id": 419,
+    "question": "Amazon EC2 provides a [...]. It is an HTTP or HTTPS request that uses the HTTP verbs GET or POST.",
+    "choices": [
+      "web database.",
+      ".NET framework.",
+      "Query API.",
+      "C library."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 136
+  },
+  {
+    "id": 420,
+    "question": "Which of the following requires a custom Cloud Watch metric to monitor?",
+    "choices": [
+      "Memory Utilization of an EC2 instance.",
+      "CPU Utilization of an EC2 instance.",
+      "Disk usage activity of an EC2 instance.",
+      "Data transfer of an EC2 instance."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 137
+  },
+  {
+    "id": 422,
+    "question": "An Elastic IP address (EIP) is a static IP address designed for dynamic cloud computing. With an EIP, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account. Your EIP is associated with your AWS account, not a particular EC2 instance, and it remains associated with your account until you choose to explicitly release it. By default how many EIPs is each AWS account limited to on a per region basis?",
+    "choices": [
+      "1.",
+      "5.",
+      "Unlimited.",
+      "10."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 138
+  },
+  {
+    "id": 423,
+    "question": "Which Amazon Storage behaves like raw, unformatted, external block devices that you can attach to your instances?",
+    "choices": [
+      "None of these.",
+      "Amazon Instance Storage",
+      "Amazon EBS",
+      "All of these."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 139
+  },
+  {
+    "id": 425,
+    "question": "Does DynamoDB support in-place atomic updates?",
+    "choices": [
+      "Yes.",
+      "No.",
+      "It does support in-place non-atomic updates.",
+      "It is not defined."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 140
+  },
+  {
+    "id": 428,
+    "question": "A user is trying to launch a similar EC2 instance from an existing instance with the option 'Launch More like this'. The AMI of the selected instance is deleted. What will happen in this case?",
+    "choices": [
+      "AWS does not need an AMI for the 'Launch more like this' option.",
+      "AWS will launch the instance but will not create a new AMI.",
+      "AWS will create a new AMI and launch the instance.",
+      "AWS will throw an error saying that the AMI is deregistered."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 141
+  },
+  {
+    "id": 430,
+    "question": "You are working with a customer who is using Chef configuration management in their data center. Which service is designed to let the customer leverage existing Chef recipes in AWS?",
+    "choices": [
+      "Amazon Simple Workflow Service.",
+      "AWS Elastic Beanstalk.",
+      "AWS CloudFormation.",
+      "AWS OpsWorks."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 142
+  },
+  {
+    "id": 431,
+    "question": "Does Amazon RDS for SQL Server currently support importing data into the msdb database?",
+    "choices": [
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 143
+  },
+  {
+    "id": 432,
+    "question": "How can an EBS volume that is currently attached to an EC2 instance be migrated from one Availability Zone to another?",
+    "choices": [
+      "Detach the volume and attach it to another EC2 instance in the other AZ.",
+      "Simply create a new volume in the other AZ and specify the original volume as the source.",
+      "Create a snapshot of the volume, and create a new volume from the snapshot in the other AZ.",
+      "Detach the volume, then use the ec2-migrate-voiume command to move it to another AZ."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 144
+  },
+  {
+    "id": 435,
+    "question": "Is decreasing the storage size of a DB Instance permitted?",
+    "choices": [
+      "Depends on the ROMS used.",
+      "Yes.",
+      "No."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 145
+  },
+  {
+    "id": 439,
+    "question": "Your manager has come to you saying that he is very confused about the bills he is receiving from AWS as he is getting different bills for every user and needs you to look into making it more understandable. Which of the following would be the best solution to meet his request?",
+    "choices": [
+      "AWS Billing Aggregation.",
+      "Consolidated Billing.",
+      "Deferred Billing.",
+      "Aggregated Billing."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 146
+  },
+  {
+    "id": 441,
+    "question": "If I scale the storage capacity provisioned to my DB Instance by mid of a billing month, how will I be charged?",
+    "choices": [
+      "You will be charged for the highest storage capacity you have used.",
+      "On a proration basis."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 147
+  },
+  {
+    "id": 444,
+    "question": "True or False: REST or Query requests are HTTP or HTTPS requests that use an HTTP verb (such as GET or POST) and a parameter named Action or Operation that specifies the API you are calling.",
+    "choices": [
+      "True.",
+      "False."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 148
+  },
+  {
+    "id": 446,
+    "question": "Groups can't [...].",
+    "choices": [
+      "be nested more than 3 levels.",
+      "be nested at all.",
+      "be nested more than 4 levels.",
+      "be nested more than 2 levels."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 149
+  },
+  {
+    "id": 448,
+    "question": "Do the system resources on the Micro instance meet the recommended configuration for Oracle?",
+    "choices": [
+      "Yes, completely.",
+      "Yes, but only for certain situations."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 150
+  },
+  {
+    "id": 454,
+    "question": "Which of the following statements is NOT true about using Elastic IP Address (EIP) in EC2-Classic and EC2-VPC platforms?",
+    "choices": [
+      "In the EC2-VPC platform, the Elastic IP Address (EIP) does not remain associated with the instance when you stop it.",
+      "In the EC2-Classic platform, stopping the instance disassociates the Elastic IP Address (EIP) from it.",
+      "In the EC2-VPC platform, if you have attached a second network interface to an instance, when you disassociate the Elastic IP Address (EIP) from that instance, a new public IP address is not assigned to the instance automatically; you'll have to associate an EIP with it manually.",
+      "In the EC2-Classic platform, if you disassociate an Elastic IP Address (EIP) from the instance, the instance is automatically assigned a new public IP address within a few minutes."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 151
+  },
+  {
+    "id": 470,
+    "question": "What happens to the I/O operations while you take a database snapshot?",
+    "choices": [
+      "I/O operations to the database are suspended for an hour while the backup is in progress.",
+      "I/O operations to the database are sent to a Replica (if available) for a few minutes while the backup is in progress.",
+      "I/O operations will be functioning normally.",
+      "I/O operations to the database are suspended for a few minutes while the backup is in progress."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 152
+  },
+  {
+    "id": 471,
+    "question": "When an EC2 EBS-backed (EBS root) instance is stopped, what happens to the data on any ephemeral store volumes?",
+    "choices": [
+      "Data is automatically saved in an EBS volume.",
+      "Data is unavailable until the instance is restarted.",
+      "Data will be deleted and will no longer be accessible.",
+      "Data is automatically saved as an EBS snapshot."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 153
+  },
+  {
+    "id": 472,
+    "question": "[...] is a durable, block-level storage volume that you can attach to a single, running Amazon EC2 instance.",
+    "choices": [
+      "Amazon S3.",
+      "Amazon EBS.",
+      "None of these.",
+      "All of these."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 154
+  },
+  {
+    "id": 476,
+    "question": "After launching an instance that you intend to serve as a NAT (Network Address Translation) device in a public subnet you modify your route tables to have the NAT device be the target of internet bound traffic of your private subnet. When you try and make an outbound connection to the internet from an instance in the private subnet, you are not successful. Which of the following steps could resolve the issue?",
+    "choices": [
+      "Disabling the Source/Destination Check attribute on the NAT instance.",
+      "Attaching an Elastic IP address to the instance in the private subnet.",
+      "Attaching a second Elastic Network Interface (EN I) to the NAT instance, and placing it in the private subnet.",
+      "Attaching a second Elastic Network Interface (ENI) to the instance in the private subnet, and placing it in the public subnet."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 155
+  },
+  {
+    "id": 477,
+    "question": "Which of the following would you use to list your AWS Import/Export jobs?",
+    "choices": [
+      "Amazon RDS.",
+      "AWS Import/Export Web Service Tool.",
+      "Amazon S3 REST API.",
+      "AWS Elastic Beanstalk."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 156
+  },
+  {
+    "id": 479,
+    "question": "If your DB instance runs out of storage space or file system resources, its status will change to [...] and your DB Instance will no longer be available.",
+    "choices": [
+      "storage-overflow.",
+      "storage-full.",
+      "storage-exceed.",
+      "storage-overage."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 157
+  },
+  {
+    "id": 481,
+    "question": "How many Elastic IP by default in Amazon Account?",
+    "choices": [
+      "1 Elastic IP.",
+      "3 Elastic IP.",
+      "5 Elastic IP.",
+      "0 Elastic IP."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 158
+  },
+  {
+    "id": 482,
+    "question": "What would be the best way to retrieve the public IP address of your EC2 instance using the CLI?",
+    "choices": [
+      "Using tags.",
+      "Using traceroute.",
+      "Using ipconfig.",
+      "Using instance metadata."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 159
+  },
+  {
+    "id": 485,
+    "question": "You have been storing massive amounts of data on Amazon Glacier for the past 2 years and now start to wonder if there are any limitations on this. What is the correct answer to your question?",
+    "choices": [
+      "The total volume of data is limited but the number of archives you can store are unlimited.",
+      "The total volume of data is unlimited but the number of archives you can store are limited.",
+      "The total volume of data and number of archives you can store are unlimited.",
+      "The total volume of data is limited and the number of archives you can store are limited."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 160
+  },
+  {
+    "id": 486,
+    "question": "How are the EBS snapshots saved on Amazon S3?",
+    "choices": [
+      "Exponentially.",
+      "Incrementally.",
+      "EBS snapshots are not stored in the Amazon S3.",
+      "Decrementally."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 161
+  },
+  {
+    "id": 488,
+    "question": "You have three Amazon EC2 instances with Elastic IP addresses in the US East (Virginia) region, and you want to distribute requests across all three IPs evenly for users for whom US East (Virginia) is the appropriate region. How many EC2 instances would be sufficient to distribute requests in other regions?",
+    "choices": [
+      "3.",
+      "9.",
+      "2.",
+      "1."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 162
+  },
+  {
+    "id": 492,
+    "question": "What does Amazon Cloud Formation provide?",
+    "choices": [
+      "The ability to setup Autoscaling for Amazon EC2 instances.",
+      "None of these.",
+      "A templated resource creation for Amazon Web Services.",
+      "A template to map network resources for Amazon Web Services."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 163
+  },
+  {
+    "id": 494,
+    "question": "When creation of an EBS snapshot is initiated, but not completed, the EBS volume?",
+    "choices": [
+      "Can be used while the snapshot is in progress.",
+      "Cannot be detached or attached to an EC2 instance until the snapshot completes.",
+      "Can be used in read-only mode while the snapshot is in progress.",
+      "Cannot be used until the snapshot completes."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 164
+  },
+  {
+    "id": 495,
+    "question": "What does Amazon SES stand for?",
+    "choices": [
+      "Simple Elastic Server.",
+      "Simple Email Service.",
+      "Software Email Solution.",
+      "Software Enabled Server."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 165
+  },
+  {
+    "id": 497,
+    "question": "Disabling automated backups [...] disable the point-in-time recovery.",
+    "choices": [
+      "if configured to can.",
+      "will never.",
+      "will."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 166
+  },
+  {
+    "id": 500,
+    "question": "Are you able to integrate a multi-factor token service with the AWS Platform?",
+    "choices": [
+      "Yes, you can integrate private multi-factor token devices to authenticate users to the AWS platform.",
+      "No, you cannot integrate multi-factor token devices with the AWS platform.",
+      "Yes, using the AWS multi-factor token devices to authenticate users on the AWS platform."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 167
+  },
+  {
+    "id": 506,
+    "question": "Once again your customers are concerned about the security of their sensitive data and with their latest enquiry ask about what happens to old storage devices on AWS. What would be the best answer to this question?",
+    "choices": [
+      "AWS reformats the disks and uses them again.",
+      "AWS uses the techniques detailed in DoD 5220.22-M to destroy data as part of the decommissioning process.",
+      "AWS uses their own proprietary software to destroy data as part of the decommissioning process.",
+      "AWS uses a 3rd party security organization to destroy data as part of the decommissioning process."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 168
+  },
+  {
+    "id": 507,
+    "question": "Which of the following are characteristics of Amazon VPC subnets? (Choose 2 answers)",
+    "choices": [
+      "Each subnet spans at least 2 Availability Zones to provide a high-availability environment.",
+      "Each subnet maps to a single Availability Zone.",
+      "CIDR block mask of/25 is the smallest range supported.",
+      "By default, all subnets can route between each other, whether they are private or public.",
+      "Instances in a private subnet can communicate with the Internet only if they have an Elastic IP."
+    ],
+    "correct": [
+      1,
+      4
+    ],
+    "multi": true,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 169
+  },
+  {
+    "id": 508,
+    "question": "Which AWS instance address has the following characteristics? 'If you stop an instance, its Elastic IP address is unmapped, and you must remap it when you restart the instance.'",
+    "choices": [
+      "Both A and B.",
+      "None of these.",
+      "VPC Addresses.",
+      "EC2 Addresses."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 170
+  },
+  {
+    "id": 510,
+    "question": "What is an isolated database environment running in the cloud (Amazon RDS) called?",
+    "choices": [
+      "DB Instance.",
+      "DB Unit.",
+      "DB Server.",
+      "DB Volume."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 171
+  },
+  {
+    "id": 511,
+    "question": "A user is sending bulk emails using AWS SES. The emails are not reaching some of the targeted audience because they are not authorized by the ISPs. How can the user ensure that the emails are all delivered?",
+    "choices": [
+      "Send an email using DKIM with SE.",
+      "Send an email using SMTP with SE.",
+      "Open a ticket with AWS support to get it authorized with the IS.",
+      "Authorize the ISP by sending emails from the development account."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 172
+  },
+  {
+    "id": 512,
+    "question": "What's an ECU?",
+    "choices": [
+      "Extended Cluster User.",
+      "None of these.",
+      "Elastic Computer Usage.",
+      "Elastic Compute Unit."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 173
+  },
+  {
+    "id": 514,
+    "question": "Which procedure for backing up a relational database on EC2 that is using a set of RAIDed EBS volumes for storage minimizes the time during which the database cannot be written to and results in a consistent backup?",
+    "choices": [
+      "1. Detach EBS volumes, 2. Start EBS snapshot of volumes, 3. Re-attach EBS volumes.",
+      "1. Stop the EC2 Instance. 2. Snapshot the EBS volumes.",
+      "1. Suspend disk 1/0, 2. Create an image of the EC2 Instance, 3. Resume disk 1/0.",
+      "1. Suspend disk 1/0, 2. Start EBS snapshot of volumes, 3. Resume disk 1/0.",
+      "1. Suspend disk 1/0, 2. Start EBS snapshot of volumes, 3. Wait for snapshots to complete, 4. Resume disk 1/0."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 174
+  },
+  {
+    "id": 520,
+    "question": "True or False: A VPC contains multiple subnets, where each subnet can span multiple Availability Zones.",
+    "choices": [
+      "This is true only if requested during the set-up of VPC.",
+      "This is true.",
+      "This is false.",
+      "This is true only for US regions."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 175
+  },
+  {
+    "id": 521,
+    "question": "Amazon RDS automated backups and DB Snapshots are currently supported for only the [...] storage engine.",
+    "choices": [
+      "InnoDB.",
+      "MyISAM."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 176
+  },
+  {
+    "id": 523,
+    "question": "Out of the stripping options available for the EBS volumes, which one has the following disadvantage: 'Doubles the amount of 1/0 required from the instance to EBS compared to RAID 0, because you're mirroring all writes to a pair of volumes, limiting how much you can stripe.'?",
+    "choices": [
+      "Raid 0.",
+      "RAID 1+0 (RAID 10).",
+      "Raid 1.",
+      "Raid."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 177
+  },
+  {
+    "id": 526,
+    "question": "Identify a true statement about the On-Demand instances purchasing option provided by Amazon EC2.",
+    "choices": [
+      "Pay for the instances that you use by the hour, with no long-term commitments or up-front payments.",
+      "Make a low, one-time, up-front payment for an instance, reserve it for a one- or three-year term, and pay a significantly lower hourly rate for these instances.",
+      "Pay for the instances that you use by the hour, with long-term commitments or up-front payments.",
+      "Make a high, one-time, all-front payment for an instance, reserve it for a one- or three-year term, and pay a significantly higher hourly rate for these instances."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 178
+  },
+  {
+    "id": 529,
+    "question": "What does RRS stand for when talking about S3?",
+    "choices": [
+      "Redundancy Removal System.",
+      "Relational Rights Storage.",
+      "Regional Rights Standard.",
+      "Reduced Redundancy Storage."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 179
+  },
+  {
+    "id": 531,
+    "question": "Please select the Amazon EC2 resource which cannot be tagged.",
+    "choices": [
+      "Images (AMIs, kernels, RAM disks).",
+      "Amazon EBS volumes.",
+      "Elastic IP addresses.",
+      "VPCs."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 180
+  },
+  {
+    "id": 538,
+    "question": "In Amazon Elastic Compute Cloud, which of the following is used for communication between instances in the same network (EC2-Classic or a VPC)?",
+    "choices": [
+      "Private IP addresses.",
+      "Elastic IP addresses.",
+      "Static IP addresses.",
+      "Public IP addresses."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 181
+  },
+  {
+    "id": 539,
+    "question": "A user is planning to host a mobile game on EC2 which sends notifications to active users on either high score or the addition of new features. The user should get this notification when he is online on his mobile device. Which of the below mentioned AWS services can help achieve this functionality?",
+    "choices": [
+      "AWS Simple Notification Service.",
+      "AWS Simple Email Service.",
+      "AWS Mobile Communication Service.",
+      "AWS Simple Queue Service."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 182
+  },
+  {
+    "id": 540,
+    "question": "You need to create an Amazon Machine Image (AMI) for a customer for an application which does not appear to be part of the standard AWS AMI template that you can see in the AWS console. What are the alternative possibilities for creating an AMI on AWS?",
+    "choices": [
+      "You can purchase an AMIs from a third party but cannot create your own AMI.",
+      "You can purchase an AMIs from a third party or can create your own AMI.",
+      "Only AWS can create AMIs and you need to wait till it becomes available.",
+      "Only AWS can create AMIs and you need to request them to create one for you."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 183
+  },
+  {
+    "id": 541,
+    "question": "Will I be charged if the DB instance is idle?",
+    "choices": [
+      "Yes.",
+      "Only is running in GovCloud.",
+      "Only if running in VPC."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 184
+  },
+  {
+    "id": 545,
+    "question": "A scope has been handed to you to set up a super fast gaming server and you decide that you will use Amazon DynamoDB as your database. For efficient access to data in a table, Amazon DynamoDB creates and maintains indexes for the primary key attributes. A secondary index is a data structure that contains a subset of attributes from a table, along with an alternate key to support Query operations. How many types of secondary indexes does DynamoDB support?",
+    "choices": [
+      "2.",
+      "16.",
+      "4.",
+      "As many as you need."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 185
+  },
+  {
+    "id": 547,
+    "question": "You want to use AWS Import/Export to send data from your S3 bucket to several of your branch offices. What should you do if you want to send 10 storage units to AWS?",
+    "choices": [
+      "Make sure your disks are encrypted prior to shipping.",
+      "Make sure you format your disks prior to shipping.",
+      "Make sure your disks are 1TB or more.",
+      "Make sure you submit a separate job request for each device."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 186
+  },
+  {
+    "id": 549,
+    "question": "While performing the volume status checks, if the status is insufficient-data, what does it mean?",
+    "choices": [
+      "The checks may still be in progress on the volume.",
+      "The check has passed.",
+      "The check has failed."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 187
+  },
+  {
+    "id": 558,
+    "question": "You have been doing a lot of testing of your VPC Network by deliberately failing EC2 instances to test whether instances are failing over properly. Your customer who will be paying the AWS bill for all this asks you if he being charged for all these instances. You try to explain to him how the billing works on EC2 instances to the best of your knowledge. What would be an appropriate response to give to the customer in regards to this?",
+    "choices": [
+      "Billing commences when Amazon EC2 AMI instance is completely up and billing ends as soon as the instance starts to shutdown.",
+      "Billing only commences only after 1 hour of uptime and billing ends when the instance terminates.",
+      "Billing commences when Amazon EC2 initiates the boot sequence of an AMI instance and billing ends when the instance shuts down.",
+      "Billing commences when Amazon EC2 initiates the boot sequence of an AMI instance and billing ends as soon as the instance starts to shutdown."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 188
+  },
+  {
+    "id": 560,
+    "question": "You are migrating an internal server on your DC to an EC2 instance with EBS volume. Your server disk usage is around 500GB so you just copied all your data to a 2TB disk to be used with AWS Import/Export. Where will the data be imported once it arrives at Amazon?",
+    "choices": [
+      "To a 2TB EBS volume.",
+      "To an S3 bucket with 2 objects of 1TB.",
+      "To an 500GB EBS volume.",
+      "To an S3 bucket as a 2TB snapshot."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 189
+  },
+  {
+    "id": 565,
+    "question": "In Amazon EC2, how many Elastic IP addresses can you have by default?",
+    "choices": [
+      "10.",
+      "2.",
+      "5.",
+      "20."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 190
+  },
+  {
+    "id": 567,
+    "question": "Using Amazon CloudWatch's Free Tier, what is the frequency of metric updates which you receive?",
+    "choices": [
+      "5 minutes.",
+      "500 milliseconds.",
+      "30 seconds",
+      "1 minute."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 191
+  },
+  {
+    "id": 568,
+    "question": "When you resize the Amazon RDS DB instance, Amazon RDS will perform the upgrade during the next maintenance window. If you want the upgrade to be performed now, rather than waiting for the maintenance window, specify the [...] option.",
+    "choices": [
+      "Apply Now.",
+      "Apply Soon.",
+      "Apply This.",
+      "Apply Immediately."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 192
+  },
+  {
+    "id": 571,
+    "question": "What happens to Amazon EBS root device volumes, by default, when an instance terminates?",
+    "choices": [
+      "Amazon EBS root device volumes are moved to IA",
+      "Amazon EBS root device volumes are copied into Amazon RD",
+      "Amazon EBS root device volumes are automatically deleted.",
+      "Amazon EBS root device volumes remain in the database until you delete them."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 193
+  },
+  {
+    "id": 574,
+    "question": "A company needs to deploy virtual desktops to its customers in a virtual private cloud, leveraging existing security controls. Which set of AWS services and features will meet the company's requirements?",
+    "choices": [
+      "Virtual Private Network connection. AWS Directory Services, and Classic link.",
+      "Virtual Private Network connection. AWS Di rectory Services, and Amazon Workspaces.",
+      "AWS Directory Service, Amazon Workspaces, and AWS Identity and Access Management.",
+      "Amazon Elastic Compute Cloud, and AWS Identity and Access Management."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 194
+  },
+  {
+    "id": 576,
+    "question": "A company is deploying a two-tier, highly available web application to AWS. Which service provides durable storage for static content while utilizing lower Overall CPU resources for the web tier?",
+    "choices": [
+      "Amazon EBS volume.",
+      "Amazon S3.",
+      "Amazon EC2 instance store.",
+      "Amazon RD5 instance."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 195
+  },
+  {
+    "id": 577,
+    "question": "Select the incorrect statement.",
+    "choices": [
+      "In Amazon EC2, the private IP addresses only returned to Amazon EC2 when the instance is stopped or terminated.",
+      "In Amazon VPC, an instance retains its private IP addresses when the instance is stopped.",
+      "In Amazon VPC, an instance does NOT retain its private IP addresses when the instance is stopped.",
+      "In Amazon EC2, the private IP address is associated exclusive ly with the instance for its lifetime."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 196
+  },
+  {
+    "id": 581,
+    "question": "Can Amazon S3 uploads resume on failure or do they need to restart?",
+    "choices": [
+      "Restart from beginning.",
+      "You can resume them, if you flag the 'resume on fai lure' option before uploading.",
+      "Resume on failure.",
+      "Depends on the file size."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 197
+  },
+  {
+    "id": 586,
+    "question": "What does Amazon EC2 provide?",
+    "choices": [
+      "Virtual servers in the Cloud.",
+      "A platform to run code (Java, PHP, Python), paying on an hourly basis.",
+      "Computer Clusters in the Cloud.",
+      "Physical servers, remotely managed by the customer."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 198
+  },
+  {
+    "id": 591,
+    "question": "You need to migrate a large amount of data into the cloud that you have stored on a hard disk and you decide that the best way to accomplish this is with AWS Import/Export and you mail the hard disk to AWS. Which of the following statements is incorrect in regards to AWS Import/Export?",
+    "choices": [
+      "It can export from Amazon S3.",
+      "It can Import to Amazon Glacier.",
+      "It can export from Amazon Glacier.",
+      "It can Import to Amazon EBS."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 199
+  },
+  {
+    "id": 592,
+    "question": "Can I control if and when MySQL based RDS Instance is upgraded to new supported versions?",
+    "choices": [
+      "No.",
+      "Only in VPC.",
+      "Yes."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 200
+  },
+  {
+    "id": 597,
+    "question": "What are characteristics of Amazon S3? (Choose 2 answers)",
+    "choices": [
+      "Amazon S3 allows you to store objects of virtually unlimited size.",
+      "Amazon S3 offers Provisioned IOP.",
+      "Amazon S3 allows you to store unlimited amounts of data.",
+      "Amazon S3 should be used to host a relational database.",
+      "Objects are directly accessible via a URL."
+    ],
+    "correct": [
+      2,
+      4
+    ],
+    "multi": true,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 201
+  },
+  {
+    "id": 600,
+    "question": "You are setting up a VPC and you need to set up a public subnet within that VPC. Which following requirement must be met for this subnet to be considered a public subnet?",
+    "choices": [
+      "Subnet's traffic is not routed to an internet gateway but has its traffic routed to a virtual private gateway.",
+      "Subnet's traffic is routed to an internet gateway.",
+      "Subnet's traffic is not routed to an internet gateway.",
+      "None of these answers can be considered a public subnet."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 202
+  },
+  {
+    "id": 601,
+    "question": "Is it possible to access your EBS snapshots?",
+    "choices": [
+      "Yes, through the Amazon S3 APIs.",
+      "Yes, through the Amazon EC2 APIs.",
+      "No, EBS snapshots cannot be accessed; they can only be used to create a new EBS volume.",
+      "EBS doesn't provide snapshots."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 203
+  },
+  {
+    "id": 602,
+    "question": "How many types of block devices does Amazon EC2 support?",
+    "choices": [
+      "4.",
+      "5.",
+      "2.",
+      "1."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 204
+  },
+  {
+    "id": 603,
+    "question": "SQL Server [...] store log ins and passwords in the master database.",
+    "choices": [
+      "can be configured to but by default does not.",
+      "doesn't.",
+      "does."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 205
+  },
+  {
+    "id": 613,
+    "question": "What is the durability of S3 RRS?",
+    "choices": [
+      "99.99%.",
+      "99.95%.",
+      "99.995%.",
+      "99.999999999%."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 206
+  },
+  {
+    "id": 614,
+    "question": "Your organization is in the business of architecting complex transactional databases. For a variety of reasons, this has been done on EBS. What is AWS's recommendation for customers who have architected databases using EBS for backups?",
+    "choices": [
+      "Backups to Amazon S3 be performed through the database management system.",
+      "Backups to AWS Storage Gateway be performed through the database management system.",
+      "If you take regular snapshots no further backups are required.",
+      "Backups to Amazon Glacier be performed through the database management system."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 207
+  },
+  {
+    "id": 615,
+    "question": "You need to create a load balancer in a VPC network that you are building. You can make your load balancer internal (private) or internet-facing (public). When you make your load balancer internal, a DNS name will be created, and it will contain the private IP address of the load balancer. An internal load balancer is not exposed to the internet. When you make your load balancer internet-facing, a DNS name will be created with the public IP address. If you want the Internet-facing load balancer to be connected to the Internet, where must this load balancer reside?",
+    "choices": [
+      "The load balancer must reside in a subnet that is connected to the internet using the internet gateway.",
+      "The load balancer must reside in a subnet that is not connected to the internet.",
+      "The load balancer must not reside in a subnet that is connected to the internet.",
+      "The load balancer must be completely outside of your IP."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 208
+  },
+  {
+    "id": 616,
+    "question": "In the Amazon CloudWatch, which metric should I be checking to ensure that your DB Instance has enough free storage space?",
+    "choices": [
+      "Free Storage.",
+      "Free Storage Space.",
+      "Free Storage Volume.",
+      "Free DB Storage Space."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 209
+  },
+  {
+    "id": 621,
+    "question": "What happens to data on an ephemeral volume of an EBS-backed EC2 instance if it is terminated or if it fails?",
+    "choices": [
+      "Data is automatically copied to another volume.",
+      "The volume snapshot is saved in S3.",
+      "Data persists.",
+      "Data is deleted."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 210
+  },
+  {
+    "id": 623,
+    "question": "You have just discovered that you can upload your objects to Amazon S3 using Multipart Upload API. You start to test it out but are unsure of the benefits that it would provide. Which of the following is not a benefit of using multipart uploads?",
+    "choices": [
+      "You can begin an upload before you know the final object size.",
+      "Quick recovery from any network issues.",
+      "Pause and resume object uploads.",
+      "It's more secure than normal upload."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 211
+  },
+  {
+    "id": 624,
+    "question": "To help you manage your Amazon EC2 instances, images, and other Amazon EC2 resources, you can assign your own metadata to each resource in the form of [...].",
+    "choices": [
+      "special filters.",
+      "functions.",
+      "tags.",
+      "wildcards."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 212
+  },
+  {
+    "id": 625,
+    "question": "Do the Amazon EBS volumes persist independently from the running life of an Amazon EC2 instance?",
+    "choices": [
+      "No.",
+      "Only if instructed to when created.",
+      "Yes."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 213
+  },
+  {
+    "id": 629,
+    "question": "Regarding the attaching of ENI to an instance, what does 'warm attach' refer to?",
+    "choices": [
+      "Attaching an ENI to an instance when it is stopped.",
+      "This question doesn't make sense.",
+      "Attaching an ENI to an instance when it is running.",
+      "Attaching an ENI to an instance during the launch process."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 214
+  },
+  {
+    "id": 631,
+    "question": "By default, when an EBS volume is attached to a Windows instance, it may show up as any drive letter on the instance. You can change the settings of the [...] Service to set the drive letters of the EBS volumes per your specifications.",
+    "choices": [
+      "EBS Config Service.",
+      "AMI Config Service.",
+      "EC2 Config Service.",
+      "EC2-AMI Config Service."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 215
+  },
+  {
+    "id": 632,
+    "question": "Select the correct set of steps for exposing the snapshot only to specific AWS accounts.",
+    "choices": [
+      "Select public for all the accounts and check mark t hose accounts with whom you want to expose the snapshots and cl ick save.",
+      "Select Private, enter the IDs of t hose AWS accounts, and click Save.",
+      "Select Public, enter the IDs of those AWS accounts, and click Save.",
+      "Select Public, mark the IDs of those AWS accounts as private, and click Save."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 216
+  },
+  {
+    "id": 635,
+    "question": "What can I access by visiting the URL: http://status.aws.amazon.com/?",
+    "choices": [
+      "Amazon Cloud Watch.",
+      "Status of the Amazon RDS DB.",
+      "AWS Service Health Dashboard.",
+      "AWS Cloud Monitor."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 217
+  },
+  {
+    "id": 637,
+    "question": "A user is launching an EC2 instance in the US East region. Which of the below mentioned options is recommended by AWS with respect to the selection of the Availability Zone?",
+    "choices": [
+      "Always select the AZ while launching an instance.",
+      "Always select the US-East-1-a zone for HA.",
+      "Do not select the AZ; instead let AWS select the AZ.",
+      "The user can never select the Availability Zone while launching an instance."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 218
+  },
+  {
+    "id": 639,
+    "question": "Select the correct statement.",
+    "choices": [
+      "You don't need not specify the resource identifier while stopping a resource.",
+      "You can terminate, stop, or delete a resource based solely on its tags.",
+      "You can't terminate, stop, or delete a resource based solely on its tags.",
+      "You don't need to specify the resource identifier while terminating a resource."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 219
+  },
+  {
+    "id": 640,
+    "question": "What is the time period with which metric data is sent to CloudWatch when detailed monitoring is enabled on an Amazon EC2 instance?",
+    "choices": [
+      "15 minutes.",
+      "5 minutes.",
+      "1 minute.",
+      "45 seconds."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 220
+  },
+  {
+    "id": 643,
+    "question": "What is the data model of DynamoDB?",
+    "choices": [
+      "Since DynamoDB is schema-less, there is no data model.",
+      "'Items', with Keys and one or more Attribute; and 'Attribute', with Name and Value.",
+      "'Table', a collection of Items; 'Items', with Keys and one or more Attribute; and 'Attribute', with Name and Value.",
+      "'Database', which is a set of 'Tables', which is a set of 'Items', which is a set of 'Attributes'."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 221
+  },
+  {
+    "id": 644,
+    "question": "What is a placement group in Amazon EC2?",
+    "choices": [
+      "It is a group of EC2 instances within a single Availability Zone.",
+      "It the edge location of your web content.",
+      "It is the AWS region where you run the EC2 instance of your web content.",
+      "It is a group used to span multiple Availability Zones."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 222
+  },
+  {
+    "id": 674,
+    "question": "A company uses AWS Organizations to create dedicated AWS accounts for each business unit to manage each business unit's account independently upon request. The root email recipient missed a notification that was sent to the root user email address of one account. The company wants to ensure that all future notifications are not missed. Future notifications must be limited to account administrators. Which solution will meet these requirements?",
+    "choices": [
+      "Configure the company's email server to forward notification email messages that are sent to the AWS account root user email address to all users in the organization.",
+      "Configure all AWS account root user email addresses as distribution lists that go to a few administrators who can respond to alerts. Configure AWS account alternate contacts in the AWS Organizations console or programmatically.",
+      "Configure all AWS account root user email messages to be sent to one administrator who is responsible for monitoring alerts and forwarding those alerts to the appropriate groups.",
+      "Configure all existing AWS accounts and all newly created accounts to use the same root user email address. Configure AWS account alternate contacts in the AWS Organizations console or programmatically."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 223
+  },
+  {
+    "id": 683,
+    "question": "A company has a three-tier web application that is deployed on AWS. The web servers are deployed in a public subnet in a VPC. The application servers and database servers are deployed in private subnets in the same VPC. The company has deployed a third-party virtual firewall appliance from AWS Marketplace in an inspection VPC. The appliance is configured with an IP interface that can accept IP packets. A solutions architect needs to integrate the web application with the appliance to inspect all traffic to the application before the traffic reaches the web server. Which solution will meet these requirements with the LEAST operational overhead?",
+    "choices": [
+      "Create a Network Load Balancer in the public subnet of the application's VPC to route the traffic to the appliance for packet inspection.",
+      "Create an Application Load Balancer in the public subnet of the application's VPC to route the traffic to the appliance for packet inspection.",
+      "Deploy a transit gateway in the inspection VPConfigure route tables to route the incoming packets through the transit gateway.",
+      "Deploy a Gateway Load Balancer in the inspection VPC. Create a Gateway Load Balancer endpoint to receive the incoming packets and forward the packets to the appliance."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 224
+  },
+  {
+    "id": 692,
+    "question": "A company is migrating applications to AWS. The applications are deployed in different accounts. The company manages the accounts centrally by using AWS Organizations. The company's security team needs a single sign-on (SSO) solution across all the company's accounts. The company must continue managing the users and groups in its on-premises self-managed Microsoft Active Directory. Which solution will meet these requirements?",
+    "choices": [
+      "Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console. Create a one-way forest trust or a one-way domain trust to connect the company's self-managed Microsoft Active Directory with AWS SSO by using AWS Directory Service for Microsoft Active Directory.",
+      "Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console. Create a two-way forest trust to connect the company's self-managed Microsoft Active Directory with AWS SSO by using AWS Directory Service for Microsoft Active Directory.",
+      "Use AWS Directory Service. Create a two-way trust relationship with the company's self-managed Microsoft Active Directory.",
+      "Deploy an identity provider (IdP) on premises. Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 0,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 225
+  }
+]

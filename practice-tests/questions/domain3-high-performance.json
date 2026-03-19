@@ -1,0 +1,1718 @@
+[
+  {
+    "id": 8,
+    "question": "When should I choose Provisioned IOPS over Standard RDS storage?",
+    "choices": [
+      "If you have batch-oriented workloads.",
+      "If you use production online transaction processing (OLTP) workloads.",
+      "If you have workloads that are not sensitive to consistent performance."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 1
+  },
+  {
+    "id": 9,
+    "question": "Your department creates regular analytics reports from your company's log files All log data is collected in Amazon S3 and processed by daily Amazon Elastic MapReduce (EMR) jobs that generate daily PDF reports and aggregated tables in CSV format for an Amazon Redshift data warehouse. Which of the following alternatives will lower costs without compromising average performance of the system or data integrity for the raw data?",
+    "choices": [
+      "Use reduced redundancy storage (RRS) for all data in S3. Use a combination of Spot Instances and Reserved Instances for Amazon EMR jobs. Use Reserved Instances for Amazon Redshift.",
+      "Use reduced redundancy storage (RRS) for PDF and .csv data in S3. Add Spot Instances to EMR jobs. Use Spot Instances for Amazon Redshift.",
+      "Use reduced redundancy storage (RRS) for PDF and .csv data in Amazon S3. Add Spot Instances to Amazon EMR jobs. Use Reserved Instances for Amazon Redshift.",
+      "Use reduced redundancy storage (RRS) for all data in Amazon S3. Add Spot Instances to Amazon EMR jobs. Use Reserved Instances for Amazon Redshift."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 2
+  },
+  {
+    "id": 13,
+    "question": "Content and Media Server is the latest requirement that you need to meet for a client. The client has been very specific about his requirements such as low latency, high availability, durability, and access control. Potentially there will be millions of views on this server and because of 'spiky' usage patterns, operations teams will need to provision static hardware, network, and management resources to support the maximum expected need. The Customer base will be initially low but is expected to grow and become more geographically distributed. Which of the following would be a good solution for content distribution?",
+    "choices": [
+      "Amazon S3 as both the origin server and for caching.",
+      "AWS Storage Gateway as the origin server and Amazon EC2 for caching.",
+      "AWS CloudFront as both the origin server and for caching.",
+      "Amazon S3 as the origin server and Amazon CloudFront for caching."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 3
+  },
+  {
+    "id": 18,
+    "question": "Which of the following services natively encrypts data at rest within an AWS region? (Choose 2 answers)",
+    "choices": [
+      "AWS Storage Gateway.",
+      "Amazon DynamoDB.",
+      "Amazon CloudFront.",
+      "Amazon Glacier.",
+      "Amazon Simple Queue Service."
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 4
+  },
+  {
+    "id": 19,
+    "question": "Which one of the following can't be used as an origin server with Amazon CloudFront?",
+    "choices": [
+      "A web server running in your infrastructure.",
+      "Amazon S3.",
+      "Amazon Glacier.",
+      "A web server running on Amazon EC2 instances."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 5
+  },
+  {
+    "id": 29,
+    "question": "What is the network performance offered by the c4.8xlarge instance in Amazon EC2?",
+    "choices": [
+      "20 Gigabit.",
+      "10 Gigabit.",
+      "Very High but variable.",
+      "5 Gigabit."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 6
+  },
+  {
+    "id": 31,
+    "question": "What does Amazon DynamoDB provide?",
+    "choices": [
+      "A predictable and scalable MySQL database.",
+      "A fast and reliable PL/SQL database cluster.",
+      "A standalone Cassandra database, managed by Amazon Web Services.",
+      "A fast, highly scalable managed NoSQL database service."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 7
+  },
+  {
+    "id": 35,
+    "question": "What does Amazon Elastic Beanstalk provide?",
+    "choices": [
+      "A scalable storage appliance on top of Amazon Web Services.",
+      "An application container on top of Amazon Web Services.",
+      "A service by this name doesn't exist.",
+      "A scalable cluster of EC2 instances."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 8
+  },
+  {
+    "id": 40,
+    "question": "You have been asked to build a database warehouse using Amazon Redshift. You know a little about it, including that it is a SQL data warehouse solution, and uses industry standard ODBC and JDBC connections and PostgreSQL drivers. However, you are not sure about what sort of storage it uses for database tables. What sort of storage does Amazon Redshift use for database tables?",
+    "choices": [
+      "InnoDB Tables.",
+      "NDB data storage.",
+      "Columnar data storage.",
+      "NDB CLUSTER Storage."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 9
+  },
+  {
+    "id": 45,
+    "question": "A user is planning a highly available application deployment with EC2. Which of the below mentioned options will not help to achieve HA?",
+    "choices": [
+      "Elastic IP address.",
+      "PIOPS.",
+      "AMI.",
+      "Availability Zones."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 10
+  },
+  {
+    "id": 48,
+    "question": "You are deploying an application to collect votes for a very popular television show. Millions of users will submit votes using mobile devices. The votes must be collected into a durable, scalable, and highly available data store for real-time public tabulation. Which service should you use?",
+    "choices": [
+      "Amazon DynamoDB.",
+      "Amazon Redshift.",
+      "Amazon Kinesis.",
+      "Amazon Simple Queue Service."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 11
+  },
+  {
+    "id": 73,
+    "question": "Which one of the below is not an AWS Storage Service?",
+    "choices": [
+      "Amazon S3.",
+      "Amazon Glacier.",
+      "Amazon CloudFront.",
+      "Amazon EBS."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 12
+  },
+  {
+    "id": 77,
+    "question": "You need to measure the performance of your EBS volumes as they seem to be under performing. You have come up with a measurement of 1,024 KB I/O but your colleague tells you that EBS volume performance is measured in IOPS. How many IOPS is equal to 1,024 KB I/O?",
+    "choices": [
+      "16.",
+      "256.",
+      "8.",
+      "4."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 13
+  },
+  {
+    "id": 78,
+    "question": "Your company produces customer commissioned one-of-a-kind skiing helmets combining high fashion with custom technical enhancements. Customers can show off their Individuality on the ski slopes and have access to head-up-displays. GPS rear-view cams and any other technical innovation they wish to embed in the helmet. The current manufacturing process is data rich and complex including assessments to ensure that the custom electronics and materials used to assemble the helmets are to the highest standards. Assessments are a mixture of human and automated assessments you need to add a new set of assessment to model the failure modes of the custom electronics using GPUs with CUDA, across a cluster of servers with low latency networking. What architecture would allow you to automate the existing process using a hybrid approach and ensure that the architecture can support the evolution of processes over time?",
+    "choices": [
+      "Use AWS Data Pipeline to manage movement of data & meta-data and assessments Use an autoscaling group of G2 instances in a placement group.",
+      "Use Amazon Simple Workflow (SWF) to manages assessments, movement of data & meta-data Use an auto-scaling group of G2 instances in a placement group.",
+      "Use Amazon Simple Workflow (SWF) to manages assessments movement of data & meta-data Use an auto-scaling group of C3 instances with SR-IOV (Single Root 1/0 Virtualization).",
+      "Use AWS data Pipeline to manage movement of data & meta-data and assessments use autoscaling group of C3 with SR-IOV (Single Root 1/0 virtualization)."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 14
+  },
+  {
+    "id": 100,
+    "question": "You have been asked to set up monitoring of your network and you have decided that Cloudwatch would be the best service to use. Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real-time. You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and applications. Which of the following items listed can AWS Cloudwatch monitor?",
+    "choices": [
+      "Log files your applications generate.",
+      "All of the items listed on this page.",
+      "System-wide visibility into resource utilization, application performance, and operational health.",
+      "Custom metrics generated by your applications and services."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 15
+  },
+  {
+    "id": 101,
+    "question": "What is the maximum write throughput I can provision for a single Dynamic DB table?",
+    "choices": [
+      "1,000 write capacity units.",
+      "100,000 write capacity units.",
+      "Dynamic DB is designed to scale without limits, but if you go beyond 10,000 you have to contact AWS first.",
+      "10,000 write capacity units."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 16
+  },
+  {
+    "id": 105,
+    "question": "In the 'Detailed' monitoring data available for your Amazon EBS volumes, Provisioned IOPS volumes automatically send [...] minute metrics to Amazon CloudWatch.",
+    "choices": [
+      "3.",
+      "1.",
+      "5.",
+      "2."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 17
+  },
+  {
+    "id": 106,
+    "question": "You are looking at ways to improve some existing infrastructure as it seems a lot of engineering resources are being taken up with basic management and monitoring tasks and the costs seem to be excessive. You are thinking of deploying Amazon ElasticCache to help. Which of the following statements is true in regards to ElasticCache?",
+    "choices": [
+      "You can improve load and response times to user actions and queries however the cost associated with scaling web applications will be more.",
+      "You can't improve load and response times to user actions and queries but you can reduce the cost associated with scaling web applications.",
+      "You can improve load and response times to user actions and queries however the cost associated with scaling web applications will remain the same.",
+      "You can improve load and response times to user actions and queries and also reduce the cost associated with scaling web applications."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 18
+  },
+  {
+    "id": 127,
+    "question": "If you are using Amazon RDS Provisioned IOPS storage with MySQL and Oracle database engines, you can scale the throughput of your database Instance by specifying the IOPS rate from [...].",
+    "choices": [
+      "1,000 to 100,000.",
+      "100 to 1,000.",
+      "10,000 to 100,000.",
+      "1,000 to 10,000."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 19
+  },
+  {
+    "id": 132,
+    "question": "You are designing a social media site and are considering how to mitigate distributed denial-of service (DDoS) attacks. Which of the below are viable mitigation techniques? (Choose 3 answers)",
+    "choices": [
+      "Add multiple elastic network interfaces (ENis) to each EC2 instance to increase the network bandwidth.",
+      "Use dedicated instances to ensure that each instance has the maximum performance possible.",
+      "Use an Amazon CloudFront distribution for both static and dynamic content.",
+      "Use an Elastic Load Balancer with auto scaling groups at the web. App and Amazon Relational Database Service (RDS) tiers.",
+      "Add alert Amazon CloudWatch to look for high Network in and CPU utilization.",
+      "Create processes and capabilities to quickly add and remove rules to the instance OS firewall."
+    ],
+    "correct": [
+      2,
+      3,
+      4
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 20
+  },
+  {
+    "id": 133,
+    "question": "In Amazon CloudFront, if you use Amazon EC2 instances and other custom origins with CloudFront, it is recommended to [...].",
+    "choices": [
+      "not use Elastic Load Balancing.",
+      "restrict Internet communication to private instances while allowing outgoing traffic.",
+      "enable access key rotation for CloudWatch metrics.",
+      "specify the URL of the load balancer for the domain name of your origin server."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 21
+  },
+  {
+    "id": 137,
+    "question": "You have an application running on an Amazon Elastic Compute Cloud instance, that uploads 5 GB video objects to Amazon Simple Storage Service (S3). Video uploads are taking longer than expected, resulting in poor application performance. Which method will help improve performance of your application?",
+    "choices": [
+      "Enable enhanced networking.",
+      "Use Amazon S3 multipart upload.",
+      "Leveraging Amazon CloudFront, use the HTTP POST method to reduce latency.",
+      "Use Amazon Elastic Block Store Provisioned IOPs and use an Amazon EBS-optimized instance."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 22
+  },
+  {
+    "id": 138,
+    "question": "You have been given a scope to set up an AWS Media Sharing Framework for a new start up photo sharing company similar to flickr. The first thing that comes to mind about this is that it will obviously need a huge amount of persistent data storage for this framework. Which of the following storage options would be appropriate for persistent storage?",
+    "choices": [
+      "Amazon Glacier or Amazon S3.",
+      "Amazon Glacier or AWS Import/Export.",
+      "AWS Import/Export or Amazon CloudFront.",
+      "Amazon EBS volumes or Amazon S3."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 23
+  },
+  {
+    "id": 167,
+    "question": "True or False: Provisioned IOPS Costs - you are charged for the IOPS and storage whether or not you use them in a given month.",
+    "choices": [
+      "True.",
+      "False."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 24
+  },
+  {
+    "id": 169,
+    "question": "An edge location refers to which Amazon Web Service?",
+    "choices": [
+      "An edge location is referred to the network configured within a Zone or Region.",
+      "An edge location is an AWS Region.",
+      "An edge location is the location of the data center used for Amazon CloudFront.",
+      "An edge location is a Zone within an AWS Region."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 25
+  },
+  {
+    "id": 181,
+    "question": "You require the ability to analyze a large amount of data, which is stored on Amazon S3 using Amazon Elastic MapReduce. You are using the cc2 8x large Instance type, whose CPUs are mostly idle during processing. Which of the below would be the most cost efficient way to reduce the runtime of the job?",
+    "choices": [
+      "Create more smaller flies on Amazon S3.",
+      "Add additional cc2 8x large instances by introducing a task group.",
+      "Use smaller instances that have higher aggregate 1/0 performance.",
+      "Create fewer, larger fi les on Amazon S3."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 26
+  },
+  {
+    "id": 193,
+    "question": "In the most recent company meeting, your CEO focused on the fact that everyone in the organization needs to make sure that all of the infrastructure that is built is truly scalable. Which of the following statements is incorrect in reference to scalable architecture?",
+    "choices": [
+      "A scalable service is capable of handling heterogeneity.",
+      "A scalable service is resilient.",
+      "A scalable architecture won't be cost effective as it grows.",
+      "Increasing resources results in a proportional increase in performance."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 27
+  },
+  {
+    "id": 204,
+    "question": "You have launched an EC2 instance with four (4) 500 GB EBS Provisioned IOPS volumes attached. The EC2 instance is EBS-Optimized and supports 500 Mbps throughput between EC2 and EBS. The four EBS volumes are configured as a single RAID 0 device, and each Provisioned IOPS volume is provisioned with 4,000IOPS (4,000 16KB reads or writes), for a total of 16,000 random IOPS on the instance. The EC2 instance initially delivers the expected 16,000 IOPS random read and write performance. Sometime later, in order to increase the total random I/O performance of the instance, you add an additional two 500 GB EBS Provisioned IOPS volumes to the RAID. Each volume is provisioned to 4,000 IOPs like the original four, for a total of 24,000 IOPS on the EC2 instance. Monitoring shows that the EC2 instance CPU utilization increased from 50% to 70%, but the total random IOPS measured at the instance level does not increase at all. What is the problem and a valid solution?",
+    "choices": [
+      "Larger storage volumes support higher Provisioned IOPS rates; increase the provisioned volume storage of each of the 6 EBS volumes to 1TB.",
+      "The EBS-Optimized throughput limits the total IOPS that can be utilized; use an EBS Optimized instance that provides larger throughput. Mo",
+      "Small block sizes cause performance degradation, limiting the I/O throughput; configure the instance device driver and filesystem to use 64KB blocks to increase throughput.",
+      "The standard EBS Instance root volume limits the total IOPS rate; change the instance root volume to also be a 500GB 4,000 Provisioned IOPS volume.",
+      "RAID 0 only scales linearly to about 4 devices; use RAID 0 with 4 EBS Provisioned IOPS volumes, but increase each Provisioned IOPS EBS volume to 6,000 IOPS."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 28
+  },
+  {
+    "id": 208,
+    "question": "A web company is looking to implement an intrusion detection and prevention system into their deployed VPC. This platform should have the ability to scale to thousands of instances running inside of the VPC. How should they architect their solution to achieve these goals?",
+    "choices": [
+      "Configure an instance with monitoring software and the elastic network interface (ENI) set to promiscuous mode packet sniffing to see an traffic across the VPC. Configure servers running in the VPC using the host-based 'route' commands to send all traffic through the platform to a scalable virtualized IDS/IP.",
+      "Create a second VPC and route all traffic from the primary application VPC through the second VPC where the scalable virtualized IDS/IPS platform resides.",
+      "Configure servers running in the VPC using the host-based 'route' commands to send all traffic through the platform to a scalable virtualized IDS/IP.",
+      "Configure each host with an agent that collects all network traffic and sends that traffic to the IDS/IPS platform for inspection."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 29
+  },
+  {
+    "id": 210,
+    "question": "Which of the following is not a true statement relating to the performance of your EBS volumes?",
+    "choices": [
+      "Frequent snapshots provide a higher level of data durability and they will not degrade the performance of your application while the snapshot is in progress.",
+      "General Purpose (SSD) and Provisioned IOPS (SSD) volumes have a throughput limit of 128 MB/s per volume.",
+      "There is a relationship between the maximum performance of your EBS volumes, the amount of I/O you are driving to them, and the amount of time it takes for each transaction to complete.",
+      "There is a 5 to 50 percent reduction in IOPS when you first access each block of data on a newly created or restored EBS volume."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 30
+  },
+  {
+    "id": 228,
+    "question": "Which services allow the customer to retain full administrative privileges of the underlying EC2 instances? (Choose 2 answers)",
+    "choices": [
+      "Amazon Relational Database Service.",
+      "Amazon Elastic MapReduce.",
+      "Amazon ElastiCache.",
+      "Amazon DynamoDB.",
+      "AWS Elastic Beanstalk."
+    ],
+    "correct": [
+      1,
+      4
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 31
+  },
+  {
+    "id": 233,
+    "question": "Can I use Provisioned IOPS with VPC?",
+    "choices": [
+      "Only Oracle based RDS.",
+      "No.",
+      "Only with MSSQL based RDS.",
+      "Yes for all RDS instances."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 32
+  },
+  {
+    "id": 237,
+    "question": "Which of the below statements would be an incorrect response to your customers enquiry?",
+    "choices": [
+      "Amazon EMR customers can choose to send data to Amazon S3 using the HTTPS protocol for secure transmission.",
+      "Amazon S3 provides authentication mechanisms to ensure that stored data is secured against unauthorized access.",
+      "Every packet sent in the AWS network uses Internet Protocol Security (IPsec).",
+      "Customers may encrypt the input data before they upload it to Amazon S3."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 33
+  },
+  {
+    "id": 241,
+    "question": "An AWS customer runs a public blogging website. The site users upload two million blog entries a month. The average blog entry size is 200 KB. The access rate to blog entries drops to negligible 6 months after publication and users rarely access a blog entry 1 year after publication. Additionally, blog entries have a high update rate during the first 3 months following publication, this drops to no updates after 6 months. The customer wants to use CloudFront to improve his user's load times. Which of the following recommendations would you make to the customer?",
+    "choices": [
+      "Duplicate entries into two different buckets and create two separate CloudFront distributions where S3 access is restricted only to CloudFront identity.",
+      "Create a CloudFront distribution with 'US' Europe price class for US/ Europe users and a different CloudFront distribution with Al l Edge Locations' for the remaining users.",
+      "Create a CloudFront distribution with S3 access restricted only to the CloudFront identity and partition the blog entry's location in S3 according to the month it was uploaded to be used withCloudFront behaviors.",
+      "Create a CloudFronl distribution with Restrict Viewer Access Forward Query string set to true and minimum TTL of 0."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 34
+  },
+  {
+    "id": 245,
+    "question": "You are architecting a highly-scalable and reliable web application which will have a huge amount of content. You have decided to use Cloudfront as you know it will speed up distribution of your static and dynamic web content and know that Amazon CloudFront integrates with Amazon CloudWatch metrics so that you can monitor your web application. Because you live in Sydney you have chosen the the Asia Pacific (Sydney) region in the AWS console. However you have set up this up but no CloudFront metrics seem to be appearing in the CloudWatch console. What is the most likely reason from the possible choices below for this?",
+    "choices": [
+      "Metrics for CloudWatch are available only when you choose the same region as the application you are monitoring.",
+      "You need to pay for CloudWatch for it to become active.",
+      "Metrics for CloudWatch are available only when you choose the US East (Virginia).",
+      "Metrics for CloudWatch are not available for the Asia Pacific region as yet."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 35
+  },
+  {
+    "id": 260,
+    "question": "Your company plans to host a large donation website on Amazon Web Services (AWS). You anticipate a large and undetermined amount of traffic that will create many database writes. To be certain that you do not drop any writes to a database hosted on AWS. Which service should you use?",
+    "choices": [
+      "Amazon RDS with provisioned IOPS up to the anticipated peak write throughput.",
+      "Amazon Simple Queue Service (SOS) for capturing the writes and draining the queue to write to the database.",
+      "Amazon ElastiCache to store the writes until the writes are committed to the database.",
+      "Amazon DynamoDB with provisioned write throughput up to the anticipated peak write throughput."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 36
+  },
+  {
+    "id": 272,
+    "question": "A user is planning to launch a scalable web application. Which of the below mentioned options will not affect the latency of the application?",
+    "choices": [
+      "Region.",
+      "Provisioned IOPS.",
+      "Availability Zone.",
+      "Instance size."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 37
+  },
+  {
+    "id": 276,
+    "question": "You have been asked to design the storage layer for an application. The application requires disk performance of at least 100,000 IOPS. In addition, the storage layer must be able to survive the loss of an individual disk, EC2 instance, or Availability Zone without any data loss. The volume you provide must have a capacity of at least 3 TB. Which of the following designs will meet these objectives?",
+    "choices": [
+      "Instantiate a c3.8xlarge instance in us-east-1. Provision 4x1TB EBS volumes, attach them to the instance, and configure them as a single RAID 5 volume. Ensure that EBS snapshots are performed every 15 minutes.",
+      "Instantiate a c3.8xlarge instance in us-east-1. Provision 3xlTB EBS volumes, attach them to the Instance, and configure them as a single RAID 0 volume. Ensure that EBS snapshots are performed every 15 minutes.",
+      "Instantiate an i2.8xlarge instance in us-east-1a. Create a RAID 0 volume using the four 800GB SSD ephemeral disks provided with the instance. Provision 3x1TB EBS volumes, attach them to the instance, and configure them as a second RAID 0 volume. Configure synchronous, block-level replication from the ephemeral-backed volume to the EBS-backed volume.",
+      "Instantiate a c3.8xlarge instance in us-east-1. Provision an AWS Storage Gateway and configure it for 3 TB of storage and 100,000 IOPS. Attach the volume to the instance.",
+      "Instantiate an i2.8xlarge instance in us-east-1a. Create a RAID 0 volume using the four 800GB SSD ephemeral disks provided with the instance. Configure synchronous, block-level replication to an identically configured instance in us-east-1b."
+    ],
+    "correct": [
+      4
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 38
+  },
+  {
+    "id": 289,
+    "question": "A gaming company comes to you and asks you to build them infrastructure for their site. They are not sure how big they will be as with all start ups they have limited money and big ideas. What they do tell you is that if the game becomes successful, like one of their previous games, it may rapidly grow to millions of users and generate tens (or even hundreds) of thousands of writes and reads per second. After considering all of this, you decide that they need a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. Which of the following databases do you think would best fit their needs?",
+    "choices": [
+      "Amazon DynamoDB.",
+      "Amazon Redshift.",
+      "Any non-relational database.",
+      "Amazon SimpleDB."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 39
+  },
+  {
+    "id": 295,
+    "question": "What is the average IOPS that the user will get for most of the year as per EC2 SLA if the instance is attached to the EBS optimized instance?",
+    "choices": [
+      "950.",
+      "990.",
+      "1000.",
+      "900."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 40
+  },
+  {
+    "id": 303,
+    "question": "Which of the following will cause an immediate DB instance reboot to occur?",
+    "choices": [
+      "You change storage type from standard to PIOPS, and Apply Immediately is set to true.",
+      "You change the DB instance class, and Apply Immediately is set to false.",
+      "You change a static parameter in a DB parameter group.",
+      "You change the backup retention period for a DB instance from 0 to a nonzero value or from a nonzero value to 0, and Apply Immediately is set to false."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 41
+  },
+  {
+    "id": 311,
+    "question": "A Provisioned IOPS volume must be at least [...] GB in size.",
+    "choices": [
+      "1.",
+      "50.",
+      "20.",
+      "10."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 42
+  },
+  {
+    "id": 314,
+    "question": "The [...] service is targeted at organizations with multiple users or systems that use AWS products such as Amazon EC2, Amazon SimpleDB, and the AWS Management Console.",
+    "choices": [
+      "Amazon RDS.",
+      "AWS Integrity Management.",
+      "AWS Identity and Access Management.",
+      "Amazon EMR."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 43
+  },
+  {
+    "id": 315,
+    "question": "You have just been given a scope for a new client who has an enormous amount of data (petabytes) that he constantly needs analysed. Currently he is paying a huge amount of money for a data warehousing company to do this for him and is wondering if AWS can provide a cheaper solution. Do you think AWS has a solution for this?",
+    "choices": [
+      "Yes. Amazon SimpleDB.",
+      "No. Not presently.",
+      "Yes. Amazon Redshift.",
+      "Yes. Your choice of relational AMIs on Amazon EC2 and EBS."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 44
+  },
+  {
+    "id": 335,
+    "question": "How would you improve page load times for your users? (Choose 3 answers)",
+    "choices": [
+      "Lower the scale up trigger of your Auto Scaling group to 30% so it scales more aggressively.",
+      "Add an Amazon ElastiCache caching layer to your application for storing sessions and frequent DB queries.",
+      "Configure Amazon CloudFront dynamic content support to enable caching of re-usable content from your site.",
+      "Switch Amazon RDS database to the high memory extra large Instance type.",
+      "Set up a second installation in another region, and use the Amazon Route 53 latency-based routing feature to select the right region."
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 45
+  },
+  {
+    "id": 339,
+    "question": "You have just finished setting up an advertisement server in which one of the obvious choices for a service was Amazon Elastic MapReduce( EMR) and are now troubleshooting some weird cluster states that you are seeing. Which of the below is not an Amazon EMR cluster state?",
+    "choices": [
+      "STARTING.",
+      "STOPPED.",
+      "RUNNING.",
+      "WAITING."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 46
+  },
+  {
+    "id": 342,
+    "question": "One of the criteria for a new deployment is that the customer wants to use AWS Storage Gateway. However you are not sure whether you should use gateway-cached volumes or gateway-stored volumes or even what the differences are. Which statement below best describes those differences?",
+    "choices": [
+      "Gateway-cached lets you store your data in Amazon Simple Storage Service (Amazon S3) and retain a copy of frequently accessed data subsets locally. Gateway-stored enables you to configure your on-premises gateway to store all your data locally and then asynchronously back up point-in-time snapshots of this data to Amazon S3.",
+      "Gateway-cached is free whilst gateway-stored is not.",
+      "Gateway-cached is up to 10 times faster than gateway-stored.",
+      "Gateway-stored lets you store your data in Amazon Simple Storage Service (Amazon S3) and retain a copy of frequently accessed data subsets locally. Gateway-cached enables you to configure your on-premises gateway to store all your data locally and then asynchronously back up point-in-time snapshots of this data to Amazon S3."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 47
+  },
+  {
+    "id": 345,
+    "question": "After you recommend Amazon Redshift to a client as an alternative solution to paying data warehouses to analyze his data, your client asks you to explain why you are recommending Redshift. Which of the following would be a reasonable response to his request?",
+    "choices": [
+      "It has high performance at scale as data and query complexity grows.",
+      "It prevents reporting and analytic processing from interfering with the performance of OLTP workloads.",
+      "You don't have the administrative burden of running your own data warehouse and dealing with setup, durability, monitoring, scaling, and patching.",
+      "All answers listed are a reasonable response to his question."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 48
+  },
+  {
+    "id": 348,
+    "question": "You have multiple Amazon EC2 instances running in a cluster across multiple Availability Zones within the same region. What combination of the following should be used to ensure the highest network performance (packets per second), lowest latency, and lowest jitter? (Choose 3 answers)",
+    "choices": [
+      "Amazon EC2 placement groups.",
+      "Enhanced networking.",
+      "Amazon PV AMI.",
+      "Amazon HVM AMI.",
+      "Amazon Linux.",
+      "Amazon VPC."
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 49
+  },
+  {
+    "id": 357,
+    "question": "You are configuring your company's application to use Auto Scaling and need to move user state information. Which of the following AWS services provides a shared data store with durability and low latency?",
+    "choices": [
+      "AWS ElastiCache Memcached.",
+      "Amazon Simple Storage Service.",
+      "Amazon EC2 instance storage.",
+      "Amazon DynamoDB."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 50
+  },
+  {
+    "id": 360,
+    "question": "You deployed your company website using Elastic Beanstalk and you enabled log file rotation to S3. An Elastic MapReduce job is periodically analyzing the logs on S3 to build a usage dashboard that you share with your CIO. You recently improved overall performance of the website using CloudFront for dynamic content delivery and your website as the origin. After this architectural change, the usage dashboard shows that the traffic on your website dropped by an order of magnitude. How do you fix your usage dashboard?",
+    "choices": [
+      "Enable CloudFront to deliver access logs to S3 and use them as input of the Elastic MapReduce job.",
+      "Turn on Cloud Trail and use trail log tiles on S3 as input of the Elastic MapReduce job.",
+      "Change your log collection process to use Cloud Watch ELB metrics as input of the Elastic Map Reduce job.",
+      "Use Elastic Beanstalk 'Rebuild Environment' option to update log delivery to the Elastic Map Reduce job.",
+      "Use Elastic Beanstalk 'Restart App server(s)' option to update log delivery to the Elastic Map Reduce job."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 51
+  },
+  {
+    "id": 372,
+    "question": "After setting up a Virtual Private Cloud (VPC) network, a more experienced cloud engineer suggests that to achieve low network latency and high network throughput you should look into setting up a placement group. You know nothing about this, but begin to do some research about it and are especially curious about its limitations. Which of the below statements is wrong in describing the limitations of a placement group?",
+    "choices": [
+      "Although launching multiple instance types into a placement group is possible, this reduces the likelihood that the required capacity will be available for your launch to succeed.",
+      "A placement group can span multiple Availability Zones.",
+      "You can't move an existing instance into a placement group.",
+      "A placement group can span peered VPCs."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 52
+  },
+  {
+    "id": 380,
+    "question": "A read only news reporting site with a combined web and application tier and a database tier that receives large and unpredictable traffic demands must be able to respond to these traffic fluctuations automatically. What AWS services should be used meet these requirements?",
+    "choices": [
+      "Stateless instances for the web and application tier synchronized using Elasticache Memcached in an autoscaimg group monitored with CloudWatch. And RDSwith read replicas.",
+      "Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch and RDS with read replicas.",
+      "Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch and multi-AZ RDS.",
+      "Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch and multi-AZ RDS."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 53
+  },
+  {
+    "id": 381,
+    "question": "In Amazon AWS, which of the following statements is true of key pairs?",
+    "choices": [
+      "Key pairs are used only for Amazon SDKs.",
+      "Key pairs are used only for Amazon EC2 and Amazon CloudFront.",
+      "Key pairs are used only for Elastic Load Balancing and AWS IA.",
+      "Key pairs are used for all Amazon services."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 54
+  },
+  {
+    "id": 382,
+    "question": "What does Amazon ElastiCache provide?",
+    "choices": [
+      "A service by this name doesn't exist. Perhaps you mean Amazon CloudCache.",
+      "A virtual server with a huge amount of memory.",
+      "A managed In-memory cache service.",
+      "An Amazon EC2 instance with the Memcached software already pre-installed."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 55
+  },
+  {
+    "id": 386,
+    "question": "Your company is in the process of developing a next generation pet collar that collects biometric information to assist families with promoting healthy lifestyles for their pets. Each collar will push 30kb of biometric data in JSON format every 2 seconds to a collection platform that will process and analyze the data providing health trending information back to the pet owners and veterinarians via a web portal. Management has tasked you to architect the collection platform ensuring the following requirements are met. Provide the ability for real-time analytics of the inbound biometric data. Ensure processing of the biometric data is highly durable, elastic and parallel. The results of the analytic processing should be persisted for data mining. Which architecture outlined below will meet the initial requirements for the collection platform?",
+    "choices": [
+      "Utilize S3 to collect the inbound sensor data, analyze the data from S3 with a daily scheduled Data Pipeline and save the results to a Redshift Cluster.",
+      "Utilize Amazon Kinesis to collect the inbound sensor data, analyze the data with Kinesis clients and save the results to a Redshift cluster using EMR.",
+      "Utilize SQS to collect the inbound sensor data, analyze the data from SQS with Amazon Kinesis and save the results to a Microsoft SQL Server RDS instance.",
+      "Utilize EMR to collect the inbound sensor data, analyze the data from EMR with Amazon Kinesis and save the results to DynamoDB."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 56
+  },
+  {
+    "id": 390,
+    "question": "You have recently joined a startup company building sensors to measure street noise and air quality in urban areas. The company has been running a pilot deployment of around 100 sensors for 3 months. Each sensor uploads 1KB of sensor data every minute to a backend hosted on AWS. During the pilot, you measured a peak of 10 IOPS on the database, and you stored an average of 3GB of sensor data per month in the database. The current deployment consists of a load-balanced auto scaled Ingestion layer using EC2 instances and a PostgreSQL RDS database with 500GB standard storage. The pilot is considered a success and your CEO has managed to get the attention of some potential investors. The business plan requires a deployment of at least 100K sensors which needs to be supported by the backend. You also need to store sensor data for at least two years to be able to compare year over year improvements. To secure funding, you have to make sure that the platform meets these requirements and leaves room for further scaling. Which setup will meet the requirements?",
+    "choices": [
+      "Add an SQS queue to the ingestion layer to buffer writes to the RDS instance.",
+      "Ingest data into a DynamoDB table and move old data to a Redshift cluster.",
+      "Replace the RDS instance with a 6 node Redshift cluster with 96TB of storage.",
+      "Keep the current architecture but upgrade RDS storage to 3TB and 10K provisioned IOPS."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 57
+  },
+  {
+    "id": 394,
+    "question": "Which of the following features are provided by Amazon EC2?",
+    "choices": [
+      "Exadata Database Machine, Optimized Storage Management, Flashback Technology, and Data Warehousing.",
+      "Instances, Amazon Machine Images (AMIs), Key Pairs, Amazon EBS Volumes, Firewall, Elastic IP address, Tags, and Virtual Private Clouds (VPCs).",
+      "Real Application Clusters (RAC), Elasticache Machine Images (EMIs), Data Warehousing, Flashback Technology, Dynamic IP address.",
+      "Exadata Database Machine, Real Application Clusters (RAC), Data Guard, Table and Index Partitioning, and Data Pump Compression."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 58
+  },
+  {
+    "id": 399,
+    "question": "After deciding that EMR will be useful in analysing vast amounts of data for a gaming website that you are architecting you have just deployed an Amazon EMR Cluster and wish to monitor the cluster performance. Which of the following tools cannot be used to monitor the cluster performance?",
+    "choices": [
+      "Kinesis.",
+      "Ganglia.",
+      "CloudWatch Metrics.",
+      "Hadoop Web Interfaces."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 59
+  },
+  {
+    "id": 404,
+    "question": "In the 'Detailed ' monitoring data available for your Amazon EBS volumes, Provisioned IOPS volumes automatically send [...] minute metrics to Amazon CloudWatch.",
+    "choices": [
+      "5.",
+      "2.",
+      "1.",
+      "3."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 60
+  },
+  {
+    "id": 413,
+    "question": "You are building an automated transcription service in which Amazon EC2 worker instances process an uploaded audio file and generate a text file. You must store both of these files in the same durable storage until the text file is retrieved. You do not know what the storage capacity requirements are. Which storage option is both cost-efficient and scalable?",
+    "choices": [
+      "Multiple Amazon EBS volume with snapshots.",
+      "A single Amazon Glacier vault.",
+      "A single Amazon S3 bucket.",
+      "Multiple instance stores."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 61
+  },
+  {
+    "id": 447,
+    "question": "You have been using T2 instances as your CPU requirements have not been that intensive. However you now start to think about larger instance types and start looking at M1 and M3 instances. You are a little confused as to the differences between them as they both seem to have the same ratio of CPU and memory. Which statement below is incorrect as to why you would use one over the other?",
+    "choices": [
+      "M3 instances are less expensive than M1 instances.",
+      "M3 instances are configured with more swap memory than M1 instances.",
+      "M3 instances provide better, more consistent performance that M1 instances for most use-cases.",
+      "M3 instances also offer SSD-based instance storage that delivers higher I/O performance."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 62
+  },
+  {
+    "id": 451,
+    "question": "A major finance organisation has engaged your company to set up a large data mining application. Using AWS you decide the best service for this is Amazon Elastic MapReduce (EMR) which you know uses Hadoop. Which of the following statements best describes Hadoop?",
+    "choices": [
+      "Hadoop is 3rd Party software which can be installed using AMI.",
+      "Hadoop is an open source python web framework.",
+      "Hadoop is an open source Java software framework.",
+      "Hadoop is an open source javascript framework."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 63
+  },
+  {
+    "id": 462,
+    "question": "What is a placement group?",
+    "choices": [
+      "A collection of Auto Scaling groups in the same region.",
+      "A feature that enables EC2 instances to interact with each other via high bandwidth, low latency connections.",
+      "A collection of authorized CloudFront edge locations for a distribution.",
+      "A collection of Elastic Load Balancers in the same Region or Availability Zone."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 64
+  },
+  {
+    "id": 463,
+    "question": "You are checking the workload on some of your General Purpose (SSD) and Provisioned IOPS (SSD) volumes and it seems that the I/O latency is higher than you require. You should probably check the [...] to make sure that your application is not trying to drive more IOPS than you have provisioned.",
+    "choices": [
+      "amount of IOPS that are available.",
+      "acknowledgement from the storage subsystem.",
+      "average queue length.",
+      "time it takes for the I/O operation to complete."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 65
+  },
+  {
+    "id": 468,
+    "question": "Which of the following is NOT a characteristic of Amazon Elastic Compute Cloud (Amazon EC2)?",
+    "choices": [
+      "It can be used to launch as many or as few virtual servers as you need.",
+      "It increases the need to forecast traffic by providing dynamic IP addresses for static cloud computing.",
+      "It eliminates your need to invest in hardware up front, so you can develop and deploy applications faster.",
+      "It offers scalable computing capacity in the Amazon Web Services (AWS) cloud."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 66
+  },
+  {
+    "id": 473,
+    "question": "A favored client needs you to quickly deploy a database that is a relational database service with minimal administration as he wants to spend the least amount of time administering it. Which database would be the best option?",
+    "choices": [
+      "Amazon SimpleDB.",
+      "Your choice of relational AMIs on Amazon EC2 and EB.",
+      "Amazon RDS.",
+      "Amazon Redshift."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 67
+  },
+  {
+    "id": 487,
+    "question": "An online gaming site asked you if you can deploy a database that is a fast, highly scalable NoSQL database service in AWS for a new site that he wants to build. Which database should you recommend?",
+    "choices": [
+      "Amazon DynamoDB.",
+      "Amazon RDS.",
+      "Amazon Redshift.",
+      "Amazon SimpleDB."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 68
+  },
+  {
+    "id": 489,
+    "question": "You are the new IT architect in a company that operates a mobile sleep tracking application. When activated at night, the mobile app is sending collected data points of 1 kilobyte every 5 minutes to your backend. The backend takes care of authenticating the user and writing the data points into an Amazon DynamoDB table. Every morning, you scan the table to extract and aggregate last night's data on a per user basis, and store the results in Amazon S3. Users are notified via Amazon SNS mobile push notifications that new data is available, which is parsed and visualized by the mobile app. Currently you have around 100k users who are mostly based out of North America. You have been tasked to optimize the architecture of the backend system to lower cost. What would you recommend? (Choose 2 answers)",
+    "choices": [
+      "Create a new Amazon DynamoDB table each day and drop the one for the previous day after its data is on Amazon S3.",
+      "Have the mobile app access Amazon DynamoDB directly instead of JSON files stored on Amazon S3.",
+      "Introduce an Amazon SQS queue to buffer writes to the Amazon DynamoDB table and reduce provisioned write throughput.",
+      "Introduce Amazon Elasticache to cache reads from the Amazon DynamoDB table and reduce provisioned read throughput.",
+      "Write data directly into an Amazon Redshift cluster replacing both Amazon DynamoDB and Amazon S3."
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 69
+  },
+  {
+    "id": 490,
+    "question": "You are implementing a URL whitelisting system for a company that wants to restrict outbound HTTPS connections to specific domains from their EC2-hosted applications. You deploy a single EC2 instance running proxy software and configure it to accept traffic from all subnets and EC2 instances in the VPC. You configure the proxy to only pass through traffic to domains that you define in its whitelist configuration. You have a nightly maintenance window of 10 minutes where all instances fetch new software updates. Each update is about 200MB in size and there are 500 instances in the VPC that routinely fetch updates. After a few days you notice that some machines are failing to successfully download some, but not all of their updates within the maintenance window. The download URLs used for these updates are correctly listed in the proxy's whitelist configuration and you are able to access them manually using a web browser on the instances. What might be happening? (Choose 2 answers)",
+    "choices": [
+      "You are running the proxy on an undersized EC2 instance type so network throughput is not sufficient for all instances to download their updates in time.",
+      "You are running the proxy on a sufficiently-sized EC2 instance in a private subnet and its network throughput is being throttled by a NAT running on an undersized EC2 instance.",
+      "The route table for the subnets containing the affected EC2 instances is not configured to direct network traffic for the software update locations to the proxy.",
+      "You have not allocated enough storage to the EC2 instance running the proxy so the network buffer is filling up, causing some requests to fail.",
+      "You are running the proxy in a public subnet but have not allocated enough EIPs to support the needed network throughput through the Internet Gateway (IGW)."
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 70
+  },
+  {
+    "id": 533,
+    "question": "Which of the following notification endpoints or clients are supported by Amazon Simple Notification Service? (Choose 2 answers)",
+    "choices": [
+      "Email.",
+      "CloudFront distribution.",
+      "File Transfer Protocol.",
+      "Short Message Service.",
+      "Simple Network Management Protocol."
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 71
+  },
+  {
+    "id": 548,
+    "question": "You are deploying an application to track GPS coordinates of delivery trucks in the United States. Coordinates are transmitted from each delivery truck once every three seconds. You need to design an architecture that will enable real-time processing of these coordinates from multiple consumers. Which service should you use to implement data ingestion?",
+    "choices": [
+      "Amazon Kinesis.",
+      "AWS Data Pipeline.",
+      "Amazon AppStream.",
+      "Amazon Simple Queue Service."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 72
+  },
+  {
+    "id": 566,
+    "question": "A user has created photo editing software and hosted it on EC2. The software accepts requests from the user about the photo format and resolution and sends a message to S3 to enhance the picture accordingly. Which of the below mentioned AWS services will help make a scalable software with the AWS infrastructure in this scenario?",
+    "choices": [
+      "AWS Simple Notification Service.",
+      "AWS Simple Queue Service.",
+      "AWS Elastic Transcoder.",
+      "AWS Glacier."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 73
+  },
+  {
+    "id": 570,
+    "question": "You're running an application on-premises due to its dependency on non-x86 hardware and want to use AWS for data backup. Your backup application is only able to write to POSIX-compatible block based storage. You have 140TB of data and would like to mount it as a single folder on your file server Users must be able to access portions of this data while the backups are taking place. What backup solution would be most appropriate for this use case?",
+    "choices": [
+      "Use Storage Gateway and configure it to use Gateway Cached volumes.",
+      "Configure your backup software to use S3 as the target for your data backups.",
+      "Configure your backup software to use Glacier as the target for your data backups.",
+      "Use Storage Gateway and configure it to use Gateway Stored volumes."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 74
+  },
+  {
+    "id": 572,
+    "question": "You require the ability to analyze a customer's clickstream data on a website so they can do behavioral analysis. Your customer needs to know what sequence of pages and ads their customer clicked on. This data will be used in real time to modify the page layouts as customers click through the site to increase stickiness and advertising click-through. Which option meets the requirements for captioning and analyzing this data?",
+    "choices": [
+      "Log clicks in weblogs by URL store to Amazon S3, and then analyze with Elastic MapReduce.",
+      "Push web clicks by session to Amazon Kinesis and analyze behavior using Kinesis workers.",
+      "Write click events directly to Amazon Redshift and then analyze with SQL.",
+      "Publish web clicks by session to an Amazon SQS queue men periodically drain these events to Amazon RDS and analyze with SQL."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 75
+  },
+  {
+    "id": 582,
+    "question": "Prior to the introduction of this function, the HA feature provided redundancy and performance, but required that a failed/lost group member be [...] reinstated.",
+    "choices": [
+      "automatically.",
+      "periodically.",
+      "manually.",
+      "continuously."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 76
+  },
+  {
+    "id": 585,
+    "question": "You are designing a web application that stores static assets in an Amazon Simple Storage Service (S3) bucket. You expect this bucket to immediately receive over 150 PUT requests per second. What should you do to ensure optimal performance?",
+    "choices": [
+      "Use multi-part upload.",
+      "Add a random prefix to the key names.",
+      "Amazon S3 will automatically manage performance at this scale.",
+      "Use a predictable naming scheme, such as sequential numbers or date time sequences, in the key names."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 77
+  },
+  {
+    "id": 587,
+    "question": "A customer has a single 3-TB volume on-premises that is used to hold a large repository of images and print layout files. This repository is growing at 500 GB a year and must be presented as a single logical volume. The customer is becoming increasingly constrained with their local storage capacity and wants an off-site backup of this data, while maintaining low-latency access to their frequently accessed data. Which AWS Storage Gateway configuration meets the customer requirements?",
+    "choices": [
+      "Gateway-Cached volumes with snapshots scheduled to Amazon S3.",
+      "Gateway-Stored volumes with snapshots scheduled to Amazon S3.",
+      "Gateway-Virtual Tape Library with snapshots to Amazon S3.",
+      "Gateway-Virtual Tape Library with snapshots to Amazon Glacier."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 78
+  },
+  {
+    "id": 589,
+    "question": "Which Amazon service can I use to define a virtual network that closely resembles a traditional data center?",
+    "choices": [
+      "Amazon VPC.",
+      "Amazon Service Bus.",
+      "Amazon EMR.",
+      "Amazon RDS."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 79
+  },
+  {
+    "id": 605,
+    "question": "A user is hosting a website in the US West-1 region. The website has the highest client base from the Asia-Pacific (Singapore / Japan) region. The application is accessing data from S3 before serving it to client. Which of the below mentioned regions gives a better performance for S3 objects?",
+    "choices": [
+      "Japan.",
+      "Singapore.",
+      "US East.",
+      "US West-1."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 80
+  },
+  {
+    "id": 607,
+    "question": "Can a single EBS volume be attached to multiple EC2 instances at the same time?",
+    "choices": [
+      "Yes.",
+      "No.",
+      "Only for high-performance EBS volumes.",
+      "Only when the instances are located in the US regions."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 81
+  },
+  {
+    "id": 608,
+    "question": "You are planning and configuring some EBS volumes for an application. In order to get the most performance out of your EBS volumes, you should attach them to an instance with enough [...] to support your volumes.",
+    "choices": [
+      "redundancy.",
+      "storage.",
+      "bandwidth.",
+      "memory."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 82
+  },
+  {
+    "id": 618,
+    "question": "A client needs you to import some existing infrastructure from a dedicated hosting provider to AWS to try and save on the cost of running his current website. He also needs an automated process that manages backups, software patching, automatic failure detection, and recovery. You are aware that his existing set up currently uses an Oracle database. Which of the following AWS databases would be best for accomplishing this task?",
+    "choices": [
+      "Amazon RDS.",
+      "Amazon Redshift.",
+      "Amazon SimpleDB.",
+      "Amazon ElastiCache."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 83
+  },
+  {
+    "id": 628,
+    "question": "In order to optimize performance for a compute cluster that requires low inter-node latency, which of the following feature should you use?",
+    "choices": [
+      "Multiple Availability Zones.",
+      "AWS Direct Connect.",
+      "EC2 Dedicated Instances.",
+      "Placement Groups.",
+      "VPC private subnets."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 84
+  },
+  {
+    "id": 652,
+    "question": "A company plans to run a high performance computing (HPC) workload on Amazon EC2 Instances. The workload requires low-latency network performance and high network throughput with tightly coupled node-to-node communication. Which solution will meet these requirements?",
+    "choices": [
+      "Configure the EC2 instances to be part of a cluster placement group.",
+      "Launch the EC2 instances with Dedicated Instance tenancy.",
+      "Launch the EC2 instances as Spot Instances.",
+      "Configure an On-Demand Capacity Reservation when the EC2 instances are launched."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 85
+  },
+  {
+    "id": 656,
+    "question": "A company wants to relocate its on-premises MySQL database to AWS. The database accepts regular imports from a client-facing application, which causes a high volume of write operations. The company is concerned that the amount of traffic might be causing performance issues within the application. How should a solutions architect design the architecture on AWS?",
+    "choices": [
+      "Provision an Amazon RDS for MySQL DB instance with Provisioned IOPS SSD storage. Monitor write operation metrics by using Amazon CloudWatch. Adjust the provisioned IOPS if necessary.",
+      "Provision an Amazon RDS for MySQL DB instance with General Purpose SSD storage. Place an Amazon ElastiCache cluster in front of the DB instance. Configure the application to query ElastiCache instead.",
+      "Provision an Amazon DocumentDB (with MongoDB compatibility) instance with a memory optimized instance type. Monitor Amazon CloudWatch for performance-related issues. Change the instance class if necessary.",
+      "Provision an Amazon Elastic File System (Amazon EFS) file system in General Purpose performance mode. Monitor Amazon CloudWatch for IOPS bottlenecks. Change to Provisioned Throughput performance mode if necessary."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 86
+  },
+  {
+    "id": 660,
+    "question": "A company that runs its application on AWS uses an Amazon Aurora DB cluster as its database. During peak usage hours when multiple users access and read the data, the monitoring system shows degradation of database performance for write queries. The company wants to increase the scalability of the application to meet peak usage demands. Which solution will meet these requirements MOST cost effectively?",
+    "choices": [
+      "Create a second Aurora DB cluster. Configure a copy job to replicate the users' data to the new database. Update the application to use the second database to read the data.",
+      "Create an Amazon DynamoDB Accelerator (DAX) cluster in front of the existing Aurora DB cluster. Update the application to use the DAX cluster for read-only queries. Write data directly to the Aurora DB cluster.",
+      "Create an Aurora read replica in the existing Aurora DB cluster. Update the application to use the replica endpoint for read only queries and to use the cluster endpoint for write queries.",
+      "Create an Amazon Redshift cluster. Copy the users' data to the Redshift cluster. Update the application to connect to the Redshift cluster and to perform read-only queries on the Redshift cluster."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 87
+  },
+  {
+    "id": 667,
+    "question": "A company wants to restrict access to the content of its web application. The company needs to protect the content by using authorization techniques that are available on AWS. The company also wants to implement a serverless architecture for authorization and authentication that has low login latency. The solution must integrate with the web application and serve web content globally. The application currently has a small user base, but the company expects the application's user base to increase. Which solution will meet these requirements?",
+    "choices": [
+      "Configure Amazon Cognito for authentication. Implement Lambda@Edge for authorization. Configure Amazon CloudFront to serve the web application globally.",
+      "Configure AWS Directory Service for Microsoft Active Directory for authentication. Implement AWS Lambda for authorization. Use an Application Load Balancer to serve the web application globally.",
+      "Configure Amazon Cognito for authentication. Implement AWS Lambda for authorization. Use Amazon S3 Transfer Acceleration to serve the web application globally.",
+      "Configure AWS Directory Service for Microsoft Active Directory for authentication. Implement Lambda@Edge for authorization. Use AWS Elastic Beanstalk to serve the web application globally."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 88
+  },
+  {
+    "id": 676,
+    "question": "A company that uses AWS Organizations runs 150 applications across 30 different AWS accounts. The company used AWS Cost and Usage Report to create a new report in the management account. The report is delivered to an Amazon S3 bucket that is replicated to a bucket in the data collection account. The company's senior leadership wants to view a custom dashboard that provides NAT gateway costs each day starting at the beginning of the current month. Which solution will meet these requirements?",
+    "choices": [
+      "Share an Amazon QuickSight dashboard that includes the requested table visual. Configure QuickSight to use AWS DataSync to query the new report.",
+      "Share an Amazon QuickSight dashboard that includes the requested table visual. Configure QuickSight to use Amazon Athena to query the new report.",
+      "Share an Amazon CloudWatch dashboard that includes the requested table visual. Configure CloudWatch to use AWS DataSync to query the new report.",
+      "Share an Amazon CloudWatch dashboard that includes the requested table visual. Configure CloudWatch to use Amazon Athena to query the new report."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 89
+  },
+  {
+    "id": 677,
+    "question": "A company is hosting a high-traffic static website on Amazon S3 with an Amazon CloudFront distribution that has a default TTL of 0 seconds. The company wants to implement caching to improve performance for the website. However, the company also wants to ensure that stale content is not served for more than a few minutes after a deployment. Which combination of caching methods should a solutions architect implement to meet these requirements? (Choose two.)",
+    "choices": [
+      "Set the CloudFront default TTL to 2 minutes.",
+      "Set a default TTL of 2 minutes on the S3 bucket.",
+      "Add a Cache-Control private directive to the objects in Amazon S3.",
+      "Create an AWS Lambda@Edge function to add an Expires header to HTTP responses. Configure the function to run on viewer response.",
+      "Add a Cache-Control max-age directive of 24 hours to the objects in Amazon S3. On deployment, create a CloudFront invalidation to clear any changed files from edge caches."
+    ],
+    "correct": [
+      0,
+      4
+    ],
+    "multi": true,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 90
+  },
+  {
+    "id": 680,
+    "question": "A company runs an ecommerce application on Amazon EC2 instances behind an Application Load Balancer. The instances run in an Amazon EC2 Auto Scaling group across multiple Availability Zones. The Auto Scaling group scales based on CPU utilization metrics. The ecommerce application stores the transaction data in a MySQL 8.0 database that is hosted on a large EC2 instance. The database's performance degrades quickly as application load increases. The application handles more read requests than write transactions. The company wants a solution that will automatically scale the database to meet the demand of unpredictable read workloads while maintaining high availability. Which solution will meet these requirements?",
+    "choices": [
+      "Use Amazon Redshift with a single node for leader and compute functionality.",
+      "Use Amazon RDS with a Single-AZ deployment Configure Amazon RDS to add reader instances in a different Availability Zone.",
+      "Use Amazon Aurora with a Multi-AZ deployment. Configure Aurora Auto Scaling with Aurora Replicas.",
+      "Use Amazon ElastiCache for Memcached with EC2 Spot Instances."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 91
+  },
+  {
+    "id": 684,
+    "question": "A company wants to improve its ability to clone large amounts of production data into a test environment in the same AWS Region. The data is stored in Amazon EC2 instances on Amazon Elastic Block Store (Amazon EBS) volumes. Modifications to the cloned data must not affect the production environment. The software that accesses this data requires consistently high I/O performance. A solutions architect needs to minimize the time that is required to clone the production data into the test environment. Which solution will meet these requirements?",
+    "choices": [
+      "Take EBS snapshots of the production EBS volumes. Restore the snapshots onto EC2 instance store volumes in the test environment.",
+      "Configure the production EBS volumes to use the EBS Multi-Attach feature. Take EBS snapshots of the production EBS volumes. Attach the production EBS volumes to the EC2 instances in the test environment.",
+      "Take EBS snapshots of the production EBS volumes. Create and initialize new EBS volumes. Attach the new EBS volumes to EC2 instances in the test environment before restoring the volumes from the production EBS snapshots.",
+      "Take EBS snapshots of the production EBS volumes. Turn on the EBS fast snapshot restore feature on the EBS snapshots. Restore the snapshots into new EBS volumes. Attach the new EBS volumes to EC2 instances in the test environment."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 92
+  },
+  {
+    "id": 696,
+    "question": "A company runs an online marketplace web application on AWS. The application serves hundreds of thousands of users during peak hours. The company needs a scalable, near-real-time solution to share the details of millions of financial transactions with several other internal applications. Transactions also need to be processed to remove sensitive data before being stored in a document database for low-latency retrieval. What should a solutions architect recommend to meet these requirements?",
+    "choices": [
+      "Store the transactions data into Amazon DynamoDB. Set up a rule in DynamoDB to remove sensitive data from every transaction upon write. Use DynamoDB Streams to share the transactions data with other applications.",
+      "Stream the transactions data into Amazon Kinesis Data Firehose to store data in Amazon DynamoDB and Amazon S3. Use AWS Lambda integration with Kinesis Data Firehose to remove sensitive data. Other applications can consume the data stored in Amazon S3.",
+      "Stream the transactions data into Amazon Kinesis Data Streams. Use AWS Lambda integration to remove sensitive data from every transaction and then store the transactions data in AmazonDynamoDB. Other applications can consume the transactions data off the Kinesis data stream.",
+      "Store the batched transactions data in Amazon S3 as files. Use AWS Lambda to process every file and remove sensitive data before updating the files in Amazon S3. The Lambda function then stores the data in Amazon DynamoDB. Other applications can consume transaction files stored in Amazon S3."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 93
+  },
+  {
+    "id": 710,
+    "question": "An ecommerce company wants to collect user clickstream data from the company's website for real-time analysis. The website experiences fluctuating traffic patterns throughout the day. The company needs a scalable solution that can adapt to varying levels of traffic. Which solution will meet these requirements?",
+    "choices": [
+      "Use a data stream in Amazon Kinesis Data Streams in on-demand mode to capture the clickstream data. Use AWS Lambda to process the data in real time.",
+      "Use Amazon Kinesis Data Firehose to capture the clickstream data. Use AWS Glue to process the data in real time.",
+      "Use Amazon Kinesis Video Streams to capture the clickstream data. Use AWS Glue to process the data in real time.",
+      "Use Amazon Managed Service for Apache Flink (previously known as Amazon Kinesis Data Analytics) to capture the clickstream data. Use AWS Lambda to process the data in real time."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 3,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 94
+  }
+]

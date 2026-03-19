@@ -1,0 +1,746 @@
+[
+  {
+    "id": 20,
+    "question": "Select the most correct The device name /dev/sdal (within Amazon EC2) is [...].",
+    "choices": [
+      "possible for EBS volumes.",
+      "reserved for the root device.",
+      "recommended for EBS volumes.",
+      "recommended for instance store volumes."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 1
+  },
+  {
+    "id": 76,
+    "question": "Can we attach an EBS volume to more than one EC2 instance at the same time?",
+    "choices": [
+      "Yes.",
+      "No.",
+      "Only EC2-optimized EBS volumes.",
+      "Only in read mode."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 2
+  },
+  {
+    "id": 82,
+    "question": "You are developing a new mobile application and are considering storing user preferences in AWS. This would provide a more uniform cross-device experience to users using multiple mobile devices to access the application. The preference data for each user is estimated to be 50KB in size. Additionally, 5 million customers are expected to use the application on a regular basis. The solution needs to be cost-effective, highly available, scalable and secure. How would you design a solution to meet the above requirements?",
+    "choices": [
+      "Setup an RDS MySQL instance in 2 Availability Zones to store the user preference data. Deploy a public facing application on a server in front of the database to manage security and access credentials.",
+      "Setup a DynamoDB table with an item for each user having the necessary attributes to hold the user preferences. The mobile application will query the user preferences directly from the DynamoDB table. Utilize STS, Web Identity Federation, and DynamoDB Fine Grained Access Control to authenticate and authorize access.",
+      "Setup an RDS MySQL instance with multiple read replicas in 2 Availability Zones to store the user preference data. The mobile application will query the user preferences from the read replicas. Leverage the MySQL user management and access privilege system to manage security and access credentials.",
+      "Store the user preference data in S3. Setup a DynamoDB table with an item for each user and an item attribute pointing to the user's S3 object. The mobile application will retrieve the S3 URL from DynamoDB and then access the S3 object directly. Utilize STS, Web identity Federation, and S3 ACLs to authenticate and authorize access."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 3
+  },
+  {
+    "id": 96,
+    "question": "If I want my instance to run on a single-tenant hardware, which value do I have to set the instance's tenancy attribute to?",
+    "choices": [
+      "Dedicated.",
+      "Isolated.",
+      "One.",
+      "Reserved."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 4
+  },
+  {
+    "id": 117,
+    "question": "Can you move a Reserved Instance from one Availability Zone to another?",
+    "choices": [
+      "Yes, but each Reserved Instance is associated with a specific Region that cannot be changed.",
+      "Yes, only in US-West-2.",
+      "Yes, only in US-East-1.",
+      "No."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 5
+  },
+  {
+    "id": 139,
+    "question": "You need a persistent and durable storage to trace call activity of an IVR (Interactive Voice Response) system. Call duration is mostly in the 2-3 minutes timeframe. Each traced call can be either active or terminated. An external application needs to know each minute the list of currently active calls, which are usually a few calls/second. Put once per month there is a periodic peak up to 1000 calls/second for a few hours. The system is open 24/7 and any downtime should be avoided. Historical data is periodically archived to files. Cost saving is a priority for this project. What database implementation would better fit this scenario, keeping costs as low as possible?",
+    "choices": [
+      "Use RDS Multi-AZ with two tables, one for 'Active calls' and one for 'Terminated calls'. in this way the 'Active calls' table is always small and effective to access.",
+      "Use DynamoDB with a 'Calls' table and a Global Secondary Index on a 'lsActive' attribute that is present for active calls only in this way the Global Secondary index is sparse and more effective.",
+      "Use DynamoDB with a 'Calls' table and a Global secondary index on a 'State' attribute that can equal to 'active' or 'terminated' in this way the Global Secondary index can be used for all Items in the table.",
+      "Use RDS Multi-AZ with a 'CALLS' table and an Indexed 'STATE* field that can be equal to 'ACTIVE' or 'TERMINATED' in this way the SOL query Is optimized by the use of the Index."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 6
+  },
+  {
+    "id": 197,
+    "question": "What is Oracle SQL Developer?",
+    "choices": [
+      "An AWS developer who is an expert in Amazon RDS using both the Oracle and SQL Server DB engines.",
+      "A graphical Java tool distributed without cost by Oracle.",
+      "It is a variant of the SQL Server Management Studio designed by Microsoft to support Oracle DBMS functionalities.",
+      "A different DBMS released by Microsoft free of cost."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 7
+  },
+  {
+    "id": 238,
+    "question": "The one-time payment for Reserved Instances is [...] refundable if the reservation is cancelled.",
+    "choices": [
+      "always.",
+      "in some circumstances.",
+      "never."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 8
+  },
+  {
+    "id": 240,
+    "question": "The Trusted Advisor service provides insight regarding which four categories of an AWS account?",
+    "choices": [
+      "Security, fault tolerance, high availability, and connectivity.",
+      "Security, access control, high availability, and performance.",
+      "Performance, cost optimization, security, and fault tolerance.",
+      "Performance, cost optimization, access control, and connectivity."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 9
+  },
+  {
+    "id": 282,
+    "question": "What is Amazon Glacier?",
+    "choices": [
+      "You mean Amazon 'Iceberg': it's a low-cost storage service.",
+      "A security tool that allows to 'freeze' an EBS volume and perform computer forensics on it.",
+      "A low-cost storage service that provides secure and durable storage for data archiving and backup.",
+      "It's a security tool that allows to 'freeze' an EC2 instance and perform computer forensics on it."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 10
+  },
+  {
+    "id": 331,
+    "question": "You have a distributed application that periodically processes large volumes of data across multiple Amazon EC2 Instances. The application is designed to recover gracefully from Amazon EC2 instance failures. You are required to accomplish this task in the most cost-effective way. Which of the following will meet your requirements?",
+    "choices": [
+      "Spot Instances.",
+      "Reserved instances.",
+      "Dedicated instances.",
+      "On-Demand instances."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 11
+  },
+  {
+    "id": 361,
+    "question": "A customer has a 10 GB AWS Direct Connect connection to an AWS region where they have a web application hosted on Amazon Elastic Computer Cloud (EC2). The application has dependencies on an on-premises mainframe database that uses a BASE (Basic Available. Sort stale Eventual consistency) rather than an ACID (Atomicity. Consistency isolation. Durability) consistency model. The application is exhibiting undesirable behavior because the database is not able to handle the volume of writes. How can you reduce the load on your on-premises database resources in the most cost-effective way?",
+    "choices": [
+      "Use an Amazon Elastic MapReduce (EMR) S3DistCp as a synchronization mechanism between the on-premises database and a Hadoop cluster on AWS.",
+      "Modify the application to write to an Amazon SQS queue and develop a worker process to flush the queue to the on-premises database.",
+      "Modify the application to use DynamoDB to feed an EMR cluster which uses a map function to write to the on-premises database.",
+      "Provision an RDS read-replica database on AWS to handle the writes and synchronize the two databases using Data Pipeline."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 12
+  },
+  {
+    "id": 374,
+    "question": "What is the Reduced Redundancy option in Amazon S3?",
+    "choices": [
+      "Less redundancy for a lower cost.",
+      "It doesn't exist in Amazon S3, but in Amazon EBS.",
+      "It allows you to destroy any copy of your files outside a specific jurisdiction.",
+      "It doesn't exist at all."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 13
+  },
+  {
+    "id": 387,
+    "question": "Which of the following approaches provides the lowest cost for Amazon Elastic Block Store snapshots while giving you the ability to fully restore data?",
+    "choices": [
+      "Maintain two snapshots: the original snapshot and the latest incremental snapshot.",
+      "Maintain a volume snapshot; subsequent snapshots will overwrite one another",
+      "Maintain a single snapshot the latest snapshot is both Incremental and complete.",
+      "Maintain the most current snapshot, archive the original and incremental to Amazon Glacier."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 14
+  },
+  {
+    "id": 388,
+    "question": "You have a video transcoding application running on Amazon EC2. Each instance polls a queue to find out which video should be transcoded, and then runs a transcoding process. If this process is interrupted, the video will be transcoded by another instance based on the queuing system. You have a large backlog of videos which need to be transcoded and would like to reduce this backlog by adding more instances. You will need these instances only until the backlog is reduced. Which type of Amazon EC2 instances should you use to reduce the backlog in the most cost efficient way?",
+    "choices": [
+      "Reserved instances.",
+      "Spot instances.",
+      "Dedicated instances.",
+      "On-demand instances."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 15
+  },
+  {
+    "id": 409,
+    "question": "In Amazon EC2, what is the limit of Reserved Instances per Availability Zone each month?",
+    "choices": [
+      "5.",
+      "20.",
+      "50.",
+      "10."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 16
+  },
+  {
+    "id": 458,
+    "question": "Which of the following are characteristics of a reserved instance? (Choose 3 answers)",
+    "choices": [
+      "It can be migrated across Availability Zones.",
+      "It is specific to an Amazon Machine Image (AMI).",
+      "It can be applied to instances launched by Auto Scaling.",
+      "It is specific to an instance Type.",
+      "It can be used to lower Total Cost of Ownership (TCO) of a system."
+    ],
+    "correct": [
+      0,
+      3,
+      4
+    ],
+    "multi": true,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 17
+  },
+  {
+    "id": 496,
+    "question": "You receive a bill from AWS but are confused because you see you are incurring different costs for the exact same storage size in different regions on Amazon S3. You ask AWS why this is so. What response would you expect to receive from AWS?",
+    "choices": [
+      "We charge less in different time zones.",
+      "We charge less where our costs are less.",
+      "This will balance out next bill.",
+      "It must be a mistake."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 18
+  },
+  {
+    "id": 502,
+    "question": "Select the correct statement: Within Amazon EC2, when using Linux instances, the device name /dev/sda1 is [...].",
+    "choices": [
+      "reserved for EBS volumes.",
+      "recommended for EBS volumes.",
+      "recommended for instance store volumes.",
+      "reserved for the root device."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 19
+  },
+  {
+    "id": 505,
+    "question": "George has launched three EC2 instances inside the US-East-1a zone with his AWS account. Ray has launched two EC2 instances in the US-East-1a zone with his AWS account. Which of the below mentioned statements will help George and Ray understand the Availability Zone (AZ) concept better?",
+    "choices": [
+      "All the instances of George and Ray can communicate over a private IP with a minimal cost.",
+      "The US-East-1a region of George and Ray can be different Availability Zones.",
+      "All the instances of George and Ray can communicate over a private IP without any cost.",
+      "The instances of George and Ray will be running in the same data centre."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 20
+  },
+  {
+    "id": 527,
+    "question": "When will you incur costs with an Elastic IP address (EIP)?",
+    "choices": [
+      "When an EIP is allocated.",
+      "When it is allocated and associated with a running instance.",
+      "When it is allocated and associated with a stopped instance.",
+      "Costs are incurred regardless of whether the ElP is associated with a running instance."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 21
+  },
+  {
+    "id": 551,
+    "question": "Can I move a Reserved Instance from one Region to another?",
+    "choices": [
+      "No.",
+      "Only if they are moving into GovCloud.",
+      "Yes.",
+      "Only if they are moving to US East from another region."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 22
+  },
+  {
+    "id": 557,
+    "question": "A user needs to run a batch process which runs for 10 minutes. This will only be run once, or at maximum twice, in the next month, so the processes will be temporary only. The process needs 15 X-Large instances. The process downloads the code from S3 on each instance when it is launched, and then generates a temporary log file. Once the instance is terminated, all the data will be lost. Which of the below mentioned pricing models should the user choose in this case?",
+    "choices": [
+      "Spot instance.",
+      "Reserved instance.",
+      "On-demand instance.",
+      "EBS optimized instance."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 23
+  },
+  {
+    "id": 594,
+    "question": "A user is running a batch process which runs for 1 hour every day. Which of the below mentioned options is the right instance type and costing model in this case if the user performs the same task for the whole year?",
+    "choices": [
+      "EBS backed instance with on-demand instance pricing.",
+      "EBS backed instance with heavy utilized reserved instance pricing.",
+      "EBS backed instance with low utilized reserved instance pricing.",
+      "Instance store backed instance with spot instance pricing."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 24
+  },
+  {
+    "id": 617,
+    "question": "A web-startup runs its very successful social news application on Amazon EC2 with an Elastic Load Balancer, an Auto-Scaling group of Java/Tomcat application-servers, and DynamoDB as data store. The main web-application best runs on m2 x large instances since it is highly memory- bound Each new deployment requires semi-automated creation and testing of a new AMI for the application servers which takes quite a while and is therefore only done once per week. Recently, a new chat feature has been implemented in nodejs and waits to be integrated in the architecture. First tests show that the new component is CPU bound Because the company has some experience with using Chef, they decided to streamline the deployment process and use AWS OpsWorks as an application life cycle tool to simplify management of the application and reduce the deployment cycles. What configuration in AWS OpsWorks is necessary to integrate the new chat module in the most cost-efficient and flexible way?",
+    "choices": [
+      "Create one AWS OpsWorks stack, create one AWS OpsWorks layer, create one custom recipe.",
+      "Create one AWS OpsWorks stack create two AWS OpsWorks layers create one custom recipe.",
+      "Create two AWS OpsWorks stacks create two AWS OpsWorks layers create one custom recipe.",
+      "Create two AWS OpsWorks stacks create two AWS OpsWorks layers create two custom recipe."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 25
+  },
+  {
+    "id": 619,
+    "question": "A user is currently building a website which will require a large number of instances in six months, when a demonstration of the new site will be given upon launch. Which of the below mentioned options allows the user to procure the resources beforehand so that they need not worry about infrastructure availability during the demonstration?",
+    "choices": [
+      "Procure all the instances as reserved instances beforehand.",
+      "Launch all the instances as part of the cluster group to ensure resource availability.",
+      "Pre-warm all the instances one month prior to ensure resource availability.",
+      "Ask AWS now to procure the dedicated instances in 6 months."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 26
+  },
+  {
+    "id": 641,
+    "question": "A large real-estate brokerage is exploring the option of adding a cost-effective location based alert to their existing mobile application. The application backend infrastructure currently runs on AWS. Users who opt in to this service will receive alerts on their mobile device regarding real-estate offers in proximity to their location. For the alerts to be relevant delivery time needs to be in the low minute count. The existing mobile app has 5 million users across the US. Which one of the following architectural suggestions would you make to the customer?",
+    "choices": [
+      "The mobile application will submit its location to a web service endpoint utilizing Elastic Load Balancing and EC2 instances. DynamoDB will be used to store and retrieve relevant offers. EC2 instances will communicate with mobile carriers/device providers to push alerts back to mobile application.",
+      "Use AWS DirectConnect or VPN to establish connectivity with mobile carriers. EC2 instances will receive the mobile applications' location through carrier connection. RDS will be used to store and relevant offers. EC2 instances will communicate with mobile carriers to push alerts back to the mobile application.",
+      "The mobile application will send device location using SQS. EC2 instances will retrieve the relevant offers from DynamoDB. AWS Mobile Push will be used to send offers to the mobile application.",
+      "The mobile application will send device location using AWS Mobile Push. EC2 instances will retrieve the relevant offers from DynamoDB. EC2 instances will communicate with mobile carriers/device providers to push alerts back to the mobile application."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 27
+  },
+  {
+    "id": 645,
+    "question": "A company is running an SMB file server in its data center. The file server stores large files that are accessed frequently for the first few days after the files are created. After 7 days the files are rarely accessed. The total data size is increasing and is close to the company's total storage capacity. A solutions architect must increase the company's available storage space without losing low-latency access to the most recently accessed files. The solutions architect must also provide file lifecycle management to avoid future storage issues. Which solution will meet these requirements?",
+    "choices": [
+      "Use AWS DataSync to copy data that is older than 7 days from the SMB file server to AWS.",
+      "Create an Amazon S3 File Gateway to extend the company's storage space. Create an S3 Lifecycle policy to transition the data to S3 Glacier Deep Archive after 7 days.",
+      "Create an Amazon FSx for Windows File Server file system to extend the company's storage space.",
+      "Install a utility on each user's computer to access Amazon S3. Create an S3 Lifecycle policy to transition the data to S3 Glacier Flexible Retrieval after 7 days."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 28
+  },
+  {
+    "id": 646,
+    "question": "A large company wants to provide its globally located developers separate, limited size, managed PostgreSQL databases for development purposes. The databases will be low volume. The developers need the databases only when they are actively working. Which solution will meet these requirements MOST cost-effectively?",
+    "choices": [
+      "Give the developers the ability to launch separate Amazon Aurora instances. Set up a process to shut down Aurora instances at the end of the workday and to start Aurora instances at the beginning of the next workday.",
+      "Develop an AWS Service Catalog product that enforces size restrictions for launching Amazon Aurora instances. Give the developers access to launch the product when they need a development database.",
+      "Create an Amazon Aurora Serverless cluster. Develop an AWS Service Catalog product to launch databases in the cluster with the default capacity settings. Grant the developers access to the product.",
+      "Monitor AWS Trusted Advisor checks for idle Amazon RDS databases. Create a process to terminate identified idle RDS databases."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 29
+  },
+  {
+    "id": 654,
+    "question": "A company runs several Amazon RDS for Oracle On-Demand DB instances that have high utilization. The RDS DB instances run in member accounts that are in an organization in AWS Organizations. The company's finance team has access to the organization's management account and member accounts. The finance team wants to find ways to optimize costs by using AWS Trusted Advisor. Which combination of steps will meet these requirements? (Choose two.)",
+    "choices": [
+      "Use the Trusted Advisor recommendations in the management account.",
+      "Use the Trusted Advisor recommendations in the member accounts where the RDS DB instances are running.",
+      "Review the Trusted Advisor checks for Amazon RDS Reserved Instance Optimization.",
+      "Review the Trusted Advisor checks for Amazon RDS Idle DB Instances.",
+      "Review the Trusted Advisor checks for compute optimization. Crosscheck the results by using AWS Compute Optimizer."
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "multi": true,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 30
+  },
+  {
+    "id": 655,
+    "question": "A solutions architect is creating an application. The application will run on Amazon EC2 instances in private subnets across multiple Availability Zones in a VPC. The EC2 instances will frequently access large files that contain confidential information. These files are stored in Amazon S3 buckets for processing. The solutions architect must optimize the network architecture to minimize data transfer costs. What should the solutions architect do to meet these requirements?",
+    "choices": [
+      "Create a gateway endpoint for Amazon S3 in the VPC. In the route tables for the private subnets, add an entry for the gateway endpoint.",
+      "Create a single NAT gateway in a public subnet. In the route tables for the private subnets, add a default route that points to the NAT gateway.",
+      "Create an AWS PrivateLink interface endpoint for Amazon S3 in the VPC. In the route tables for the private subnets, add an entry for the interface endpoint.",
+      "Create one NAT gateway for each Availability Zone in public subnets. In each of the route tables for the private subnets, add a default route that points to the NAT gateway in the same Availability Zone."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 31
+  },
+  {
+    "id": 663,
+    "question": "A company runs its production workload on Amazon EC2 instances with Amazon Elastic Block Store (Amazon EBS) volumes. A solutions architect needs to analyze the current EBS volume cost and to recommend optimizations. The recommendations need to include estimated monthly saving opportunities. Which solution will meet these requirements?",
+    "choices": [
+      "Use Amazon Inspector reporting to generate EBS volume recommendations for optimization.",
+      "Use AWS Systems Manager reporting to determine EBS volume recommendations for optimization.",
+      "Use Amazon CloudWatch metrics reporting to determine EBS volume recommendations for optimization.",
+      "Use AWS Compute Optimizer to generate EBS volume recommendations for optimization."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 32
+  },
+  {
+    "id": 671,
+    "question": "A company runs an application on Amazon EC2 instances in a private subnet. The application needs to store and retrieve data in Amazon S3 buckets. According to regulatory requirements, the data must not travel across the public internet. What should a solutions architect do to meet these requirements MOST cost-effectively?",
+    "choices": [
+      "Deploy a NAT gateway to access the S3 buckets.",
+      "Deploy AWS Storage Gateway to access the S3 buckets.",
+      "Deploy an S3 interface endpoint to access the S3 buckets.",
+      "Deploy an S3 gateway endpoint to access the S3 buckets."
+    ],
+    "correct": [
+      3
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 33
+  },
+  {
+    "id": 678,
+    "question": "A company uses Amazon EC2 instances and AWS Lambda functions to run its application. The company has VPCs with public subnets and private subnets in its AWS account. The EC2 instances run in a private subnet in one of the VPCs. The Lambda functions need direct network access to the EC2 instances for the application to work. The application will run for at least 1 year. The company expects the number of Lambda functions that the application uses to increase during that time. The company wants to maximize its savings on all application resources and to keep network latency between the services low. Which solution will meet these requirements?",
+    "choices": [
+      "Purchase an EC2 Instance Savings Plan Optimize the Lambda functions' duration and memory usage and the number of invocations. Connect the Lambda functions to the private subnet that contains the EC2 instances.",
+      "Purchase an EC2 Instance Savings Plan Optimize the Lambda functions' duration and memory usage, the number of invocations, and the amount of data that is transferred. Connect the Lambda functions to a public subnet in the same VPC where the EC2 instances run.",
+      "Purchase a Compute Savings Plan. Optimize the Lambda functions' duration and memory usage, the number of invocations, and the amount of data that is transferred. Connect the Lambda functions to the private subnet that contains the EC2 instances.",
+      "Purchase a Compute Savings Plan. Optimize the Lambda functions' duration and memory usage, the number of invocations, and the amount of data that is transferred. Keep the Lambda functions in the Lambda service VPC."
+    ],
+    "correct": [
+      2
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 34
+  },
+  {
+    "id": 686,
+    "question": "A solutions architect is using Amazon S3 to design the storage architecture of a new digital media application. The media files must be resilient to the loss of an Availability Zone. Some files are accessed frequently while other files are rarely accessed in an unpredictable pattern. The solutions architect must minimize the costs of storing and retrieving the media files. Which storage option meets these requirements?",
+    "choices": [
+      "S3 Standard.",
+      "S3 Intelligent-Tiering.",
+      "S3 Standard-Infrequent Access (S3 Standard-IA).",
+      "S3 One Zone-Infrequent Access (S3 One Zone-IA)."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 35
+  },
+  {
+    "id": 687,
+    "question": "A company is storing backup files by using Amazon S3 Standard storage. The files are accessed frequently for 1 month. However, the files are not accessed after 1 month. The company must keep the files indefinitely. Which storage solution will meet these requirements MOST cost-effectively?",
+    "choices": [
+      "Configure S3 Intelligent-Tiering to automatically migrate objects.",
+      "Create an S3 Lifecycle configuration to transition objects from S3 Standard to S3 Glacier Deep Archive after 1 month.",
+      "Create an S3 Lifecycle configuration to transition objects from S3 Standard to S3 Standard-Infrequent Access (S3 Standard-IA) after 1 month.",
+      "Create an S3 Lifecycle configuration to transition objects from S3 Standard to S3 One Zone-Infrequent Access (S3 One Zone-IA) after 1 month."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 36
+  },
+  {
+    "id": 688,
+    "question": "A company observes an increase in Amazon EC2 costs in its most recent bill. The billing team notices unwanted vertical scaling of instance types for a couple of EC2 instances. A solutions architect needs to create a graph comparing the last 2 months of EC2 costs and perform an in-depth analysis to identify the root cause of the vertical scaling. How should the solutions architect generate the information with the LEAST operational overhead?",
+    "choices": [
+      "Use AWS Budgets to create a budget report and compare EC2 costs based on instance types.",
+      "Use Cost Explorer's granular filtering feature to perform an in-depth analysis of EC2 costs based on instance types.",
+      "Use graphs from the AWS Billing and Cost Management dashboard to compare EC2 costs based on instance types for the last 2 months.",
+      "Use AWS Cost and Usage Reports to create a report and send it to an Amazon S3 bucket. Use Amazon QuickSight with Amazon S3 as a source to generate an interactive graph based on instance types."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 37
+  },
+  {
+    "id": 695,
+    "question": "A company that hosts its web application on AWS wants to ensure all Amazon EC2 instances, Amazon RDS DB instances, and Amazon Redshift clusters are configured with tags. The company wants to minimize the effort of configuring and operating this check. What should a solutions architect do to accomplish this?",
+    "choices": [
+      "Use AWS Config rules to define and detect resources that are not properly tagged.",
+      "Use Cost Explorer to display resources that are not properly tagged. Tag those resources manually.",
+      "Write API calls to check all resources for proper tag allocation. Periodically run the code on an EC2 instance.",
+      "Write API calls to check all resources for proper tag allocation. Schedule an AWS Lambda function through Amazon CloudWatch to periodically run the code."
+    ],
+    "correct": [
+      0
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 38
+  },
+  {
+    "id": 703,
+    "question": "A company runs its application on Oracle Database Enterprise Edition. The company needs to migrate the application and the database to AWS. The company can use the Bring Your Own License (BYOL) model while migrating to AWS. The application uses third-party database features that require privileged access. A solutions architect must design a solution for the database migration. Which solution will meet these requirements MOST cost-effectively?",
+    "choices": [
+      "Migrate the database to Amazon RDS for Oracle by using native tools. Replace the third-party features with AWS Lambda.",
+      "Migrate the database to Amazon RDS Custom for Oracle by using native tools. Customize the new database settings to support the third-party features.",
+      "Migrate the database to Amazon DynamoDB by using AWS Database Migration Service (AWS DMS). Customize the new database settings to support the third-party features.",
+      "Migrate the database to Amazon RDS for PostgreSQL by using AWS Database Migration Service (AWS DMS). Rewrite the application code to remove the dependency on third-party features."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 39
+  },
+  {
+    "id": 705,
+    "question": "A solutions architect is designing an application that will allow business users to upload objects to Amazon S3. The solution needs to maximize object durability. Objects also must be readily available at any time and for any length of time. Users will access objects frequently within the first 30 days after the objects are uploaded, but users are much less likely to access objects that are older than 30 days. Which solution meets these requirements MOST cost-effectively?",
+    "choices": [
+      "Store all the objects in S3 Standard with an S3 Lifecycle rule to transition the objects to S3 Glacier after 30 days.",
+      "Store all the objects in S3 Standard with an S3 Lifecycle rule to transition the objects to S3 Standard-Infrequent Access (S3 Standard-IA) after 30 days.",
+      "Store all the objects in S3 Standard with an S3 Lifecycle rule to transition the objects to S3 One Zone-Infrequent Access (S3 One Zone-IA) after 30 days.",
+      "Store all the objects in S3 Intelligent-Tiering with an S3 Lifecycle rule to transition the objects to S3 Standard-Infrequent Access (S3 Standard-IA) after 30 days."
+    ],
+    "correct": [
+      1
+    ],
+    "multi": false,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 40
+  },
+  {
+    "id": 707,
+    "question": "A company has released a new version of its production application. The company's workload uses Amazon EC2, AWS Lambda, AWS Fargate, and Amazon SageMaker. The company wants to cost optimize the workload now that usage is at a steady state. The company wants to cover the most services with the fewest savings plans. Which combination of savings plans will meet these requirements? (Choose two.)",
+    "choices": [
+      "Purchase an EC2 Instance Savings Plan for Amazon EC2 and SageMaker.",
+      "Purchase a Compute Savings Plan for Amazon EC2, Lambda, and SageMaker.",
+      "Purchase a SageMaker Savings Plan.",
+      "Purchase a Compute Savings Plan for Lambda, Fargate, and Amazon EC2.",
+      "Purchase an EC2 Instance Savings Plan for Amazon EC2 and Fargate."
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "multi": true,
+    "domain": 4,
+    "tags": [],
+    "explanation": "",
+    "domain_seq": 41
+  }
+]

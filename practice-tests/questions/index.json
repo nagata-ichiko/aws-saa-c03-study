@@ -1,0 +1,23 @@
+{
+  "total": 710,
+  "domains": {
+    "general": 225,
+    "domain1-secure-architecture": 218,
+    "domain2-resilient-architecture": 132,
+    "domain3-high-performance": 94,
+    "domain4-cost-optimized": 41
+  },
+  "source": "Ditectrev/AWS-Certified-Solutions-Architect-Associate-SAA-C03-Practice-Tests-Exams-Questions-Answers",
+  "license": "MIT",
+  "format": {
+    "id": "問題の通し番号",
+    "domain_seq": "分野内の連番",
+    "question": "問題文",
+    "choices": "選択肢の配列",
+    "correct": "正解インデックスの配列（0始まり）",
+    "multi": "複数選択問題かどうか",
+    "domain": "分野番号 (0=general, 1-4=各分野)",
+    "tags": "タグ（空配列、AI が追記）",
+    "explanation": "解説（空文字列、AI が追記）"
+  }
+}
