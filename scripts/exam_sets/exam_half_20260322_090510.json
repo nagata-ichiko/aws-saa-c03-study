@@ -1,0 +1,603 @@
+{
+  "mode": "ハーフ模擬試験",
+  "total": 33,
+  "distribution": {
+    "1": 10,
+    "2": 9,
+    "3": 8,
+    "4": 6
+  },
+  "generated_at": "2026-03-22 09:05:10",
+  "questions": [
+    {
+      "number": 1,
+      "id": 1736,
+      "domain": 2,
+      "question": "グローバルに展開するメディア企業は、サーバーレスAPIを複数リージョンで冗長化し、最も可用性の高いサービス提供を目指しています。API GatewayとLambdaで構成されたAPIを複数リージョンに展開し、単一障害点を排除しつつ、最小の運用負荷で実現するにはどの設計が最適ですか？",
+      "choices": [
+        "Route 53のヘルスチェックを用いてリージョン間でトラフィックをルーティングし、各リージョンのAPI GatewayとLambdaは独立運用する。",
+        "API Gatewayでマルチリージョンのカスタムドメインを設定し、Lambda関数のコードをS3に配置して各リージョンで共有する。",
+        "Step Functionsをグローバルに跨る1つのワークフローとして構築し、Lambda関数は1つのリージョンに集中させる。",
+        "CloudFrontをフロントに置き、オリジンに複数リージョンのAPI Gatewayエンドポイントを割り当ててフェイルオーバーを設定する。"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "CloudFrontはグローバル分散のCDNであり、複数リージョンのAPI Gatewayエンドポイントをオリジンとしてフェイルオーバー可能。これにより単一障害点を排除しつつ運用負荷も低い。Route 53のヘルスチェックによるリージョン間ルーティングは可用性向上に有効だが運用負荷が高い。API Gatewayのマルチリージョンカスタムドメインはサポートされていない。Step Functionsを1リージョンに集中させると単一障害点となり可用性が低下する。",
+      "tags": [
+        "API Gateway",
+        "Lambda",
+        "CloudFront",
+        "高可用性",
+        "グローバル展開"
+      ]
+    },
+    {
+      "number": 2,
+      "id": 393,
+      "domain": 1,
+      "question": "AWS Acceptable Use Policy によると、EC2 インスタンスのペネトレーションテストはどうなっていますか？",
+      "choices": [
+        "AWS によって実施される場合があり、顧客の依頼に応じて実施される。",
+        "AWS によって実施される場合があり、定期的に実施されている。",
+        "あらゆる状況で明確に禁止されている。",
+        "顧客が自身のインスタンスに対して、事前に AWS の許可を得て実施できる。",
+        "顧客が自身のインスタンスに対して、EC2 インスタンスからのみ実施できる。"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 3,
+      "id": 1740,
+      "domain": 3,
+      "question": "新興スタートアップが、ユーザー認証後のWebアプリの一部ページをCloudFront経由で動的に配信しています。認証トークンの検証をLambda@Edgeで行い、かつキャッシュを最大化したいと考えています。最も効果的な構成はどれでしょうか？",
+      "choices": [
+        "Viewer Requestイベントでトークン検証を行い、検証結果に基づきキャッシュキーにトークンの有無と状態を含める。",
+        "Origin Requestイベントでトークン検証を行い、認証済ユーザーのレスポンスはすべてキャッシュ無効化する。",
+        "Viewer Responseイベントでトークン検証を行い、キャッシュを使わずリクエストごとにオリジンサーバーへ転送する。",
+        "Lambda@Edgeは使わず、CloudFrontのキャッシュポリシーでAuthorizationヘッダーをキャッシュキーに含める。"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Viewer Requestイベントはリクエスト処理の最初の段階でトークン検証を行うのに適しており、結果をキャッシュキーに含めることで認証状態ごとにキャッシュを分け、キャッシュ効率を最大化できます。Origin RequestやViewer Responseイベントでは遅延が増えますし、キャッシュ無効化はパフォーマンス低下を招きます。Authorizationヘッダーを直接キャッシュキーに含めるとキャッシュがほぼ無効化されるため非効率です。選択肢Aが最適解です。",
+      "tags": [
+        "CloudFront",
+        "Lambda@Edge",
+        "キャッシュ最適化",
+        "認証"
+      ]
+    },
+    {
+      "number": 4,
+      "id": 540,
+      "domain": 0,
+      "question": "標準のAWS AMIテンプレートには含まれていないアプリケーションのために、顧客向けにAmazon Machine Image（AMI）を作成する必要があります。AWSでAMIを作成する代替手段にはどのようなものがありますか？",
+      "choices": [
+        "サードパーティからAMIを購入できるが、自分でAMIを作成することはできない。",
+        "サードパーティからAMIを購入することも、自分でAMIを作成することもできる。",
+        "AMIはAWSのみが作成でき、利用可能になるまで待つ必要がある。",
+        "AMIはAWSのみが作成でき、作成を依頼する必要がある。"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 5,
+      "id": 700,
+      "domain": 2,
+      "question": "開発チームが他のチームからアクセスされるウェブサイトをホストする必要があります。ウェブサイトの内容はHTML、CSS、クライアントサイドのJavaScript、および画像で構成されています。最もコスト効率の良いホスティング方法はどれですか？",
+      "choices": [
+        "ウェブサイトをコンテナ化してAWS Fargateでホストする。",
+        "Amazon S3バケットを作成してそこでウェブサイトをホストする。",
+        "Amazon EC2インスタンスにウェブサーバーをデプロイしてウェブサイトをホストする。",
+        "Express.jsフレームワークを使用するAWS Lambdaターゲットを持つApplication Load Balancerを設定する。"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 6,
+      "id": 183,
+      "domain": 2,
+      "question": "Amazon Route 53 のリソースレコードについて正しいものはどれですか？（2つ選択してください）",
+      "choices": [
+        "Alias レコードは、ある DNS 名を別の Amazon Route 53 の DNS 名にマッピングできます。",
+        "CNAME レコードはゾーンのルート（ゾーンエイペックス）に作成できます。",
+        "Amazon Route 53 の CNAME レコードは、どこにホストされている DNS レコードでも指すことができます。",
+        "Alias レコードの TTL は Amazon Route 53 で設定できます。",
+        "Amazon Route 53 の Alias レコードは、どこにホストされている DNS レコードでも指すことができます。"
+      ],
+      "correct": [
+        0,
+        2
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 7,
+      "id": 526,
+      "domain": 0,
+      "question": "Amazon EC2 が提供するオンデマンドインスタンスの購入オプションについて正しい説明を選んでください。",
+      "choices": [
+        "長期契約や前払いなしで、使用したインスタンス分を時間単位で支払う。",
+        "インスタンスに対して低額の一括前払いを行い、1年または3年の期間で予約し、これらのインスタンスに対して大幅に低い時間単価を支払う。",
+        "長期契約や前払いを伴い、使用したインスタンス分を時間単位で支払う。",
+        "インスタンスに対して高額の一括前払いを行い、1年または3年の期間で予約し、これらのインスタンスに対して大幅に高い時間単価を支払う。"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 8,
+      "id": 336,
+      "domain": 0,
+      "question": "通常、アプリケーションは結果の処理に時間をかける前に、リクエストでエラーが発生したかどうかを確認したいものです。Amazon RDS API のレスポンスでエラーが発生したかどうかを最も簡単に確認する方法は、レスポンス内の [...] ノードを探すことです。",
+      "choices": [
+        "incorrect（誤り）",
+        "error（エラー）"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 9,
+      "id": 669,
+      "domain": 1,
+      "question": "ある企業が数百台のオンプレミスの仮想マシン（VM）をAmazon EC2インスタンスに移行しました。これらのインスタンスは多様なWindows Serverのバージョンと複数のLinuxディストリビューションで構成されています。企業はオペレーティングシステムのインベントリ管理と更新を自動化するソリューションを求めています。また、各インスタンスの共通の脆弱性の概要を毎月の定期レビュー用に取得する必要があります。これらの要件を満たすためにソリューションアーキテクトは何を推奨すべきでしょうか？",
+      "choices": [
+        "すべてのEC2インスタンスを管理するためにAWS Systems Manager Patch Managerを設定し、AWS Security Hubで月次レポートを作成するように構成する。",
+        "すべてのEC2インスタンスを管理するためにAWS Systems Manager Patch Managerを設定し、Amazon Inspectorを導入して月次レポートを構成する。",
+        "AWS Shield Advancedを設定し、月次レポートを構成する。AWS Configを導入してEC2インスタンスのパッチ適用を自動化する。",
+        "Amazon GuardDutyをアカウントに設定してすべてのEC2インスタンスを監視し、AWS Configを導入してEC2インスタンスのパッチ適用を自動化する。"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 10,
+      "id": 91,
+      "domain": 0,
+      "question": "暗号化された Amazon Elastic Block Store (EBS) ボリュームについて正しいものはどれですか？（2つ選択してください）",
+      "choices": [
+        "すべての Amazon EBS ボリュームタイプでサポートされている。",
+        "スナップショットは自動的に暗号化される。",
+        "すべてのインスタンスタイプで利用可能である。",
+        "既存のボリュームを暗号化できる。",
+        "共有ボリュームを暗号化できる。"
+      ],
+      "correct": [
+        0,
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 11,
+      "id": 459,
+      "domain": 1,
+      "question": "ユーザーは、最初に請求時間に最も近いインスタンスを削除するように AutoScaling の終了ポリシーを定義しています。AutoScaling は US-East-1A リージョンに3つ、US-East-1B リージョンに2つのインスタンスを起動しました。US-East-1B リージョンのインスタンスのうち1つが請求時間に最も近く稼働しています。終了処理を実行する際、AutoScaling はどのインスタンスを最初に終了しますか？",
+      "choices": [
+        "US-East-1A のランダムなインスタンス",
+        "US-East-1B の請求時間に最も近いインスタンス",
+        "US-East-1A の請求時間に最も近いインスタンス",
+        "US-East-1B のランダムなインスタンス"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 12,
+      "id": 91,
+      "domain": 0,
+      "question": "暗号化された Amazon Elastic Block Store (EBS) ボリュームについて正しいものはどれですか？（2つ選択してください）",
+      "choices": [
+        "すべての Amazon EBS ボリュームタイプでサポートされている。",
+        "スナップショットは自動的に暗号化される。",
+        "すべてのインスタンスタイプで利用可能である。",
+        "既存のボリュームを暗号化できる。",
+        "共有ボリュームを暗号化できる。"
+      ],
+      "correct": [
+        0,
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 13,
+      "id": 573,
+      "domain": 2,
+      "question": "Amazon SNS でトピックを作成するとどうなりますか？",
+      "choices": [
+        "トピックが作成され、指定した名前が付けられます。",
+        "ARN（Amazon Resource Name）が作成されます。",
+        "トピックは Amazon SNS ではなく Amazon SQS で作成します。",
+        "この質問は意味が通じません。"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 14,
+      "id": 476,
+      "domain": 0,
+      "question": "パブリックサブネットにNAT（Network Address Translation）デバイスとして使用するインスタンスを起動し、プライベートサブネットのインターネット向けトラフィックのルートテーブルのターゲットをそのNATデバイスに変更しました。しかし、プライベートサブネット内のインスタンスからインターネットへのアウトバウンド接続ができません。問題を解決するためにどの手順を実行すればよいでしょうか？",
+      "choices": [
+        "NATインスタンスのSource/Destination Check属性を無効にする。",
+        "プライベートサブネット内のインスタンスにElastic IPアドレスを割り当てる。",
+        "NATインスタンスに2つ目のElastic Network Interface（ENI）を追加し、それをプライベートサブネットに配置する。",
+        "プライベートサブネット内のインスタンスに2つ目のElastic Network Interface（ENI）を追加し、それをパブリックサブネットに配置する。"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 15,
+      "id": 1750,
+      "domain": 0,
+      "question": "金融機関がトレーディングプラットフォームからの大量の取引データをリアルタイムで処理し、異常検知を行いたいと考えています。データの可用性と耐障害性を最優先し、レイテンシを最小化しつつ、スケーラブルな設計が求められます。最適な構成はどれでしょうか？",
+      "choices": [
+        "Amazon Kinesis Data Streamsを利用し、複数のシャードでデータを分散処理し、AWS Lambdaで異常検知を実装する。",
+        "Amazon MSKを利用してKafkaクラスター上にデータをストリーミングし、Kafka Streamsで異常検知処理を実装する。",
+        "Amazon Kinesis Data Firehoseを用いてデータをS3に保存し、Amazon Athenaでバッチ分析を行う。",
+        "Amazon Simple Notification Service (SNS)で取引データを配信し、Amazon SQSで受信して処理する。"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "MSKはKafkaの高可用性と耐障害性を兼ね備え、スケーラブルでリアルタイムのストリーミング処理に強みがあります。Kafka Streamsにより低レイテンシで異常検知を行えます。Kinesis Data Streamsもリアルタイム処理可能だが、シャード管理やスケールがMSKほど柔軟ではなく、複雑なストリーム処理には向きません。Firehoseは主にデータの蓄積向きでリアルタイム処理には不適切です。SNSとSQSはメッセージング向きで大量データのリアルタイム処理には適していません。",
+      "tags": []
+    },
+    {
+      "number": 16,
+      "id": 236,
+      "domain": 0,
+      "question": "この機能を支援する AWS サービスはどれですか？",
+      "choices": [
+        "AWS Simple Queue Service",
+        "AWS Simple Notification Service",
+        "AWS Simple Workflow Service",
+        "AWS Simple Email Service"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 17,
+      "id": 690,
+      "domain": 1,
+      "question": "ある企業が、自社のAWSクラウド環境においてAmazon S3バケットに不正な設定変更がないかを確認する必要があります。この目的を達成するために、ソリューションアーキテクトは何をすべきでしょうか？",
+      "choices": [
+        "適切なルールを設定してAWS Configを有効化する。",
+        "適切なチェックを設定してAWS Trusted Advisorを有効化する。",
+        "適切な評価テンプレートを設定してAmazon Inspectorを有効化する。",
+        "Amazon S3のサーバーアクセスログを有効化し、Amazon EventBridge（Amazon CloudWatch Events）を設定する。"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 18,
+      "id": 285,
+      "domain": 1,
+      "question": "Amazon EC2 リソースへのアクセスを制御する際、各 Amazon EBS スナップショットには、どの AWS アカウントがスナップショットを使用できるかを制御する [...] 属性があります。",
+      "choices": [
+        "createVolumePermission",
+        "LaunchPermission",
+        "SharePermission",
+        "RequestPermission"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 19,
+      "id": 692,
+      "domain": 0,
+      "question": "ある企業がアプリケーションをAWSに移行しています。アプリケーションは異なるアカウントに展開されており、AWS Organizationsを使ってアカウントを一元管理しています。セキュリティチームは、全アカウントでのシングルサインオン（SSO）ソリューションを必要としています。ユーザーとグループは引き続きオンプレミスの自己管理型Microsoft Active Directoryで管理しなければなりません。これらの要件を満たすソリューションはどれですか？",
+      "choices": [
+        "AWS SSOコンソールからAWS Single Sign-On（AWS SSO）を有効にします。AWS Directory Service for Microsoft Active Directoryを使い、企業の自己管理型Microsoft Active DirectoryとAWS SSOを接続するために、一方向のフォレストトラストまたは一方向のドメイントラストを作成します。",
+        "AWS SSOコンソールからAWS Single Sign-On（AWS SSO）を有効にします。AWS Directory Service for Microsoft Active Directoryを使い、企業の自己管理型Microsoft Active DirectoryとAWS SSOを接続するために、双方向のフォレストトラストを作成します。",
+        "AWS Directory Serviceを使用します。企業の自己管理型Microsoft Active Directoryと双方向のトラスト関係を作成します。",
+        "オンプレミスにアイデンティティプロバイダー（IdP）を展開します。AWS SSOコンソールからAWS Single Sign-On（AWS SSO）を有効にします。"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 20,
+      "id": 648,
+      "domain": 1,
+      "question": "ある企業のウェブアプリケーションは、VPC内のApplication Load Balancerの背後で稼働する複数のAmazon EC2インスタンスで構成されています。データはAmazon RDS for MySQLのDBインスタンスに格納されています。企業はAWS環境内の疑わしいまたは予期しない挙動を自動的に検出し対応する機能を必要としています。すでにAWS WAFはアーキテクチャに組み込まれています。脅威から保護するためにソリューションアーキテクトは次に何をすべきでしょうか？",
+      "choices": [
+        "Amazon GuardDutyを使って脅威検出を行う。Amazon EventBridge（Amazon CloudWatch Events）を設定してGuardDutyの検出結果をフィルタリングし、AWS Lambda関数を呼び出してAWS WAFのルールを調整する。",
+        "AWS Firewall Managerを使って脅威検出を行う。Amazon EventBridge（Amazon CloudWatch Events）を設定してFirewall Managerの検出結果をフィルタリングし、AWS Lambda関数を呼び出してAWS WAFのWeb ACLを調整する。",
+        "Amazon Inspectorを使って脅威検出を行い、AWS WAFのルールを更新する。VPCのネットワークACLを作成してウェブアプリケーションへのアクセスを制限する。",
+        "Amazon Macieを使って脅威検出を行い、AWS WAFのルールを更新する。VPCのネットワークACLを作成してウェブアプリケーションへのアクセスを制限する。"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 21,
+      "id": 166,
+      "domain": 0,
+      "question": "Amazon EBS ボリュームの情報を確認するには、Amazon EC2 コンソール（https://console.aws.amazon.com/ec2/）を開き、ナビゲーションパネルでどこをクリックしますか？",
+      "choices": [
+        "EBS",
+        "Describe",
+        "詳細",
+        "ボリューム"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 22,
+      "id": 63,
+      "domain": 0,
+      "question": "すべての Amazon EC2 インスタンスは起動時に2つのIPアドレスが割り当てられますが、そのうち1つは Amazon EC2 ネットワーク内からのみアクセス可能です。これはどのIPアドレスですか？",
+      "choices": [
+        "複数のIPアドレス",
+        "パブリックIPアドレス",
+        "プライベートIPアドレス",
+        "Elastic IPアドレス"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 23,
+      "id": 466,
+      "domain": 1,
+      "question": "ユーザーはオンラインでもオフラインでも遊べるモバイルゲームを作成し、EC2上でホストする予定です。誰かが最高得点を更新したり、あるマイルストーンを達成した場合に、全ての同僚にメールで通知したいと考えています。以下のAWSサービスのうち、この目的を達成するのに役立つものはどれですか？",
+      "choices": [
+        "AWS Simple Workflow Service",
+        "AWS Simple Email Service",
+        "Amazon Cognito",
+        "AWS Simple Queue Service"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 24,
+      "id": 331,
+      "domain": 4,
+      "question": "複数の Amazon EC2 インスタンスで定期的に大量のデータを処理する分散アプリケーションがあります。このアプリケーションは、EC2 インスタンスの障害からも正常に復旧できるよう設計されています。最もコスト効率よくこの要件を満たすには、どの選択肢が適切でしょうか？",
+      "choices": [
+        "スポットインスタンス",
+        "リザーブドインスタンス",
+        "専用インスタンス",
+        "オンデマンドインスタンス"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 25,
+      "id": 1694,
+      "domain": 1,
+      "question": "新規設計のVPCで、複数のサブネットがあり、それぞれのサブネットで異なるレベルのトラフィック制御が必要です。サブネット間の通信は許可しつつ、インターネットからの不要なアクセスはブロックしたい場合、最も適切なセキュリティ構成はどれですか？",
+      "choices": [
+        "すべてのインスタンスに同じセキュリティグループを割り当て、NACLでサブネット間通信とインターネットトラフィックを制御する。",
+        "NACLはデフォルトのままにし、インスタンスのセキュリティグループでサブネット間通信を許可し、インターネットからのアクセスを制限する。",
+        "サブネットごとに異なるNACLを設定してサブネット間通信を制御し、セキュリティグループはすべてのトラフィックを許可する。",
+        "インターネットゲートウェイの設定でサブネットごとのトラフィック制御を行い、セキュリティグループとNACLはデフォルトで問題ない。"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "インスタンス間の通信制御はセキュリティグループがステートフルに機能するため柔軟で効率的です。サブネット間通信を許可しつつ、インターネットからの不要なアクセスはセキュリティグループで制限するのが最適です。NACLはステートレスで管理が複雑になるため、サブネット間通信の制御には不向きです。選択肢AはNACL管理が煩雑、Cはセキュリティグループの効果を無視しリスクが高い。DはIGWでサブネット単位の制御ができず不適切です。",
+      "tags": [
+        "セキュリティグループ",
+        "NACL",
+        "サブネット"
+      ]
+    },
+    {
+      "number": 26,
+      "id": 1754,
+      "domain": 3,
+      "question": "大手製造業の企業がオンプレミスのデータセンターとAWS環境を高速かつ安定して接続したいと考えています。複数のVPCを運用しており、これらのVPCとオンプレミス間の通信を一元管理し、かつ通信のセキュリティと信頼性を担保する必要があります。最も適切な設計はどれですか？",
+      "choices": [
+        "AWS Direct Connectを用いてオンプレミスと専用線接続し、Transit Gatewayで複数VPCを接続する。",
+        "VPN接続を複数構築してオンプレミスと各VPC間を個別に接続する。",
+        "オンプレミスとAWS間はインターネットVPNで接続し、VPC間はVPC Peeringで接続する。",
+        "各VPCにDirect Connectゲートウェイを個別に作成し、オンプレミスからの接続を分散させる。"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Direct Connectは専用線接続により高帯域かつ低遅延な通信を実現し、Transit Gatewayは複数VPCとオンプレミス間の通信を一元管理するために最適です。VPN接続（選択肢B）は信頼性がDirect Connectより劣り、個別管理で運用負荷が高いです。インターネットVPNとVPC Peering（選択肢C）はスケーラビリティとセキュリティの面で不十分です。Direct ConnectゲートウェイをVPCごとに作成する（選択肢D）は管理が煩雑になり、Transit Gatewayの利点を活かせません。",
+      "tags": [
+        "Direct Connect",
+        "Transit Gateway",
+        "VPN"
+      ]
+    },
+    {
+      "number": 27,
+      "id": 645,
+      "domain": 4,
+      "question": "ある企業がデータセンターで SMB ファイルサーバーを運用しています。このファイルサーバーには、大きなファイルが保存されており、作成後最初の数日間は頻繁にアクセスされますが、7日経過するとほとんどアクセスされなくなります。データの総容量は増加しており、企業のストレージ容量の上限に近づいています。ソリューションアーキテクトは、最近アクセスされたファイルに対して低遅延アクセスを維持しつつ、利用可能なストレージ容量を増やす必要があります。また、将来的なストレージ問題を回避するためにファイルのライフサイクル管理も提供しなければなりません。どのソリューションがこれらの要件を満たしますか？",
+      "choices": [
+        "AWS DataSync を使用して、7日より古いデータを SMB ファイルサーバーから AWS にコピーする。",
+        "Amazon S3 File Gateway を作成して企業のストレージ容量を拡張する。7日後にデータを S3 Glacier Deep Archive に移行する S3 ライフサイクルポリシーを作成する。",
+        "Amazon FSx for Windows File Server のファイルシステムを作成して企業のストレージ容量を拡張する。",
+        "各ユーザーのコンピュータにユーティリティをインストールして Amazon S3 にアクセスさせる。7日後にデータを S3 Glacier Flexible Retrieval に移行する S3 ライフサイクルポリシーを作成する。"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 28,
+      "id": 522,
+      "domain": 1,
+      "question": "REST/Query リクエストに署名する際、追加のセキュリティ対策として、リクエストを Secure Sockets Layer (SSL) を使って送信するにはどれを使用すべきですか？",
+      "choices": [
+        "HTTP",
+        "Internet Protocol Security (IPsec)",
+        "TLS (Transport Layer Security)",
+        "HTTPS"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 29,
+      "id": 231,
+      "domain": 0,
+      "question": "お客様のためにいくつかの EBS ボリュームを設定しています。お客様からは RAID（冗長化された安価なディスクのアレイ）を含む構成を希望されています。AWS では RAID の設定に関していくつかの推奨事項があります。Amazon EBS に対して推奨されていない RAID 構成はどれですか？",
+      "choices": [
+        "RAID 5 のみ",
+        "RAID 5 と RAID 6",
+        "RAID 1 のみ",
+        "RAID 1 と RAID 6"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 30,
+      "id": 30,
+      "domain": 0,
+      "question": "Amazon EC2 で、EBS ボリュームが detaching 状態のままの場合、[...] をクリックして強制的にデタッチできます。",
+      "choices": [
+        "Force Detach（強制デタッチ）",
+        "Detach Instance（インスタンスのデタッチ）",
+        "AttachVolume（ボリュームのアタッチ）",
+        "AttachInstance（インスタンスのアタッチ）"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 31,
+      "id": 1721,
+      "domain": 2,
+      "question": "グローバルに展開するECサイトを運営する企業が、ユーザーのアクセス速度を最適化しつつ、特定のリージョンのサーバー障害時に自動で別リージョンのサーバーに切り替えたい。最も効果的なRoute 53のルーティングポリシー構成はどれか？",
+      "choices": [
+        "レイテンシールーティングポリシーを設定し、プライマリリージョンのヘルスチェックが失敗した場合にセカンダリリージョンへフェイルオーバーするよう設定する。",
+        "加重ルーティングポリシーでトラフィックを全リージョンに均等に分散し、ヘルスチェックは設定しない。",
+        "地理的ルーティングポリシーでユーザーの所在地に基づき最も近いリージョンに誘導し、フェイルオーバーはDNS TTL短縮で対応する。",
+        "単一のフェイルオーバールーティングポリシーを用いて、障害時に別リージョンに切り替えるがレイテンシーは考慮しない。"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "レイテンシールーティングポリシーはユーザーに最も低遅延で応答できるリージョンを選択するため、アクセス速度の最適化に適している。加えて、フェイルオーバールーティングポリシーでプライマリのヘルスチェックが失敗した際にセカンダリに自動切り替えできるため、可用性も確保できる。他の選択肢は加重ルーティングが速度最適化に不向きであり、地理的ルーティングは故障時の自動切り替え機能がない。単一フェイルオーバーは速度を考慮しないため要件を満たさない。",
+      "tags": [
+        "Route 53",
+        "レイテンシールーティング",
+        "フェイルオーバー",
+        "ヘルスチェック"
+      ]
+    },
+    {
+      "number": 32,
+      "id": 660,
+      "domain": 3,
+      "question": "AWS 上でアプリケーションを運用している企業が、データベースとして Amazon Aurora DB クラスターを使用しています。複数のユーザーがデータにアクセスして読み取るピーク時間帯に、監視システムで書き込みクエリのデータベース性能が低下していることが確認されました。企業はピーク時の需要に対応できるよう、アプリケーションのスケーラビリティを向上させたいと考えています。最もコスト効果の高い解決策はどれでしょうか？",
+      "choices": [
+        "2つ目の Aurora DB クラスターを作成し、ユーザーデータを新しいデータベースに複製するコピー処理を設定します。アプリケーションを更新して、読み取りには2つ目のデータベースを使用するようにします。",
+        "既存の Aurora DB クラスターの前に Amazon DynamoDB Accelerator (DAX) クラスターを作成します。アプリケーションを更新して読み取り専用クエリに DAX クラスターを使用し、書き込みは直接 Aurora DB クラスターに行います。",
+        "既存の Aurora DB クラスターに Aurora のリードレプリカを作成します。アプリケーションを更新して、読み取り専用クエリにはリードレプリカのエンドポイントを使用し、書き込みクエリにはクラスターのエンドポイントを使用します。",
+        "Amazon Redshift クラスターを作成し、ユーザーデータを Redshift クラスターにコピーします。アプリケーションを更新して Redshift クラスターに接続し、読み取り専用クエリを Redshift クラスターで実行します。"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "",
+      "tags": []
+    },
+    {
+      "number": 33,
+      "id": 351,
+      "domain": 0,
+      "question": "EBS ボリュームを削除する前に、後で同じボリュームを再作成したい場合、何ができますか？",
+      "choices": [
+        "EBS ボリュームのコピーを作成する（スナップショットではない）",
+        "ボリュームのスナップショットを保存する",
+        "内容を EC2 インスタンスにダウンロードする",
+        "データを物理ディスクにバックアップする"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "",
+      "tags": []
+    }
+  ]
+}
