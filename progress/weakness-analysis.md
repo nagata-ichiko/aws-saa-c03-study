@@ -10,6 +10,7 @@ AI エージェントが試験終了後に自動更新します。
 | 日付 | 問題数 | 正解数 | 正答率 | 合否ライン(72%) |
 | :--- | ---: | ---: | ---: | :--- |
 | 2026-03-22 | 33 | 8 | 24.2% | ❌ 未達 |
+| 2026-03-22 (2回目) | 9（採点分） | 5 | 55.6% | ❌ 未達（改善傾向） |
 
 ---
 
@@ -27,6 +28,8 @@ AI エージェントが試験終了後に自動更新します。
 | セキュリティグループ vs NACL の使い分け | Q25 | インスタンス間通信の制御はセキュリティグループ（ステートフル）が適切。NACL はステートレスで管理が複雑 |
 | EC2 移行後のパッチ管理 | Q9 | 大量 EC2 のパッチ管理は AWS Systems Manager Patch Manager が最適 |
 | HTTPS と TLS の関係 | Q28 | SSL/TLS を使った HTTP 通信 = HTTPS。TLS は SSL の後継プロトコル名であり、AWS では HTTPS を使う |
+| AWS Shield vs WAF の違い | ミニQ6 | Shield = DDoS 防御、WAF = アプリケーション層保護（SQL インジェクション等）。地理的制限は CloudFront の機能 |
+| S3 暗号化方式の使い分け | ミニQ7 | SSE-S3 は AWS 完全管理でキー制御不可。自社管理+自動ローテーション+監査 = SSE-KMS CMK が正解 |
 
 **学習優先度: 高**
 - [ ] AWS Config のルールと自動修復の仕組みを学ぶ
@@ -61,6 +64,8 @@ AI エージェントが試験終了後に自動更新します。
 | CloudFront + Lambda@Edge の認証フロー | Q3 | 認証トークン検証は Lambda@Edge で実装し、キャッシュ制御と組み合わせる |
 | Direct Connect + Transit Gateway の構成 | Q26 | 複数 VPC + オンプレミスの一元管理 = Direct Connect + Transit Gateway が正解 |
 | Aurora リードレプリカ vs DAX | Q32 | Aurora の読み取りスケールは Aurora リードレプリカが正解。DAX は DynamoDB 専用 |
+| Auto Scaling クールダウン期間の計算 | ミニQ3 | クールダウンは最後のスケーリングアクティビティ完了後から起算。複数インスタンス起動時は最後の起動基準 |
+| DAX vs ElastiCache の使い分け | ミニQ10 | DynamoDB のキャッシュ = DAX（専用・コード変更最小）。ElastiCache は汎用だがアプリ側実装が必要 |
 
 **学習優先度: 最高**
 - [ ] CloudFront のキャッシュ動作とオリジン設定を学ぶ
@@ -112,6 +117,11 @@ AI エージェントが試験終了後に自動更新します。
 | EBS スナップショットによるボリューム再作成 | Q33 | EBS のバックアップ・復元フローを理解している |
 | EBS の RAID 5/6 非推奨 | Q29 | EBS の RAID 推奨事項を正しく記憶している |
 | AMI の作成・購入方法 | Q4 | AMI の入手方法（自作・Marketplace）を理解している |
+| EFS + ライフサイクルポリシー（IA） | ミニQ4 | NFS 移行 + コスト最適化 = EFS + IA ストレージクラスへの自動移行を正しく選択 |
+| Organizations 組織トレイル | ミニQ5 | マルチアカウント CloudTrail ログ集約 = 組織トレイルが最適解を正しく選択 |
+| DR 戦略の選定（ウォームスタンバイ） | ミニQ8 | RTO 1-2h / RPO 15min + コスト考慮 = ウォームスタンバイを正しく選択 |
+| SQS FIFO キュー | ミニQ9 | メッセージ順序保証 + Exactly-once + 重複排除 = SQS FIFO を正しく選択 |
+| S3 + CloudFront + ACM 構成 | ミニQ11 | 静的サイトのグローバル配信 + HTTPS + 低コスト = S3+CloudFront+ACM を正しく選択 |
 
 ---
 
@@ -119,10 +129,10 @@ AI エージェントが試験終了後に自動更新します。
 
 以下を優先的に学習すること（正答率が低いドメインから順に）:
 
-1. **Domain 3（0%）**: CloudFront/Lambda@Edge、Direct Connect/Transit Gateway、Aurora アーキテクチャ
-2. **Domain 4（0%）**: EC2 購入オプション、S3 ストレージクラス、Storage Gateway
-3. **Domain 1（22%）**: AWS Config、Systems Manager、セキュリティグループ vs NACL
-4. **Domain 2（20%）**: Route 53 ルーティングポリシー、マルチリージョン設計
+1. **Domain 3（0%→0%）**: Auto Scaling クールダウン、DAX vs ElastiCache、CloudFront/Lambda@Edge、Direct Connect/Transit Gateway
+2. **Domain 1（22%→33%）**: AWS Shield vs WAF の違い、S3 暗号化方式、AWS Config、Systems Manager
+3. **Domain 4**: EC2 購入オプション、S3 ストレージクラス、Storage Gateway
+4. **Domain 2（20%→100%）**: 大幅改善！引き続き Route 53 の知識を定着させる
 
 ---
 
@@ -131,3 +141,4 @@ AI エージェントが試験終了後に自動更新します。
 | 日付 | 更新内容 |
 | :--- | :--- |
 | 2026-03-22 | 初回試験（33問）の結果を記録。正答率 24.2% |
+| 2026-03-22 | ミニ模擬試験（9問採点）の結果を記録。正答率 55.6%（+31.4pt改善） |
