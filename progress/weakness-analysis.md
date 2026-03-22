@@ -129,8 +129,8 @@ AI エージェントが試験終了後に自動更新します。
 
 以下を優先的に学習すること（正答率が低いドメインから順に）:
 
-1. **Domain 3（0%→0%）**: Auto Scaling クールダウン、DAX vs ElastiCache、CloudFront/Lambda@Edge、Direct Connect/Transit Gateway
-2. **Domain 1（22%→33%）**: AWS Shield vs WAF の違い、S3 暗号化方式、AWS Config、Systems Manager
+1. **Domain 1（最優先）**: ⚠️ AWS Shield vs WAF の違い（復習で再度間違い）、⚠️ S3 暗号化方式 SSE-KMS（復習で再度間違い）、AWS Config、Systems Manager
+2. **Domain 3**: DAX vs ElastiCache、CloudFront/Lambda@Edge、Direct Connect/Transit Gateway（Auto Scaling クールダウンは克服済み）
 3. **Domain 4**: EC2 購入オプション、S3 ストレージクラス、Storage Gateway
 4. **Domain 2（20%→100%）**: 大幅改善！引き続き Route 53 の知識を定着させる
 
@@ -142,3 +142,4 @@ AI エージェントが試験終了後に自動更新します。
 | :--- | :--- |
 | 2026-03-22 | 初回試験（33問）の結果を記録。正答率 24.2% |
 | 2026-03-22 | ミニ模擬試験（9問採点）の結果を記録。正答率 55.6%（+31.4pt改善） |
+| 2026-03-22 | 弱点復習 5問中3問正解。Q688/Q520/miniQ3 を克服。miniQ6(Shield vs WAF)・miniQ7(S3暗号化) は再度間違い → 最優先弱点に格上げ |
