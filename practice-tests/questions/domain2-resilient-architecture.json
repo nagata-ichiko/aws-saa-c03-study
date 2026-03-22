@@ -491,7 +491,7 @@
     "multi": true,
     "domain": 2,
     "tags": [],
-    "explanation": "",
+    "explanation": "CNAMEレコードはゾーンのルート（ゾーンエイペックス）には作成できません（選択肢Bは誤り）。AliasレコードのTTLはAWS側で管理されユーザーが設定できません（選択肢Dは誤り）。AliasレコードはAWSの特定サービス（ELB、CloudFront、S3など）にのみポイント可能で、任意の外部DNSには指せません（選択肢Eは誤り）。したがって正しいのはA（CNAMEはゾーンエイペックス以外で使用可能）とC（Aliasレコードは AWS リソースにのみ指定可能）です。",
     "domain_seq": 27
   },
   {

@@ -594,7 +594,7 @@
     "multi": true,
     "domain": 0,
     "tags": [],
-    "explanation": "",
+    "explanation": "A: すべてのEBSボリュームタイプ（gp2/gp3/io1/io2/st1/sc1）で暗号化がサポートされています（正しい）。B: 暗号化されたEBSボリュームから作成されたスナップショットは自動的に暗号化されます（正しい）。C: 暗号化はすべてのEC2インスタンスタイプでサポートされています（誤り）。D: 既存のEBSボリュームを直接暗号化することはできず、暗号化されたスナップショットから新しいボリュームを作成する必要があります（誤り）。",
     "domain_seq": 33
   },
   {
@@ -1491,12 +1491,12 @@
       "AWS Simple Email Service."
     ],
     "correct": [
-      0
+      2
     ],
     "multi": false,
     "domain": 0,
     "tags": [],
-    "explanation": "",
+    "explanation": "問題文が不完全ですが、文脈からAWS Simple Workflow Service (SWF)を指していると判断されます。SWFは複雑なビジネスプロセスやワークフローの管理に適したサービスです。SQSはメッセージキューであり、ワークフロー管理機能は持ちません。",
     "domain_seq": 84
   },
   {

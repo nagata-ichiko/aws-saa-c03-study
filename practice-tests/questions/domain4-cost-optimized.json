@@ -497,12 +497,12 @@
       "Install a utility on each user's computer to access Amazon S3. Create an S3 Lifecycle policy to transition the data to S3 Glacier Flexible Retrieval after 7 days."
     ],
     "correct": [
-      3
+      1
     ],
     "multi": false,
     "domain": 4,
     "tags": [],
-    "explanation": "",
+    "explanation": "Amazon S3 File GatewayはSMBプロトコルでオンプレミスからS3にアクセスできるため、ストレージ容量の拡張と低遅延アクセスを両立できます。7日後にS3 Glacier Deep Archiveへのライフサイクルポリシーを設定することで、コスト効率の高いアーカイブも実現できます。選択肢DはユーザーごとにユーティリティをインストールしてS3に直接アクセスさせるため運用負荷が高く、SMBアクセスの要件も満たしません。",
     "domain_seq": 28
   },
   {
