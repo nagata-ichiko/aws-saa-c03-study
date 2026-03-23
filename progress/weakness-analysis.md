@@ -12,12 +12,13 @@ AI エージェントが試験終了後に自動更新します。
 | 2026-03-22 | 33 | 8 | 24.2% | ❌ 未達 |
 | 2026-03-22 (2回目) | 9（採点分） | 5 | 55.6% | ❌ 未達（改善傾向） |
 | 2026-03-23 | 11 | 5 | 45.5% | ❌ 未達 |
+| 2026-03-23 (2回目) | 32（途中終了） | 7 | 21.9% | ❌ 未達 |
 
 ---
 
 ## 🔴 弱点ポイント（要強化）
 
-### Domain 1: セキュアなアーキテクチャの設計（2/9 = 22%）
+### Domain 1: セキュアなアーキテクチャの設計（累計: 3/19 = 16%）
 
 **理解が不十分なトピック:**
 
@@ -31,15 +32,27 @@ AI エージェントが試験終了後に自動更新します。
 | HTTPS と TLS の関係 | Q28 | SSL/TLS を使った HTTP 通信 = HTTPS。TLS は SSL の後継プロトコル名であり、AWS では HTTPS を使う |
 | AWS Shield vs WAF の違い | ミニQ6 | Shield = DDoS 防御、WAF = アプリケーション層保護（SQL インジェクション等）。地理的制限は CloudFront の機能 |
 | S3 暗号化方式の使い分け | ミニQ7, Q146 | SSE-S3 は AWS 完全管理でキー制御不可。自社管理+自動ローテーション+監査 = SSE-KMS CMK が正解。**再度間違えた（3回目）**: 保存データ暗号化 = SSE-KMS / SSE-C / クライアントサイド暗号化の3種。EC2キーペアはSSH用で暗号化に無関係。SSL は転送中の暗号化であり保存データ暗号化ではない |
+| VPC での IDS/IPS 設計 | Q5 | 各インスタンスにホストベースのエージェントをインストール + リバースプロキシ層で検査。VPC Flow Logs だけでは不十分 |
+| EC2 テナンシー属性 | Q96 | Dedicated テナンシー = 専用ハードウェアで実行。Shared（デフォルト）、Dedicated Host との違いを整理する必要あり |
+| デフォルトセキュリティグループの初期設定 | Q590 | デフォルトSG: インバウンド = 同SG内からのみ許可、アウトバウンド = 全許可。ユーザー作成SGとは異なる |
+| ユーザー作成SGの初期設定 | Q217 | ユーザー作成SG: インバウンド = 全拒否、アウトバウンド = 全許可。デフォルトSGとの違いに注意 |
+| 他サービス所有インターフェースのSG変更 | Q21 | ELB等の他サービスが管理するENIのSG変更は、そのサービス固有のコンソール/APIから行う |
+| Bastion Host SG設定 | Q224 | Bastion Host のインバウンドSG = TCP/22（SSH）、ソースは管理者IPの /32 CIDR で限定する |
+| Auto Scaling + SNS通知 + 鍵管理 | Q145 | Auto Scaling でスケールイン/アウト時の SNS 通知設定、鍵管理サービスによる証明書署名の組み合わせ |
+| S3 バケット/オブジェクト作成者の権限 | Q328 | S3 はバケットやオブジェクトの作成者に対して自動的に他の権限を付与しない。明示的なポリシー設定が必要 |
+| 大量EC2への緊急パッチ適用 | Q701 | Systems Manager Run Command で複数EC2に一括コマンド実行。Patch Manager とは異なる即時実行ツール |
 
-**学習優先度: 高**
+**学習優先度: 最高（正答率 10.0%）**
 - [ ] AWS Config のルールと自動修復の仕組みを学ぶ
 - [ ] IAM ポリシー・リソースポリシーの違いを整理する
-- [ ] Systems Manager の主要機能（Patch Manager, Session Manager, Parameter Store）を学ぶ
+- [ ] Systems Manager の主要機能（Patch Manager, Session Manager, Parameter Store, Run Command）を学ぶ
+- [ ] セキュリティグループの種類別初期設定（デフォルトSG vs ユーザー作成SG）を整理する
+- [ ] EC2 テナンシーオプション（Shared / Dedicated Instance / Dedicated Host）を整理する
+- [ ] VPC セキュリティ設計（IDS/IPS、Bastion Host）のベストプラクティスを学ぶ
 
 ---
 
-### Domain 2: 弾力性に優れたアーキテクチャの設計（1/5 = 20%）
+### Domain 2: 弾力性に優れたアーキテクチャの設計（累計: 3/14 = 21%）
 
 **理解が不十分なトピック:**
 
@@ -49,14 +62,25 @@ AI エージェントが試験終了後に自動更新します。
 | Route 53 ルーティングポリシーの組み合わせ | Q31 | レイテンシー最適化 + フェイルオーバー = レイテンシールーティング + ヘルスチェックの組み合わせ |
 | Route 53 リソースレコードの仕様 | Q6 | 複数選択問題。Alias レコードと CNAME の違い、TTL の扱いを整理する必要あり |
 | 静的ウェブサイトホスティング | Q5 | S3 静的ウェブサイトホスティングが最もシンプル・低コスト |
+| Lambda スケーラビリティ改善 | Q689 | Lambda のスケーラビリティ問題は SQS キューで分離して解決。非同期処理パターンの理解が必要 |
+| トランスポート層の高可用性 | Q672 | トランスポート層（L4）= NLB が最適。Multi-AZ Auto Scaling と組み合わせて高可用性を実現 |
+| RDS Multi-AZ 強制フェイルオーバー | Q185 | RDS Multi-AZ では手動で強制フェイルオーバーが可能。テストや計画的切り替えに使用 |
+| リアルタイムストリーミング処理 | Q548 | リアルタイムストリーミング = Kinesis Data Streams。SQS は複数コンシューマーへの同時配信ができない |
+| Route 53 NS レコード | Q503 | NS = Name Server レコード。ドメインの権威DNSサーバーを指定するレコードタイプ |
+| グローバルリソースの理解 | Q513 | Route 53、IAM はグローバルサービスでリージョン再作成が不要。リージョナルサービスとの区別が重要 |
+| VPN CloudHub 構成 | Q88 | VPN CloudHub = 仮想プライベートGW + 複数カスタマーGW + 固有BGP ASN。複数拠点間VPN接続のハブ&スポーク型構成 |
 
-**学習優先度: 高**
+**学習優先度: 最高（正答率 22.2%）**
 - [ ] Route 53 の全ルーティングポリシー（シンプル/加重/レイテンシー/フェイルオーバー/地理的/地理近接/複数値）を整理する
 - [ ] マルチリージョン高可用性アーキテクチャのパターンを学ぶ
+- [ ] ELB の種類と使い分け（ALB=L7, NLB=L4, CLB=旧世代）を整理する
+- [ ] Kinesis vs SQS vs SNS のストリーミング/メッセージング使い分けを学ぶ
+- [ ] VPN CloudHub のアーキテクチャパターンを理解する
+- [ ] AWS グローバルサービス vs リージョナルサービスの一覧を整理する
 
 ---
 
-### Domain 3: 高性能アーキテクチャの設計（0/3 = 0%）
+### Domain 3: 高性能アーキテクチャの設計（累計: 2/9 = 22%）
 
 **理解が不十分なトピック:**
 
@@ -68,27 +92,40 @@ AI エージェントが試験終了後に自動更新します。
 | Auto Scaling クールダウン期間の計算 | ミニQ3 | クールダウンは最後のスケーリングアクティビティ完了後から起算。複数インスタンス起動時は最後の起動基準 |
 | DAX vs ElastiCache の使い分け | ミニQ10 | DynamoDB のキャッシュ = DAX（専用・コード変更最小）。ElastiCache は汎用だがアプリ側実装が必要 |
 | マルチリージョン低レイテンシー設計（DynamoDB vs ElastiCache） | Q158 | **再度間違えた**: ユーザー好みデータの永続保存+マルチリージョン = 各リージョンのローカル DynamoDB テーブルが正解。ElastiCache はインメモリで高速だが永続性・マルチリージョン対応で DynamoDB に劣る。Route 53 レイテンシーベースルーティングの有無も要確認 |
+| EBS Provisioned IOPS の CloudWatch メトリクス | Q105 | Provisioned IOPS ボリュームの CloudWatch メトリクス送信間隔は1分。汎用SSD等は5分間隔 |
+| AWS Storage Gateway の機能理解 | Q56 | Storage Gateway の各タイプ（File/Volume/Tape）の用途と機能を整理する必要あり |
+| DB書き込みスループット向上 | Q604 | EBSアレイ（RAID 0等）+ EC2インスタンスサイズ拡大で書き込み性能を向上。RDS では対応できないケースの設計 |
+| Oracle SQL Developer の理解 | Q197 | Oracle提供の無料Javaグラフィカルツール。AWS固有サービスではなく一般的なDB管理ツール |
 
-**学習優先度: 最高**
+**学習優先度: 最高（正答率 33.3%）**
 - [ ] CloudFront のキャッシュ動作とオリジン設定を学ぶ
 - [ ] Direct Connect / VPN / Transit Gateway の使い分けを整理する
 - [ ] Aurora のアーキテクチャ（クラスターエンドポイント、リーダーエンドポイント）を学ぶ
+- [ ] EBS ボリュームタイプ別の CloudWatch メトリクス間隔を整理する
+- [ ] Storage Gateway の全タイプと使い分けを学ぶ
+- [ ] EC2 + EBS のパフォーマンスチューニング（RAID構成、インスタンスサイズ）を学ぶ
 
 ---
 
-### Domain 4: コストを最適化したアーキテクチャの設計（0/2 = 0%）
+### Domain 4: コストを最適化したアーキテクチャの設計（累計: 2/9 = 22%）
 
 **理解が不十分なトピック:**
 
 | トピック | 間違えた問題 | 具体的な誤解・ギャップ |
 | :--- | :--- | :--- |
-| Spot インスタンスの活用 | Q24 | 分散処理・バッチ処理には Spot インスタンスが最もコスト効率が高い |
+| Spot インスタンスの活用 | Q24, Q331 | 分散処理・バッチ処理・障害耐性のある分散処理には Spot インスタンスが最もコスト効率が高い。**再度出題**: 障害耐性ありの分散処理コスト最適化 = Spot Instances |
 | S3 File Gateway + ライフサイクルポリシー | Q27 | SMB ファイルサーバー拡張 = S3 File Gateway。7日後のアーカイブ = S3 Glacier Deep Archive へのライフサイクル |
+| DynamoDB コスト最適化・SQS バッファリング | Q489 | SQS による書き込みバッファリングでスパイクを平準化→WCU 削減。不要テーブル削除でストレージコスト削減。S3 は DynamoDB より大量データ保存に安価 |
+| EMR + Redshift コスト最適化 | Q9 | PDF/CSV 保存は S3 RRS（Reduced Redundancy Storage）、EMR は Spot Instances、Redshift は Reserved Instances でコスト最適化 |
+| S3 Intelligent-Tiering | Q686 | 予測不可能なアクセスパターンのデータには S3 Intelligent-Tiering が最適。アクセス頻度に応じて自動的にストレージ層を移動 |
+| Reserved Instances の上限 | Q409 | Reserved Instances は月20台/AZ（アベイラビリティゾーン）の上限がある。上限緩和申請が可能 |
 
-**学習優先度: 高**
-- [ ] EC2 購入オプション（オンデマンド/Reserved/Spot/Savings Plans）の使い分けを整理する
-- [ ] S3 ストレージクラスとライフサイクルポリシーを学ぶ
+**学習優先度: 最高（正答率 28.6%）**
+- [ ] EC2 購入オプション（オンデマンド/Reserved/Spot/Savings Plans）の使い分けと制限を整理する
+- [ ] S3 ストレージクラス全種類（Standard/IA/One Zone-IA/Intelligent-Tiering/Glacier/Glacier Deep Archive/RRS）を学ぶ
 - [ ] AWS Storage Gateway の種類（File/Volume/Tape）を整理する
+- [ ] EMR + Redshift のコスト最適化パターンを学ぶ
+- [ ] Reserved Instances の仕様と制限（上限、スコープ、変更可能性）を整理する
 
 ---
 
@@ -124,6 +161,13 @@ AI エージェントが試験終了後に自動更新します。
 | DR 戦略の選定（ウォームスタンバイ） | ミニQ8 | RTO 1-2h / RPO 15min + コスト考慮 = ウォームスタンバイを正しく選択 |
 | SQS FIFO キュー | ミニQ9 | メッセージ順序保証 + Exactly-once + 重複排除 = SQS FIFO を正しく選択 |
 | S3 + CloudFront + ACM 構成 | ミニQ11 | 静的サイトのグローバル配信 + HTTPS + 低コスト = S3+CloudFront+ACM を正しく選択 |
+| EC2 ルートデバイス名 | Q20 | /dev/sda1 はルートデバイスとして予約されている。データボリュームには /dev/sd[b-z] を使用 |
+| Placement Groups で低レイテンシー | Q628 | 低レイテンシーのインスタンス間通信には Placement Groups（クラスター配置グループ）が有効 |
+| Reserved Instances 前払い金は返金不可 | Q238 | RI の前払い金は途中解約しても返金されない。Marketplace での売却は可能 |
+| RDS Multi-AZ の用途 | Q627 | 複雑なクエリ処理 + 高可用性が必要な場合は RDS Multi-AZ が最適 |
+| Route 53 アクティブ-アクティブフェイルオーバー | Q433 | 複数リソースへの同時トラフィック分散 + フェイルオーバー = アクティブ-アクティブ構成 |
+| User data によるカスタムスクリプト | Q142 | EC2 起動時にカスタムスクリプトを実行するには User data を使用 |
+| EBS は複数EC2に同時アタッチ不可 | Q607 | EBS ボリュームは基本的に1つの EC2 インスタンスにのみアタッチ可能（io1/io2 の Multi-Attach は例外） |
 
 ---
 
@@ -131,10 +175,10 @@ AI エージェントが試験終了後に自動更新します。
 
 以下を優先的に学習すること（正答率が低いドメインから順に）:
 
-1. **Domain 1（33.3%）**: S3 Storage Lens、セキュリティグループのルール操作、AWS Config の適用範囲
-2. **Domain 2（33.3%）**: EC2 ディスクストレージの種類、ELB + Route 53 の負荷分散最適化
-3. **Domain 4（50.0%）**: S3 Intelligent-Tiering の適用場面、アクセスパターン別ストレージ選択
-4. **Domain 3（66.7%）**: EMR 監視ツールの種類と用途の区別
+1. **Domain 1（10.0%・最低）**: セキュリティグループ（デフォルトSG vs ユーザー作成SG）、Systems Manager（Run Command, Patch Manager）、VPCセキュリティ設計（IDS/IPS, Bastion Host）、EC2テナンシー、S3権限管理
+2. **Domain 2（22.2%）**: ELB種類別使い分け（ALB/NLB）、Kinesis vs SQS vs SNS、VPN CloudHub、グローバルサービス vs リージョナルサービス、RDS Multi-AZ フェイルオーバー
+3. **Domain 4（28.6%）**: EC2購入オプション（Spot/RI上限）、S3ストレージクラス全種類（Intelligent-Tiering含む）、EMR+Redshiftコスト最適化
+4. **Domain 3（33.3%）**: EBSボリュームタイプ別CloudWatchメトリクス、Storage Gateway全タイプ、EC2+EBSパフォーマンスチューニング
 
 ---
 
@@ -148,3 +192,4 @@ AI エージェントが試験終了後に自動更新します。
 | 2026-03-23 | Q146(S3保存データ暗号化) 不正解。S3暗号化方式の弱点が継続（3回目）。「保存データ vs 転送中」の区別、SSE-C の存在を再確認 |
 | 2026-03-23 | Q158(マルチリージョン低レイテンシー設計) 不正解。DynamoDB vs ElastiCache の使い分け弱点が継続。永続データ+マルチリージョン = DynamoDB ローカルテーブル |
 | 2026-03-23 | ミニ模擬試験（11問）の結果を記録。正答率 45.5%（前回比 +21.3%）。Domain 3 が 66.7% と最も改善。Domain 1・2 は 33.3% で引き続き要強化 |
+| 2026-03-23 | フル模擬試験途中終了（32問）の結果を記録。正答率 21.9%（7/32）。全ドメインで大幅な弱点が判明。Domain 1: 10.0%、Domain 2: 22.2%、Domain 3: 33.3%、Domain 4: 28.6%。25問の新規弱点トピックを追加、7問の理解済みトピックを確認 |
