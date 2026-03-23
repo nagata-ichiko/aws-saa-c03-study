@@ -92,6 +92,7 @@ AI エージェントが試験終了後に自動更新します。
 | :--- | :--- | :--- |
 | CloudFront + Lambda@Edge の認証フロー | Q3 | 認証トークン検証は Lambda@Edge で実装し、キャッシュ制御と組み合わせる |
 | Direct Connect + Transit Gateway の構成 | Q26 | 複数 VPC + オンプレミスの一元管理 = Direct Connect + Transit Gateway が正解 |
+| Direct Connect / VPN 移行手順と BGP 設定 | Q358 | DX移行の正しい順序: ①DXルーター設定→②VPCルートテーブル更新→③VPNのBGP優先度調整→④確認。BGP優先度の設定を忘れずに。VPNはバックアップとして残しダウンタイムなしで移行する |
 | Aurora リードレプリカ vs DAX | Q32 | Aurora の読み取りスケールは Aurora リードレプリカが正解。DAX は DynamoDB 専用 |
 | Auto Scaling クールダウン期間の計算 | ミニQ3 | クールダウンは最後のスケーリングアクティビティ完了後から起算。複数インスタンス起動時は最後の起動基準 |
 | DAX vs ElastiCache の使い分け | ミニQ10 | DynamoDB のキャッシュ = DAX（専用・コード変更最小）。ElastiCache は汎用だがアプリ側実装が必要 |
@@ -105,7 +106,7 @@ AI エージェントが試験終了後に自動更新します。
 
 **学習優先度: 最高（正答率 33.3%）**
 - [ ] CloudFront のキャッシュ動作とオリジン設定を学ぶ
-- [ ] Direct Connect / VPN / Transit Gateway の使い分けを整理する
+- [ ] Direct Connect / VPN / Transit Gateway の使い分けと移行手順（BGP優先度制御含む）を整理する
 - [ ] Aurora のアーキテクチャ（クラスターエンドポイント、リーダーエンドポイント）を学ぶ
 - [ ] EBS ボリュームタイプ別の CloudWatch メトリクス間隔を整理する
 - [ ] Storage Gateway の全タイプと使い分けを学ぶ
