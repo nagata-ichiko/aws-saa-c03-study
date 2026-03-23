@@ -28,7 +28,7 @@ AI エージェントが試験終了後に自動更新します。
 | AWS Config vs CloudTrail vs Inspector | Q17 | S3 設定変更の監視は Config が担当。CloudTrail はAPI呼び出しログ、Inspector は脆弱性スキャン |
 | EBS スナップショットのアクセス制御 | Q18 | スナップショットはデフォルトでプライベート。共有するには明示的な許可が必要 |
 | Auto Scaling 終了ポリシー | Q11 | 「最初に請求時間に最も近いインスタンスを削除」= OldestInstance ではなく ClosestToNextInstanceHour |
-| セキュリティグループ vs NACL の使い分け | Q25 | インスタンス間通信の制御はセキュリティグループ（ステートフル）が適切。NACL はステートレスで管理が複雑 |
+| セキュリティグループ vs NACL の使い分け | Q25, Q32 | インスタンス間通信の制御はセキュリティグループ（ステートフル）が適切。NACL はステートレスで管理が複雑。**再度間違えた**: セキュリティグループ＝インスタンスレベル（ステートフル）、ネットワーク ACL＝サブネットレベル（ステートレス）の多層防御構造を問う問題で VPC Security Groups を選んでしまった |
 | EC2 移行後のパッチ管理 | Q9 | 大量 EC2 のパッチ管理は AWS Systems Manager Patch Manager が最適 |
 | HTTPS と TLS の関係 | Q28 | SSL/TLS を使った HTTP 通信 = HTTPS。TLS は SSL の後継プロトコル名であり、AWS では HTTPS を使う |
 | AWS Shield vs WAF の違い | ミニQ6 | Shield = DDoS 防御、WAF = アプリケーション層保護（SQL インジェクション等）。地理的制限は CloudFront の機能 |
