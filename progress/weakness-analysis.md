@@ -96,7 +96,7 @@ AI エージェントが試験終了後に自動更新します。
 | Auto Scaling クールダウン期間の計算 | ミニQ3 | クールダウンは最後のスケーリングアクティビティ完了後から起算。複数インスタンス起動時は最後の起動基準 |
 | DAX vs ElastiCache の使い分け | ミニQ10 | DynamoDB のキャッシュ = DAX（専用・コード変更最小）。ElastiCache は汎用だがアプリ側実装が必要 |
 | マルチリージョン低レイテンシー設計（DynamoDB vs ElastiCache） | Q158 | **再度間違えた**: ユーザー好みデータの永続保存+マルチリージョン = 各リージョンのローカル DynamoDB テーブルが正解。ElastiCache はインメモリで高速だが永続性・マルチリージョン対応で DynamoDB に劣る。Route 53 レイテンシーベースルーティングの有無も要確認 |
-| EBS Provisioned IOPS の CloudWatch メトリクス | Q105 | Provisioned IOPS ボリュームの CloudWatch メトリクス送信間隔は1分。汎用SSD等は5分間隔 |
+| EBS Provisioned IOPS の CloudWatch メトリクス | Q105, Q463 | Provisioned IOPS ボリュームの CloudWatch メトリクス送信間隔は1分。汎用SSD等は5分間隔。**再度間違えた**: IOPS超過の確認 = VolumeQueueLength（平均キュー長）が正解。レイテンシ（ストレージサブシステムの応答）はIOPS超過の「結果」であり「原因確認」には使えない |
 | AWS Storage Gateway の機能理解 | Q56, Q342 | Storage Gateway の各タイプ（File/Volume/Tape）の用途と機能を整理する必要あり。**再度間違えた**: Gateway-Cached = 本体S3 + キャッシュのみローカル、Gateway-Stored = 全データローカル + S3にバックアップ。DはAの説明が逆の「ひっかけ選択肢」に引っかかった |
 | DB書き込みスループット向上 | Q604 | EBSアレイ（RAID 0等）+ EC2インスタンスサイズ拡大で書き込み性能を向上。RDS では対応できないケースの設計 |
 | Oracle SQL Developer の理解 | Q197 | Oracle提供の無料Javaグラフィカルツール。AWS固有サービスではなく一般的なDB管理ツール |
