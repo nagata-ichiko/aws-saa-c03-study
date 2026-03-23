@@ -97,7 +97,7 @@ AI エージェントが試験終了後に自動更新します。
 | DAX vs ElastiCache の使い分け | ミニQ10 | DynamoDB のキャッシュ = DAX（専用・コード変更最小）。ElastiCache は汎用だがアプリ側実装が必要 |
 | マルチリージョン低レイテンシー設計（DynamoDB vs ElastiCache） | Q158 | **再度間違えた**: ユーザー好みデータの永続保存+マルチリージョン = 各リージョンのローカル DynamoDB テーブルが正解。ElastiCache はインメモリで高速だが永続性・マルチリージョン対応で DynamoDB に劣る。Route 53 レイテンシーベースルーティングの有無も要確認 |
 | EBS Provisioned IOPS の CloudWatch メトリクス | Q105 | Provisioned IOPS ボリュームの CloudWatch メトリクス送信間隔は1分。汎用SSD等は5分間隔 |
-| AWS Storage Gateway の機能理解 | Q56 | Storage Gateway の各タイプ（File/Volume/Tape）の用途と機能を整理する必要あり |
+| AWS Storage Gateway の機能理解 | Q56, Q342 | Storage Gateway の各タイプ（File/Volume/Tape）の用途と機能を整理する必要あり。**再度間違えた**: Gateway-Cached = 本体S3 + キャッシュのみローカル、Gateway-Stored = 全データローカル + S3にバックアップ。DはAの説明が逆の「ひっかけ選択肢」に引っかかった |
 | DB書き込みスループット向上 | Q604 | EBSアレイ（RAID 0等）+ EC2インスタンスサイズ拡大で書き込み性能を向上。RDS では対応できないケースの設計 |
 | Oracle SQL Developer の理解 | Q197 | Oracle提供の無料Javaグラフィカルツール。AWS固有サービスではなく一般的なDB管理ツール |
 | VPC エンドポイント vs Direct Connect の使い分け | 通常Q9 | VPC エンドポイント = VPC 内から AWS サービスへのプライベート接続（ゲートウェイ型: S3/DynamoDB）。Direct Connect = オンプレミスと AWS 間の専用線接続。用途が異なる |
@@ -205,3 +205,4 @@ AI エージェントが試験終了後に自動更新します。
 | 2026-03-23 | ミニ模擬試験（11問）の結果を記録。正答率 45.5%（前回比 +21.3%）。Domain 3 が 66.7% と最も改善。Domain 1・2 は 33.3% で引き続き要強化 |
 | 2026-03-23 | フル模擬試験途中終了（32問）の結果を記録。正答率 21.9%（7/32）。全ドメインで大幅な弱点が判明。Domain 1: 10.0%、Domain 2: 22.2%、Domain 3: 33.3%、Domain 4: 28.6%。25問の新規弱点トピックを追加、7問の理解済みトピックを確認 |
 | 2026-03-23 | 通常モード（10問・7問記録）の結果を記録。正答率 43%（3/7）。新規弱点4件追加（S3 Glacier取得時間、ELB vs Route 53、Lambda スケジュール停止、VPCエンドポイント vs Direct Connect）。理解済み3件追加（RDSリードレプリカ、SSE-KMS、マルチリージョン耐障害性） |
+| 2026-03-23 | Q342(Gateway-Cached vs Gateway-Stored) 不正解。Storage Gateway の弱点が継続（2回目）。ひっかけ選択肢（説明が逆）に注意 |
