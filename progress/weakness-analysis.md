@@ -71,12 +71,14 @@ AI エージェントが試験終了後に自動更新します。
 | グローバルリソースの理解 | Q513 | Route 53、IAM はグローバルサービスでリージョン再作成が不要。リージョナルサービスとの区別が重要 |
 | VPN CloudHub 構成 | Q88 | VPN CloudHub = 仮想プライベートGW + 複数カスタマーGW + 固有BGP ASN。複数拠点間VPN接続のハブ&スポーク型構成 |
 | ELB vs Route 53 の使い分け | 通常Q5 | ELB = インスタンスレベルの負荷分散・高可用性（AZ 間）、Route 53 = DNS レベルのルーティング（リージョン間フェイルオーバー等）。用途を混同しない |
+| Amazon SNS のサポートするエンドポイント一覧 | Q533 | SNS のエンドポイントは Email, SMS, HTTP/HTTPS, SQS, Lambda, モバイルプッシュ, Kinesis Data Firehose。CloudFront や FTP, SNMP はサポート対象外。CloudFront を選んでしまった |
 
 **学習優先度: 最高（正答率 22.2%）**
 - [ ] Route 53 の全ルーティングポリシー（シンプル/加重/レイテンシー/フェイルオーバー/地理的/地理近接/複数値）を整理する
 - [ ] マルチリージョン高可用性アーキテクチャのパターンを学ぶ
 - [ ] ELB の種類と使い分け（ALB=L7, NLB=L4, CLB=旧世代）を整理する
 - [ ] Kinesis vs SQS vs SNS のストリーミング/メッセージング使い分けを学ぶ
+- [ ] Amazon SNS のサポートするエンドポイント一覧（Email, SMS, HTTP/HTTPS, SQS, Lambda, モバイルプッシュ, Firehose）を覚える
 - [ ] VPN CloudHub のアーキテクチャパターンを理解する
 - [ ] AWS グローバルサービス vs リージョナルサービスの一覧を整理する
 
