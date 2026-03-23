@@ -18,7 +18,7 @@ AI エージェントが試験終了後に自動更新します。
 
 ## 🔴 弱点ポイント（要強化）
 
-### Domain 1: セキュアなアーキテクチャの設計（2/9 = 22%）
+### Domain 1: セキュアなアーキテクチャの設計（累計: 3/19 = 16%）
 
 **理解が不十分なトピック:**
 
@@ -32,11 +32,23 @@ AI エージェントが試験終了後に自動更新します。
 | HTTPS と TLS の関係 | Q28 | SSL/TLS を使った HTTP 通信 = HTTPS。TLS は SSL の後継プロトコル名であり、AWS では HTTPS を使う |
 | AWS Shield vs WAF の違い | ミニQ6 | Shield = DDoS 防御、WAF = アプリケーション層保護（SQL インジェクション等）。地理的制限は CloudFront の機能 |
 | S3 暗号化方式の使い分け | ミニQ7, Q146 | SSE-S3 は AWS 完全管理でキー制御不可。自社管理+自動ローテーション+監査 = SSE-KMS CMK が正解。**再度間違えた（3回目）**: 保存データ暗号化 = SSE-KMS / SSE-C / クライアントサイド暗号化の3種。EC2キーペアはSSH用で暗号化に無関係。SSL は転送中の暗号化であり保存データ暗号化ではない |
+| VPC での IDS/IPS 設計 | Q5 | 各インスタンスにホストベースのエージェントをインストール + リバースプロキシ層で検査。VPC Flow Logs だけでは不十分 |
+| EC2 テナンシー属性 | Q96 | Dedicated テナンシー = 専用ハードウェアで実行。Shared（デフォルト）、Dedicated Host との違いを整理する必要あり |
+| デフォルトセキュリティグループの初期設定 | Q590 | デフォルトSG: インバウンド = 同SG内からのみ許可、アウトバウンド = 全許可。ユーザー作成SGとは異なる |
+| ユーザー作成SGの初期設定 | Q217 | ユーザー作成SG: インバウンド = 全拒否、アウトバウンド = 全許可。デフォルトSGとの違いに注意 |
+| 他サービス所有インターフェースのSG変更 | Q21 | ELB等の他サービスが管理するENIのSG変更は、そのサービス固有のコンソール/APIから行う |
+| Bastion Host SG設定 | Q224 | Bastion Host のインバウンドSG = TCP/22（SSH）、ソースは管理者IPの /32 CIDR で限定する |
+| Auto Scaling + SNS通知 + 鍵管理 | Q145 | Auto Scaling でスケールイン/アウト時の SNS 通知設定、鍵管理サービスによる証明書署名の組み合わせ |
+| S3 バケット/オブジェクト作成者の権限 | Q328 | S3 はバケットやオブジェクトの作成者に対して自動的に他の権限を付与しない。明示的なポリシー設定が必要 |
+| 大量EC2への緊急パッチ適用 | Q701 | Systems Manager Run Command で複数EC2に一括コマンド実行。Patch Manager とは異なる即時実行ツール |
 
-**学習優先度: 高**
+**学習優先度: 最高（正答率 10.0%）**
 - [ ] AWS Config のルールと自動修復の仕組みを学ぶ
 - [ ] IAM ポリシー・リソースポリシーの違いを整理する
-- [ ] Systems Manager の主要機能（Patch Manager, Session Manager, Parameter Store）を学ぶ
+- [ ] Systems Manager の主要機能（Patch Manager, Session Manager, Parameter Store, Run Command）を学ぶ
+- [ ] セキュリティグループの種類別初期設定（デフォルトSG vs ユーザー作成SG）を整理する
+- [ ] EC2 テナンシーオプション（Shared / Dedicated Instance / Dedicated Host）を整理する
+- [ ] VPC セキュリティ設計（IDS/IPS、Bastion Host）のベストプラクティスを学ぶ
 
 ---
 
