@@ -7,6 +7,10 @@ exam_session.py — 模擬試験セッション管理スクリプト
    python exam_session.py start --mode mini --repo /path/to/repo
    → /tmp/exam_session.json を生成する
 
+   過去出題済み問題のみで試験を行う場合:
+   python exam_session.py start --mode mini --repo /path/to/repo --past
+   → progress/exam-history/ の履歴から過去出題済みIDを抽出して出題する
+
 2. 1問出題するたびに回答を記録する:
    python exam_session.py record --q_num 1 --answer A
    python exam_session.py record --q_num 2 --answer B,C  # 複数選択の場合
@@ -20,6 +24,7 @@ exam_session.py — 模擬試験セッション管理スクリプト
   "mode": "mini",
   "date": "2026-03-25",
   "repo": "/path/to/repo",
+  "past_mode": false,
   "questions": [
     {"num": 1, "id": 371, "answer": null},
     {"num": 2, "id": 1760, "answer": null},
@@ -37,6 +42,7 @@ exam_session.py — 模擬試験セッション管理スクリプト
 """
 
 import json
+import re
 import argparse
 import random
 import sys
@@ -60,7 +66,41 @@ def load_questions(repo: str):
         return json.load(f)
 
 
-def start_session(mode: str, repo: str):
+def extract_past_ids(repo: str) -> set:
+    """
+    progress/exam-history/ 内の Markdown ファイルから
+    過去に出題されたすべての問題 ID を抽出する。
+
+    対応フォーマット:
+    - 「| Q{id} |」形式（試験履歴の間違えた問題・正解した問題テーブル）
+    - 「ID:{id}」形式（_questions.md ファイル）
+    """
+    history_dir = Path(repo) / "progress" / "exam-history"
+    if not history_dir.exists():
+        return set()
+
+    past_ids = set()
+
+    # テーブル行: | Q{id} | または | Q{id}_{日付} |
+    pattern_table = re.compile(r"\|\s*Q(\d+)\s*\|")
+
+    # ID: 形式: ID:371 または (ID:371,
+    pattern_id = re.compile(r"ID:(\d+)")
+
+    for md_file in history_dir.glob("*.md"):
+        try:
+            content = md_file.read_text(encoding="utf-8")
+            for m in pattern_table.finditer(content):
+                past_ids.add(int(m.group(1)))
+            for m in pattern_id.finditer(content):
+                past_ids.add(int(m.group(1)))
+        except Exception:
+            pass
+
+    return past_ids
+
+
+def start_session(mode: str, repo: str, past: bool = False):
     """問題を抽出してセッションファイルを生成する"""
     if mode not in EXAM_MODES:
         print(f"ERROR: mode は {list(EXAM_MODES.keys())} のいずれかを指定してください")
@@ -71,6 +111,20 @@ def start_session(mode: str, repo: str):
 
     # skip フラグが True の問題を除外
     all_qs = [q for q in all_qs if not q.get("skip", False)]
+
+    if past:
+        # 過去出題済み問題のみに絞り込む
+        past_ids = extract_past_ids(repo)
+        if not past_ids:
+            print("WARNING: 過去の試験履歴が見つかりません。通常モードで実行します。")
+            past = False
+        else:
+            all_qs = [q for q in all_qs if q["id"] in past_ids]
+            if len(all_qs) == 0:
+                print("ERROR: 過去出題済み問題が問題データに見つかりません。")
+                sys.exit(1)
+            print(f"📚 過去出題済みモード: {len(past_ids)} 問のIDを履歴から抽出、"
+                  f"問題データと照合して {len(all_qs)} 問が利用可能")
 
     # ドメイン別に分類
     by_domain = {1: [], 2: [], 3: [], 4: []}
@@ -87,7 +141,12 @@ def start_session(mode: str, repo: str):
         if len(pool) < count:
             print(f"WARNING: Domain {d} の問題数が不足しています（{len(pool)} < {count}）")
             count = len(pool)
-        selected.extend(random.sample(pool, count))
+        if count > 0:
+            selected.extend(random.sample(pool, count))
+
+    if len(selected) == 0:
+        print("ERROR: 出題できる問題がありません。")
+        sys.exit(1)
 
     # シャッフル
     random.shuffle(selected)
@@ -97,6 +156,7 @@ def start_session(mode: str, repo: str):
         "mode": mode,
         "date": str(date.today()),
         "repo": repo,
+        "past_mode": past,
         "questions": [
             {"num": i + 1, "id": q["id"], "answer": None}
             for i, q in enumerate(selected)
@@ -109,12 +169,13 @@ def start_session(mode: str, repo: str):
     with open(SESSION_FILE, "w", encoding="utf-8") as f:
         json.dump(session, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ セッション開始: {mode} モード ({config['total']}問)")
+    mode_label = f"{mode}（過去出題済み問題）" if past else mode
+    print(f"✅ セッション開始: {mode_label} モード ({len(selected)}問)")
     print(f"📄 セッションファイル: {SESSION_FILE}")
     print()
-    print("出題する問題一覧（この順番で出題すること）:")
+    print("\n出題する問題一覧（この順番で出題すること）:")
     for entry in session["questions"]:
-        q = session["_question_data"][entry["id"]]
+        q = session["_question_data"][str(entry["id"])]
         print(f"  Q{entry['num']:2d} (ID:{entry['id']:4d}, Domain:{q['domain']}): {q.get('question_ja', q.get('question', ''))[:60]}...")
 
     return session
@@ -195,8 +256,9 @@ def grade_session(repo: str = None):
     total = len(results)
     score_pct = correct_count / total * 100 if total > 0 else 0
 
+    past_label = "（過去出題済み問題）" if session.get("past_mode") else ""
     print(f"\n{'='*60}")
-    print(f"  採点結果: {correct_count}/{total} ({score_pct:.1f}%)")
+    print(f"  採点結果{past_label}: {correct_count}/{total} ({score_pct:.1f}%)")
     print(f"  合格ライン: 72%  {'✅ 合格' if score_pct >= 72 else '❌ 未達'}")
     print(f"{'='*60}\n")
 
@@ -234,6 +296,30 @@ def grade_session(repo: str = None):
     return results, correct_count, total, score_pct
 
 
+def list_past_ids(repo: str):
+    """過去出題済み問題IDの一覧を表示する（デバッグ用）"""
+    past_ids = extract_past_ids(repo)
+    all_qs = load_questions(repo)
+    all_qs = [q for q in all_qs if not q.get("skip", False)]
+    available = [q for q in all_qs if q["id"] in past_ids]
+
+    print(f"📚 過去出題済み問題: {len(past_ids)} 問のIDを履歴から抽出")
+    print(f"   問題データと照合: {len(available)} 問が利用可能")
+
+    # ドメイン別集計
+    by_domain = {1: 0, 2: 0, 3: 0, 4: 0}
+    for q in available:
+        d = q.get("domain")
+        if d in by_domain:
+            by_domain[d] += 1
+
+    domain_names = {1: "D1: セキュリティ", 2: "D2: 弾力性", 3: "D3: 高性能", 4: "D4: コスト最適化"}
+    for d, cnt in by_domain.items():
+        print(f"   {domain_names[d]}: {cnt} 問")
+
+    return past_ids, available
+
+
 def main():
     parser = argparse.ArgumentParser(description="模擬試験セッション管理")
     subparsers = parser.add_subparsers(dest="command")
@@ -242,6 +328,8 @@ def main():
     start_parser = subparsers.add_parser("start", help="セッションを開始する")
     start_parser.add_argument("--mode", choices=["mini", "half", "full"], default="mini")
     start_parser.add_argument("--repo", required=True, help="リポジトリのパス")
+    start_parser.add_argument("--past", action="store_true",
+                              help="過去出題済み問題のみで試験を行う")
 
     # record コマンド
     record_parser = subparsers.add_parser("record", help="回答を記録する")
@@ -252,14 +340,20 @@ def main():
     grade_parser = subparsers.add_parser("grade", help="採点する")
     grade_parser.add_argument("--repo", help="リポジトリのパス（オプション）")
 
+    # list-past コマンド（デバッグ用）
+    list_parser = subparsers.add_parser("list-past", help="過去出題済み問題IDを一覧表示する")
+    list_parser.add_argument("--repo", required=True, help="リポジトリのパス")
+
     args = parser.parse_args()
 
     if args.command == "start":
-        start_session(args.mode, args.repo)
+        start_session(args.mode, args.repo, past=getattr(args, "past", False))
     elif args.command == "record":
         record_answer(args.q_num, args.answer)
     elif args.command == "grade":
         grade_session(args.repo)
+    elif args.command == "list-past":
+        list_past_ids(args.repo)
     else:
         parser.print_help()
 
