@@ -55,6 +55,7 @@ AI エージェントが試験終了後に自動更新します。
 | Secrets Manager | Q702 | RDSのパスワードローテーションにはSecrets Managerが最適。KMSは暗号化キー管理用 |
 | CloudFront OAI | Q180 | S3の非公開コンテンツをCloudFront経由で配信→OAIを作成しバケットポリシーでアクセス権付与 |
 | マルチプラットフォームELB設計 | Q575 | プラットフォームごとに異なるSSL/スティッキーセッション→ELBを分ける。共通のEC2で処理 |
+| UDP / VoIP / レイヤーの違い | Q693 追加 | UDP=確認なし高速通信（VoIP・ゲーム）。TCP=確認あり確実通信（Web・ファイル）。Layer4=NLB（TCP/UDP対応）。Layer7=ALB（HTTP/HTTPSのみ） |
 | Web Identity Federation | Q175 | OpenID Connect対応IdP→Web Identity Federation。SAMLは企業AD/LDAP連携 |
 | AWS Config（設定変更検出） | Q690 | リソースの設定変更検出にはAWS Config。S3ログはアクセスログであり設定変更ではない |
 | 責任共有モデル | Q253 | 顧客責任: SG/ACL設定、OSパッチ管理、IAM資格情報管理、EBS暗号化。AWS責任: ストレージ廃棄、物理アクセス管理 |
