@@ -44,20 +44,20 @@ AI エージェントが試験終了後に自動更新します。
 | S3 バケット/オブジェクト作成者の権限 | Q328 | S3 はバケットやオブジェクトの作成者に対して自動的に他の権限を付与しない。明示的なポリシー設定が必要 |
 | 大量EC2への緊急パッチ適用 | Q701 | Systems Manager Run Command で複数EC2に一括コマンド実行。Patch Manager とは異なる即時実行ツール |
 | IAMロール vs アクセスキー | Q148 | EC2にはIAMロールを割り当てるのがベストプラクティス。509証明書ではなくIAMロール |
-| Presigned URL | Q651 | 外部への一時的なS3アクセスにはPresigned URLが最も運用効率が高い。IAMユーザー作成は不要 |
-| セキュリティグループ基礎 | Q290, Q426 | SGはインスタンスレベルのファイアウォール（ACLではない）。ルールはいつでも変更可能で即座に適用 |
+| Presigned URL | Q651 | 外部への一時的なS3アクセスにはPresigned URLが最も運用効率が高い。IAMユーザー作成は不要 ✅ 解説確認済み(2026-03-25) |
+| セキュリティグループ基礎 | Q290, Q426 | SGはインスタンスレベルのファイアウォール（ACLではない）。ルールはいつでも変更可能で即座に適用 ✅ 解説確認済み(2026-03-25) |
 | CloudFormation課金 | Q491 | スタックリソースは稼働時間に対して課金。トラフィックの有無は関係ない |
 | ペネトレーションテスト | Q393 | AWSは自社インフラのペネトレーションテストを定期的に実施している |
 | AD Connector + IAMロール | Q277 | 社内ADとの連携にはAD Connector。IAMロールでロールベースアクセス制御を実現 |
-| RDS SSL暗号化 | Q524 | アプリケーションとDBインスタンス間のSSL暗号化はVPCに限定されず常に利用可能 |
-| SSL/TLS と KMS の違い | 追加 | SSL/TLS = 転送中の暗号化（通信経路）。KMS = 保存時の暗号化（ストレージ上のキー管理）。2つは目的が異なる別のサービス |
+| RDS SSL暗号化 | Q524 | アプリケーションとDBインスタンス間のSSL暗号化はVPCに限定されず常に利用可能 ✅ 解説確認済み(2026-03-25) |
+| SSL/TLS と KMS の違い | 追加 | SSL/TLS = 転送中の暗号化（通信経路）。KMS = 保存時の暗号化（ストレージ上のキー管理）。2つは目的が異なる別のサービス ✅ 解説確認済み(2026-03-25) |
 | クロスアカウントIAMロール | Q1685 | 別アカウントへのアクセスにはIAMロールのAssumeRoleが推奨。直接権限付与はNG |
-| Secrets Manager | Q702 | RDSのパスワードローテーションにはSecrets Managerが最適。KMSは暗号化キー管理用 |
+| Secrets Manager | Q702 | RDSのパスワードローテーションにはSecrets Managerが最適。KMSは暗号化キー管理用 ✅ 解説確認済み(2026-03-25) |
 | CloudFront OAI | Q180 | S3の非公開コンテンツをCloudFront経由で配信→OAIを作成しバケットポリシーでアクセス権付与 |
 | マルチプラットフォームELB設計 | Q575 | プラットフォームごとに異なるSSL/スティッキーセッション→ELBを分ける。共通のEC2で処理 |
-| UDP / VoIP / レイヤーの違い | Q693 追加 | UDP=確認なし高速通信（VoIP・ゲーム）。TCP=確認あり確実通信（Web・ファイル）。Layer4=NLB（TCP/UDP対応）。Layer7=ALB（HTTP/HTTPSのみ） |
+| UDP / VoIP / レイヤーの違い | Q693 追加 | UDP=確認なし高速通信（VoIP・ゲーム）。TCP=確認あり確実通信（Web・ファイル）。Layer4=NLB（TCP/UDP対応）。Layer7=ALB（HTTP/HTTPSのみ） ✅ 解説確認済み(2026-03-25) |
 | Web Identity Federation | Q175 | OpenID Connect対応IdP→Web Identity Federation。SAMLは企業AD/LDAP連携 |
-| AWS Config（設定変更検出） | Q690 | リソースの設定変更検出にはAWS Config。S3ログはアクセスログであり設定変更ではない |
+| AWS Config（設定変更検出） | Q690 | リソースの設定変更検出にはAWS Config。S3ログはアクセスログであり設定変更ではない ✅ 解説確認済み(2026-03-25) |
 | 責任共有モデル | Q253 | 顧客責任: SG/ACL設定、OSパッチ管理、IAM資格情報管理、EBS暗号化。AWS責任: ストレージ廃棄、物理アクセス管理 |
 
 **学習優先度: 最高（正答率 25.0%）**
@@ -84,22 +84,22 @@ AI エージェントが試験終了後に自動更新します。
 | トランスポート層の高可用性 | Q672 | トランスポート層（L4）= NLB が最適。Multi-AZ Auto Scaling と組み合わせて高可用性を実現 |
 | RDS Multi-AZ 強制フェイルオーバー | Q185 | RDS Multi-AZ では手動で強制フェイルオーバーが可能。テストや計画的切り替えに使用 |
 | リアルタイムストリーミング処理 | Q548 | リアルタイムストリーミング = Kinesis Data Streams。SQS は複数コンシューマーへの同時配信ができない |
-| Route 53 NS レコード | Q503 | NS = Name Server レコード。ドメインの権威DNSサーバーを指定するレコードタイプ |
+| Route 53 NS レコード | Q503 | NS = Name Server レコード。ドメインの権威DNSサーバーを指定するレコードタイプ ✅ 解説確認済み(2026-03-25) |
 | グローバルリソースの理解 | Q513 | Route 53、IAM はグローバルサービスでリージョン再作成が不要。リージョナルサービスとの区別が重要 |
 | VPN CloudHub 構成 | Q88 | VPN CloudHub = 仮想プライベートGW + 複数カスタマーGW + 固有BGP ASN。複数拠点間VPN接続のハブ&スポーク型構成 |
 | ELB vs Route 53 の使い分け | 通常Q5 | ELB = インスタンスレベルの負荷分散・高可用性（AZ 間）、Route 53 = DNS レベルのルーティング（リージョン間フェイルオーバー等）。用途を混同しない |
-| Amazon SNS のサポートするエンドポイント一覧 | Q533 | SNS のエンドポイントは Email, SMS, HTTP/HTTPS, SQS, Lambda, モバイルプッシュ, Kinesis Data Firehose。CloudFront や FTP, SNMP はサポート対象外。CloudFront を選んでしまった |
+| Amazon SNS のサポートするエンドポイント一覧 | Q533 | SNS のエンドポイントは Email, SMS, HTTP/HTTPS, SQS, Lambda, モバイルプッシュ, Kinesis Data Firehose。CloudFront や FTP, SNMP はサポート対象外。CloudFront を選んでしまった ✅ 解説確認済み(2026-03-25) |
 | Auto Scaling通知設定 | Q321 | インスタンスの起動・終了通知はAuto Scalingグループで設定する（Launch Configではない） |
-| ELBゾーン追加 | Q552 | 既存ELBにAZをリアルタイムで追加可能。ELBを停止する必要はない |
-| EBSアレイ+インスタンスサイズ | Q604 | 書き込みスループット改善→EBSアレイ（RAID0）+インスタンスサイズアップ。RAID5は書き込みペナルティあり |
+| ELBゾーン追加 | Q552 | 既存ELBにAZをリアルタイムで追加可能。ELBを停止する必要はない ✅ 解説確認済み(2026-03-25) |
+| EBSアレイ+インスタンスサイズ | Q604 | 書き込みスループット改善→EBSアレイ（RAID0）+インスタンスサイズアップ。RAID5は書き込みペナルティあり ✅ 解説確認済み(2026-03-25) |
 | Route 53レイテンシー+フェイルオーバー | Q1721 | 速度最適化＝レイテンシールーティング。ヘルスチェックと組み合わせてフェイルオーバーも実現 |
 | S3ライフサイクルポリシー自動移行 | Q1727 | 運用負荷最小＝自動化。ライフサイクルポリシーで自動移行+自動削除が最適。手動移行はNG |
-| Auto Scaling+SQS+RDS Proxy | Q675 | ピーク対策にはAuto Scaling+RDS Proxy（DB接続管理）とSQSによるデカップリング |
+| Auto Scaling+SQS+RDS Proxy | Q675 | ピーク対策にはAuto Scaling+RDS Proxy（DB接続管理）とSQSによるデカップリング ✅ 解説確認済み(2026-03-25) |
 | Auto Scalingクールダウン計算 | Q261 | クールダウンは最後のインスタンス起動から計算。2番目が4分後→4+7=11分（最初から） |
 | Aurora Global Database | Q1714 | 複数リージョンでの災害復旧+読み込み分散→Aurora Global Database。Multi-AZは同一リージョン内のみ |
 | 起動設定の自動作成 | Q287 | Auto ScalingはEC2インスタンスから直接起動設定を自動作成できる |
-| SQS+Auto Scalingバッチ処理 | Q559 | SQS+CloudWatch+Auto Scalingでジョブ数に応じたEC2自動スケーリング（スキップ） |
-| NLB+Global Accelerator | Q693 | UDP→NLB。低遅延+自動フェイルオーバー→Global Accelerator（スキップ） |
+| SQS+Auto Scalingバッチ処理 | Q559 | SQS+CloudWatch+Auto Scalingでジョブ数に応じたEC2自動スケーリング ✅ 解説確認済み(2026-03-25) |
+| NLB+Global Accelerator | Q693 | UDP→NLB。低遅延+自動フェイルオーバー→Global Accelerator ✅ 解説確認済み(2026-03-25) |
 
 **学習優先度: 最高（正答率 29.4%）**
 - [ ] Route 53 の全ルーティングポリシー（シンプル/加重/レイテンシー/フェイルオーバー/地理的/地理近接/複数値）を整理する
@@ -131,7 +131,7 @@ AI エージェントが試験終了後に自動更新します。
 | VPC エンドポイント vs Direct Connect の使い分け | 通常Q9 | VPC エンドポイント = VPC 内から AWS サービスへのプライベート接続（ゲートウェイ型: S3/DynamoDB）。Direct Connect = オンプレミスと AWS 間の専用線接続。用途が異なる |
 | オンプレミス→AWS 3層移行設計 | Q190 | ①AWSはIPマルチキャストをサポートしない→IPユニキャストに変更が必要 ②読み取り専用データはS3が最適（EC2 NFSは単一障害点） ③バックアップはAMI+DBスナップショットが標準 |
 | EBS gp3 vs io2 vs st1 | Q1745 | gp3は最大16,000IOPSでコスト効率良。st1はHDDでランダムIO不向き。高IOPSかつ低コスト→gp3 |
-| RRS+Spot+RIコスト最適化 | Q9 | 生データはRRS不可（整合性維持）。再生成可能なPDF/CSVのみRRS。Redshiftは常時稼働→RI |
+| RRS+Spot+RIコスト最適化 | Q9 | 生データはRRS不可（整合性維持）。再生成可能なPDF/CSVのみRRS。Redshiftは常時稼働→RI ✅ 解説確認済み(2026-03-25) |
 | Redshiftメリット | Q345 | Redshiftは高パフォーマンス、OLTP分離、運用負担軽減のすべてを提供 |
 | CloudFrontオリジングループ | Q1737 | S3オリジン間の自動フェイルオーバー→オリジングループ機能。Lambda@Edgeより運用負荷低い |
 | ストレージ設計 RAID0+レプリケーション | Q276 | 100,000 IOPS→エフェメラルSSD RAID0。AZ障害耐性→別AZへの同期レプリケーション（スキップ） |
@@ -152,7 +152,7 @@ AI エージェントが試験終了後に自動更新します。
 
 | トピック | 間違えた問題 | 具体的な誤解・ギャップ |
 | :--- | :--- | :--- |
-| Spot インスタンスの活用 | Q24, Q331 | 分散処理・バッチ処理・障害耐性のある分散処理には Spot インスタンスが最もコスト効率が高い。**再度出題**: 障害耐性ありの分散処理コスト最適化 = Spot Instances |
+| Spot インスタンスの活用 | Q24, Q331 | 分散処理・バッチ処理・障害耐性のある分散処理には Spot インスタンスが最もコスト効率が高い。**再度出題**: 障害耐性ありの分散処理コスト最適化 = Spot Instances ✅ 解説確認済み(2026-03-25) |
 | S3 File Gateway + ライフサイクルポリシー | Q27 | SMB ファイルサーバー拡張 = S3 File Gateway。7日後のアーカイブ = S3 Glacier Deep Archive へのライフサイクル |
 | DynamoDB コスト最適化・SQS バッファリング | Q489 | SQS による書き込みバッファリングでスパイクを平準化→WCU 削減。不要テーブル削除でストレージコスト削減。S3 は DynamoDB より大量データ保存に安価 |
 | EMR + Redshift コスト最適化 | Q9 | PDF/CSV 保存は S3 RRS（Reduced Redundancy Storage）、EMR は Spot Instances、Redshift は Reserved Instances でコスト最適化 |
@@ -161,12 +161,12 @@ AI エージェントが試験終了後に自動更新します。
 | S3 Glacier Flexible vs Deep Archive の取得時間 | 通常Q4 | Glacier Flexible Retrieval = 数分〜12時間、Deep Archive = 12〜48時間。取得時間要件に応じたクラス選択が重要 |
 | EC2 コスト最適化（低使用率ワークロード） | 通常Q8 | 低使用率の EC2 は Lambda でスケジュール起動停止が最もコスト効率が高い。常時稼働前提の RI ではなく使用時間を減らす発想 |
 | OpsWorks構成 | Q617 | メモリバウンドとCPUバウンドの異なるワークロード→異なるスタック。レシピは共通化できる場合1つ |
-| S3 Standard-IA ライフサイクル | Q705 | 「いつでもすぐ利用可能」→Glacierは不適。30日後にアクセス頻度低下→Standard-IAが最適 |
-| EBSスナップショットコスト最適化 | Q387 | EBSスナップショットは増分式。元+最新の増分を保持すれば完全復元可能で最低コスト |
+| S3 Standard-IA ライフサイクル | Q705 | 「いつでもすぐ利用可能」→Glacierは不適。30日後にアクセス頻度低下→Standard-IAが最適 ✅ 解説確認済み(2026-03-25) |
+| EBSスナップショットコスト最適化 | Q387 | EBSスナップショットは増分式。元+最新の増分を保持すれば完全復元可能で最低コスト ✅ 解説確認済み(2026-03-25) |
 | ECS Fargate | Q1774 | Fargateはインフラ管理不要でタスク単位の自動スケーリング。運用負荷最小でコスト効率良い |
 | AZ概念（アカウント別マッピング） | Q505 | 同じAZ名でもアカウントが異なると物理的に異なるAZにマッピングされる可能性がある |
-| S3 Intelligent-Tiering | Q686 | **再度間違えた**: 予測不可能なアクセスパターン+AZ障害耐性→Intelligent-Tiering。One Zone-IAはAZ障害耐性なし |
-| スポットインスタンス | Q331 | **再度間違えた**: 障害耐性ありの分散バッチ処理→Spot Instancesが最もコスト効率良い |
+| S3 Intelligent-Tiering | Q686 | **再度間違えた**: 予測不可能なアクセスパターン+AZ障害耐性→Intelligent-Tiering。One Zone-IAはAZ障害耐性なし ✅ 解説確認済み(2026-03-25) |
+| スポットインスタンス | Q331 | **再度間違えた**: 障害耐性ありの分散バッチ処理→Spot Instancesが最もコスト効率良い ✅ 解説確認済み(2026-03-25) |
 | S3ゲートウェイエンドポイント | Q671 | ゲートウェイエンドポイントは無料。インターフェイスエンドポイントは有料。S3/DynamoDB→ゲートウェイ型（スキップ） |
 
 **学習優先度: 最高（正答率 38.5%）**
