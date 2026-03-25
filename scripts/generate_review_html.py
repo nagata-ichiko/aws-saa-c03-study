@@ -80,20 +80,24 @@ def load_wrong_questions(repo):
 
 
 def enrich_from_db(questions, q_db):
+    """問題DBを優先ソースとして補完する（旧フォーマットファイル対応）"""
     for q in questions:
         db_q = q_db.get(q["id"])
         if not db_q:
             continue
-        if not q["question"] and db_q.get("question_ja"):
-            q["question"] = db_q["question_ja"]
-        if not q["choices"] and db_q.get("choices_ja"):
-            q["choices"] = db_q["choices_ja"]
-        if not q["explanation"] and db_q.get("explanation_ja"):
-            q["explanation"] = db_q["explanation_ja"]
-        if not q["explanation"] and db_q.get("explanation"):
-            q["explanation"] = db_q["explanation"]
+        # 問題文: DBの日本語版を優先、なければ英語版
+        if not q["question"]:
+            q["question"] = db_q.get("question_ja") or db_q.get("question", "")
+        # 選択肢: DBの日本語版を優先
+        if not q["choices"]:
+            q["choices"] = db_q.get("choices_ja") or db_q.get("choices", [])
+        # 解説: DBの日本語版を優先
+        if not q["explanation"]:
+            q["explanation"] = db_q.get("explanation_ja") or db_q.get("explanation", "")
+        # ドメイン
         if not q["domain"] and db_q.get("domain"):
             q["domain"] = db_q["domain"]
+        # 正解ラベル: DBのインデックスからラベルに変換
         if not q["correct"] and db_q.get("correct"):
             q["correct"] = ",".join([LABELS[i] for i in db_q["correct"] if i < len(LABELS)])
     return questions
