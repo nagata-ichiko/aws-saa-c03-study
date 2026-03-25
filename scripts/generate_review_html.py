@@ -8,15 +8,12 @@ import glob
 import json
 import os
 import re
-import sys
-from datetime import datetime
 
 LABELS = ["A", "B", "C", "D", "E", "F"]
 DOMAIN_NAMES = {1: "D1: セキュリティ", 2: "D2: 弾力性", 3: "D3: 高性能", 4: "D4: コスト最適化"}
 
 
 def load_questions_db(repo):
-    """問題データベースを読み込む"""
     q_db = {}
     for path in glob.glob(os.path.join(repo, "practice-tests/questions/*.json")):
         if "index" in path:
@@ -30,7 +27,6 @@ def load_questions_db(repo):
 
 
 def load_wrong_questions(repo):
-    """不正解問題ファイルを読み込む（IDごとに最新ファイルを使用）"""
     wrong_dir = os.path.join(repo, "practice-tests/wrong-answers")
     files_by_id = {}
     for path in sorted(
@@ -45,62 +41,49 @@ def load_wrong_questions(repo):
         qid = m.group(1)
         files_by_id[qid] = path
 
-    sorted_ids = sorted(files_by_id.keys(), key=lambda x: int(x))
     result = []
-    for qid in sorted_ids:
+    for qid in sorted(files_by_id.keys(), key=lambda x: int(x)):
         path = files_by_id[qid]
         with open(path) as f:
             content = f.read()
 
-        # ドメインを抽出
         domain_m = re.search(r"\*\*ドメイン:\*\* D(\d)", content)
         domain = int(domain_m.group(1)) if domain_m else 0
 
-        # 問題文を抽出
         q_m = re.search(r"## 問題\n\n(.*?)\n## 選択肢", content, re.DOTALL)
         question = q_m.group(1).strip() if q_m else ""
 
-        # 選択肢を抽出
         choices_m = re.search(r"## 選択肢\n\n(.*?)\n## あなたの回答", content, re.DOTALL)
         choices_raw = choices_m.group(1).strip() if choices_m else ""
         choices = re.findall(r"- \*\*[A-F]\.\*\* (.+)", choices_raw)
 
-        # 正解を抽出
         correct_m = re.search(r"## 正解: (.+)", content)
         correct = correct_m.group(1).strip() if correct_m else ""
 
-        # 解説を抽出
         expl_m = re.search(r"## 解説\n\n?(.*?)$", content, re.DOTALL)
         explanation = expl_m.group(1).strip() if expl_m else ""
 
-        # 自分の回答を抽出
         user_ans_m = re.search(r"## あなたの回答: (.+)", content)
         user_answer = user_ans_m.group(1).strip() if user_ans_m else ""
 
-        # ファイルから取れない場合はDBから補完
-        result.append(
-            {
-                "id": qid,
-                "domain": domain,
-                "question": question,
-                "choices": choices,
-                "correct": correct,
-                "explanation": explanation,
-                "user_answer": user_answer,
-                "path": path,
-            }
-        )
-
+        result.append({
+            "id": qid,
+            "domain": domain,
+            "question": question,
+            "choices": choices,
+            "correct": correct,
+            "explanation": explanation,
+            "user_answer": user_answer,
+            "path": path,
+        })
     return result
 
 
 def enrich_from_db(questions, q_db):
-    """問題DBから日本語データで補完する"""
     for q in questions:
         db_q = q_db.get(q["id"])
         if not db_q:
             continue
-        # 問題文・選択肢・解説がファイルにない場合はDBから補完
         if not q["question"] and db_q.get("question_ja"):
             q["question"] = db_q["question_ja"]
         if not q["choices"] and db_q.get("choices_ja"):
@@ -111,27 +94,12 @@ def enrich_from_db(questions, q_db):
             q["explanation"] = db_q["explanation"]
         if not q["domain"] and db_q.get("domain"):
             q["domain"] = db_q["domain"]
-        # 正解ラベルがない場合はDBから生成
         if not q["correct"] and db_q.get("correct"):
-            q["correct"] = ",".join(
-                [LABELS[i] for i in db_q["correct"] if i < len(LABELS)]
-            )
+            q["correct"] = ",".join([LABELS[i] for i in db_q["correct"] if i < len(LABELS)])
     return questions
 
 
-def escape_html(text):
-    return (
-        str(text)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-        .replace("\n", "<br>")
-    )
-
-
 def generate_html(questions, output_path):
-    """ページング形式のHTMLを生成する"""
     total = len(questions)
     questions_json = json.dumps(questions, ensure_ascii=False)
 
@@ -142,210 +110,396 @@ def generate_html(questions, output_path):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AWS SAA-C03 不正解問題レビュー ({total}問)</title>
 <style>
-  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-  body {{ font-family: 'Helvetica Neue', Arial, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }}
+  *, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
 
+  :root {{
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2128;
+    --border: #30363d;
+    --border-light: #21262d;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #484f58;
+    --blue: #58a6ff;
+    --green: #3fb950;
+    --green-bg: #0d2818;
+    --green-border: #238636;
+    --red: #f85149;
+    --red-bg: #2d0f0f;
+    --red-border: #da3633;
+    --purple: #bc8cff;
+    --yellow: #e3b341;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }}
+
+  body {{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+  }}
+
+  /* ── ヘッダー ── */
   .header {{
-    background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
-    padding: 20px 24px;
-    border-bottom: 1px solid #334155;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 200;
   }}
-  .header h1 {{ font-size: 1.1rem; font-weight: 700; color: #f8fafc; }}
-  .header .subtitle {{ font-size: 0.8rem; color: #94a3b8; margin-top: 2px; }}
+  .header-title {{
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }}
+  .header-sub {{
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }}
+  .progress-wrap {{ flex: 1; }}
+  .progress-track {{
+    background: var(--border);
+    border-radius: 999px;
+    height: 6px;
+    overflow: hidden;
+  }}
+  .progress-fill {{
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.35s ease;
+  }}
+  .progress-label {{
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 4px;
+  }}
 
-  .progress-bar-wrap {{ flex: 1; margin: 0 24px; }}
-  .progress-bar {{ background: #1e293b; border-radius: 999px; height: 8px; overflow: hidden; }}
-  .progress-fill {{ background: linear-gradient(90deg, #3b82f6, #8b5cf6); height: 100%; border-radius: 999px; transition: width 0.3s ease; }}
-  .progress-label {{ font-size: 0.75rem; color: #64748b; text-align: right; margin-top: 4px; }}
+  /* ── フィルターバー ── */
+  .filter-bar {{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 14px 24px 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }}
+  .filter-btn {{
+    padding: 5px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface2);
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-weight: 500;
+  }}
+  .filter-btn:hover:not(.active) {{ background: var(--border); color: var(--text-primary); }}
+  .filter-btn.active {{ background: var(--blue); color: #fff; border-color: var(--blue); }}
 
-  .main {{ max-width: 860px; margin: 0 auto; padding: 32px 16px 80px; }}
+  /* ── メインコンテンツ ── */
+  .main {{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 24px 100px;
+  }}
 
+  /* ── カード ── */
   .card {{
-    background: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 16px;
-    padding: 28px 32px;
-    margin-bottom: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
   }}
 
-  .card-meta {{
+  /* カードヘッダー */
+  .card-head {{
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 18px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-light);
+    background: var(--surface2);
   }}
   .badge {{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 3px 10px;
     border-radius: 999px;
     font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
+    border: 1px solid;
   }}
-  .badge-d1 {{ background: #1e3a5f; color: #93c5fd; border: 1px solid #3b82f6; }}
-  .badge-d2 {{ background: #1a3a2a; color: #6ee7b7; border: 1px solid #10b981; }}
-  .badge-d3 {{ background: #3a2a1a; color: #fcd34d; border: 1px solid #f59e0b; }}
-  .badge-d4 {{ background: #2a1a3a; color: #c4b5fd; border: 1px solid #8b5cf6; }}
-  .badge-id {{ background: #1e293b; color: #64748b; border: 1px solid #334155; }}
-  .q-num {{ font-size: 0.85rem; color: #64748b; margin-left: auto; }}
+  .badge-d1 {{ background: #0d1f3c; color: #79c0ff; border-color: #1f4d8a; }}
+  .badge-d2 {{ background: #0d2818; color: #56d364; border-color: #1a5c2a; }}
+  .badge-d3 {{ background: #2d1f00; color: #e3b341; border-color: #5c3d00; }}
+  .badge-d4 {{ background: #1d1040; color: #bc8cff; border-color: #4a2d8a; }}
+  .badge-id {{ background: var(--surface2); color: var(--text-muted); border-color: var(--border); }}
+  .card-qnum {{ margin-left: auto; font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }}
 
+  /* 問題文 */
+  .question-block {{
+    padding: 24px 24px 20px;
+    border-bottom: 1px solid var(--border-light);
+  }}
+  .question-label {{
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }}
   .question-text {{
-    font-size: 1rem;
-    line-height: 1.75;
-    color: #e2e8f0;
-    margin-bottom: 24px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #334155;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-primary);
+    font-weight: 400;
   }}
 
-  .choices {{ list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }}
+  /* 選択肢 */
+  .choices-block {{
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }}
   .choice-item {{
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    padding: 12px 16px;
-    border-radius: 10px;
-    border: 1px solid #334155;
-    background: #0f172a;
+    gap: 0;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface2);
+    overflow: hidden;
     transition: border-color 0.2s;
   }}
   .choice-item.correct {{
-    border-color: #10b981;
-    background: #052e16;
+    border-color: var(--green-border);
+    background: var(--green-bg);
   }}
   .choice-item.user-wrong {{
-    border-color: #ef4444;
-    background: #2d0a0a;
+    border-color: var(--red-border);
+    background: var(--red-bg);
   }}
-  .choice-label {{
-    font-weight: 700;
-    font-size: 0.9rem;
-    min-width: 24px;
-    color: #94a3b8;
-  }}
-  .choice-item.correct .choice-label {{ color: #10b981; }}
-  .choice-item.user-wrong .choice-label {{ color: #ef4444; }}
-  .choice-text {{ font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; }}
-  .choice-mark {{ margin-left: auto; font-size: 1rem; }}
-
-  .answer-row {{
+  .choice-label-col {{
     display: flex;
-    gap: 16px;
-    margin-bottom: 20px;
-    font-size: 0.85rem;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    padding: 14px 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    border-right: 1px solid var(--border);
+    background: rgba(0,0,0,0.15);
+    align-self: stretch;
   }}
-  .answer-box {{
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-weight: 600;
+  .choice-item.correct .choice-label-col {{
+    color: var(--green);
+    border-right-color: var(--green-border);
+    background: rgba(63,185,80,0.08);
   }}
-  .answer-box.user {{ background: #2d0a0a; color: #fca5a5; border: 1px solid #ef4444; }}
-  .answer-box.correct {{ background: #052e16; color: #6ee7b7; border: 1px solid #10b981; }}
+  .choice-item.user-wrong .choice-label-col {{
+    color: var(--red);
+    border-right-color: var(--red-border);
+    background: rgba(248,81,73,0.08);
+  }}
+  .choice-text-col {{
+    flex: 1;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+  }}
+  .choice-item.correct .choice-text-col {{ color: #aff5b4; }}
+  .choice-item.user-wrong .choice-text-col {{ color: #ffa198; }}
+  .choice-mark-col {{
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    font-size: 1.1rem;
+    align-self: stretch;
+  }}
 
-  .explanation {{
-    background: #0f172a;
-    border: 1px solid #334155;
-    border-left: 3px solid #3b82f6;
-    border-radius: 8px;
-    padding: 16px 20px;
-    font-size: 0.88rem;
-    line-height: 1.75;
-    color: #94a3b8;
+  /* 回答行 */
+  .answer-block {{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border-light);
+    background: var(--surface2);
+    flex-wrap: wrap;
   }}
-  .explanation-title {{
-    font-size: 0.78rem;
+  .answer-label {{
+    font-size: 0.72rem;
     font-weight: 700;
-    color: #3b82f6;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-bottom: 8px;
+    color: var(--text-muted);
   }}
-  .no-explanation {{ color: #475569; font-style: italic; }}
+  .answer-chip {{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    font-weight: 700;
+    border: 1px solid;
+  }}
+  .answer-chip.user-chip {{
+    background: var(--red-bg);
+    color: #ffa198;
+    border-color: var(--red-border);
+  }}
+  .answer-chip.correct-chip {{
+    background: var(--green-bg);
+    color: #aff5b4;
+    border-color: var(--green-border);
+  }}
+  .answer-arrow {{ color: var(--text-muted); font-size: 1rem; }}
 
+  /* 解説 */
+  .explanation-block {{
+    padding: 20px 24px;
+  }}
+  .explanation-label {{
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--purple);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }}
+  .explanation-label::before {{
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    background: var(--purple);
+    border-radius: 2px;
+  }}
+  .explanation-text {{
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text-secondary);
+    background: var(--surface2);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+  }}
+  .no-explanation {{
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 12px 16px;
+    background: var(--surface2);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+  }}
+
+  /* ── ナビゲーション ── */
   .nav {{
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #0f172a;
-    border-top: 1px solid #334155;
-    padding: 14px 24px;
+    background: rgba(13,17,23,0.95);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border);
+    padding: 12px 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    z-index: 100;
+    gap: 16px;
+    z-index: 200;
   }}
   .btn {{
-    padding: 10px 24px;
-    border-radius: 10px;
-    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 28px;
+    border-radius: var(--radius-sm);
+    border: 1px solid;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.15s;
+    letter-spacing: 0.01em;
   }}
-  .btn-primary {{ background: #3b82f6; color: #fff; }}
-  .btn-primary:hover {{ background: #2563eb; }}
-  .btn-secondary {{ background: #1e293b; color: #94a3b8; border: 1px solid #334155; }}
-  .btn-secondary:hover {{ background: #334155; color: #e2e8f0; }}
-  .btn:disabled {{ opacity: 0.35; cursor: not-allowed; }}
-  .nav-counter {{ font-size: 0.85rem; color: #64748b; min-width: 80px; text-align: center; }}
-
-  .filter-bar {{
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+  .btn-primary {{
+    background: var(--blue);
+    color: #0d1117;
+    border-color: var(--blue);
   }}
-  .filter-btn {{
-    padding: 5px 14px;
-    border-radius: 999px;
-    border: 1px solid #334155;
-    background: #1e293b;
-    color: #94a3b8;
-    font-size: 0.78rem;
-    cursor: pointer;
-    transition: all 0.15s;
+  .btn-primary:hover {{ background: #79c0ff; border-color: #79c0ff; }}
+  .btn-secondary {{
+    background: var(--surface2);
+    color: var(--text-secondary);
+    border-color: var(--border);
   }}
-  .filter-btn.active {{ background: #3b82f6; color: #fff; border-color: #3b82f6; }}
-  .filter-btn:hover:not(.active) {{ background: #334155; }}
-
-  .done-screen {{
+  .btn-secondary:hover {{ background: var(--border); color: var(--text-primary); }}
+  .btn:disabled {{ opacity: 0.3; cursor: not-allowed; pointer-events: none; }}
+  .nav-counter {{
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    min-width: 70px;
     text-align: center;
-    padding: 60px 20px;
+    font-weight: 600;
   }}
-  .done-screen h2 {{ font-size: 1.8rem; color: #f8fafc; margin-bottom: 12px; }}
-  .done-screen p {{ color: #64748b; font-size: 1rem; }}
+
+  /* ── 空状態 ── */
+  .empty-state {{
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-muted);
+    font-size: 1rem;
+  }}
 </style>
 </head>
 <body>
 
 <div class="header">
   <div>
-    <div class="header h1">AWS SAA-C03 不正解問題レビュー</div>
-    <div class="subtitle" id="subtitle">全 {total} 問</div>
+    <div class="header-title">AWS SAA-C03 不正解問題レビュー</div>
+    <div class="header-sub" id="headerSub">全 {total} 問</div>
   </div>
-  <div class="progress-bar-wrap">
-    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  <div class="progress-wrap">
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
     <div class="progress-label" id="progressLabel">0 / {total}</div>
   </div>
 </div>
 
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="setFilter(0)">すべて</button>
+  <button class="filter-btn" onclick="setFilter(1)">D1: セキュリティ</button>
+  <button class="filter-btn" onclick="setFilter(2)">D2: 弾力性</button>
+  <button class="filter-btn" onclick="setFilter(3)">D3: 高性能</button>
+  <button class="filter-btn" onclick="setFilter(4)">D4: コスト最適化</button>
+</div>
+
 <div class="main">
-  <div class="filter-bar" id="filterBar">
-    <button class="filter-btn active" onclick="setFilter(0)">すべて</button>
-    <button class="filter-btn" onclick="setFilter(1)">D1: セキュリティ</button>
-    <button class="filter-btn" onclick="setFilter(2)">D2: 弾力性</button>
-    <button class="filter-btn" onclick="setFilter(3)">D3: 高性能</button>
-    <button class="filter-btn" onclick="setFilter(4)">D4: コスト最適化</button>
-  </div>
   <div id="cardContainer"></div>
 </div>
 
@@ -361,18 +515,12 @@ let filtered = [...ALL_QUESTIONS];
 let current = 0;
 let activeFilter = 0;
 
-const DOMAIN_BADGE = {{
-  1: 'badge-d1', 2: 'badge-d2', 3: 'badge-d3', 4: 'badge-d4'
-}};
-const DOMAIN_LABEL = {{
-  1: 'D1: セキュリティ', 2: 'D2: 弾力性', 3: 'D3: 高性能', 4: 'D4: コスト最適化', 0: '不明'
-}};
+const DOMAIN_BADGE = {{ 1:'badge-d1', 2:'badge-d2', 3:'badge-d3', 4:'badge-d4' }};
+const DOMAIN_LABEL = {{ 1:'D1: セキュリティ', 2:'D2: 弾力性', 3:'D3: 高性能', 4:'D4: コスト最適化', 0:'不明' }};
 
 function setFilter(domain) {{
   activeFilter = domain;
-  document.querySelectorAll('.filter-btn').forEach((b, i) => {{
-    b.classList.toggle('active', i === domain);
-  }});
+  document.querySelectorAll('.filter-btn').forEach((b, i) => b.classList.toggle('active', i === domain));
   filtered = domain === 0 ? [...ALL_QUESTIONS] : ALL_QUESTIONS.filter(q => q.domain === domain);
   current = 0;
   render();
@@ -381,7 +529,13 @@ function setFilter(domain) {{
 function navigate(dir) {{
   current = Math.max(0, Math.min(filtered.length - 1, current + dir));
   render();
-  window.scrollTo({{top: 0, behavior: 'smooth'}});
+  window.scrollTo({{ top: 0, behavior: 'smooth' }});
+}}
+
+function esc(str) {{
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/\\n/g,'<br>');
 }}
 
 function render() {{
@@ -393,14 +547,12 @@ function render() {{
   document.getElementById('progressFill').style.width = pct + '%';
   document.getElementById('progressLabel').textContent = (current + 1) + ' / ' + total;
   document.getElementById('navCounter').textContent = (current + 1) + ' / ' + total;
-  document.getElementById('subtitle').textContent = '全 ' + total + ' 問' + (activeFilter ? ' (D' + activeFilter + ')' : '');
-
-  // buttons
+  document.getElementById('headerSub').textContent = '全 ' + total + ' 問' + (activeFilter ? ' (D' + activeFilter + ')' : '');
   document.getElementById('btnPrev').disabled = current === 0;
   document.getElementById('btnNext').disabled = current === total - 1;
 
   if (!q) {{
-    document.getElementById('cardContainer').innerHTML = '<div class="done-screen"><h2>表示する問題がありません</h2></div>';
+    document.getElementById('cardContainer').innerHTML = '<div class="empty-state">表示する問題がありません</div>';
     return;
   }}
 
@@ -409,7 +561,7 @@ function render() {{
   const correctLabels = q.correct ? q.correct.split(',').map(s => s.trim()) : [];
   const userLabels = q.user_answer ? q.user_answer.split(',').map(s => s.trim()).filter(s => s && s !== 'SKIP') : [];
 
-  // choices HTML
+  // 選択肢HTML
   let choicesHtml = '';
   (q.choices || []).forEach((c, i) => {{
     const label = 'ABCDEF'[i];
@@ -417,58 +569,57 @@ function render() {{
     const isUserWrong = userLabels.includes(label) && !isCorrect;
     let cls = 'choice-item';
     let mark = '';
-    if (isCorrect) {{ cls += ' correct'; mark = '<span class="choice-mark">✅</span>'; }}
-    if (isUserWrong) {{ cls += ' user-wrong'; mark = '<span class="choice-mark">❌</span>'; }}
-    choicesHtml += `<li class="${{cls}}">
-      <span class="choice-label">${{label}}</span>
-      <span class="choice-text">${{escHtml(c)}}</span>
-      ${{mark}}
-    </li>`;
+    if (isCorrect) {{ cls += ' correct'; mark = '<div class="choice-mark-col">✅</div>'; }}
+    else if (isUserWrong) {{ cls += ' user-wrong'; mark = '<div class="choice-mark-col">❌</div>'; }}
+    choicesHtml += `
+      <div class="${{cls}}">
+        <div class="choice-label-col">${{label}}</div>
+        <div class="choice-text-col">${{esc(c)}}</div>
+        ${{mark}}
+      </div>`;
   }});
 
-  // explanation
+  // 回答表示
+  const userAnsDisplay = q.user_answer && q.user_answer !== 'SKIP' ? q.user_answer : 'スキップ';
+  const answerHtml = `
+    <div class="answer-block">
+      <span class="answer-label">回答</span>
+      <span class="answer-chip user-chip">✗ ${{esc(userAnsDisplay)}}</span>
+      <span class="answer-arrow">→</span>
+      <span class="answer-chip correct-chip">✓ 正解: ${{esc(q.correct || '?')}}</span>
+    </div>`;
+
+  // 解説HTML
   let explHtml = '';
   if (q.explanation && q.explanation.trim()) {{
-    explHtml = `<div class="explanation">
-      <div class="explanation-title">解説</div>
-      <div>${{escHtml(q.explanation)}}</div>
+    explHtml = `<div class="explanation-block">
+      <div class="explanation-label">解説</div>
+      <div class="explanation-text">${{esc(q.explanation)}}</div>
     </div>`;
   }} else {{
-    explHtml = `<div class="explanation"><span class="no-explanation">解説データなし（問題データベースに解説が登録されていません）</span></div>`;
+    explHtml = `<div class="explanation-block">
+      <div class="explanation-label">解説</div>
+      <div class="no-explanation">解説データなし（問題データベースに解説が登録されていません）</div>
+    </div>`;
   }}
-
-  // user answer row
-  const userAnsDisplay = q.user_answer && q.user_answer !== 'SKIP' ? q.user_answer : 'スキップ';
-  const answerRow = `<div class="answer-row">
-    <div class="answer-box user">あなたの回答: ${{escHtml(userAnsDisplay)}}</div>
-    <div class="answer-box correct">正解: ${{escHtml(q.correct || '?')}}</div>
-  </div>`;
 
   document.getElementById('cardContainer').innerHTML = `
     <div class="card">
-      <div class="card-meta">
+      <div class="card-head">
         <span class="badge ${{domainBadge}}">${{domainLabel}}</span>
         <span class="badge badge-id">ID: ${{q.id}}</span>
-        <span class="q-num">${{current + 1}} / ${{total}}</span>
+        <span class="card-qnum">${{current + 1}} / ${{total}}</span>
       </div>
-      <div class="question-text">${{escHtml(q.question || '（問題文データなし）')}}</div>
-      <ul class="choices">${{choicesHtml}}</ul>
-      ${{answerRow}}
+      <div class="question-block">
+        <div class="question-label">問題</div>
+        <div class="question-text">${{esc(q.question || '（問題文データなし）')}}</div>
+      </div>
+      <div class="choices-block">${{choicesHtml}}</div>
+      ${{answerHtml}}
       ${{explHtml}}
-    </div>
-  `;
+    </div>`;
 }}
 
-function escHtml(str) {{
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/\\n/g, '<br>');
-}}
-
-// init
 render();
 </script>
 </body>
@@ -496,7 +647,6 @@ def main():
     print(f"不正解問題: {len(questions)}問読み込み")
 
     questions = enrich_from_db(questions, q_db)
-
     generate_html(questions, args.output)
 
 
