@@ -54,7 +54,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 3
+    "domain_seq": 3,
+    "question_ja": "ソリューションアーキテクトが、大量のデータを保存および取得するシステムを設計しています。データは高い可用性と耐久性を備えている必要があります。また、システムは30日後にデータをより安価なストレージに移動するためのライフサイクルポリシーをサポートする必要があります。ソリューションアーキテクトはどのストレージサービスを選択すべきですか？",
+    "choices_ja": [
+      "Amazon S3",
+      "Amazon EBS",
+      "Amazon EFS",
+      "Amazon Instance Store"
+    ],
+    "explanation_ja": "Amazon S3 は高い可用性と耐久性を実現するように設計されています。定義されたルール（30日後など）に基づいて、オブジェクトを異なるストレージクラス（S3 Standard-IA や S3 Glacier など）に自動的に移行できるライフサイクルポリシーをサポートしています。"
   },
   {
     "id": 10,
@@ -71,7 +79,13 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 4
+    "domain_seq": 4,
+    "question_ja": "Windows Serverにアタッチされたストライプドストレージの拡張性の制限のため、Amazon RDSは現在、[...] DBインスタンスのストレージ増加をサポートしていません。",
+    "choices_ja": [
+      "SQL Server。",
+      "MySQL。",
+      "Oracle。"
+    ]
   },
   {
     "id": 12,
@@ -89,7 +103,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 5
+    "domain_seq": 5,
+    "question_ja": "Amazon EC2 Container Serviceでは、他のコンテナタイプはサポートされていますか？",
+    "choices_ja": [
+      "はい、EC2 Container Serviceは必要なあらゆるコンテナサービスをサポートしています。",
+      "はい、EC2 Container ServiceはMicrosoftのコンテナサービスもサポートしています。",
+      "いいえ、現在EC2 Container ServiceがサポートしているコンテナプラットフォームはDockerのみです。",
+      "はい、EC2 Container ServiceはMicrosoftのコンテナサービスとOpenstackをサポートしています。"
+    ]
   },
   {
     "id": 16,
@@ -107,7 +128,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 6
+    "domain_seq": 6,
+    "question_ja": "インスタンスにパブリックIPアドレスを割り当てたい場合、どのIPアドレスを使用すべきですか？",
+    "choices_ja": [
+      "Elastic IPアドレス",
+      "クラスBのIPアドレス",
+      "クラスAのIPアドレス",
+      "動的IPアドレス"
+    ]
   },
   {
     "id": 17,
@@ -125,7 +153,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 7
+    "domain_seq": 7,
+    "question_ja": "Amazon RDS は SOAP を通じて [...] のみサポートしています。",
+    "choices_ja": [
+      "HTTP または HTTPS",
+      "TCP/IP",
+      "HTTP",
+      "HTTPS"
+    ]
   },
   {
     "id": 23,
@@ -143,7 +178,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 8
+    "domain_seq": 8,
+    "question_ja": "ソリューションアーキテクトは、Amazon S3 バケットにアップロードされた画像を処理するサーバーレスアプリケーションを設計しています。アプリケーションは、画像のリサイズ処理をトリガーし、その結果を別の S3 バケットに保存する必要があります。このワークフローをオーケストレートするために、ソリューションアーキテクトはどの AWS サービスを使用すべきですか？",
+    "choices_ja": [
+      "A. AWS Step Functions",
+      "B. AWS Lambda",
+      "C. Amazon EventBridge",
+      "D. AWS Batch"
+    ],
+    "explanation_ja": "AWS Step Functions は、AWS Lambda 関数や他の AWS サービスを組み合わせてビジネスに不可欠なアプリケーションを構築できるサーバーレスオーケストレーションサービスです。Lambda は S3 から直接トリガーできますが、特に複数のステップやエラー処理が含まれる場合、ワークフローのオーケストレーションには Step Functions が最適な選択肢です。"
   },
   {
     "id": 25,
@@ -161,7 +204,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 9
+    "domain_seq": 9,
+    "question_ja": "ある企業が、Application Load Balancer (ALB) の背後にある Amazon EC2 インスタンスでウェブアプリケーションを実行しています。企業は、SQL インジェクションやクロスサイトスクリプティング (XSS) などの一般的なウェブの脆弱性攻撃からアプリケーションを保護したいと考えています。どの AWS サービスを使用すべきですか？",
+    "choices_ja": [
+      "A. AWS WAF",
+      "B. AWS Shield",
+      "C. Amazon Inspector",
+      "D. AWS KMS"
+    ],
+    "explanation_ja": "AWS WAF (Web Application Firewall) は、アプリケーションの可用性に影響を与えたり、セキュリティを侵害したり、過剰なリソースを消費したりする可能性がある一般的なウェブの脆弱性攻撃からウェブアプリケーションを保護するのに役立ちます。SQL インジェクションや XSS 攻撃をブロックするために使用できます。"
   },
   {
     "id": 28,
@@ -179,7 +230,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 10
+    "domain_seq": 10,
+    "question_ja": "ある企業が、自社の AWS リソースが特定のセキュリティ構成に準拠していることを確認したいと考えています。企業は、構成の変更を継続的に監視および記録し、これらの変更の履歴を提供できるサービスを必要としています。どの AWS サービスを使用すべきですか？",
+    "choices_ja": [
+      "A. AWS Config",
+      "B. AWS CloudTrail",
+      "C. Amazon CloudWatch",
+      "D. AWS Trusted Advisor"
+    ],
+    "explanation_ja": "AWS Config は、AWS リソースの構成を評価、監査、審査できるサービスです。AWS リソースの構成を継続的に監視および記録し、記録された構成を目的の構成に対して自動的に評価することができます。"
   },
   {
     "id": 30,
@@ -197,7 +256,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 11
+    "domain_seq": 11,
+    "question_ja": "ある企業が Amazon S3 を使用して機密性の高い顧客データを保存しています。企業は、バケットにアップロードされるすべてのデータが、AWS KMS キーを使用したサーバー側暗号化 (SSE-KMS) を使用して保管時に暗号化されるようにしたいと考えています。これをどのように強制できますか？",
+    "choices_ja": [
+      "A. x-amz-server-side-encryption ヘッダーが aws:kms に設定されていない s3:PutObject リクエストを拒否する S3 バケットポリシーを使用する。",
+      "B. S3 バケットのデフォルト暗号化を有効にし、SSE-KMS を選択する。",
+      "C. AWS Identity and Access Management (IAM) ポリシーを使用して、バケットへのアクセスを制限する。",
+      "D. Amazon S3 Inventory を使用して、オブジェクトの暗号化ステータスを監視する。"
+    ],
+    "explanation_ja": "S3 バケットポリシーを使用すると、必要な暗号化ヘッダーを指定していないアップロードリクエストを拒否することで、暗号化を強制できます。デフォルトの暗号化（オプション B）は良い習慣ですが、バケットポリシー（オプション A）は、非準拠のリクエストを明示的に拒否する方法を提供します。"
   },
   {
     "id": 36,
@@ -215,7 +282,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 12
+    "domain_seq": 12,
+    "question_ja": "クライアントが1時間以内に利用を開始する必要があるため、迅速にメール送信サービスを構築する必要があります。Amazon Simple Email Service（Amazon SES）が適切な選択肢のようですが、設定方法はいくつかあります。クライアントのニーズに最も合ったSESの設定方法はどれでしょうか？",
+    "choices_ja": [
+      "Amazon SESコンソール",
+      "AWS CloudFormation",
+      "SMTPインターフェイス",
+      "AWS Elastic Beanstalk"
+    ]
   },
   {
     "id": 37,
@@ -233,7 +307,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 13
+    "domain_seq": 13,
+    "question_ja": "ユーザーが CloudWatch で EC2 の CPU 使用率メトリクスを監視しています。特定の時間帯に対して1週間の期間でフィルタリングしたところ、興味深いパターンを見つけました。ユーザーはそのデータポイントをより詳細な期間で拡大表示したいと考えています。CloudWatch で簡単にそれを行うにはどうすればよいでしょうか？",
+    "choices_ja": [
+      "ユーザーはマウスでその期間を選択し、マウスを離すことで特定の期間を拡大できます。",
+      "ユーザーはその期間の集計データを指定して特定の期間を拡大できます。",
+      "ユーザーはマウスでその期間をダブルクリックして特定の期間を拡大できます。",
+      "ユーザーは時間範囲で期間を指定して特定の期間を拡大できます。"
+    ]
   },
   {
     "id": 41,
@@ -251,7 +332,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 14
+    "domain_seq": 14,
+    "question_ja": "ユーザーはVPCインスタンスに1つのEBSボリュームをアタッチしています。ユーザーは可能な限り最高のデータのフォールトトレランスを実現したいと考えています。以下の選択肢のうち、フォールトトレランスを達成するのに役立つものはどれですか？",
+    "choices_ja": [
+      "RAID 1構成でさらにもう1つのボリュームをアタッチする。",
+      "RAID 0構成でさらにもう1つのボリュームをアタッチする。",
+      "複数のボリュームを接続し、RAIDでストライピングする。",
+      "EBSボリュームをルートデバイスとして使用する。"
+    ]
   },
   {
     "id": 44,
@@ -269,7 +357,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 15
+    "domain_seq": 15,
+    "question_ja": "各DBインスタンスクラスに対して、関連付け可能な最大のストレージ容量はどれくらいですか？",
+    "choices_ja": [
+      "5GB.",
+      "1TB.",
+      "2TB.",
+      "500GB."
+    ]
   },
   {
     "id": 46,
@@ -287,7 +382,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 16
+    "domain_seq": 16,
+    "question_ja": "インスタンス起動時にマッピング /dev/sdc=none を指定するとどうなりますか？",
+    "choices_ja": [
+      "/dev/sdc がインスタンスの作成を妨げることを防ぐ。",
+      "/dev/sdc がインスタンスの削除を妨げることを防ぐ。",
+      "/dev/sdc の値を 'zero' に設定する。",
+      "/dev/sdc がインスタンスにアタッチされるのを防ぐ。"
+    ]
   },
   {
     "id": 47,
@@ -305,7 +407,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 17
+    "domain_seq": 17,
+    "question_ja": "Amazon EC2リソースにタグを付けることについて、正しい記述はどれですか？",
+    "choices_ja": [
+      "リソースを終了（terminate）するときにリソース識別子を指定する必要はありません。",
+      "タグのみを基にしてリソースを終了（terminate）、停止（stop）、または削除（delete）できます。",
+      "タグのみを基にしてリソースを終了（terminate）、停止（stop）、または削除（delete）することはできません。",
+      "リソースを停止（stop）するときにリソース識別子を指定する必要はありません。"
+    ]
   },
   {
     "id": 50,
@@ -323,7 +432,14 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 18
+    "domain_seq": 18,
+    "question_ja": "VPCにおける_____とは、通常はプライベートな複数のサブネットをまとめたもので、バックエンドのRDS DBインスタンス用に指定したいものです。",
+    "choices_ja": [
+      "DBサブネットセット",
+      "RDSサブネットグループ",
+      "DBサブネットグループ",
+      "DBサブネットコレクション"
+    ]
   },
   {
     "id": 52,
@@ -341,7 +457,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 19
+    "domain_seq": 19,
+    "question_ja": "ソリューションアーキテクトは、Amazon EC2 インスタンス群のバックアップ戦略を設計しています。バックアップは、災害復旧の目的で別の AWS リージョンに保存する必要があります。会社は低い目標復旧時間（RTO）を要求しています。最小限の運用労力でこれらの要件を満たすソリューションはどれですか？",
+    "choices_ja": [
+      "AWS Backup を使用して、送信先リージョンへのクロスリージョンコピーを含むバックアップ計画を作成する。",
+      "EBS スナップショットを取得し、AWS CLI を使用してそれらを送信先リージョンにコピーするスクリプトを作成する。",
+      "Amazon Data Lifecycle Manager (Amazon DLM) を構成して、スナップショットを作成し、それらを送信先リージョンにコピーする。",
+      "Amazon EventBridge ルールによってトリガーされる AWS Lambda 関数を使用して、スナップショットを取得し、それらを送信先リージョンにコピーする。"
+    ],
+    "explanation_ja": "AWS Backup は、AWS サービス全体のデータのバックアップを中央管理し、自動化するフルマネージドサービスです。バックアップ計画の一部としてクロスリージョンコピーをサポートしており、手動スクリプトや Lambda 関数と比較して最小限の運用労力で済みます。"
   },
   {
     "id": 58,
@@ -359,7 +483,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 20
+    "domain_seq": 20,
+    "question_ja": "ソリューションアーキテクトは、異なる AWS リージョンに複数の VPC を持つ会社のネットワークアーキテクチャを設計しています。会社は、すべての VPC 間にプライベート接続を確立する必要があります。これらの接続の管理を簡素化するために、どの AWS サービスを使用すべきですか？",
+    "choices_ja": [
+      "VPC ピアリング。",
+      "AWS Transit Gateway。",
+      "AWS Direct Connect。",
+      "AWS PrivateLink。"
+    ],
+    "explanation_ja": "AWS Transit Gateway はネットワークトランジットハブとして機能し、単一のゲートウェイを介して複数の VPC やオンプレミスネットワークを接続できます。VPC ピアリング接続の複雑なメッシュと比較して、ネットワーク管理を簡素化します。"
   },
   {
     "id": 59,
@@ -377,7 +509,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 21
+    "domain_seq": 21,
+    "question_ja": "ある会社は、アーカイブデータを Amazon S3 に保存したいと考えています。データにアクセスすることはめったにありませんが、リクエストされたときは数分以内に利用可能である必要があります。この要件に対して最もコスト効率の高い S3 ストレージクラスはどれですか？",
+    "choices_ja": [
+      "S3 Standard-Infrequent Access (S3 Standard-IA)。",
+      "S3 Glacier Instant Retrieval。",
+      "S3 Glacier Flexible Retrieval。",
+      "S3 Glacier Deep Archive。"
+    ],
+    "explanation_ja": "S3 Glacier Instant Retrieval は、めったにアクセスされないが、必要なときにミリ秒単位の取得が必要な長期保存データ向けに設計されています。アーカイブデータに対して S3 Standard-IA よりもコスト効率が高く、「数分以内」（実際にはミリ秒単位）という要件を満たします。"
   },
   {
     "id": 60,
@@ -395,7 +535,15 @@
     "domain": 0,
     "tags": [],
     "explanation": "",
-    "domain_seq": 22
+    "domain_seq": 22,
+    "question_ja": "ある会社は AWS 上でウェブアプリケーションを実行しており、SQL インジェクションやクロスサイトスクリプティング (XSS) などの一般的なウェブエクスプロイトから保護したいと考えています。どの AWS サービスを使用すべきですか？",
+    "choices_ja": [
+      "AWS Shield。",
+      "AWS WAF。",
+      "Amazon Inspector。",
+      "Amazon GuardDuty。"
+    ],
+    "explanation_ja": "AWS WAF (Web Application Firewall) は、特定のパターンに基づいてトラフィックをフィルタリングするルールを作成できるようにすることで、SQL インジェクションや XSS などの一般的なウェブエクスプロイトからウェブアプリケーションを保護するように特別に設計されています。"
   },
   {
     "id": 62,
